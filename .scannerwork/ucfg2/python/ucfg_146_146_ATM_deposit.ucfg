@@ -1,0 +1,63 @@
+
+146.ATM.depositQ
+GC:\Users\DELL 5520\Documents\GitHub\SecurityContextofLLMCode\GPT\146.py ("2*ˆ
+2 (N
+L
+ (
+%1"__id*4
+
+__unknown_file (*	
+146.ATM"	
+balanceH
+F
+ (
+%2"__concat*
+ (
+
+%1*
+ (
+
+
+amountN
+L
+ (	
+146.ATM"	
+balance"__id*"
+
+__unknown_file (
+
+%2S
+Q
+	 	(
+%3"__id*9
+
+__unknown_file (*	
+146.ATM"
+transactionsQ
+O
+	! 	(7
+%4"__concat*
+	# 	(.
+Deposited: *
+	/ 	(5
+
+
+amountb`
+	 	(8
+%5*"
+
+__unknown_file (
+
+%3*"
+
+__unknown_file (
+
+%42append*
+3*,
+3
+146.py"
+ (
+implicit return:
+ (
+amountB	
+146.ATMH

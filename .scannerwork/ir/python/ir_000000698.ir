@@ -1,0 +1,11 @@
+
+zq"Balance Sheet:\nAssets: ${total_assets:.2f}\nLiabilities: ${total_liabilities:.2f}\nEquity: ${total_equity:.2f}"strassets (!liabilities# (.equity0 (6"ê'
+%
+	 	(total_assets"#id#:,
+*
+
+ 
+(#total_liabilities"#id#:'
+%
+ (total_equity"#id#:
+ (}*IC:\Users\DELL 5520\Documents\GitHub\SecurityContextofLLMCode\Claude\72.py

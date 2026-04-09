@@ -1,0 +1,6 @@
+self ("user_id$ (+"h2
+0
+ (%"#get-field# user_interactions:"
+ 
+ (."#array-read#:
+ (.*IC:\Users\DELL 5520\Documents\GitHub\SecurityContextofLLMCode\Claude\89.py

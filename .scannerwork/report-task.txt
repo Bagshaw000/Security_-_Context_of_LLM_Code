@@ -1,0 +1,6 @@
+projectKey=Project-1
+serverUrl=http://localhost:9099
+serverVersion=2025.4.6.121412
+dashboardUrl=http://localhost:9099/dashboard?id=Project-1
+ceTaskId=57590150-8340-4afe-a209-5304f73b10fe
+ceTaskUrl=http://localhost:9099/api/ce/task?id=57590150-8340-4afe-a209-5304f73b10fe

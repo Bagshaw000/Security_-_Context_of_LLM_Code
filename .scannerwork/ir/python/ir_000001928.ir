@@ -1,0 +1,861 @@
+
+
+1int
+
+0int
+
+2int
+
+j4int
+
+03int
+”5intn (list	tuple"T*
+(
+ ("
+#binop ==#2==:Bbool&"$
+ ( * (2 ("≤(
+&
+ ("#unknown-value#Btuple&
+$
+ ("
+#is-exact#:Bbool
+
+ ("
+#assume#:8
+6
+ (	"#set-field# __collection_size:Bint&
+$
+ (
+"#array-add-last#:&
+$
+ ("#array-add-last#:(
+&
+ ("#unknown-value#Btuple&
+$
+ ("
+#is-exact#:Bbool
+
+ ("
+#assume#:8
+6
+ ("#set-field# __collection_size:Bint&
+$
+ ("#array-add-last#:'
+%
+ ("#unknown-value#Blist&
+$
+ ("
+#is-exact#:Bbool
+
+ ("
+#assume#:8
+6
+ ("#set-field# __collection_size:Bint&
+$
+ ("#array-add-last#:
+ ("V*
+(
+	 ("
+#binop ==#2==:Bbool&"$
+	 ( * (2 ("’(
+&
+ ("#unknown-value#Btuple&
+$
+ ("
+#is-exact#:Bbool
+
+ ("
+#assume#:8
+6
+ ("#set-field# __collection_size:Bint&
+$
+ ("#array-add-last#:&
+$
+ ("#array-add-last#:(
+&
+ ("#unknown-value#Btuple&
+$
+ ( "
+#is-exact#:Bbool
+
+ (!"
+#assume#: 8
+6
+ (""#set-field# __collection_size:Bint&
+$
+ (#"#array-add-last#:&
+$
+ ($"#array-add-last#:(
+&
+ ( %"#unknown-value#Btuple&
+$
+ ( &"
+#is-exact#:%Bbool
+
+ ( '"
+#assume#:&8
+6
+ ( ("#set-field# __collection_size:%Bint&
+$
+ ( )"#array-add-last#:%&
+$
+ ( *"#array-add-last#:%'
+%
+ (!+"#unknown-value#Blist&
+$
+ (!,"
+#is-exact#:+Bbool
+
+ (!-"
+#assume#:,8
+6
+ (!."#set-field# __collection_size:+Bint&
+$
+ (!/"#array-add-last#:+%
+ (!+"V*
+(
+	 (1"
+#binop ==#2==:0Bbool&"$
+	 (1 * (2 ("¥(
+&
+ (2"#unknown-value#Btuple&
+$
+ (3"
+#is-exact#:2Bbool
+
+ (4"
+#assume#:38
+6
+ (5"#set-field# __collection_size:2Bint&
+$
+ (6"#array-add-last#:2&
+$
+ (7"#array-add-last#:2(
+&
+ (8"#unknown-value#Btuple&
+$
+ (9"
+#is-exact#:8Bbool
+
+ (:"
+#assume#:98
+6
+ (;"#set-field# __collection_size:8Bint&
+$
+ (<"#array-add-last#:8&
+$
+ (="#array-add-last#:8(
+&
+! ('>"#unknown-value#Btuple&
+$
+! ('?"
+#is-exact#:>Bbool
+
+! ('@"
+#assume#:?8
+6
+! ('A"#set-field# __collection_size:>Bint&
+$
+! ('B"#array-add-last#:>&
+$
+! ('C"#array-add-last#:>(
+&
+ ((D"#unknown-value#Btuple&
+$
+ ((E"
+#is-exact#:DBbool
+
+ ((F"
+#assume#:E8
+6
+ ((G"#set-field# __collection_size:DBint&
+$
+ ((H"#array-add-last#:D2&
+$
+ ((I"#array-add-last#:D8&
+$
+ ((J"#array-add-last#:D>(
+&
++ (1K"#unknown-value#Btuple&
+$
++ (1L"
+#is-exact#:KBbool
+
++ (1M"
+#assume#:L8
+6
++ (1N"#set-field# __collection_size:KBint&
+$
++ (1O"#array-add-last#:K&
+$
++ (1P"#array-add-last#:K(
+&
+3 (9Q"#unknown-value#Btuple&
+$
+3 (9R"
+#is-exact#:QBbool
+
+3 (9S"
+#assume#:R8
+6
+3 (9T"#set-field# __collection_size:QBint&
+$
+3 (9U"#array-add-last#:Q&
+$
+3 (9V"#array-add-last#:Q(
+&
+; (AW"#unknown-value#Btuple&
+$
+; (AX"
+#is-exact#:WBbool
+
+; (AY"
+#assume#:X8
+6
+; (AZ"#set-field# __collection_size:WBint&
+$
+; (A["#array-add-last#:W&
+$
+; (A\"#array-add-last#:W(
+&
+* (B]"#unknown-value#Btuple&
+$
+* (B^"
+#is-exact#:]Bbool
+
+* (B_"
+#assume#:^8
+6
+* (B`"#set-field# __collection_size:]Bint&
+$
+* (Ba"#array-add-last#:]K&
+$
+* (Bb"#array-add-last#:]Q&
+$
+* (Bc"#array-add-last#:]W'
+%
+ (Cd"#unknown-value#Blist&
+$
+ (Ce"
+#is-exact#:dBbool
+
+ (Cf"
+#assume#:e8
+6
+ (Cg"#set-field# __collection_size:dBint&
+$
+ (Ch"#array-add-last#:dD&
+$
+ (Ci"#array-add-last#:d]
+ (Cd"V*
+(
+	 (k"
+#binop ==#2==:jBbool&"$
+	 (k * (2 ("˚"(
+&
+	 	(l"#unknown-value#Btuple&
+$
+	 	(m"
+#is-exact#:lBbool
+
+	 	(n"
+#assume#:m8
+6
+	 	(o"#set-field# __collection_size:lBint&
+$
+	 	(p"#array-add-last#:l&
+$
+	 	(q"#array-add-last#:l(
+&
+	 	(r"#unknown-value#Btuple&
+$
+	 	(s"
+#is-exact#:rBbool
+
+	 	(t"
+#assume#:s8
+6
+	 	(u"#set-field# __collection_size:rBint&
+$
+	 	(v"#array-add-last#:r&
+$
+	 	(w"#array-add-last#:r(
+&
+	! 	('x"#unknown-value#Btuple&
+$
+	! 	('y"
+#is-exact#:xBbool
+
+	! 	('z"
+#assume#:y8
+6
+	! 	('{"#set-field# __collection_size:xBint&
+$
+	! 	('|"#array-add-last#:x&
+$
+	! 	('}"#array-add-last#:x(
+&
+	) 	(/~"#unknown-value#Btuple&
+$
+	) 	(/"
+#is-exact#:~Bbool
+
+	) 	(/Ä"
+#assume#:9
+7
+	) 	(/Å"#set-field# __collection_size:~Bint'
+%
+	) 	(/Ç"#array-add-last#:~0'
+%
+	) 	(/É"#array-add-last#:~)
+'
+	 	(0Ñ"#unknown-value#Btuple(
+&
+	 	(0Ö"
+#is-exact#:ÑBbool
+
+	 	(0Ü"
+#assume#:Ö:
+8
+	 	(0á"#set-field# __collection_size:ÑBint(
+&
+	 	(0à"#array-add-last#:Ñl(
+&
+	 	(0â"#array-add-last#:Ñr(
+&
+	 	(0ä"#array-add-last#:Ñx(
+&
+	 	(0ã"#array-add-last#:Ñ~)
+'
+
+ 
+(å"#unknown-value#Btuple(
+&
+
+ 
+(ç"
+#is-exact#:åBbool
+
+
+ 
+(é"
+#assume#:ç:
+8
+
+ 
+(è"#set-field# __collection_size:åBint(
+&
+
+ 
+(ê"#array-add-last#:å(
+&
+
+ 
+(ë"#array-add-last#:å)
+'
+
+ 
+(í"#unknown-value#Btuple(
+&
+
+ 
+(ì"
+#is-exact#:íBbool
+
+
+ 
+(î"
+#assume#:ì:
+8
+
+ 
+(ï"#set-field# __collection_size:íBint(
+&
+
+ 
+(ñ"#array-add-last#:í(
+&
+
+ 
+(ó"#array-add-last#:í)
+'
+
+! 
+('ò"#unknown-value#Btuple(
+&
+
+! 
+('ô"
+#is-exact#:òBbool
+
+
+! 
+('ö"
+#assume#:ô:
+8
+
+! 
+('õ"#set-field# __collection_size:òBint(
+&
+
+! 
+('ú"#array-add-last#:ò(
+&
+
+! 
+('ù"#array-add-last#:ò)
+'
+
+) 
+(/û"#unknown-value#Btuple(
+&
+
+) 
+(/ü"
+#is-exact#:ûBbool
+
+
+) 
+(/†"
+#assume#:ü:
+8
+
+) 
+(/°"#set-field# __collection_size:ûBint(
+&
+
+) 
+(/¢"#array-add-last#:û(
+&
+
+) 
+(/£"#array-add-last#:û)
+'
+
+ 
+(0§"#unknown-value#Btuple(
+&
+
+ 
+(0•"
+#is-exact#:§Bbool
+
+
+ 
+(0¶"
+#assume#:•:
+8
+
+ 
+(0ß"#set-field# __collection_size:§Bint)
+'
+
+ 
+(0®"#array-add-last#:§å)
+'
+
+ 
+(0©"#array-add-last#:§í)
+'
+
+ 
+(0™"#array-add-last#:§ò)
+'
+
+ 
+(0´"#array-add-last#:§û)
+'
+ (¨"#unknown-value#Btuple(
+&
+ (≠"
+#is-exact#:¨Bbool
+
+ (Æ"
+#assume#:≠:
+8
+ (Ø"#set-field# __collection_size:¨Bint(
+&
+ (∞"#array-add-last#:¨(
+&
+ (±"#array-add-last#:¨)
+'
+ (≤"#unknown-value#Btuple(
+&
+ (≥"
+#is-exact#:≤Bbool
+
+ (¥"
+#assume#:≥:
+8
+ (µ"#set-field# __collection_size:≤Bint(
+&
+ (∂"#array-add-last#:≤(
+&
+ (∑"#array-add-last#:≤)
+'
+! ('∏"#unknown-value#Btuple(
+&
+! ('π"
+#is-exact#:∏Bbool
+
+! ('∫"
+#assume#:π:
+8
+! ('ª"#set-field# __collection_size:∏Bint(
+&
+! ('º"#array-add-last#:∏(
+&
+! ('Ω"#array-add-last#:∏)
+'
+) (/æ"#unknown-value#Btuple(
+&
+) (/ø"
+#is-exact#:æBbool
+
+) (/¿"
+#assume#:ø:
+8
+) (/¡"#set-field# __collection_size:æBint(
+&
+) (/¬"#array-add-last#:æ(
+&
+) (/√"#array-add-last#:æ)
+'
+ (0ƒ"#unknown-value#Btuple(
+&
+ (0≈"
+#is-exact#:ƒBbool
+
+ (0∆"
+#assume#:≈:
+8
+ (0«"#set-field# __collection_size:ƒBint)
+'
+ (0»"#array-add-last#:ƒ¨)
+'
+ (0…"#array-add-last#:ƒ≤)
+'
+ (0 "#array-add-last#:ƒ∏)
+'
+ (0À"#array-add-last#:ƒæ(
+&
+	 (1Ã"#unknown-value#Blist(
+&
+	 (1Õ"
+#is-exact#:ÃBbool
+
+	 (1Œ"
+#assume#:Õ:
+8
+	 (1œ"#set-field# __collection_size:ÃBint)
+'
+	 (1–"#array-add-last#:ÃÑ)
+'
+	 (1—"#array-add-last#:Ã§)
+'
+	 (1“"#array-add-last#:Ãƒ
+	 (1Ã"O,
+*
+	 (‘"
+#binop ==#2==:”Bbool"
+	 (‘	 
+* ("∫*	)
+'
+ (’"#unknown-value#Btuple(
+&
+ (÷"
+#is-exact#:’Bbool
+
+ (◊"
+#assume#:÷:
+8
+ (ÿ"#set-field# __collection_size:’Bint(
+&
+ (Ÿ"#array-add-last#:’(
+&
+ (⁄"#array-add-last#:’)
+'
+ (€"#unknown-value#Btuple(
+&
+ (‹"
+#is-exact#:€Bbool
+
+ (›"
+#assume#:‹:
+8
+ (ﬁ"#set-field# __collection_size:€Bint(
+&
+ (ﬂ"#array-add-last#:€(
+&
+ (‡"#array-add-last#:€)
+'
+! ('·"#unknown-value#Btuple(
+&
+! ('‚"
+#is-exact#:·Bbool
+
+! ('„"
+#assume#:‚:
+8
+! ('‰"#set-field# __collection_size:·Bint(
+&
+! ('Â"#array-add-last#:·(
+&
+! ('Ê"#array-add-last#:·)
+'
+) (/Á"#unknown-value#Btuple(
+&
+) (/Ë"
+#is-exact#:ÁBbool
+
+) (/È"
+#assume#:Ë:
+8
+) (/Í"#set-field# __collection_size:ÁBint(
+&
+) (/Î"#array-add-last#:Á0(
+&
+) (/Ï"#array-add-last#:Á)
+'
+1 (7Ì"#unknown-value#Btuple(
+&
+1 (7Ó"
+#is-exact#:ÌBbool
+
+1 (7Ô"
+#assume#:Ó:
+8
+1 (7"#set-field# __collection_size:ÌBint(
+&
+1 (7Ò"#array-add-last#:Ìj(
+&
+1 (7Ú"#array-add-last#:Ì)
+'
+ (8Û"#unknown-value#Btuple(
+&
+ (8Ù"
+#is-exact#:ÛBbool
+
+ (8ı"
+#assume#:Ù:
+8
+ (8ˆ"#set-field# __collection_size:ÛBint)
+'
+ (8˜"#array-add-last#:Û’)
+'
+ (8¯"#array-add-last#:Û€)
+'
+ (8˘"#array-add-last#:Û·)
+'
+ (8˙"#array-add-last#:ÛÁ)
+'
+ (8˚"#array-add-last#:ÛÌ)
+'
+ (¸"#unknown-value#Btuple(
+&
+ (˝"
+#is-exact#:¸Bbool
+
+ (˛"
+#assume#:˝:
+8
+ (ˇ"#set-field# __collection_size:¸Bint(
+&
+ (Ä"#array-add-last#:¸(
+&
+ (Å"#array-add-last#:¸)
+'
+ (Ç"#unknown-value#Btuple(
+&
+ (É"
+#is-exact#:ÇBbool
+
+ (Ñ"
+#assume#:É:
+8
+ (Ö"#set-field# __collection_size:ÇBint(
+&
+ (Ü"#array-add-last#:Ç(
+&
+ (á"#array-add-last#:Ç)
+'
+! ('à"#unknown-value#Btuple(
+&
+! ('â"
+#is-exact#:àBbool
+
+! ('ä"
+#assume#:â:
+8
+! ('ã"#set-field# __collection_size:àBint(
+&
+! ('å"#array-add-last#:à(
+&
+! ('ç"#array-add-last#:à)
+'
+) (/é"#unknown-value#Btuple(
+&
+) (/è"
+#is-exact#:éBbool
+
+) (/ê"
+#assume#:è:
+8
+) (/ë"#set-field# __collection_size:éBint(
+&
+) (/í"#array-add-last#:é(
+&
+) (/ì"#array-add-last#:é)
+'
+1 (7î"#unknown-value#Btuple(
+&
+1 (7ï"
+#is-exact#:îBbool
+
+1 (7ñ"
+#assume#:ï:
+8
+1 (7ó"#set-field# __collection_size:îBint(
+&
+1 (7ò"#array-add-last#:î(
+&
+1 (7ô"#array-add-last#:î)
+'
+ (8ö"#unknown-value#Btuple(
+&
+ (8õ"
+#is-exact#:öBbool
+
+ (8ú"
+#assume#:õ:
+8
+ (8ù"#set-field# __collection_size:öBint)
+'
+ (8û"#array-add-last#:ö¸)
+'
+ (8ü"#array-add-last#:öÇ)
+'
+ (8†"#array-add-last#:öà)
+'
+ (8°"#array-add-last#:öé)
+'
+ (8¢"#array-add-last#:öî)
+'
+ (£"#unknown-value#Btuple(
+&
+ (§"
+#is-exact#:£Bbool
+
+ (•"
+#assume#:§:
+8
+ (¶"#set-field# __collection_size:£Bint(
+&
+ (ß"#array-add-last#:£(
+&
+ (®"#array-add-last#:£)
+'
+ (©"#unknown-value#Btuple(
+&
+ (™"
+#is-exact#:©Bbool
+
+ (´"
+#assume#:™:
+8
+ (¨"#set-field# __collection_size:©Bint(
+&
+ (≠"#array-add-last#:©(
+&
+ (Æ"#array-add-last#:©)
+'
+! ('Ø"#unknown-value#Btuple(
+&
+! ('∞"
+#is-exact#:ØBbool
+
+! ('±"
+#assume#:∞:
+8
+! ('≤"#set-field# __collection_size:ØBint(
+&
+! ('≥"#array-add-last#:Ø(
+&
+! ('¥"#array-add-last#:Ø)
+'
+) (/µ"#unknown-value#Btuple(
+&
+) (/∂"
+#is-exact#:µBbool
+
+) (/∑"
+#assume#:∂:
+8
+) (/∏"#set-field# __collection_size:µBint(
+&
+) (/π"#array-add-last#:µ(
+&
+) (/∫"#array-add-last#:µ)
+'
+1 (7ª"#unknown-value#Btuple(
+&
+1 (7º"
+#is-exact#:ªBbool
+
+1 (7Ω"
+#assume#:º:
+8
+1 (7æ"#set-field# __collection_size:ªBint(
+&
+1 (7ø"#array-add-last#:ª(
+&
+1 (7¿"#array-add-last#:ª)
+'
+ (8¡"#unknown-value#Btuple(
+&
+ (8¬"
+#is-exact#:¡Bbool
+
+ (8√"
+#assume#:¬:
+8
+ (8ƒ"#set-field# __collection_size:¡Bint)
+'
+ (8≈"#array-add-last#:¡£)
+'
+ (8∆"#array-add-last#:¡©)
+'
+ (8«"#array-add-last#:¡Ø)
+'
+ (8»"#array-add-last#:¡µ)
+'
+ (8…"#array-add-last#:¡ª(
+&
+ (9 "#unknown-value#Blist(
+&
+ (9À"
+#is-exact#: Bbool
+
+ (9Ã"
+#assume#:À:
+8
+ (9Õ"#set-field# __collection_size: Bint)
+'
+ (9Œ"#array-add-last#: Û)
+'
+ (9œ"#array-add-last#: ö)
+'
+ (9–"#array-add-last#: ¡
+ (9 "ƒ
+(
+&
+ (—"#unknown-value#Blist(
+&
+ (“"
+#is-exact#:—Bbool
+
+ (”"
+#assume#:“:
+8
+ (‘"#set-field# __collection_size:—Bint
+ (—*GC:\Users\DELL 5520\Documents\GitHub\SecurityContextofLLMCode\GPT\186.py

@@ -1,0 +1,31 @@
+
+"Net Cash Flow"str
+"Investing Activities"str
+
+"Operating Activities"str
+"Financing Activities"str"operating_activities! (5"investing_activities7 (K"financing_activitiesM (a"‚%
+#
+ (!"
+builtinssum*:%
+#
+ (!"
+builtinssum*:%
+#
+ (!"
+builtinssum*:#
+!
+ (!"	#binop +#2+:(
+&
+ (net_cash_flow"#id#:$
+"
+  %(	"#new-object#Bdict 
+
+! !(4"	#map-set#:	
+ 
+
+" "(4"	#map-set#:	 
+
+# #(4"	#map-set#:	 
+
+$ $(&"	#map-set#:	
+  %(	*IC:\Users\DELL 5520\Documents\GitHub\SecurityContextofLLMCode\Claude\69.py

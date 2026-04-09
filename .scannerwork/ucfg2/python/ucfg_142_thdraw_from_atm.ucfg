@@ -1,0 +1,101 @@
+
+#142.ATMController.withdraw_from_atmQ
+GC:\Users\DELL 5520\Documents\GitHub\SecurityContextofLLMCode\GPT\142.py ("2*Ú
+2 (U
+S
+ (
+%6"__id*;
+
+__unknown_file (*
+142.ATMController"
+atmslj
+ (
+%7*"
+
+__unknown_file (
+
+%6*&
+
+__unknown_file (
+
+
+atm_id2__contains__*
+4
+7*-
+4 ("
+ (
+ATM not found.*˜
+5 (;u
+s
+ (;
+%1"__concat*,
+ (1 
+Insufficient balance in ATM *
+2 (8
+
+
+atm_id*
+9 (:
+."
+ (;
+
+%1*Ë
+6 (N§
+¤
+ (N
+%2"__concat*
+ ('
+Withdrawal of *
+( (.
+
+
+amount*
+/ (9
+
+ from ATM *
+: (@
+
+
+atm_id*
+A (M
+ successful."
+ (N
+
+%2*Í
+7 (1U
+S
+ (
+%3"__id*;
+
+__unknown_file (*
+142.ATMController"
+atmsus
+ ( 
+%4"__mapGet*"
+
+__unknown_file (
+
+%3*&
+
+__unknown_file (
+
+
+atm_id2__getitem__hf
+ (1
+%5*"
+
+__unknown_file (
+
+%4*&
+
+__unknown_file (
+
+
+amount2withdraw*
+5
+6:
+  (&
+atm_id:
+( (.
+amountB
+142.ATMControllerH

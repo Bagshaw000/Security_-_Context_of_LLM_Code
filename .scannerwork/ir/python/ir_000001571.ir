@@ -1,0 +1,25 @@
+
+	"'''.*?'''"str
+""str
+"""".*?""""str
+"#.*"strcode	# 	(,"Ğ<
+:
+# (;code_no_single_line_comments"	
+resub:!
+
+V (X"#unknown-value#'
+%
+V (_"#get-field# DOTALL:3
+1
+ (`code_no_docstrings"	
+resub:!
+
+L (N
+"#unknown-value#'
+%
+L (U"#get-field# DOTALL:
+3
+1
+ (Vcode_no_docstrings"	
+resub:	
+ (*HC:\Users\DELL 5520\Documents\GitHub\SecurityContextofLLMCode\src\util.py

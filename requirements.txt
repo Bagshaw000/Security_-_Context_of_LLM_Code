@@ -1,0 +1,7 @@
+anthropic
+dotenv
+pandas
+openai
+pandas
+google-genai
+numpy

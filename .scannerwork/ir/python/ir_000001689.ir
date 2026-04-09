@@ -1,0 +1,10 @@
+self (amount ("¶(
+&
+ ("#get-field# balance:%
+#
+ ("	#binop +#*2+:)
+'
+ ("#set-field# balance:(
+&
+ ("#get-field# balance:
+ (*GC:\Users\DELL 5520\Documents\GitHub\SecurityContextofLLMCode\GPT\140.py

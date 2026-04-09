@@ -1,0 +1,66 @@
+
+#137.ATMController.withdraw_from_atmQ
+GC:\Users\DELL 5520\Documents\GitHub\SecurityContextofLLMCode\GPT\137.py ("2*Ú
+2 (U
+S
+ (
+%4"__id*;
+
+__unknown_file (*
+137.ATMController"
+atmslj
+ (
+%5*"
+
+__unknown_file (
+
+%4*&
+
+__unknown_file (
+
+
+atm_id2__contains__*
+4
+5*$
+4 ("
+ (	
+
+False*Ù
+5 (5U
+S
+ (
+%1"__id*;
+
+__unknown_file (*
+137.ATMController"
+atmsus
+ ($
+%2"__mapGet*"
+
+__unknown_file (
+
+%1*&
+
+__unknown_file (
+
+
+atm_id2__getitem__hf
+ (5
+%3*"
+
+__unknown_file (
+
+%2*&
+
+__unknown_file (
+
+
+amount2withdraw"
+ (5
+
+%3:
+  (&
+atm_id:
+( (.
+amountB
+137.ATMControllerH

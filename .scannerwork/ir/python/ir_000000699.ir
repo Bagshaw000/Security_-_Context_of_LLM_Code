@@ -1,0 +1,5 @@
+
+ÜÒ"Cash Flow Statement:\nOperating Cash Flow: ${operating_cash_flow:.2f}\nInvesting Cash Flow: ${investing_cash_flow:.2f}\nFinancing Cash Flow: ${financing_cash_flow:.2f}\nTotal Cash Flow: ${total_cash_flow:.2f}"str!operating_cash_flow! (4!investing_cash_flow6 (I!financing_cash_flowK (^"G4
+2
+ (Utotal_cash_flow"	#binop +#2+:
+	 (Þ*IC:\Users\DELL 5520\Documents\GitHub\SecurityContextofLLMCode\Claude\72.py

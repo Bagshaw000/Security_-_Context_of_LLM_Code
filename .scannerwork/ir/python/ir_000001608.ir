@@ -1,0 +1,547 @@
+
+
+U1int
+30int
+	10int
+Ó
+"__main__"str
+600int
+9128int
+255int
+1165int
+NoneNoneType
+300int
+
+0intIlist	tuple"‡K*
+(
+ (SCREEN_WIDTH"#id#:Bint+
+)
+ (SCREEN_HEIGHT"#id#:Bint(
+&
+ (
+BLOCK_SIZE"#id#:Bint3
+1
+ ('
+GRID_WIDTH"
+#binop //#*2//:4
+2
+	 	()GRID_HEIGHT"
+#binop //#*2//:!
+
+
+ 
+(
+FPS"#id#:	Bint(
+&
+ ("#unknown-value#Btuple&
+$
+ ("
+#is-exact#:Bbool
+
+ ("
+#assume#:8
+6
+ ("#set-field# __collection_size:Bint&
+$
+ ("#array-add-last#:&
+$
+ ("#array-add-last#:&
+$
+ ("#array-add-last#:(
+&
+ ("#unknown-value#Btuple&
+$
+ ("
+#is-exact#:Bbool
+
+ ("
+#assume#:8
+6
+ ("#set-field# __collection_size:Bint&
+$
+ ("#array-add-last#:&
+$
+ ("#array-add-last#:&
+$
+ ("#array-add-last#:(
+&
+ ('"#unknown-value#Btuple&
+$
+ ('"
+#is-exact#:Bbool
+
+ ('"
+#assume#:8
+6
+ ('"#set-field# __collection_size:Bint&
+$
+ (' "#array-add-last#:&
+$
+ ('!"#array-add-last#:&
+$
+ ('""#array-add-last#:(
+&
+) (4#"#unknown-value#Btuple&
+$
+) (4$"
+#is-exact#:#Bbool
+
+) (4%"
+#assume#:$8
+6
+) (4&"#set-field# __collection_size:#Bint&
+$
+) (4'"#array-add-last#:#&
+$
+) (4("#array-add-last#:#&
+$
+) (4)"#array-add-last#:#(
+&
+ (*"#unknown-value#Btuple&
+$
+ (+"
+#is-exact#:*Bbool
+
+ (,"
+#assume#:+8
+6
+ (-"#set-field# __collection_size:*Bint&
+$
+ (."#array-add-last#:*&
+$
+ (/"#array-add-last#:*&
+$
+ (0"#array-add-last#:*(
+&
+ ( 2"#unknown-value#Btuple&
+$
+ ( 3"
+#is-exact#:2Bbool
+
+ ( 4"
+#assume#:38
+6
+ ( 5"#set-field# __collection_size:2Bint&
+$
+ ( 6"#array-add-last#:2&
+$
+ ( 7"#array-add-last#:21&
+$
+ ( 8"#array-add-last#:2(
+&
+" (/:"#unknown-value#Btuple&
+$
+" (/;"
+#is-exact#::Bbool
+
+" (/<"
+#assume#:;8
+6
+" (/="#set-field# __collection_size::Bint&
+$
+" (/>"#array-add-last#::9&
+$
+" (/?"#array-add-last#::&
+$
+" (/@"#array-add-last#::9(
+&
+1 (>A"#unknown-value#Btuple&
+$
+1 (>B"
+#is-exact#:ABbool
+
+1 (>C"
+#assume#:B8
+6
+1 (>D"#set-field# __collection_size:ABint&
+$
+1 (>E"#array-add-last#:A&
+$
+1 (>F"#array-add-last#:A&
+$
+1 (>G"#array-add-last#:A/
+-
+	 (HCOLORS"#unknown-value#Blist&
+$
+	 (J"
+#is-exact#:HIBbool
+
+	 (K"
+#assume#:J8
+6
+	 (L"#set-field# __collection_size:HBint&
+$
+	 (M"#array-add-last#:H&
+$
+	 (N"#array-add-last#:H&
+$
+	 (O"#array-add-last#:H&
+$
+	 (P"#array-add-last#:H#&
+$
+	 (Q"#array-add-last#:H*&
+$
+	 (R"#array-add-last#:H2&
+$
+	 (S"#array-add-last#:H:&
+$
+	 (T"#array-add-last#:HA'
+%
+ (V"#unknown-value#Blist&
+$
+ (W"
+#is-exact#:VIBbool
+
+ (X"
+#assume#:W8
+6
+ (Y"#set-field# __collection_size:VBint&
+$
+ (Z"#array-add-last#:VU&
+$
+ (["#array-add-last#:VU&
+$
+ (\"#array-add-last#:VU&
+$
+ (]"#array-add-last#:VU'
+%
+ (^"#unknown-value#Blist&
+$
+ (_"
+#is-exact#:^IBbool
+
+ (`"
+#assume#:_8
+6
+ (a"#set-field# __collection_size:^Bint&
+$
+ (b"#array-add-last#:^V'
+%
+ (c"#unknown-value#Blist&
+$
+ (d"
+#is-exact#:cIBbool
+
+ (e"
+#assume#:d8
+6
+ (f"#set-field# __collection_size:cBint&
+$
+ (g"#array-add-last#:cU&
+$
+ (h"#array-add-last#:cU'
+%
+ (i"#unknown-value#Blist&
+$
+ (j"
+#is-exact#:iIBbool
+
+ (k"
+#assume#:j8
+6
+ (l"#set-field# __collection_size:iBint&
+$
+ (m"#array-add-last#:iU&
+$
+ (n"#array-add-last#:iU'
+%
+ (o"#unknown-value#Blist&
+$
+ (p"
+#is-exact#:oIBbool
+
+ (q"
+#assume#:p8
+6
+ (r"#set-field# __collection_size:oBint&
+$
+ (s"#array-add-last#:oc&
+$
+ (t"#array-add-last#:oi'
+%
+ (u"#unknown-value#Blist&
+$
+ (v"
+#is-exact#:uIBbool
+
+ (w"
+#assume#:v8
+6
+ (x"#set-field# __collection_size:uBint&
+$
+ (y"#array-add-last#:u&
+$
+ (z"#array-add-last#:uU&
+$
+ ({"#array-add-last#:u'
+%
+ (|"#unknown-value#Blist&
+$
+ (}"
+#is-exact#:|IBbool
+
+ (~"
+#assume#:}8
+6
+ ("#set-field# __collection_size:|Bint'
+%
+ (Ä"#array-add-last#:|U'
+%
+ (Å"#array-add-last#:|U'
+%
+ (Ç"#array-add-last#:|U(
+&
+ (É"#unknown-value#Blist(
+&
+ (Ñ"
+#is-exact#:ÉIBbool
+
+ (Ö"
+#assume#:Ñ:
+8
+ (Ü"#set-field# __collection_size:ÉBint(
+&
+ (á"#array-add-last#:Éu(
+&
+ (à"#array-add-last#:É|(
+&
+ (â"#unknown-value#Blist(
+&
+ (ä"
+#is-exact#:âIBbool
+
+ (ã"
+#assume#:ä:
+8
+ (å"#set-field# __collection_size:âBint(
+&
+ (ç"#array-add-last#:âU(
+&
+ (é"#array-add-last#:âU(
+&
+ (è"#array-add-last#:â(
+&
+ (ê"#unknown-value#Blist(
+&
+ (ë"
+#is-exact#:êIBbool
+
+ (í"
+#assume#:ë:
+8
+ (ì"#set-field# __collection_size:êBint(
+&
+ (î"#array-add-last#:ê(
+&
+ (ï"#array-add-last#:êU(
+&
+ (ñ"#array-add-last#:êU(
+&
+ (ó"#unknown-value#Blist(
+&
+ (ò"
+#is-exact#:óIBbool
+
+ (ô"
+#assume#:ò:
+8
+ (ö"#set-field# __collection_size:óBint)
+'
+ (õ"#array-add-last#:óâ)
+'
+ (ú"#array-add-last#:óê(
+&
+ (ù"#unknown-value#Blist(
+&
+ (û"
+#is-exact#:ùIBbool
+
+ (ü"
+#assume#:û:
+8
+ (†"#set-field# __collection_size:ùBint(
+&
+ (°"#array-add-last#:ù(
+&
+ (¢"#array-add-last#:ùU(
+&
+ (£"#array-add-last#:ùU(
+&
+ (§"#unknown-value#Blist(
+&
+ (•"
+#is-exact#:§IBbool
+
+ (¶"
+#assume#:•:
+8
+ (ß"#set-field# __collection_size:§Bint(
+&
+ (®"#array-add-last#:§U(
+&
+ (©"#array-add-last#:§U(
+&
+ (™"#array-add-last#:§(
+&
+ (´"#unknown-value#Blist(
+&
+ (¨"
+#is-exact#:´IBbool
+
+ (≠"
+#assume#:¨:
+8
+ (Æ"#set-field# __collection_size:´Bint)
+'
+ (Ø"#array-add-last#:´ù)
+'
+ (∞"#array-add-last#:´§(
+&
+ (±"#unknown-value#Blist(
+&
+ (≤"
+#is-exact#:±IBbool
+
+ (≥"
+#assume#:≤:
+8
+ (¥"#set-field# __collection_size:±Bint(
+&
+ (µ"#array-add-last#:±U(
+&
+ (∂"#array-add-last#:±(
+&
+ (∑"#array-add-last#:±(
+&
+ (∏"#unknown-value#Blist(
+&
+ (π"
+#is-exact#:∏IBbool
+
+ (∫"
+#assume#:π:
+8
+ (ª"#set-field# __collection_size:∏Bint(
+&
+ (º"#array-add-last#:∏U(
+&
+ (Ω"#array-add-last#:∏U(
+&
+ (æ"#array-add-last#:∏U(
+&
+ (ø"#unknown-value#Blist(
+&
+ (¿"
+#is-exact#:øIBbool
+
+ (¡"
+#assume#:¿:
+8
+ (¬"#set-field# __collection_size:øBint)
+'
+ (√"#array-add-last#:ø±)
+'
+ (ƒ"#array-add-last#:ø∏(
+&
+ (≈"#unknown-value#Blist(
+&
+ (∆"
+#is-exact#:≈IBbool
+
+ («"
+#assume#:∆:
+8
+ (»"#set-field# __collection_size:≈Bint(
+&
+ (…"#array-add-last#:≈(
+&
+ ( "#array-add-last#:≈(
+&
+ (À"#array-add-last#:≈U(
+&
+ (Ã"#unknown-value#Blist(
+&
+ (Õ"
+#is-exact#:ÃIBbool
+
+ (Œ"
+#assume#:Õ:
+8
+ (œ"#set-field# __collection_size:ÃBint(
+&
+ (–"#array-add-last#:ÃU(
+&
+ (—"#array-add-last#:ÃU(
+&
+ (“"#array-add-last#:ÃU(
+&
+ (”"#unknown-value#Blist(
+&
+ (‘"
+#is-exact#:”IBbool
+
+ (’"
+#assume#:‘:
+8
+ (÷"#set-field# __collection_size:”Bint)
+'
+ (◊"#array-add-last#:”≈)
+'
+ (ÿ"#array-add-last#:”Ã0
+.
+	 (ŸSHAPES"#unknown-value#Blist(
+&
+	 (⁄"
+#is-exact#:ŸIBbool
+
+	 (€"
+#assume#:⁄:
+8
+	 (‹"#set-field# __collection_size:ŸBint(
+&
+	 (›"#array-add-last#:Ÿ^(
+&
+	 (ﬁ"#array-add-last#:Ÿo)
+'
+	 (ﬂ"#array-add-last#:ŸÉ)
+'
+	 (‡"#array-add-last#:Ÿó)
+'
+	 (·"#array-add-last#:Ÿ´)
+'
+	 (‚"#array-add-last#:Ÿø)
+'
+	 („"#array-add-last#:Ÿ”%
+#
+U [‰%closure"#new-object#&
+$
+U [Â"#set-field# COLORS:‰H*
+(
+U [Ê"#set-field# BLOCK_SIZE:‰)
+'
+U [Á"?python-partial-apply?:‰&
+$
+[ ÑË%closure"#new-object#-
++
+[ ÑÈ"#set-field# SCREEN_WIDTH:Ë.
+,
+[ ÑÍ"#set-field# SCREEN_HEIGHT:Ë$
+"
+[ ÑÎ"#set-field# FPS:Ë
+*
+(
+[ ÑÏ"?python-partial-apply?:Ë$
+"
+
+Ñ Ñ(Ì"#unknown-value#/
+-
+
+Ñ Ñ(Ô"
+#binop ==#2==:ÌÓBbool"
+
+Ñ Ñ(Ô *Ñ Ñ("(
+
+
+Ö Ö(
+"
+164main" *GC:\Users\DELL 5520\Documents\GitHub\SecurityContextofLLMCode\GPT\164.py

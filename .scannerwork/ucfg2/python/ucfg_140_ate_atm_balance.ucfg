@@ -1,0 +1,64 @@
+
+$140.ATMController.update_atm_balanceT
+JC:\Users\DELL 5520\Documents\GitHub\SecurityContextofLLMCode\Claude\140.py ("2*¶
+2 (+]
+[
+ (
+%1"__id*C
+
+__unknown_file ('*%
+140.ATMController"
+atm_balancesus
+ (!
+%2"__mapGet*"
+
+__unknown_file (
+
+%1*&
+
+__unknown_file (
+
+
+atm_id2__getitem__H
+F
+ (+
+%3"__concat*
+ (!
+
+%2*
+% (+
+
+
+amount]
+[
+ (
+%5"__id*C
+
+__unknown_file ('*%
+140.ATMController"
+atm_balances¢Ÿ
+ (+
+%4"dict.__setitem__*"
+
+__unknown_file (
+
+%5*&
+
+__unknown_file (
+
+
+atm_id*"
+
+__unknown_file (
+
+%32__setitem__*
+3*,
+3
+140.py"
+ (
+implicit return:
+! ('
+atm_id:
+) (/
+amountB
+140.ATMControllerH

@@ -1,0 +1,967 @@
+
+10int
+20int
+)°"Player {player + 1} has lost!"str
+¡7int
+§6int
+
+A3int
+òtruebool
+á5int
+
+$2int
+
+1int
+
+j4int
+
+0int
+NoneNoneType
+°-1intlist"ñZ"
+ 
+) )(
+ﬂ"#unknown-value#)
+'
+ (BOARD_WIDTH"#id#:Bint*
+(
+ (BOARD_HEIGHT"#id#:Bint'
+%
+	 	("#unknown-value#Blist&
+$
+	 	(	"
+#is-exact#:Bbool
+
+	 	(
+"
+#assume#:	8
+6
+	 	("#set-field# __collection_size:Bint&
+$
+	 	("#array-add-last#:&
+$
+	 	("#array-add-last#:&
+$
+	 	("#array-add-last#:'
+%
+
+ 
+("#unknown-value#Blist&
+$
+
+ 
+("
+#is-exact#:Bbool
+
+
+ 
+("
+#assume#:8
+6
+
+ 
+("#set-field# __collection_size:Bint&
+$
+
+ 
+("#array-add-last#:&
+$
+
+ 
+("#array-add-last#:&
+$
+
+ 
+("#array-add-last#:'
+%
+ ("#unknown-value#Blist&
+$
+ ("
+#is-exact#:Bbool
+
+ ("
+#assume#:8
+6
+ ("#set-field# __collection_size:Bint&
+$
+ ("#array-add-last#:&
+$
+ ("#array-add-last#:&
+$
+ ("#array-add-last#:'
+%
+	 ("#unknown-value#Blist&
+$
+	 ("
+#is-exact#:Bbool
+
+	 ("
+#assume#:8
+6
+	 ( "#set-field# __collection_size:Bint&
+$
+	 (!"#array-add-last#:&
+$
+	 (""#array-add-last#:&
+$
+	 (#"#array-add-last#:'
+%
+ (%"#unknown-value#Blist&
+$
+ (&"
+#is-exact#:%Bbool
+
+ ('"
+#assume#:&8
+6
+ (("#set-field# __collection_size:%Bint&
+$
+ ()"#array-add-last#:%&
+$
+ (*"#array-add-last#:%$&
+$
+ (+"#array-add-last#:%$'
+%
+ (,"#unknown-value#Blist&
+$
+ (-"
+#is-exact#:,Bbool
+
+ (."
+#assume#:-8
+6
+ (/"#set-field# __collection_size:,Bint&
+$
+ (0"#array-add-last#:,$&
+$
+ (1"#array-add-last#:,$&
+$
+ (2"#array-add-last#:,'
+%
+ (3"#unknown-value#Blist&
+$
+ (4"
+#is-exact#:3Bbool
+
+ (5"
+#assume#:48
+6
+ (6"#set-field# __collection_size:3Bint&
+$
+ (7"#array-add-last#:3&
+$
+ (8"#array-add-last#:3&
+$
+ (9"#array-add-last#:3'
+%
+ (:"#unknown-value#Blist&
+$
+ (;"
+#is-exact#::Bbool
+
+ (<"
+#assume#:;8
+6
+ (="#set-field# __collection_size::Bint&
+$
+ (>"#array-add-last#::%&
+$
+ (?"#array-add-last#::,&
+$
+ (@"#array-add-last#::3'
+%
+ (B"#unknown-value#Blist&
+$
+ (C"
+#is-exact#:BBbool
+
+ (D"
+#assume#:C8
+6
+ (E"#set-field# __collection_size:BBint&
+$
+ (F"#array-add-last#:BA&
+$
+ (G"#array-add-last#:BA&
+$
+ (H"#array-add-last#:BA&
+$
+ (I"#array-add-last#:BA'
+%
+ (J"#unknown-value#Blist&
+$
+ (K"
+#is-exact#:JBbool
+
+ (L"
+#assume#:K8
+6
+ (M"#set-field# __collection_size:JBint&
+$
+ (N"#array-add-last#:J&
+$
+ (O"#array-add-last#:J&
+$
+ (P"#array-add-last#:J&
+$
+ (Q"#array-add-last#:J'
+%
+ (R"#unknown-value#Blist&
+$
+ (S"
+#is-exact#:RBbool
+
+ (T"
+#assume#:S8
+6
+ (U"#set-field# __collection_size:RBint&
+$
+ (V"#array-add-last#:R&
+$
+ (W"#array-add-last#:R&
+$
+ (X"#array-add-last#:R&
+$
+ (Y"#array-add-last#:R'
+%
+ (Z"#unknown-value#Blist&
+$
+ (["
+#is-exact#:ZBbool
+
+ (\"
+#assume#:[8
+6
+ (]"#set-field# __collection_size:ZBint&
+$
+ (^"#array-add-last#:Z&
+$
+ (_"#array-add-last#:Z&
+$
+ (`"#array-add-last#:Z&
+$
+ (a"#array-add-last#:Z'
+%
+ (b"#unknown-value#Blist&
+$
+ (c"
+#is-exact#:bBbool
+
+ (d"
+#assume#:c8
+6
+ (e"#set-field# __collection_size:bBint&
+$
+ (f"#array-add-last#:bB&
+$
+ (g"#array-add-last#:bJ&
+$
+ (h"#array-add-last#:bR&
+$
+ (i"#array-add-last#:bZ'
+%
+ (k"#unknown-value#Blist&
+$
+ (l"
+#is-exact#:kBbool
+
+ (m"
+#assume#:l8
+6
+ (n"#set-field# __collection_size:kBint&
+$
+ (o"#array-add-last#:kj&
+$
+ (p"#array-add-last#:k&
+$
+ (q"#array-add-last#:k'
+%
+ (r"#unknown-value#Blist&
+$
+ (s"
+#is-exact#:rBbool
+
+ (t"
+#assume#:s8
+6
+ (u"#set-field# __collection_size:rBint&
+$
+ (v"#array-add-last#:rj&
+$
+ (w"#array-add-last#:rj&
+$
+ (x"#array-add-last#:rj'
+%
+ (y"#unknown-value#Blist&
+$
+ (z"
+#is-exact#:yBbool
+
+ ({"
+#assume#:z8
+6
+ (|"#set-field# __collection_size:yBint&
+$
+ (}"#array-add-last#:y&
+$
+ (~"#array-add-last#:y&
+$
+ ("#array-add-last#:y(
+&
+ (Ä"#unknown-value#Blist(
+&
+ (Å"
+#is-exact#:ÄBbool
+
+ (Ç"
+#assume#:Å:
+8
+ (É"#set-field# __collection_size:ÄBint(
+&
+ (Ñ"#array-add-last#:Äk(
+&
+ (Ö"#array-add-last#:Är(
+&
+ (Ü"#array-add-last#:Äy(
+&
+ (à"#unknown-value#Blist(
+&
+ (â"
+#is-exact#:àBbool
+
+ (ä"
+#assume#:â:
+8
+ (ã"#set-field# __collection_size:àBint(
+&
+ (å"#array-add-last#:à)
+'
+ (ç"#array-add-last#:àá)
+'
+ (é"#array-add-last#:àá(
+&
+ (è"#unknown-value#Blist(
+&
+ (ê"
+#is-exact#:èBbool
+
+ (ë"
+#assume#:ê:
+8
+ (í"#set-field# __collection_size:èBint)
+'
+ (ì"#array-add-last#:èá)
+'
+ (î"#array-add-last#:èá(
+&
+ (ï"#array-add-last#:è(
+&
+ (ñ"#unknown-value#Blist(
+&
+ (ó"
+#is-exact#:ñBbool
+
+ (ò"
+#assume#:ó:
+8
+ (ô"#set-field# __collection_size:ñBint(
+&
+ (ö"#array-add-last#:ñ(
+&
+ (õ"#array-add-last#:ñ(
+&
+ (ú"#array-add-last#:ñ(
+&
+ (ù"#unknown-value#Blist(
+&
+ (û"
+#is-exact#:ùBbool
+
+ (ü"
+#assume#:û:
+8
+ (†"#set-field# __collection_size:ùBint)
+'
+ (°"#array-add-last#:ùà)
+'
+ (¢"#array-add-last#:ùè)
+'
+ (£"#array-add-last#:ùñ(
+&
+ (•"#unknown-value#Blist(
+&
+ (¶"
+#is-exact#:•Bbool
+
+ (ß"
+#assume#:¶:
+8
+ (®"#set-field# __collection_size:•Bint)
+'
+ (©"#array-add-last#:•§)
+'
+ (™"#array-add-last#:•§(
+&
+ (´"#array-add-last#:•(
+&
+ (¨"#unknown-value#Blist(
+&
+ (≠"
+#is-exact#:¨Bbool
+
+ (Æ"
+#assume#:≠:
+8
+ (Ø"#set-field# __collection_size:¨Bint(
+&
+ (∞"#array-add-last#:¨)
+'
+ (±"#array-add-last#:¨§)
+'
+ (≤"#array-add-last#:¨§(
+&
+ (≥"#unknown-value#Blist(
+&
+ (¥"
+#is-exact#:≥Bbool
+
+ (µ"
+#assume#:¥:
+8
+ (∂"#set-field# __collection_size:≥Bint(
+&
+ (∑"#array-add-last#:≥(
+&
+ (∏"#array-add-last#:≥(
+&
+ (π"#array-add-last#:≥(
+&
+ (∫"#unknown-value#Blist(
+&
+ (ª"
+#is-exact#:∫Bbool
+
+ (º"
+#assume#:ª:
+8
+ (Ω"#set-field# __collection_size:∫Bint)
+'
+ (æ"#array-add-last#:∫•)
+'
+ (ø"#array-add-last#:∫¨)
+'
+ (¿"#array-add-last#:∫≥(
+&
+ (¬"#unknown-value#Blist(
+&
+ (√"
+#is-exact#:¬Bbool
+
+ (ƒ"
+#assume#:√:
+8
+ (≈"#set-field# __collection_size:¬Bint)
+'
+ (∆"#array-add-last#:¬¡)
+'
+ («"#array-add-last#:¬¡)
+'
+ (»"#array-add-last#:¬¡(
+&
+ (…"#unknown-value#Blist(
+&
+ ( "
+#is-exact#:…Bbool
+
+ (À"
+#assume#: :
+8
+ (Ã"#set-field# __collection_size:…Bint(
+&
+ (Õ"#array-add-last#:…)
+'
+ (Œ"#array-add-last#:…¡(
+&
+ (œ"#array-add-last#:…(
+&
+ (–"#unknown-value#Blist(
+&
+ (—"
+#is-exact#:–Bbool
+
+ (“"
+#assume#:—:
+8
+ (”"#set-field# __collection_size:–Bint(
+&
+ (‘"#array-add-last#:–(
+&
+ (’"#array-add-last#:–(
+&
+ (÷"#array-add-last#:–(
+&
+ (◊"#unknown-value#Blist(
+&
+ (ÿ"
+#is-exact#:◊Bbool
+
+ (Ÿ"
+#assume#:ÿ:
+8
+ (⁄"#set-field# __collection_size:◊Bint)
+'
+ (€"#array-add-last#:◊¬)
+'
+ (‹"#array-add-last#:◊…)
+'
+ (›"#array-add-last#:◊–0
+.
+	 (ﬁPIECES"#unknown-value#Blist(
+&
+	 (ﬂ"
+#is-exact#:ﬁBbool
+
+	 (‡"
+#assume#:ﬂ:
+8
+	 (·"#set-field# __collection_size:ﬁBint(
+&
+	 (‚"#array-add-last#:ﬁ(
+&
+	 („"#array-add-last#:ﬁ:(
+&
+	 (‰"#array-add-last#:ﬁb)
+'
+	 (Â"#array-add-last#:ﬁÄ)
+'
+	 (Ê"#array-add-last#:ﬁù)
+'
+	 (Á"#array-add-last#:ﬁ∫)
+'
+	 (Ë"#array-add-last#:ﬁ◊9
+7
+" "(_È
+game_state"?python-unknown?:Blist7
+5
+# #(Íplayer_scores"#unknown-value#Blist(
+&
+# #(Î"
+#is-exact#:ÍBbool
+
+# #(Ï"
+#assume#:Î:
+8
+# #(Ì"#set-field# __collection_size:ÍBint(
+&
+# #(Ó"#array-add-last#:Í(
+&
+# #(Ô"#array-add-last#:Í(
+&
+# #("#array-add-last#:Í8
+6
+$ $(#Òcurrent_pieces"#unknown-value#Blist(
+&
+$ $(#Ú"
+#is-exact#:ÒBbool
+
+$ $(#Û"
+#assume#:Ú:
+8
+$ $(#Ù"#set-field# __collection_size:ÒBint(
+&
+$ $(#ı"#array-add-last#:Ò (
+&
+$ $(#ˆ"#array-add-last#:Ò (
+&
+$ $(#˜"#array-add-last#:Ò (
+&
+% %(¯"#unknown-value#Blist(
+&
+% %(˘"
+#is-exact#:¯Bbool
+
+% %(˙"
+#assume#:˘:
+8
+% %(˚"#set-field# __collection_size:¯Bint(
+&
+% %(¸"#array-add-last#:¯(
+&
+% %(˝"#array-add-last#:¯(
+&
+% %(!˛"#unknown-value#Blist(
+&
+% %(!ˇ"
+#is-exact#:˛Bbool
+
+% %(!Ä"
+#assume#:ˇ:
+8
+% %(!Å"#set-field# __collection_size:˛Bint(
+&
+% %(!Ç"#array-add-last#:˛(
+&
+% %(!É"#array-add-last#:˛(
+&
+%# %()Ñ"#unknown-value#Blist(
+&
+%# %()Ö"
+#is-exact#:ÑBbool
+
+%# %()Ü"
+#assume#:Ö:
+8
+%# %()á"#set-field# __collection_size:ÑBint(
+&
+%# %()à"#array-add-last#:Ñ(
+&
+%# %()â"#array-add-last#:Ñ9
+7
+% %(*äpiece_positions"#unknown-value#Blist(
+&
+% %(*ã"
+#is-exact#:äBbool
+
+% %(*å"
+#assume#:ã:
+8
+% %(*ç"#set-field# __collection_size:äBint)
+'
+% %(*é"#array-add-last#:ä¯)
+'
+% %(*è"#array-add-last#:ä˛)
+'
+% %(*ê"#array-add-last#:äÑ9
+7
+& &(ëpiece_rotations"#unknown-value#Blist(
+&
+& &(í"
+#is-exact#:ëBbool
+
+& &(ì"
+#assume#:í:
+8
+& &(î"#set-field# __collection_size:ëBint(
+&
+& &(ï"#array-add-last#:ë(
+&
+& &(ñ"#array-add-last#:ë(
+&
+& &(ó"#array-add-last#:ë
+
+) G("‘$*"øpiece_rotations ë„$*"πpiece_positions ä‚*±PIECES ﬁ·*©random ﬂ‡#*!£current_pieces Òﬁ"* ¡player_scores Í›*¿BOARD_WIDTH ÷*ø
+game_state Èœ *ΩBOARD_HEIGHT Œ"
+) )(
+ò *) )(H"±&
+$
++ +(ô"#new-object#Brange:
+8
++ +(ö"
+range__init__* :ôA  BNoneTypeH9
+7
++ +(õ"
+builtinsiter*:ôBtyping.Iterator
++ +(" "é$*"¿piece_rotationsø	¡$*"∫piece_positionsπ	ª*≤PIECES±	≥*™random©	´#*!§current_pieces£	•"* ºplayer_scores¡	∂ *ªBOARD_WIDTH¿	≥*∫
+game_stateø	¶!*üBOARD_HEIGHTΩ	æ4
+2
++ +(ú"
+builtins
+__has_next*:õBbool"
++ +(ú *+ +(H"î5
+3
+, 3(ùplayer"
+builtinsnext*:õBint&
+$
+, ,(0û"#new-object#Brange'
+%
+, ,('†"	#binop -#*2-:ü=
+;
+, ,(0¢"
+range__init__* :û†°°BNoneTypeH9
+7
+, ,(0£"
+builtinsiter*:ûBtyping.Iterator
+, ,(0"±&
+$
+3 3(¬"#new-object#Brange:
+8
+3 3(√"
+range__init__* :¬A  BNoneTypeH9
+7
+3 3(ƒ"
+builtinsiter*:¬Btyping.Iterator
+3 3("´$*"¡piece_rotations¿¡$*"ªpiece_positions∫ª*≥PIECES≤≥*´random™´#*!•current_pieces§•!*æBOARD_HEIGHTüæ"* ∂player_scoresº∂ *≥BOARD_WIDTHª≥*ßplayerùß*¶
+game_state∫¶4
+2
+, ,(0§"
+builtins
+__has_next*:£Bbool"
+, ,(0§ 	*, ,(H"–0
+.
+- 3(•y"
+builtinsnext*:£Bint%
+#
+- -(%®"#array-read#:¶ß%
+#
+- -((©"#array-read#:®•-
++
+- -()™"
+builtinsall*:©Bbool"
+- -()™
+ *- -("	"°
+%
+#
+. .("´"#array-read#:¶ß"
+ 
+. .()¨"pop* :´•H%
+#
+/ /("≠"#array-read#:¶ß(
+&
+/- /(0Æ"#unknown-value#Blist(
+&
+/- /(0Ø"
+#is-exact#:ÆBbool
+
+/- /(0∞"
+#assume#:Ø:
+8
+/- /(0±"#set-field# __collection_size:ÆBint(
+&
+/- /(0≤"#array-add-last#:Æ(
+&
+/- /(>¥"	#binop *#*2*:Æ≥&
+$
+/ /(?µ"insert* :≠¥H%
+#
+0 0(%∑"#array-read#:∂ß'
+%
+0 0(*∏"	#binop +#*2+:∑(
+&
+0 0(*π"#array-write#:∂ß∏""é"* ◊player_scoresº‹ *–BOARD_WIDTHª’*ö
+game_state∫Õ!*⁄BOARD_HEIGHTüÀ$*"÷piece_rotations¿∆$*"‘piece_positions∫æ*ÀPIECES≤∏* random™∞#*!«current_pieces§®4
+2
+3 3(≈"
+builtins
+__has_next*:ƒBbool"
+3 3(≈ *3 3(H"≠5
+3
+4 G(∆player"
+builtinsnext*:ƒBint%
+#
+4 4(!»"#array-read#:«∆,
+*
+4 4()…"
+#binop ==#2==:» Bbool"
+4 4()… *4 4(
+"Ω$*"„piece_rotations÷ƒ$*"‚piece_positions‘º*·PIECESÀ∂*‡random Æ#*!ﬁcurrent_pieces«¶"* ›player_scores◊⁄ *÷BOARD_WIDTH–”*œ
+game_stateöú!*ŒBOARD_HEIGHT⁄…"±%
+#
+5% 5(:Ã"choice* : ÀH(
+&
+5 5(:Õ"#array-write#:«∆Ã(
+&
+6& 6(,Œ"#unknown-value#Blist(
+&
+6& 6(,œ"
+#is-exact#:ŒBbool
+
+6& 6(,–"
+#assume#:œ:
+8
+6& 6(,—"#set-field# __collection_size:ŒBint(
+&
+6& 6(,“"#array-add-last#:Œ(
+&
+6& 6(,”"#array-add-last#:Œj(
+&
+6 6(,’"#array-write#:‘∆Œ'
+%
+7 7('◊"#array-write#:÷∆"∫%
+#
+: :("ÿ"#array-read#:‘∆$
+"
+: :(%Ÿ"#array-read#:ÿ'
+%
+:( :(8€"	#binop -#*2-:⁄+
+)
+: :(8‹"	#binop <#2<:Ÿ€Bbool"
+: :(8‹ "™#
+!
+	:A :(À›"#unknown-value#*
+(
+
+:œ :(“ﬁ"#unknown-value#Blist*
+(
+
+:œ :(“ﬂ"
+#is-exact#:ﬁBbool!
+
+
+:œ :(“‡"
+#assume#:ﬂ<
+:
+
+:œ :(“·"#set-field# __collection_size:ﬁBint*
+(
+
+:œ :(“‚"#array-add-last#:ﬁ'
+%
+
+:Ÿ :(Ô„"#array-read#:«∆&
+$
+
+:Ÿ :(Ú‰"#array-read#:„.
+,
+
+:’ :(ÛÂ"
+builtinslen*:‰Bint*
+(
+
+:œ :(ÛÊ"	#binop *#*2*:ﬁÂ.
+,
+	:A :(ÛÁ"
+#binop ==#2==:›ÊBbool.
+,
+	:= :(ÙË"
+builtinsall*:ÁBbool
+	: :(Ù"A*È‹Ë("&
+	: :(ÙÈ *: :(
+2< <("Œ%
+#
+; ;(#Í"#array-read#:‘∆$
+"
+; ;(&Î"#array-read#:Í'
+%
+; ;(+Ï"	#binop +#*2+:Î%
+#
+; ;(#Ì"#array-read#:‘∆'
+%
+; ;(+Ó"#array-write#:ÌÏ"á&
+$
+> >(7Ô"#new-object#Brange%
+#
+> >(5"#array-read#:«∆,
+*
+> >(6Ò"
+builtinslen*:Bint;
+9
+> >(7Ú"
+range__init__* :ÔÒ  BNoneTypeH9
+7
+> >(7Û"
+builtinsiter*:ÔBtyping.Iterator
+> >(7"´"* ÿplayer_scores◊Ÿ *—BOARD_WIDTH–“!*«BOARD_HEIGHT⁄»$*"¬piece_rotations÷√*¥PIECESÀµ*¨random ≠$*"ôpiece_positions‘å*ò
+game_stateöä*¯player∆Å#*!˜current_pieces«Ä4
+2
+> >(7Ù"
+builtins
+__has_next*:ÛBbool"
+> >(7Ù *> >(H"‡0
+.
+? B(ıy"
+builtinsnext*:ÛBint&
+$
+? ?(>ˆ"#new-object#Brange%
+#
+?# ?(9˘"#array-read#:˜¯%
+#
+?# ?(<˙"#array-read#:˘ı,
+*
+? ?(=˚"
+builtinslen*:˙Bint;
+9
+? ?(>¸"
+range__init__* :ˆ˚  BNoneTypeH9
+7
+? ?(>˝"
+builtinsiter*:ˆBtyping.Iterator
+? ?(>"1'
+%
+B B()õ"#array-write#:˜¯ "√"* Ÿplayer_scoresÿŸ *“BOARD_WIDTH—“!*»BOARD_HEIGHT«»$*"√piece_rotations¬√*µPIECES¥µ*≠random¨≠$*"åpiece_positionsôå*ä
+game_stateòä*ÉyıÉ*Åplayer¯Å#*!Äcurrent_pieces˜Ä4
+2
+? ?(>˛"
+builtins
+__has_next*:˝Bbool"
+? ?(>˛ *? ?(H"ı0
+.
+@ B(ˇx"
+builtinsnext*:˝Bint%
+#
+@ @(-Ç"#array-read#:ÄÅ%
+#
+@ @(0Ñ"#array-read#:ÇÉ%
+#
+@ @(3Ö"#array-read#:Ñˇ+
+)
+@ @(3Ü"
+__bool__*:ÖBboolH"
+@ @(3Ü *@ @(""Ê'
+%
+
+Aã A(°á"#array-read#:ÄÅ'
+%
+
+Aã A(§à"#array-read#:áÉ'
+%
+
+Aã A(ßâ"#array-read#:àˇ%
+#
+A A(*ã"#array-read#:äÅ%
+#
+A+ A(Bç"#array-read#:åÅ$
+"
+A+ A(Eé"#array-read#:ç%
+#
+AL A(bè"#array-read#:ÄÅ,
+*
+AH A(cê"
+builtinslen*:èBint(
+&
+A+ A(cë"	#binop -#*2-:éê%
+#
+A+ A(gí"	#binop +#2+:ëÉ%
+#
+A A(hì"#array-read#:ãí&
+$
+	Ai A(Äî"#array-read#:åÅ%
+#
+	Ai A(Éï"#array-read#:î&
+$
+	Ai A(áñ"	#binop +#2+:ïˇ)
+'
+	A A(ßó"#array-write#:ìñâ""Ô"* ⁄player_scores◊ÿ *”BOARD_WIDTH–—!*…BOARD_HEIGHT⁄«$*"ƒpiece_rotations÷¬$*"ºpiece_positions‘ô*∂PIECESÀ¥*Ærandom ¨#*!¶current_pieces«˜*ùplayer∆¯*ú
+game_stateöò%
+#
+E E(!û"#array-read#:úù$
+"
+E E($ü"#array-read#:û-
++
+E E(%†"
+builtinsany*:üBbool"
+E E(%† *E E(
+"G3
+1
+F F(3¢"
+builtinsprint*:°BNoneType
+G G("Ω"* ‹player_scores⁄ € *’BOARD_WIDTH” ‘*Õ
+game_stateú Ã!*ÀBOARD_HEIGHT…  $*"∆piece_rotationsƒ ≈$*"æpiece_positionsº Ω*∏PIECES∂ ∑*∞randomÆ Ø#*!®current_pieces¶ ß"Ã "
+ 
+) )(
+€"#unknown-value#"
+ 
+) )(
+‘"#unknown-value#"
+ 
+3 3(Ã"#unknown-value#"
+ 
+3 3( "#unknown-value#"
+ 
+3 3(≈"#unknown-value#"
+ 
+3 3(Ω"#unknown-value#"
+ 
+3 3(∑"#unknown-value#"
+ 
+3 3(Ø"#unknown-value#"
+ 
+3 3(ß"#unknown-value#*JC:\Users\DELL 5520\Documents\GitHub\SecurityContextofLLMCode\Claude\151.py

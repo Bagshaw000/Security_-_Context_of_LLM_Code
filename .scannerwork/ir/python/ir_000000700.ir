@@ -1,0 +1,45 @@
+
+-50000int
+	150000int
+1000000int
+2000000int
+-100000int
+800000int
+100000int
+50000int"ø'
+%
+ (revenue"#id#:Bint(
+&
+ (expenses"#id#:Bint&
+$
+ (assets"#id#:Bint+
+)
+ (liabilities"#id#:Bint&
+$
+ (equity"#id#:Bint3
+1
+ ( 
+operating_cash_flow"#id#:	Bint3
+1
+ ( investing_cash_flow"#id#:Bint3
+1
+ (!financing_cash_flow"#id#:BintE
+C
+ (Cincome_statement"
+72generate_income_statement:@
+>
+ (Gbalance_sheet"
+72generate_balance_sheet:L
+J
+ (ucash_flow_statement""
+72generate_cash_flow_statement:
+(
+&
+   (?"#unknown-value#Btuple&
+$
+   (?"#array-add-last#:&
+$
+   (?"#array-add-last#:&
+$
+   (?"#array-add-last#:
+   (?*IC:\Users\DELL 5520\Documents\GitHub\SecurityContextofLLMCode\Claude\72.py

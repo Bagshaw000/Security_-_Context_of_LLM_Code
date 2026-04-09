@@ -1,0 +1,96 @@
+
+
+1int
+
+0intn (list	tuple"J*
+(
+ ("
+#binop ==#2==:Bbool"
+ ( * ("²(
+&
+ ("#unknown-value#Btuple&
+$
+ ("
+#is-exact#:Bbool
+
+ ("
+#assume#:8
+6
+ (	"#set-field# __collection_size:Bint&
+$
+ (
+"#array-add-last#:&
+$
+ ("#array-add-last#:(
+&
+ ("#unknown-value#Btuple&
+$
+ ("
+#is-exact#:Bbool
+
+ ("
+#assume#:8
+6
+ ("#set-field# __collection_size:Bint&
+$
+ ("#array-add-last#:'
+%
+ ("#unknown-value#Blist&
+$
+ ("
+#is-exact#:Bbool
+
+ ("
+#assume#:8
+6
+ ("#set-field# __collection_size:Bint&
+$
+ ("#array-add-last#:
+ ("þ"
+ 
+ ("?python-unknown?8
+6
+ ("#set-field# __collection_size:Bint2
+0
+ (shapes"
+builtinsset*:Bset(
+&
+ (%closure"#new-object#(
+&
+ ("#set-field# shapes:+
+)
+ ("?python-partial-apply?:(
+&
+ ("#unknown-value#Btuple&
+$
+ ("
+#is-exact#:Bbool
+
+ ("
+#assume#:8
+6
+ ( "#set-field# __collection_size:Bint&
+$
+ (!"#array-add-last#:&
+$
+ (""#array-add-last#:'
+%
+ (#"#unknown-value#Blist&
+$
+ ($"
+#is-exact#:#Bbool
+
+ (%"
+#assume#:$8
+6
+ (&"#set-field# __collection_size:#Bint&
+$
+ ('"#array-add-last#:#%
+#
+ (("	#binop -#*2-:6
+4
+ ( )""
+187.generate_shapesbuild_shape:#(+
+)
+ (&*"?python-unknown?:Blist
+ (&**GC:\Users\DELL 5520\Documents\GitHub\SecurityContextofLLMCode\GPT\187.py

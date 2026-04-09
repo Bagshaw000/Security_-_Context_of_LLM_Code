@@ -1,0 +1,70 @@
+
+ "Bearer {self.api_key}"str
+#"{self.base_url}/workouts"str
+"Authorization"str
+
+"end_date"str
+"start_date"strself (
+start_date (+end_date- (:"í#
+!
+ ()url"#id#:Bstr-
++
+ (=headers"#new-object#Bdict 
+
+ (<	"	#map-set#:,
+*
+ (
+params"#new-object#Bdict)
+'
+ ("
+__bool__*:BboolH"
+ ( * (
+".$
+"
+ (-"#array-write#:
+"K)
+'
+ ("
+__bool__*:BboolH"
+ ( * (
+".$
+"
+ ()"#array-write#:
+"¶!
+
+ (D"#unknown-value#!
+
+ (D"#unknown-value#!
+
+ (D"#unknown-value#!
+
+ (D"#unknown-value#!
+
+ (D"#unknown-value#'
+%
+ (D"#unknown-value#Bbool!
+
+ (D"#unknown-value#!
+
+ (D"#unknown-value#!
+
+ (D"#unknown-value#!
+
+ (D"#unknown-value#!
+
+ (D"#unknown-value#!
+
+ (D"#unknown-value#X
+V
+ (Dresponse"
+requests.apiget:
+Brequests.models.Response%
+#
+ ('"#get-field# text:,
+*
+ ('"?python-partial-apply?:!
+
+ ( "#unknown-value#&
+$
+ ((!"?python-unknown?: 
+ ((!*JC:\Users\DELL 5520\Documents\GitHub\SecurityContextofLLMCode\Claude\106.py

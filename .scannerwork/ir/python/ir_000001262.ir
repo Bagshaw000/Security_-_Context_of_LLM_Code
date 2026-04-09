@@ -1,0 +1,52 @@
+
+ 
+"Bearer {self.api_key}"str
+#"{self.base_url}/workouts"str
+"application/json"str
+"Content-Type"str
+	"Authorization"strself (workout_data (&"Í#
+!
+ ()url"#id#:Bstr-
++
+ (aheaders"#new-object#Bdict 
+
+ (5"	#map-set#: 
+
+7 (`"	#map-set#:	
+!
+
+ (I"#unknown-value#!
+
+ (I"#unknown-value#!
+
+ (I"#unknown-value#!
+
+ (I"#unknown-value#!
+
+ (I"#unknown-value#!
+
+ (I"#unknown-value#'
+%
+ (I"#unknown-value#Bbool!
+
+ (I"#unknown-value#!
+
+ (I"#unknown-value#!
+
+ (I"#unknown-value#!
+
+ (I"#unknown-value#!
+
+ (I"#unknown-value#Y
+W
+ (Iresponse"
+requests.apipost:Brequests.models.Response%
+#
+ ('"#get-field# text:,
+*
+ ('"?python-partial-apply?:!
+
+ ("#unknown-value#&
+$
+ (("?python-unknown?:
+ ((*JC:\Users\DELL 5520\Documents\GitHub\SecurityContextofLLMCode\Claude\106.py

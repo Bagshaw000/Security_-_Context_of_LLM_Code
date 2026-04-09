@@ -1,0 +1,33 @@
+
+"Total Equity"str
+"Total Liabilities"str
+
+"Liabilities"str
+"Assets"str
+"Total Assets"str
+"Equity"strassets (!liabilities# (.equity0 (6"¦3
+1
+ (total_assets"
+builtinssum*:8
+6
+ ((total_liabilities"
+builtinssum*:3
+1
+ (total_equity"
+builtinssum*:$
+"
+ ("#new-object#Bdict 
+
+ (	"	#map-set#: 
+
+ (""	#map-set#:
+ 
+
+ ("	#map-set#: 
+
+ ($"	#map-set#: 
+
+ (."	#map-set#: 
+
+ ($"	#map-set#:
+ (*IC:\Users\DELL 5520\Documents\GitHub\SecurityContextofLLMCode\Claude\69.py

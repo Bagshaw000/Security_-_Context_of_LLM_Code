@@ -1,0 +1,103 @@
+
+113.WorkoutTracker.import_dataT
+JC:\Users\DELL 5520\Documents\GitHub\SecurityContextofLLMCode\Claude\113.py	 	("2*¨
+2
+ 
+(î
+ë
+
+ 
+(
+%6"	__compare*"
+
+__unknown_file (
+==*(
+
+__unknown_file (
+
+
+app_name*&
+
+__unknown_file (
+
+Fitbit*
+4
+8*,
+3
+113.py"
+ (
+implicit return*û
+4 (1âÜ
+ (1
+%1*2
+
+__unknown_file (
+113.WorkoutTracker*,
+
+__unknown_file (
+
+access_token2import_fitbit_data*
+3*§
+5 (7èå
+ (7
+%2*2
+
+__unknown_file (
+113.WorkoutTracker*,
+
+__unknown_file (
+
+access_token2import_apple_health_data*
+3*≤
+6 ('ö
+ó
+ ('
+%3"	__compare*"
+
+__unknown_file (
+==*(
+
+__unknown_file (
+
+
+app_name*,
+
+__unknown_file (
+Apple Health*
+3
+5*û
+7 (1âÜ
+ (1
+%4*2
+
+__unknown_file (
+113.WorkoutTracker*,
+
+__unknown_file (
+
+access_token2import_strava_data*
+3*¨
+8 (!î
+ë
+ (!
+%5"	__compare*"
+
+__unknown_file (
+==*(
+
+__unknown_file (
+
+
+app_name*&
+
+__unknown_file (
+
+Strava*
+6
+7:
+	 	("
+
+app_name:
+	$ 	(0
+access_tokenB
+113.WorkoutTrackerH

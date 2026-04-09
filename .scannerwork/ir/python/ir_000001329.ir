@@ -1,0 +1,27 @@
+
+
+"Revenues"str
+	
+"Expenses"str
+"Net Income"strrevenues (&expenses( (0"ù%
+#
+ ("
+builtinssum*:%
+#
+! (."
+builtinssum*:1
+/
+ (.
+net_income"	#binop -#*2-:$
+"
+ ("#new-object#Bdict 
+
+ ("	#map-set#: 
+
+	 	(
+"	#map-set#:	 
+
+
+ 
+( "	#map-set#:
+ (*IC:\Users\DELL 5520\Documents\GitHub\SecurityContextofLLMCode\Claude\69.py

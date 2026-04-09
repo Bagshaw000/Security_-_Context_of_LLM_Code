@@ -1,0 +1,52 @@
+
+ "Bearer {self.api_key}"str
+"Authorization"str
+6-"{self.base_url}/import/{app_name}/{user_id}"strself	 	(app_name	 	("user_id	$ 	(+"Í#
+!
+
+ 
+(<url"#id#:Bstr-
++
+ (=headers"#new-object#Bdict 
+
+ (<	"	#map-set#:!
+
+ (5
+"#unknown-value#!
+
+ (5"#unknown-value#!
+
+ (5"#unknown-value#!
+
+ (5"#unknown-value#!
+
+ (5"#unknown-value#!
+
+ (5"#unknown-value#'
+%
+ (5"#unknown-value#Bbool!
+
+ (5"#unknown-value#!
+
+ (5"#unknown-value#!
+
+ (5"#unknown-value#!
+
+ (5"#unknown-value#!
+
+ (5"#unknown-value#!
+
+ (5"#unknown-value#X
+V
+ (5response"
+requests.apiget:
+Brequests.models.Response%
+#
+ ('"#get-field# text:,
+*
+ ('"?python-partial-apply?:!
+
+ ("#unknown-value#&
+$
+ (("?python-unknown?:
+ ((*JC:\Users\DELL 5520\Documents\GitHub\SecurityContextofLLMCode\Claude\106.py

@@ -1,0 +1,71 @@
+
+252.DeepNeuralNetworkT
+JC:\Users\DELL 5520\Documents\GitHub\SecurityContextofLLMCode\Claude\252.py ("2*¬
+2 ($g
+e
+ ($'
+252.DeepNeuralNetwork"
+
+input_size"__id**
+
+__unknown_file (
+
+
+input_sizek
+i
+ (()
+252.DeepNeuralNetwork"
+hidden_sizes"__id*,
+
+__unknown_file (
+
+hidden_sizesi
+g
+ (&(
+252.DeepNeuralNetwork"
+output_size"__id*+
+
+__unknown_file (
+
+output_size
+ (
+%2"list\
+Z
+ ($
+252.DeepNeuralNetwork"	
+weights"__id*"
+
+__unknown_file (
+
+%2
+ (
+%3"list[
+Y
+ (#
+252.DeepNeuralNetwork"
+biases"__id*"
+
+__unknown_file (
+
+%3hf
+ (,
+%4*5
+
+__unknown_file (
+252.DeepNeuralNetwork2initialize_weights_and_biases*
+3*H
+3
+252.py'%
+ (
+%1"252.DeepNeuralNetwork"
+ (
+
+%1:
+ (!
+
+input_size:
+# (/
+hidden_sizes:
+1 (<
+output_sizeB
+252.DeepNeuralNetworkH
