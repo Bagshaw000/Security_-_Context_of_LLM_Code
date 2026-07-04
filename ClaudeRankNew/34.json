@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a production-grade chess position evaluation system with enterprise-level security and performance standards",
+  "complexity": "Hard",
+  "rationale": "This task demands Hard-level expertise across multiple dimensions critical to Brad's background: (1) **Distributed Systems Design** - requires stateless service architecture, horizontal scaling, caching strategies, and multi-tiered deployment patterns Brad uses daily at Amazon; (2) **Complex Algorithms** - move generation with legality checking and position evaluation requires deep algorithmic knowledge; (3) **Security & Compliance** - input validation, overflow prevention, immutability guarantees, and audit logging align with enterprise standards Brad enforces; (4) **Performance Engineering** - sub-millisecond latency optimization and horizontal scaling demand systems-level thinking; (5) **Concurrency Handling** - designing immutable state for race-condition prevention in distributed environments; (6) **Observability** - metrics and monitoring instrumentation for production systems. While Brad possesses the foundational knowledge (OOP, data structures, algorithms, distributed systems), the synthesis of chess domain logic with production-grade distributed system requirements, security hardening, and performance optimization at scale creates genuine complexity beyond routine implementation."
+}
+```

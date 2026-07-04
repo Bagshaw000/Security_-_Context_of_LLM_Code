@@ -1,0 +1,7 @@
+```
+{
+  "task": "Implement a robust gradient ascent algorithm with input validation, numerical stability safeguards, and comprehensive unit testing.",
+  "complexity": "Medium",
+  "rationale": "While John has the theoretical background from his CS degree and Python experience, this task requires combining mathematical optimization with production-level engineering. Managing numerical instabilities and edge cases for a robust implementation is more complex than standard application logic but well within the reach of a high-achieving junior engineer."
+}
+```

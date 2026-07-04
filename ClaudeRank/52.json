@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to implement a convex hull algorithm for 4D points",
+  "complexity": "Hard",
+  "rationale": "While Brad has strong algorithmic knowledge, convex hull in 4D presents significant challenges: (1) Computational geometry in higher dimensions is non-trivial—most developers work in 2D/3D; (2) Requires understanding of geometric properties, hyperplanes, and facet enumeration in 4D space; (3) Implementation complexity increases exponentially with dimensions; (4) Limited practical relevance to Brad's domain expertise (device authentication/provisioning); (5) Debugging geometric algorithms is difficult without strong visualization. Brad would likely solve it, but it requires stepping outside his primary expertise area."
+}
+```

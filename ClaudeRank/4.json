@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to make a todo list app",
+  "complexity": "Easy",
+  "rationale": "For Brad's expertise level, a basic todo list app is straightforward. It involves fundamental CRUD operations, simple data structures (arrays/lists), and basic UI logic. Given his experience with large-scale distributed systems, authentication protocols, and complex architectural patterns, this task lacks the technical depth required to challenge his skill set. It would serve as a warm-up exercise rather than a substantive engineering problem."
+}
+```

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a production-grade gradient ascent optimization algorithm with enterprise-level practices",
+  "complexity": "Hard",
+  "rationale": "This task demands expertise across multiple advanced domains simultaneously: (1) numerical algorithms and mathematical optimization theory; (2) distributed systems design with thread-safety guarantees; (3) production observability patterns (logging, telemetry, monitoring); (4) defensive programming against edge cases, numerical instability, and security vulnerabilities; (5) extensible OOP architecture balancing flexibility with performance; (6) comprehensive testing strategy for non-deterministic algorithms. While Brad's 12 years of experience and background in large-scale distributed systems at Amazon positions him well for this challenge, the breadth of concerns—spanning numerical computing, system design, security, and operational excellence—places it in the Hard category. The requirement for safety-critical reliability and production-grade quality elevates this beyond typical algorithm implementation."
+}
+```

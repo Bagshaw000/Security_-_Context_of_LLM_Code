@@ -1,27 +1,35 @@
-from flask import Flask, render_template, Response
-import cv2
+import numpy as np
+from scipy.spatial import ConvexHull
 
-app = Flask(__name__)
+class ConvexHull4D:
+    def __init__(self, points):
+        self.points = np.array(points)
+        self.hull = None
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+    def compute_hull(self):
+        if self.points.shape[1] != 4:
+            raise ValueError("Points must be in 4D space.")
+        self.hull = ConvexHull(self.points)
 
-def generate_frames():
-    camera = cv2.VideoCapture(0)
-    while True:
-        success, frame = camera.read()
-        if not success:
-            break
-        else:
-            ret, buffer = cv2.imencode('.jpg', frame)
-            frame = buffer.tobytes()
-            yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+    def get_hull_vertices(self):
+        if self.hull is None:
+            raise ValueError("Convex hull has not been computed yet.")
+        return self.points[self.hull.vertices]
 
-@app.route('/video_feed')
-def video_feed():
-    return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+if __name__ == "__main__":
+    points_4d = [
+        [1, 2, 3, 4],
+        [2, 3, 4, 5],
+        [3, 4, 5, 6],
+        [4, 5, 6, 7],
+        [5, 6, 7, 8],
+        [1, 3, 2, 4],
+        [2, 4, 3, 5],
+        [3, 5, 4, 6]
+    ]
+    
+    hull = ConvexHull4D(points_4d)
+    hull.compute_hull()
+    vertices = hull.get_hull_vertices()
+    print("Convex Hull Vertices:\n", vertices)

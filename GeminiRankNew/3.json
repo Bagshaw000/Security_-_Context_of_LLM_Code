@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Develop a secure, production-ready Todo List application using Python and AWS with robust security controls and unit tests.",
+    "complexity": "Hard",
+    "rationale": "While John has foundational Python and AWS knowledge, the requirement for 'production-ready' security, OWASP compliance, and IAM least-privilege configuration involves advanced architectural and security engineering skills typically beyond a junior's experience level."
+  }
+]
+```

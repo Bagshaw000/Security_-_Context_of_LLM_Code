@@ -1,0 +1,7 @@
+```
+{
+  "task": "Given a set of 2n coins, each biased with a different value for the probability of heads, pick a set of coins that gives the highest probability that when tossed, the number of heads will be n.",
+  "complexity": "Hard",
+  "rationale": "This task involves combinatorial optimization and probability theory, requiring a deep understanding of statistical concepts and potentially complex algorithms to evaluate different combinations of coins. Given John's background, this task may be challenging due to its advanced nature."
+}
+```

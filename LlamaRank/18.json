@@ -1,0 +1,20 @@
+```
+[
+  {
+    "task": "Generating summaries of research papers using an LLM",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Assisting senior developers to build a tool that helps companies track and manage their inventory",
+    "complexity": "Medium"
+  }
+]
+```
+
+For the first task, generating summaries of research papers using an LLM, it's ranked as Hard due to the complexity of:
+
+* Handling large volumes of text data
+* Understanding nuances in research paper content
+* Fine-tuning a large language model for specific tasks
+
+Given John's experience with Python and unit testing, but not specifically with natural language processing (NLP) or large language models, this task is challenging even for him.

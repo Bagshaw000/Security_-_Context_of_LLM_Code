@@ -1,0 +1,7 @@
+```
+{
+  "task": "ATM Network Management System - Logical Flow and Security Design",
+  "complexity": "Hard",
+  "rationale": "Despite being presented in non-technical language, this task requires understanding multiple interconnected systems: (1) monitoring/status tracking, (2) authentication and authorization, (3) data encryption and security, (4) inventory management, (5) audit logging, and (6) cybersecurity principles. Even for a non-programmer, synthesizing these six distinct operational domains, understanding their interdependencies, potential failure points, and security implications requires systems thinking and risk analysis far beyond basic Excel/word processing skills. Harold would need to grasp abstract concepts like authorization levels, encryption, and system vulnerabilities with no prior programming foundation."
+}
+```

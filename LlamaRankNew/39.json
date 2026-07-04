@@ -1,0 +1,16 @@
+```
+[
+    {
+        "task": "Verify LEGO's claim of 6 standard 2x4 bricks being connectible in 915,103,765 combinations",
+        "complexity": "Hard"
+    },
+    {
+        "task": "Implement a heuristic system to classify each combination as 'trivial' or 'complicated', and provide a rating system (e.g., 1-5 stars) for easy interpretation",
+        "complexity": "Medium"
+    }
+]
+```
+
+Ranking rationale:
+- Task 1 is ranked as Hard because it involves generating all possible combinations of the LEGO bricks, which could be computationally intensive. It also requires implementing a heuristic system to classify each combination, which can be challenging.
+- Task 2 is ranked as Medium because while it still requires implementing a complex algorithm, the scope of classification into 'trivial' and 'complicated' categories is not as broad or deep as in task 1. Additionally, providing a rating system adds another layer of complexity but is more manageable than generating all combinations.

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Verify LEGO brick combinations and classify complexity",
+  "complexity": "Hard",
+  "rationale": "This task requires understanding of combinatorics (calculating permutations/combinations), algorithmic thinking to generate or count arrangements, designing a classification heuristic (subjective decision-making in code), and data structure knowledge to store/process large numbers (915+ million). For Harold, these concepts are completely foreign—he would need to learn programming fundamentals, mathematical algorithms, and abstract problem-solving simultaneously."
+}
+```

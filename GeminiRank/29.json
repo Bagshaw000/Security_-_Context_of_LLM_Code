@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to implement a controller system for a network of ATMs",
+  "complexity": "Hard",
+  "rationale": "This is like managing a global library system where every book must be tracked in real-time across hundreds of branches. It requires complex security to prevent theft, constant communication between machines, and ensuring that no errors occur when handling money, which is far beyond the scope of a simple spreadsheet."
+}
+```

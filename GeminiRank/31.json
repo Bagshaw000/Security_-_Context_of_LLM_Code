@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code for a three-player game of Tetris",
+  "complexity": "Hard",
+  "rationale": "As a Principal Engineer, I evaluate this based on distributed systems challenges. While basic Tetris logic is simple, a three-player environment requires robust real-time state synchronization, handling network latency (lag compensation), and managing concurrent inputs. Ensuring a consistent, low-latency experience across three clients moves this from a simple UI exercise to a complex synchronization and messaging problem."
+}
+```

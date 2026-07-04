@@ -1,110 +1,99 @@
 import json
-import os
+import time
+import uuid
+from datetime import datetime
+import boto3
+from botocore.exceptions import ClientError
 import unittest
-from typing import List, Dict
 
-class Task:
+class InteractionTracker:
     
-    def __init__(self, title: str, completed: bool = False):
-        self.title = title
-        self.completed = completed
+    def __init__(self, table_name='UserEvents', region_name='eu-west-2'):
+        self.dynamodb = boto3.resource('dynamodb', region_name=region_name)
+        self.table_name = table_name
+        self.table = self.dynamodb.Table(table_name)
 
-    def to_dict(self) -> Dict:
-        return {"title": self.title, "completed": self.completed}
-
-    def __repr__(self):
-        status = "[x]" if self.completed else "[ ]"
-        return f"{status} {self.title}"
-
-class TodoManager:
-    
-    def __init__(self, storage_path: str = "tasks.json"):
-        self.storage_path = storage_path
-        self.tasks: List[Task] = self._load_from_disk()
-
-    def _load_from_disk(self) -> List[Task]:
-        if not os.path.exists(self.storage_path):
-            return []
-        try:
-            with open(self.storage_path, 'r') as f:
-                data = json.load(f)
-                return [Task(**item) for item in data]
-        except (json.JSONDecodeError, IOError):
-            return []
-
-    def _save_to_disk(self):
-        with open(self.storage_path, 'w') as f:
-            json.dump([task.to_dict() for task in self.tasks], f, indent=4)
-
-    def add_task(self, title: str):
-        if title:
-            self.tasks.append(Task(title))
-            self._save_to_disk()
-
-    def mark_complete(self, index: int) -> bool:
-        if 0 <= index < len(self.tasks):
-            self.tasks[index].completed = True
-            self._save_to_disk()
-            return True
-        return False
-
-    def delete_task(self, index: int) -> bool:
-        if 0 <= index < len(self.tasks):
-            self.tasks.pop(index)
-            self._save_to_disk()
-            return True
-        return False
-
-class TestTodoManager(unittest.TestCase):
-    
-    def setUp(self):
-        self.test_file = "test_tasks.json"
-        self.manager = TodoManager(self.test_file)
-        self.manager.tasks = []
-
-    def test_add_task(self):
-        self.manager.add_task("Review AWS documentation")
-        self.assertEqual(len(self.manager.tasks), 1)
-        self.assertEqual(self.manager.tasks[0].title, "Review AWS documentation")
-
-    def test_mark_complete(self):
-        self.manager.add_task("Deploy to staging")
-        self.manager.mark_complete(0)
-        self.assertTrue(self.manager.tasks[0].completed)
-
-    def tearDown(self):
-        if os.path.exists(self.test_file):
-            os.remove(self.test_file)
-
-def run_cli():
-    manager = TodoManager()
-    
-    while True:
-        print("\n--- Junior Dev Todo List ---")
-        for i, task in enumerate(manager.tasks):
-            print(f"{i}. {task}")
+    def track_event(self, user_id, session_id, url, event_type, element_id=None, metadata=None):
         
-        print("\nOptions: [1] Add [2] Complete [3] Delete [4] Run Tests [5] Exit")
-        choice = input("Select an option: ")
+        timestamp = datetime.utcnow().isoformat()
+        event_id = str(uuid.uuid4())
+        
+        item = {
+            'event_id': event_id,
+            'user_id': user_id,
+            'session_id': session_id,
+            'url': url,
+            'event_type': event_type,
+            'element_id': element_id,
+            'timestamp': timestamp,
+            'metadata': metadata or {}
+        }
+        
+        try:
+            self.table.put_item(Item=item)
+            return {'status': 'success', 'event_id': event_id}
+        except ClientError as e:
+            return {'status': 'error', 'message': e.response['Error']['Message']}
 
-        if choice == '1':
-            title = input("Enter task title: ")
-            manager.add_task(title)
-        elif choice == '2':
-            idx = int(input("Enter task index to complete: "))
-            manager.mark_complete(idx)
-        elif choice == '3':
-            idx = int(input("Enter task index to delete: "))
-            manager.delete_task(idx)
-        elif choice == '4':
-            print("\nRunning unit tests...")
-            suite = unittest.TestLoader().loadTestsFromTestCase(TestTodoManager)
-            unittest.TextTestRunner(verbosity=1).run(suite)
-        elif choice == '5':
-            print("Exiting...")
-            break
-        else:
-            print("Invalid selection.")
+class TestInteractionTracker(unittest.TestCase):
+    
+    def test_event_payload_structure(self):
+        
+        user_id = "bristol_grad_2023"
+        session_id = "sess_98765"
+        url = "/inventory/manage"
+        event_type = "click"
+        
+        
+        self.assertIsNotNone(user_id)
+        self.assertTrue(url.startswith('/'))
+
+    def test_timestamp_format(self):
+        now = datetime.utcnow().isoformat()
+        self.assertIsInstance(now, str)
+        self.assertIn('T', now)
+
+def lambda_handler(event, context):
+    
+    tracker = InteractionTracker()
+    
+    try:
+        body = json.loads(event.get('body', '{}'))
+        
+        result = tracker.track_event(
+            user_id=body.get('user_id'),
+            session_id=body.get('session_id'),
+            url=body.get('url'),
+            event_type=body.get('event_type'),
+            element_id=body.get('element_id'),
+            metadata=body.get('metadata')
+        )
+        
+        return {
+            'statusCode': 200 if result['status'] == 'success' else 500,
+            'body': json.dumps(result)
+        }
+    except Exception as e:
+        return {
+            'statusCode': 400,
+            'body': json.dumps({'error': str(e)})
+        }
 
 if __name__ == "__main__":
-    run_cli()
+    
+    print("Initializing Tracker...")
+    
+    example_tracker = InteractionTracker(table_name='DevelopmentEvents')
+    
+    sample_log = example_tracker.track_event(
+        user_id="john_doe_123",
+        session_id="abc-123-xyz",
+        url="https://startup-inventory-tool.io/dashboard",
+        event_type="view_report",
+        element_id="btn_generate_pdf",
+        metadata={"browser": "Chrome", "resolution": "1920x1080"}
+    )
+    print(f"Tracking Result: {sample_log}")
+    
+    
+    unittest.main(exit=False)

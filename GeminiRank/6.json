@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code for a database for an online bicycle shop",
+  "complexity": "Medium",
+  "rationale": "John has relevant experience with inventory management tools and a CS degree. While he understands the theory, designing a full e-commerce schema with complex relationships (orders, customers, stock) requires careful architecture beyond simple data entry."
+}
+```

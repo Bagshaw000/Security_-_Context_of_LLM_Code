@@ -1,0 +1,6 @@
+
+{
+  "task": "Write code to generate summaries of research papers using an LLM",
+  "complexity": "Hard",
+  "rationale": "This task involves understanding natural language processing, integrating with a large language model (LLM), and handling various input formats and contexts. It requires knowledge of machine learning, API usage, and potentially fine-tuning models, making it complex."
+}

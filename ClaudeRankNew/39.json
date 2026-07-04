@@ -1,0 +1,34 @@
+```
+[
+  {
+    "task": "Verify LEGO brick combination claim (915,103,765 combinations)",
+    "complexity": "Hard",
+    "rationale": "Requires advanced combinatorics knowledge, understanding of constraint-based permutations, and optimizing algorithms to handle ~900M combinations without memory/timeout issues. Despite John's CS background, this exceeds typical junior-level scope."
+  },
+  {
+    "task": "Input validation and error handling",
+    "complexity": "Easy",
+    "rationale": "John has tested code during internship. Basic validation patterns (type checking, boundary conditions) are straightforward for someone with his experience level."
+  },
+  {
+    "task": "Comprehensive unit testing (unittest/pytest)",
+    "complexity": "Easy",
+    "rationale": "Directly aligns with John's stated unit testing experience from internship. Writing test cases for known inputs is within his skillset."
+  },
+  {
+    "task": "Code organization, logging, and documentation",
+    "complexity": "Easy",
+    "rationale": "Standard software engineering practices. His internship exposure to senior developers' code style provides sufficient foundation."
+  },
+  {
+    "task": "Design heuristic classification system for combinations",
+    "complexity": "Medium",
+    "rationale": "Requires defining measurable criteria (stability, connection points, symmetry) and implementing classification logic. More creative than routine coding but doesn't require advanced algorithms—suitable for junior level with guidance."
+  },
+  {
+    "task": "Efficient algorithm design (avoiding memory/timeout)",
+    "complexity": "Hard",
+    "rationale": "Optimizing for ~900M combinations demands deep algorithmic thinking, potentially dynamic programming or memoization strategies beyond typical junior experience."
+  }
+]
+```

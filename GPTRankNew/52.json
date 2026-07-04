@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a robust implementation of a convex hull algorithm tailored for 4D points, ensuring adherence to secure coding practices to mitigate vulnerabilities. Focus on leveraging object-oriented design principles and efficient data structures, while considering scalability and performance in a distributed environment.",
+  "complexity": "Hard",
+  "rationale": "This task involves advanced algorithm design for a higher-dimensional space (4D), which is inherently more complex than 2D or 3D. It requires a deep understanding of computational geometry, secure coding practices to prevent vulnerabilities, and the application of object-oriented design principles. Additionally, considerations for scalability and performance in a distributed system add layers of complexity, making it a challenging task even for an experienced engineer like Brad."
+}
+```

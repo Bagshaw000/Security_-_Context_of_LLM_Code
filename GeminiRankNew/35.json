@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a self-contained chess board evaluator with layout validation and position analysis.",
+  "complexity": "Hard",
+  "rationale": "For a non-programmer, this requires a massive leap from simple cell formulas to complex algorithmic logic. It involves managing 64 data points simultaneously, defining rules for every piece type, and building a scoring system from scratch without external help, which is a high-level software engineering challenge."
+}
+```

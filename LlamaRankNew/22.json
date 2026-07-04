@@ -1,0 +1,31 @@
+```
+[
+  {
+    "task": "Develop a secure and scalable workout tracking app that seamlessly integrates with popular fitness apps",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Develop a secure and scalable workout tracking app that seamlessly integrates with popular fitness apps, utilizing object-oriented design principles, data structures, and algorithms to minimize vulnerabilities.",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Consider integrating industry-standard encryption protocols, such as TLS 1.3",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Implement regular security audits to identify and address potential weaknesses",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Design the system to scale horizontally and handle large volumes of user-generated data",
+    "complexity": "Medium"
+  }
+]
+```
+
+Rationale:
+- Task 1: The complexity is "Hard" because it requires developing a comprehensive workout tracking app with security, scalability, and integration features.
+- Task 2: Same as Task 1, complexity remains "Hard".
+- Task 3: The complexity is "Medium" because integrating encryption protocols is a specific task that requires knowledge of security protocols but is not the primary focus of the application.
+- Task 4: Complexity is "Medium" as it involves implementing regular security audits to address potential weaknesses, which requires expertise in security testing and analysis.
+- Task 5: The complexity is "Medium" because designing the system for horizontal scaling and handling large volumes of data requires knowledge of distributed systems and scalability principles.

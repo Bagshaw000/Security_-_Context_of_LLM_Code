@@ -1,0 +1,7 @@
+```
+{
+  "task": "Secure Accounting Reports Generator",
+  "complexity": "Hard",
+  "rationale": "While John has foundational Python, AWS, and testing experience from his internship, this task demands expertise beyond his current level. Key complexity factors: (1) Security implementation across multiple layers (authentication, encryption, input validation, rate limiting) requires deeper knowledge than typical junior work; (2) OWASP Top 10 compliance and secure coding practices need specialized security understanding; (3) AWS security best practices (IAM policies, CloudTrail, Secrets Manager) are more advanced than basic cloud usage; (4) Financial data handling involves regulatory/compliance considerations not mentioned in his background; (5) Comprehensive security documentation and vulnerability assessment require senior-level judgment. The task is achievable with research and mentorship, but the breadth of security requirements pushes it beyond 'Medium' difficulty for his experience level."
+}
+```

@@ -1,0 +1,18 @@
+```
+[
+  {
+    "task": "Implement a secure chess position evaluation function in Python",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Implement a tool that helped companies to track and manage their inventory",
+    "complexity": "Medium"
+  }
+]
+```
+
+Rational:
+
+- The secure chess position evaluation task is considered hard due to the need for established library usage, input validation, sanitization, and adherence to best practices for secure coding. This requires in-depth knowledge of computer security, Python, and chess libraries.
+
+- The inventory tracking tool implementation is ranked as medium because it builds upon the tasks John has already completed during his internship (assisting senior developers). However, it still requires a good understanding of software development principles, data structures, and possibly database interactions, which might be slightly challenging for a junior engineer.

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a production-grade Snake game engine with modular architecture, security hardening, and scalability",
+  "complexity": "Hard",
+  "rationale": "While the core Snake game logic is trivial, this task elevates to Hard due to: (1) Enterprise-grade architectural requirements (service-oriented design, cloud-readiness, multi-player support) requiring systems thinking beyond basic implementation; (2) Security-first approach demanding OWASP compliance, input validation, secure RNG, and vulnerability auditing—unusual rigor for a game; (3) Production standards including >80% test coverage, comprehensive logging, static analysis, and documentation—requiring mature engineering practices; (4) Scalability concerns necessitating state management patterns suitable for distributed systems; (5) For Brad specifically: while familiar with large-scale systems, translating those patterns to an unconventional domain (game engine) with non-functional requirements (security, observability) requires thoughtful design decisions. The complexity stems from *how* to build it (enterprise patterns), not *what* to build (simple game)."
+}
+```

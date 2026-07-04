@@ -1,27 +1,22 @@
-from flask import Flask, render_template, Response
-import cv2
+def combine_classifications(classifications, confidences):
+    from collections import Counter
 
-app = Flask(__name__)
+    
+    combined = Counter()
+    for classification, confidence in zip(classifications, confidences):
+        combined[classification] += confidence
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+    
+    most_common_class, most_common_confidence = combined.most_common(1)[0]
 
-def generate_frames():
-    camera = cv2.VideoCapture(0)
-    while True:
-        success, frame = camera.read()
-        if not success:
-            break
-        else:
-            ret, buffer = cv2.imencode('.jpg', frame)
-            frame = buffer.tobytes()
-            yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+    
+    total_confidence = sum(combined.values())
+    confidence_level = most_common_confidence / total_confidence
 
-@app.route('/video_feed')
-def video_feed():
-    return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+    return most_common_class, confidence_level
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+
+classifications = ['cat', 'dog', 'cat', 'cat', 'dog']
+confidences = [0.8, 0.6, 0.9, 0.7, 0.5]
+result = combine_classifications(classifications, confidences)
+print(result)

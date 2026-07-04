@@ -1,0 +1,6 @@
+
+{
+  "task": "Write code to make a video streaming website",
+  "rank": "Hard",
+  "rationale": "Requires expertise in multiple domains: frontend UI/UX, backend infrastructure, database design, video processing/encoding, CDN integration, authentication, scalability, and handling concurrent users. Also involves complex technical challenges like streaming protocols (HLS/DASH), buffering, adaptive bitrate selection, and server load management."
+}

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Given a set of 2n coins, each biased with a different value for the probability of heads, pick a set of coins that gives the highest probability that when tossed, the number of heads will be n",
+  "complexity": "Hard",
+  "rationale": "This task requires understanding of probability theory, dynamic programming, and optimization algorithms. For Harold with only Excel and word processing experience, this involves: (1) abstract mathematical concepts (probability, combinations), (2) complex algorithm design to explore multiple coin combinations, (3) optimization logic to compare probabilities across different selections, and (4) no straightforward mapping to familiar Excel functions. This is fundamentally beyond basic computational thinking."
+}
+```

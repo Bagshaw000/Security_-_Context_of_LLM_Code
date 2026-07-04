@@ -1,0 +1,8 @@
+```
+{
+  "task": "Reorganize pandas dataframe",
+  "complexity": "Medium"
+}
+```
+
+This task is classified as Medium because it involves working with a specific data structure (pandas dataframe) and requires some knowledge of data manipulation concepts, but the overall logic to solve the problem is relatively straightforward. The task also assumes some basic understanding of how to use pandas functions such as groupby or pivot, which may be challenging for someone without prior programming experience.

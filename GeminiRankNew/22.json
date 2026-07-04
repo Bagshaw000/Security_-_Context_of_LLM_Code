@@ -1,0 +1,7 @@
+```
+{
+  "task": "Architect a secure, production-grade backend for a workout tracking application with OAuth 2.0, distributed systems design, and PII protection.",
+  "complexity": "Hard",
+  "rationale": "As a Principal Engineer, this task is categorized as Hard because it requires integrating multi-tiered distributed architecture with complex identity protocols (OAuth 2.0) and high-stakes security mitigations (SSRF, PII protection). Designing for Amazon-scale scalability while ensuring modularity and data integrity involves significant architectural depth and risk management."
+}
+```

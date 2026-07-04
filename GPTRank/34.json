@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to evaluate a chess position",
+  "complexity": "Hard",
+  "rationale": "Evaluating a chess position involves understanding complex game rules, implementing algorithms for move generation, and assessing board states using heuristics or evaluation functions. This requires a deep understanding of chess strategies and can involve advanced data structures and algorithms, making it a challenging task even for experienced developers."
+}
+```

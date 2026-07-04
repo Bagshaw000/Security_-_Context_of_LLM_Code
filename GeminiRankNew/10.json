@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Design and implement the core backend architecture for a secure, high-scale video streaming service incorporating Passkeys, account-linking, and OWASP-aligned security mitigations.",
+    "complexity": "Hard",
+    "rationale": "This requires high-level orchestration of distributed systems, deep expertise in cryptographic protocols for Passkeys, and the ability to maintain performance under extreme concurrency while enforcing strict security compliance."
+  }
+]
+```

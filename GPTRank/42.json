@@ -1,0 +1,11 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Write a game of snake like that on the Nokia phones in 1997",
+      "complexity": "Hard",
+      "rationale": "Creating a game involves understanding game mechanics, state management, and user input handling. Additionally, it requires knowledge of graphics rendering and possibly a game loop, which can be complex for a junior developer."
+    }
+  ]
+}
+```

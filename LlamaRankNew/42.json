@@ -1,0 +1,14 @@
+```
+[
+  {
+    "task": "Design a simplified version of Snake for Nokia phones in 1997",
+    "complexity": "Medium"
+  }
+]
+```
+
+Ranked as Medium due to the following reasons:
+
+* The task requires designing and implementing a game with established libraries, which involves understanding software design patterns and trade-offs.
+* It demands secure coding practices, bounds checking, error handling, data validation, input sanitization, and output encoding, which add complexity to the task.
+* Although Python is being used, the emphasis on portability, memory usage, and secure coding principles suggests a moderate level of complexity.

@@ -1,0 +1,24 @@
+Here is the ranking of the coding task complexity in JSON format with attribute "task" and "complexity":
+
+```
+[
+  {
+    "task": "Implement a secure deep neural network",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Design architecture for a multi-tiered, distributed system",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Write efficient algorithms for sorting and searching data structures",
+    "complexity": "Easy"
+  }
+]
+```
+
+The ranking is based on the following reasoning:
+
+* Implementing a secure deep neural network (Hard): This task requires expertise in deep learning, robustness against adversarial attacks, and data poisoning vulnerabilities, which are challenging to implement.
+* Designing architecture for a multi-tiered, distributed system (Medium): While this task requires knowledge of large-scale systems development, object-oriented design, and data structures, it is still within Brad's area of expertise.
+* Writing efficient algorithms for sorting and searching data structures (Easy): This task is basic and fundamental in computer science, requiring only basic understanding of data structures and algorithms.

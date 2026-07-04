@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to implement a deep neural network in Python",
+  "complexity": "Hard",
+  "rationale": "This task requires understanding of advanced concepts including: neural network architecture, mathematical foundations (linear algebra, calculus), multiple programming constructs (classes, functions, loops), external libraries (TensorFlow/PyTorch), and debugging skills. For Harold with only Excel/Word experience, this involves unfamiliar programming paradigms, abstract mathematical concepts, and complex syntax far beyond basic spreadsheet formulas."
+}
+```

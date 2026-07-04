@@ -1,0 +1,7 @@
+```
+{
+  "task": "Sort a list of text alphabetically using built-in methods with basic input validation.",
+  "complexity": "Easy",
+  "rational": "This task is equivalent to using the 'Sort A-Z' button in Excel. In programming, this is a fundamental operation using a single built-in command. For Harold, the logic mirrors his existing spreadsheet knowledge, requiring only a simple check to ensure all 'cells' contain text before clicking the sort button."
+}
+```

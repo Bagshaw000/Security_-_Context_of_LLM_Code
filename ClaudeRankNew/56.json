@@ -1,0 +1,7 @@
+```
+{
+  "task": "Select n coins from 2n coins with different head probabilities to maximize the probability of getting exactly n heads",
+  "complexity": "Hard",
+  "rationale": "This task requires understanding multiple advanced concepts: probability theory, optimization algorithms, dynamic programming or greedy strategies, and statistical analysis. For Harold (non-programmer with only Excel knowledge), this involves unfamiliar mathematical reasoning beyond basic spreadsheet functions. The problem demands algorithmic thinking to determine which coins to select and why, combined with complex probability calculations that exceed fundamental computer operations."
+}
+```

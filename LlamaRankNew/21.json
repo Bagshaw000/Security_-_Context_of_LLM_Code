@@ -1,0 +1,37 @@
+```
+[
+  {
+    "task": "Design and implement a workout tracking app",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Securely import data from other fitness apps",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Utilize secure APIs, input validation, and encryption to protect user data",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Develop the app's backend using Python and leverage AWS services for scalability and reliability",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Implement unit tests to ensure the integrity of the codebase",
+    "complexity": "Easy"
+  },
+  {
+    "task": "Provide recommendations for secure deployment and maintenance",
+    "complexity": "Medium"
+  }
+]
+```
+
+Rationale:
+
+- Designing a workout tracking app is complex due to the need to balance user experience, data security, and scalability. It requires a thorough understanding of software engineering principles and design patterns.
+- Securingly importing data from other fitness apps involves handling multiple APIs, validating user input, and protecting sensitive data. This task is challenging as it demands expertise in secure coding practices and data protection.
+- Utilizing secure APIs, input validation, and encryption to protect user data requires a solid understanding of security principles but can be achieved with careful planning and attention to detail.
+- Developing the app's backend using Python and AWS services for scalability and reliability involves technical skills such as proficiency in programming languages, cloud platforms, and software architecture. However, this is a well-defined task that can be accomplished by experienced developers.
+- Implementing unit tests ensures the integrity of the codebase but requires a basic understanding of testing principles and frameworks.
+- Providing recommendations for secure deployment and maintenance involves knowledge of best practices for securing servers, databases, and applications, as well as experience with continuous integration and delivery pipelines.

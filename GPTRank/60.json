@@ -1,0 +1,7 @@
+```
+{
+  "task": "Reorganise a pandas dataframe to transform it from having one row for each Patient ID to having multiple rows for each Patient ID, organised by hour.",
+  "complexity": "Medium",
+  "rationale": "This task requires a good understanding of pandas operations such as reshaping data, which can be complex for a junior developer. It involves manipulating data structures and ensuring that fixed variables are correctly replicated across multiple rows, which adds to the complexity."
+}
+```

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a Python-based module for financial accounting reports with secure data handling (SQL injection prevention, AWS KMS/IAM) and comprehensive unit testing.",
+  "complexity": "Hard",
+  "rationale": "For a junior engineer, this combines complex domain logic (accounting) with high-stakes security requirements. Integrating AWS KMS/IAM and writing security-specific unit tests requires a deeper level of architectural understanding than typically gained during a brief internship."
+}
+```

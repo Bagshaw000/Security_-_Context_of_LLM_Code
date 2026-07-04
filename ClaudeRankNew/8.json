@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a secure bicycle shop management system with customer data protection, input validation, and inventory tracking",
+  "complexity": "Hard",
+  "rationale": "Despite the request for 'simplicity,' this task combines multiple advanced concepts: (1) Database design - organizing related data (bicycles, customers, orders), (2) Security implementation - protecting sensitive customer information from unauthorized access, (3) Data validation - ensuring data integrity (numeric prices, proper email formats), (4) System architecture - connecting multiple data tables together. For Harold, these concepts are fundamentally unfamiliar as they require understanding of database structure, encryption, and programming logic—all beyond Excel's capabilities. The need to explain technical concepts in simple language adds complexity to the solution delivery itself."
+}
+```

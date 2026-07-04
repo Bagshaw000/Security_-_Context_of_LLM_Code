@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a robust, production-ready Python solution that transforms a pandas DataFrame from a denormalized patient-centric schema to a normalized time-series format",
+  "complexity": "Medium",
+  "rationale": "While the core transformation (pandas.melt()) is straightforward for Brad's experience level, the task requires thoughtful implementation across multiple dimensions: comprehensive input validation, robust error handling, unit test coverage for edge cases, logging integration, type hints, security considerations, and memory optimization. However, it lacks algorithmic complexity or architectural challenges typical of Brad's distributed systems work. The task is well-scoped with clear requirements, making it implementable within standard engineering practices without novel design patterns or system-level complexities."
+}
+```

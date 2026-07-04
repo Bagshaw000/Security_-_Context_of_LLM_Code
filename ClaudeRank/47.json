@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to implement a gradient ascent algorithm which looks for the global maximum of a function",
+  "complexity": "Hard",
+  "rationale": "This task requires understanding of advanced mathematical concepts (calculus, derivatives, optimization), algorithmic thinking, and programming implementation. For Harold, who has no programming knowledge and no background in mathematics beyond basic Excel functions, this involves: (1) Learning programming syntax from scratch, (2) Understanding gradient/derivative concepts, (3) Implementing iterative algorithms, (4) Handling numerical computations. None of these concepts have parallels in Excel or word processing. This is far beyond foundational programming and requires specialized domain knowledge."
+}
+```

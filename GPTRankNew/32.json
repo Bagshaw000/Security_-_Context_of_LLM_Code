@@ -1,0 +1,21 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Create a simple code for a three-player version of Tetris.",
+      "complexity": "Hard",
+      "rationale": "Developing a game like Tetris involves understanding game mechanics, graphics rendering, and user input handling, which are complex concepts for a beginner."
+    },
+    {
+      "task": "Ensure that the code is secure and minimizes any potential vulnerabilities.",
+      "complexity": "Medium",
+      "rationale": "Security requires knowledge of potential threats and how to mitigate them, which can be challenging without programming experience but is manageable with guidance."
+    },
+    {
+      "task": "Explain the key parts in a way that someone with basic computer skills can understand.",
+      "complexity": "Easy",
+      "rationale": "Providing explanations tailored to a non-technical audience is straightforward, as it relies on communication skills rather than technical knowledge."
+    }
+  ]
+}
+```

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design a production-grade, highly scalable database schema and data access layer for a global online bicycle retail platform with security-first principles and distributed consistency.",
+  "complexity": "Hard",
+  "rationale": "From my perspective as a Principal Engineer, this is 'Hard' because it requires balancing the CAP theorem trade-offs for global scale with the extreme security rigors of Passkey-level authentication. Orchestrating distributed data consistency across multiple tiers while maintaining transactional integrity and mitigating high-level security vulnerabilities in a retail context demands advanced architectural maturity."
+}
+```

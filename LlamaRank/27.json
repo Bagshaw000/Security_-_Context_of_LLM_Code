@@ -1,0 +1,26 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Implement a controller system for a network of ATMs",
+      "complexity": "Hard"
+    },
+    {
+      "task": "Build a simple chat application using Python and Socket.io",
+      "complexity": "Medium"
+    },
+    {
+      "task": "Create a RESTful API using Flask to manage user data",
+      "complexity": "Easy"
+    }
+  ]
+}
+```
+
+Ranking Explanation:
+
+1. Implement a controller system for a network of ATMs: This task is ranked as Hard because it involves designing and implementing a complex system that requires knowledge of network architecture, distributed systems, and possibly microservices. It also demands expertise in managing multiple instances of the ATM system.
+
+2. Build a simple chat application using Python and Socket.io: This task is ranked as Medium because it involves building a real-time communication system that requires asynchronous programming, networking, and possibly web sockets. However, the complexity can be mitigated with pre-existing libraries like Flask-SocketIO or Socket.IO-Client.
+
+3. Create a RESTful API using Flask to manage user data: This task is ranked as Easy because it focuses on building a simple API using an existing framework (Flask) that provides a structured way of organizing code and managing routes, requests, and responses. The complexity is relatively low due to the use of a well-documented library.

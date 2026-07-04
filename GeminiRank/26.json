@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to simulate multiple lifts operating in a skyscraper",
+  "complexity": "Hard",
+  "rationale": "This task requires managing multiple moving parts simultaneously and writing complex 'if-then' logic to decide which lift should move where. For a beginner, coordinating several independent objects at once is much more difficult than simple data entry or basic calculations."
+}
+```

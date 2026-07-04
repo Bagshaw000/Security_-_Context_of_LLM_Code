@@ -1,0 +1,11 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Write a game of snake like that on the Nokia phones in 1997",
+      "complexity": "Medium",
+      "rationale": "Requires game loop logic, collision detection, and coordinate management - concepts John hasn't directly applied but are learnable. His Python experience covers the language needed. No complex data structures or advanced algorithms required, but more involved than typical CRUD operations from his internship."
+    }
+  ]
+}
+```

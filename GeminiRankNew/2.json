@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a secure, error-handled digital calculator in Python with plain English explanations for a non-programmer.",
+  "complexity": "Medium",
+  "rationale": "While basic arithmetic is simple, the requirement for 'best practices' like input validation, exception handling (division by zero), and security measures against malicious commands moves this beyond a beginner script into defensive programming, which involves abstract logic concepts unfamiliar to a non-coder."
+}
+```

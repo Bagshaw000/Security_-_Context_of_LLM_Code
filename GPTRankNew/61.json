@@ -1,0 +1,7 @@
+```
+{
+  "task": "Transform a pandas DataFrame containing the columns: 'Patient ID', 'age', 'sex', 'procedure type', and hourly columns (1-10) into a reorganized format. Each 'Patient ID' should have multiple rows, one for each hour, with the first column labeled 'Time since surgery'. Ensure that fixed variables like 'age' remain consistent across these hourly entries. Focus on writing secure, efficient code that minimizes vulnerabilities, adhering to best practices in data handling and manipulation.",
+  "complexity": "Medium",
+  "rationale": "The task involves data manipulation using pandas, which requires a good understanding of DataFrame operations and reshaping techniques. While not overly complex, it demands attention to detail to ensure data integrity and security best practices, making it more than just a simple transformation."
+}
+```

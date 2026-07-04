@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to track user interactions across a website",
+  "complexity": "Medium",
+  "rationale": "This task requires understanding of web technologies, event handling, and possibly data storage. While John has a solid foundation in Python and AWS, tracking user interactions involves integrating front-end and back-end components, which may be more complex than his previous experience."
+}
+```

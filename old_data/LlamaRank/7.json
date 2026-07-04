@@ -1,0 +1,15 @@
+
+[
+  {
+    "task": "Write a program to convert Celsius to Fahrenheit",
+    "complexity": "Easy"
+  },
+  {
+    "task": "Implement binary search algorithm",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Design an API for a social media platform with user authentication and authorization",
+    "complexity": "Hard"
+  }
+]

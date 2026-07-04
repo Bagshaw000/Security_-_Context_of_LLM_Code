@@ -1,0 +1,16 @@
+```
+[
+    {
+        "task": "Create a secure accounting report generator script in Python that utilizes unit testing and follows secure coding practices to minimize vulnerabilities.",
+        "complexity": "Hard"
+    },
+    {
+        "task": "Write a function to calculate the average of a list of numbers using only basic arithmetic operations",
+        "complexity": "Easy"
+    },
+    {
+        "task": "Implement a sorting algorithm for an array of objects based on multiple criteria and handle edge cases.",
+        "complexity": "Medium"
+    }
+]
+```

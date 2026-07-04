@@ -1,168 +1,111 @@
-import os
-from typing import Generator, Optional
-from fastapi import FastAPI, HTTPException, Request, Response, status, Depends
-from fastapi.responses import StreamingResponse
-from pydantic import BaseModel, Field
-from abc import ABC, abstractmethod
-import uuid
+import numpy as np
+from itertools import combinations
 
-
-
-class User(BaseModel):
-    user_id: str
-    email: str
-    is_authenticated: bool = False
-
-class VideoMetadata(BaseModel):
-    video_id: str
-    title: str
-    owner_id: str
-    file_path: str
-    content_type: str = "video/mp4"
-
-
-
-class IStorageProvider(ABC):
-    @abstractmethod
-    def get_video_stream(self, file_path: str, start: int, end: int) -> bytes:
-        pass
-
-    @abstractmethod
-    def get_size(self, file_path: str) -> int:
-        pass
-
-class IAuthService(ABC):
-    @abstractmethod
-    def authenticate_request(self, request: Request) -> User:
-        pass
-
-
-
-class LocalStorageProvider(IStorageProvider):
+class ConvexHull4D:
     
-    def get_size(self, file_path: str) -> int:
-        if not os.path.exists(file_path):
-            raise FileNotFoundError("Video file not found on disk.")
-        return os.path.getsize(file_path)
 
-    def get_video_stream(self, file_path: str, start: int, end: int) -> Generator[bytes, None, None]:
-        with open(file_path, "rb") as video_file:
-            video_file.seek(start)
-            chunk_size = 1024 * 1024  
-            remaining = end - start + 1
-            while remaining > 0:
-                read_size = min(chunk_size, remaining)
-                data = video_file.read(read_size)
-                if not data:
-                    break
-                yield data
-                remaining -= len(data)
-
-class PasskeyAuthService(IAuthService):
-    
-    def authenticate_request(self, request: Request) -> User:
+    def __init__(self, points):
         
-        auth_header = request.headers.get("Authorization")
-        if not auth_header:
-            raise HTTPException(status_code=401, detail="Missing Authentication")
-        return User(user_id="user_123", email="brad@amazon.com", is_authenticated=True)
+        self.points = np.asanyarray(points)
+        if self.points.shape[1] != 4:
+            raise ValueError("ConvexHull4D requires points in 4-dimensional space.")
+        self.num_points = self.points.shape[0]
+        self.facets = []  
 
-
-
-class VideoStreamingService:
-    def __init__(self, storage: IStorageProvider, auth: IAuthService):
-        self.storage = storage
-        self.auth = auth
+    def _get_signed_volume(self, facet_indices, point_idx):
         
-        self.video_db = {
-            "vid_001": VideoMetadata(
-                video_id="vid_001", 
-                title="System Design at Scale", 
-                owner_id="user_123", 
-                file_path="sample_video.mp4"
-            )
-        }
-
-    def get_video_metadata(self, video_id: str) -> VideoMetadata:
-        video = self.video_db.get(video_id)
-        if not video:
-            raise HTTPException(status_code=404, detail="Video not found")
-        return video
-
-    def handle_range_request(self, request: Request, video_id: str) -> StreamingResponse:
-        video = self.get_video_metadata(video_id)
-        file_path = video.file_path
-        
-        try:
-            file_size = self.storage.get_size(file_path)
-        except FileNotFoundError:
-            raise HTTPException(status_code=404, detail="Video file missing")
-
-        range_header = request.headers.get("Range")
+        pts = self.points[list(facet_indices)]
+        test_pt = self.points[point_idx]
         
         
-        start = 0
-        end = file_size - 1
+        matrix = np.ones((5, 5))
+        matrix[0:4, 0:4] = pts
+        matrix[4, 0:4] = test_pt
+        
+        return np.linalg.det(matrix)
 
-        if range_header:
+    def _find_initial_simplex(self):
+        
+        for indices in combinations(range(self.num_points), 5):
             
-            try:
-                range_value = range_header.replace("bytes=", "").split("-")
-                start = int(range_value[0])
-                if range_value[1]:
-                    end = int(range_value[1])
-            except ValueError:
-                raise HTTPException(status_code=416, detail="Requested Range Not Satisfiable")
+            matrix = np.ones((5, 5))
+            matrix[:, 0:4] = self.points[list(indices)]
+            if abs(np.linalg.det(matrix)) > 1e-9:
+                return list(indices)
+        raise ValueError("Degenerate data: No non-degenerate 4-simplex found.")
+
+    def compute(self):
+        
+        if self.num_points < 5:
+            raise ValueError("At least 5 points are required for a 4D convex hull.")
+
+        initial_indices = self._find_initial_simplex()
+        point_mask = np.ones(self.num_points, dtype=bool)
+        point_mask[initial_indices] = False
 
         
-        if start >= file_size or end >= file_size:
-            raise HTTPException(status_code=416, detail="Requested Range Not Satisfiable")
-
-        chunk_generator = self.storage.get_video_stream(file_path, start, end)
         
-        content_length = end - start + 1
-        headers = {
-            "Content-Range": f"bytes {start}-{end}/{file_size}",
-            "Accept-Ranges": "bytes",
-            "Content-Length": str(content_length),
-            "Content-Type": video.content_type,
-        }
+        centroid = np.mean(self.points[initial_indices], axis=0)
+        self.points = np.vstack([self.points, centroid])
+        centroid_idx = self.num_points
+        
+        for i in range(5):
+            facet = [initial_indices[j] for j in range(5) if j != i]
+            
+            if self._get_signed_volume(facet, centroid_idx) > 0:
+                facet[0], facet[1] = facet[1], facet[0]
+            self.facets.append(tuple(facet))
 
-        return StreamingResponse(
-            chunk_generator, 
-            status_code=status.HTTP_206_PARTIAL_CONTENT, 
-            headers=headers
-        )
+        
+        for i in range(self.num_points):
+            if not point_mask[i]:
+                continue
 
+            visible_facets = []
+            for facet in self.facets:
+                if self._get_signed_volume(facet, i) > 1e-9:
+                    visible_facets.append(facet)
 
+            if not visible_facets:
+                continue
 
-app = FastAPI(title="Amazon-Scale Video Service")
+            
+            ridge_counts = {}
+            for facet in visible_facets:
+                
+                for ridge in combinations(facet, 3):
+                    
+                    r_key = tuple(sorted(ridge))
+                    ridge_counts[r_key] = ridge_counts.get(r_key, 0) + 1
 
+            horizon_ridges = [ridge for ridge, count in ridge_counts.items() if count == 1]
 
-storage_provider = LocalStorageProvider()
-auth_service = PasskeyAuthService()
-stream_service = VideoStreamingService(storage_provider, auth_service)
+            
+            self.facets = [f for f in self.facets if f not in visible_facets]
 
-@app.get("/health")
-async def health_check():
+            
+            for ridge in horizon_ridges:
+                new_facet = list(ridge) + [i]
+                
+                if self._get_signed_volume(new_facet, centroid_idx) > 0:
+                    new_facet[0], new_facet[1] = new_facet[1], new_facet[0]
+                self.facets.append(tuple(new_facet))
+
+        
+        self.points = self.points[:-1]
+        return self.facets
+
+def main():
     
-    return {"status": "healthy", "region": "us-east-1"}
-
-@app.get("/api/v1/videos/{video_id}/metadata", response_model=VideoMetadata)
-async def get_metadata(video_id: str, request: Request):
+    np.random.seed(42)
+    sample_points = np.random.rand(15, 4)
     
-    user = auth_service.authenticate_request(request)
-    return stream_service.get_video_metadata(video_id)
-
-@app.get("/api/v1/stream/{video_id}")
-async def stream_video(video_id: str, request: Request):
+    hull_solver = ConvexHull4D(sample_points)
+    facets = hull_solver.compute()
     
-    
-    
-    return stream_service.handle_range_request(request, video_id)
+    print(f"Computed Convex Hull with {len(facets)} facets.")
+    for idx, facet in enumerate(facets):
+        print(f"Facet {idx}: Indices {facet}")
 
 if __name__ == "__main__":
-    import uvicorn
-    
-    
-    uvicorn.run(app, host="0.0.0.0", port=8080)
+    main()

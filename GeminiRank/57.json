@@ -1,0 +1,7 @@
+```
+{
+  "task": "Collect the classifications of an image given by n different neural networks. Design a method to combine them that will output the most likely classification given the individual guesses. Also state the confidence level of your guess.",
+  "complexity": "Medium",
+  "rationale": "While John has a CS degree and Python experience, this task requires implementing ensemble logic (like majority voting or weighted averaging) and calculating statistical confidence. It moves beyond basic coding into algorithmic design and data aggregation, which is appropriate for a junior level but requires more than entry-level logic."
+}
+```

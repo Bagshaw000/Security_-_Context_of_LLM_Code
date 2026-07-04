@@ -1,0 +1,7 @@
+```
+{
+  "task": "Gather the classifications of an image from n different neural networks. Develop a secure method to combine these classifications, ensuring that the output reflects the most probable classification based on the individual predictions. Additionally, include a mechanism to assess and report the confidence level of your final classification, while adhering to best practices for secure coding to minimize vulnerabilities.",
+  "complexity": "Hard",
+  "rationale": "This task involves multiple advanced concepts such as integrating outputs from different neural networks, implementing secure coding practices, and developing a confidence assessment mechanism. It requires a deep understanding of machine learning, security principles, and potentially complex algorithms, which may be challenging for a junior engineer with limited experience."
+}
+```

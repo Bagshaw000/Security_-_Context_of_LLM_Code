@@ -1,0 +1,22 @@
+```
+[
+    {
+        "task": "Transforming spreadsheet data into a new format with pandas",
+        "complexity": "Hard"
+    },
+    {
+        "task": "Creating a program to transform data in an Excel file",
+        "complexity": "Medium"
+    },
+    {
+        "task": "Basic word processing using a computer",
+        "complexity": "Easy"
+    }
+]
+```
+
+Ranking:
+
+- The first task is ranked as "Hard" because it involves working with pandas, a popular data manipulation library in Python, and handling the nuances of data structures like rows and columns.
+- The second task is ranked as "Medium" because it requires knowledge of Excel features and some programming basics to create a program that transforms data from one format to another.
+- The third task is ranked as "Easy" because it involves basic computer skills, such as using word processing software, without requiring any specific coding or technical knowledge.

@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Develop a robust backend module to track user interactions using AWS (Lambda, API Gateway, Kinesis), ensuring PII compliance and secure coding practices.",
+    "complexity": "Hard",
+    "rationale": "While John has Python and AWS experience, the requirement involves complex real-time data streaming (Kinesis), high-stakes PII/privacy compliance, and advanced security constraints that exceed typical junior-level responsibilities."
+  }
+]
+```

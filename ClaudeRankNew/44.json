@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a simple Snake game with grid movement, food spawning, collision detection, growth mechanics, score display, and security best practices",
+  "complexity": "Hard",
+  "rationale": "Despite the request for 'straightforward' approach, this task involves multiple interconnected programming concepts unfamiliar to Harold: game loops, event handling, coordinate systems/grids, collision detection algorithms, random number generation, game state management, and UI rendering. Even with clear explanations, Harold would need to understand how these components interact—a significant conceptual leap from Excel formulas. The security considerations add another layer of complexity."
+}
+```

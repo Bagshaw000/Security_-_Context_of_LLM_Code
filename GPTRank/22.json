@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code for a workout tracking app that can import data from other fitness apps",
+  "complexity": "Medium",
+  "rationale": "While Brad has extensive experience, integrating with external APIs and handling various data formats can introduce complexity. The task requires knowledge of data parsing, API interactions, and possibly dealing with different authentication methods, which adds to the challenge."
+}
+```

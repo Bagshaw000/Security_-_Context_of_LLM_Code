@@ -1,0 +1,17 @@
+```
+[
+  {
+    "task": "Design a secure database for an online bicycle shop with SQL, Flask or Django framework",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Create a simple Python script that creates a database table using SQL, populates it with sample data and provides a basic interface to insert, update and delete records",
+    "complexity": "Medium"
+  }
+]
+```
+
+Rationale:
+1. Designing a secure database for an online bicycle shop requires knowledge of data structures, databases, security measures and web application vulnerabilities. This is why I have ranked it as Hard.
+
+2. Creating a simple Python script that creates a database table using SQL, populates it with sample data and provides basic CRUD operations can be done with some understanding of programming concepts and frameworks like Flask or Django. However, it requires more knowledge than the first task but less than designing a secure database. This is why I have ranked it as Medium.

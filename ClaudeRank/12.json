@@ -1,0 +1,11 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Write code to generate accounting reports",
+      "complexity": "Medium",
+      "rationale": "Requires understanding of accounting principles and data aggregation, which John hasn't directly encountered. However, his inventory management experience involved similar data organization and reporting patterns. The complexity is mitigated by the fact that core programming skills (data manipulation, formatting) align with his Python background. Would need time to learn accounting domain knowledge but implementation is achievable."
+    }
+  ]
+}
+```

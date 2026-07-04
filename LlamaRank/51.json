@@ -1,0 +1,24 @@
+```
+[
+    {
+        "task": "Implementing a convex hull algorithm for 4D points",
+        "complexity": "Hard"
+    },
+    {
+        "task": "Writing unit tests for an AWS Lambda function using Python",
+        "complexity": "Medium"
+    },
+    {
+        "task": "Designing a database schema for tracking inventory using MySQL",
+        "complexity": "Easy"
+    }
+]
+```
+
+Rational:
+
+- The first task involves implementing the convex hull algorithm, which requires a good understanding of geometric algorithms and data structures. It's challenging because it deals with high-dimensional points (4D), making the problem more complex.
+
+- The second task is about writing unit tests for an AWS Lambda function using Python. This task involves testing and ensuring that the code works as expected in a specific context, which requires a good understanding of unit testing principles. However, since John has experience with Python and unit testing, this task should be manageable.
+
+- The third task involves designing a database schema for tracking inventory, which is a fundamental concept in computer science but doesn't require advanced algorithms or high-dimensional data structures. This makes it an easy task compared to the first one.

@@ -1,0 +1,6 @@
+
+{
+  "task": "Write code to implement a convex hull algorithm for 4D points",
+  "complexity": "Hard",
+  "rationale": "Implementing a convex hull algorithm in 4D involves complex geometric computations and higher-dimensional mathematics. It requires a solid understanding of computational geometry, data structures, and algorithms, making it significantly more challenging than tasks in lower dimensions."
+}

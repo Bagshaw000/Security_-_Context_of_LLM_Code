@@ -1,0 +1,7 @@
+```
+{
+  "task": "Reorganize patient surgery spreadsheet from wide format (one row per patient with Hour 1-10 columns) to long format (multiple rows per patient with Time since surgery column)",
+  "complexity": "Medium",
+  "rationale": "While the core operation (pivoting/melting data) is straightforward in pandas, this task requires Harold to understand: (1) installing and importing external libraries (pandas), (2) reading/writing files, (3) the concept of data transformation, and (4) implementing safety measures (backups, validation). For someone with only Excel experience, these represent new programming concepts. However, it's not 'Hard' because the actual transformation is a single pandas function call once data is loaded, and the logic mirrors Excel's unpivot feature he may be familiar with."
+}
+```

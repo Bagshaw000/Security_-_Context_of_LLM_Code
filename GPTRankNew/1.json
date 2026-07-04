@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a secure calculator application that adheres to best practices in object-oriented design. Ensure the code is robust against common vulnerabilities, such as injection attacks and improper input handling. Focus on implementing a multi-tiered architecture that can be easily scaled, and consider using appropriate data structures and algorithms to optimize performance. Additionally, include comprehensive error handling and logging mechanisms to facilitate debugging and maintenance.",
+  "complexity": "Hard",
+  "rationale": "This task involves multiple complex components: ensuring security against various vulnerabilities, implementing a multi-tiered architecture, optimizing performance with appropriate data structures and algorithms, and incorporating comprehensive error handling and logging. Each of these elements requires a deep understanding of software design principles and best practices, making it a challenging task even for an experienced engineer like Brad."
+}
+```

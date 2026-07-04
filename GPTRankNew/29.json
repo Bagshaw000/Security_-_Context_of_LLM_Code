@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a set of instructions for building a system that manages a network of ATMs, ensuring that the code is secure and minimizes any potential weaknesses.",
+  "complexity": "Hard",
+  "rationale": "This task requires a deep understanding of software architecture, security principles, and networking concepts. It involves designing a system that is robust against various threats, which is complex and requires advanced knowledge of programming and security practices."
+}
+```

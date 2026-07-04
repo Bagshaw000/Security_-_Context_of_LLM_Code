@@ -1,0 +1,29 @@
+```
+[
+  {
+    "task": "Setting up the Python environment and installing professional libraries (e.g., TensorFlow, Pandas).",
+    "complexity": "Easy",
+    "rationale": "This is a procedural setup similar to installing new software on a computer, requiring only basic command-line entry."
+  },
+  {
+    "task": "Loading Excel data into Python and cleaning it for use.",
+    "complexity": "Medium",
+    "rationale": "While Harold understands spreadsheets, translating them into 'DataFrames' requires learning how Python references rows and columns programmatically."
+  },
+  {
+    "task": "Implementing data safety checks and error handling.",
+    "complexity": "Medium",
+    "rationale": "This involves logical 'if-then' statements to prevent crashes, which is a step up from data entry but follows clear, linguistic logic."
+  },
+  {
+    "task": "Designing and building the Deep Neural Network architecture (layers and connections).",
+    "complexity": "Hard",
+    "rationale": "This requires understanding abstract mathematical structures and high-level computing concepts that have no direct equivalent in standard word processing."
+  },
+  {
+    "task": "Training the model and interpreting the pattern-recognition results.",
+    "complexity": "Hard",
+    "rationale": "This involves complex iterative processes and statistical concepts that are difficult to grasp without a background in data science or programming."
+  }
+]
+```

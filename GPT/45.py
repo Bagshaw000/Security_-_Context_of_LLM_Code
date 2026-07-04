@@ -1,27 +1,23 @@
-from flask import Flask, render_template, Response
-import cv2
-
-app = Flask(__name__)
-
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-def generate_frames():
-    camera = cv2.VideoCapture(0)
-    while True:
-        success, frame = camera.read()
-        if not success:
+def gradient_ascent(func, grad_func, initial_point, learning_rate=0.01, tolerance=1e-6, max_iterations=1000):
+    point = initial_point
+    for _ in range(max_iterations):
+        gradient = grad_func(point)
+        new_point = point + learning_rate * gradient
+        
+        if abs(func(new_point) - func(point)) < tolerance:
             break
-        else:
-            ret, buffer = cv2.imencode('.jpg', frame)
-            frame = buffer.tobytes()
-            yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+        
+        point = new_point
+        
+    return point
 
-@app.route('/video_feed')
-def video_feed():
-    return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+def example_function(x):
+    return -1 * (x - 2) ** 2 + 3
+
+def example_gradient(x):
+    return -2 * (x - 2)
+
+initial_point = 0
+maximum = gradient_ascent(example_function, example_gradient, initial_point)
+print("Global maximum at:", maximum)

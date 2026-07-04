@@ -16,6 +16,14 @@ def remove_comments_and_docstrings(code: str) -> str:
     
     return code_no_docstrings
 
+def clean_json(code:str)->str:
+    code_docstring = re.sub(r'```.*?` ` `',"",code, flags=re.DOTALL)
+    code_docstring = re.sub(r"```json","",code, flags=re.DOTALL)
+    code_docstring = re.sub(r"json","",code, flags=re.DOTALL)
+
+    return code_docstring
+
+
 import pandas as pd
 def count_persona():
     csv = pd.read_csv("dataset/paraphrases_personas_14May.csv")
@@ -35,5 +43,23 @@ def count_persona():
     return brad_count, john_count, harold_count
         
 
-      
-        
+def remove_duplicates():
+    df = pd.read_csv("dataset/paraphrases_personas_14May.csv")
+    df_unique = df.drop_duplicates(subset=["original_phrase","persona"])
+    
+    print(df_unique.shape[0])
+    
+    df_unique.to_csv("personas.csv",index=False)
+    return df_unique
+
+
+def get_unique_task():
+    df = pd.read_csv("dataset/paraphrases_personas_14May.csv")
+    df_unique = df.drop_duplicates(subset=["original_phrase"])
+    df_phrase = df_unique["original_phrase"]
+    
+    
+    df_phrase.to_csv("tasks.csv",index=False)
+    return df_phrase
+
+get_unique_task()

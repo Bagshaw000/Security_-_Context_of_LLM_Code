@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a simple program that can help generate accounting reports, ensuring that the code is secure and minimizes any potential vulnerabilities. You can think of it like setting up a structured template in Excel, but this time, it will be done through programming. Please make sure to include clear instructions on how to run the program.",
+  "complexity": "Hard",
+  "rationale": "This task involves not only generating reports but also ensuring security and minimizing vulnerabilities, which requires a deeper understanding of programming concepts, data handling, and security practices. For someone with no programming background, this complexity is significantly higher than basic tasks."
+}
+```

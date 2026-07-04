@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a robust, object-oriented version of the 1997 Nokia Snake game with secure coding standards and O(1) movement logic.",
+  "complexity": "Easy",
+  "rationale": "For a Principal Engineer with Brad's expertise in secure, distributed systems, the core logic—utilizing a Deque for O(1) updates and standard OO patterns—is foundational. The security requirements (input validation, safe arithmetic) are routine defensive programming practices that are trivial compared to the complexity of Remote Key Provisioning or device-authentication services."
+}
+```

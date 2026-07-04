@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Design a secure accounting report generator system",
+    "complexity": "Hard"
+  },
+  {"task": "Device-authentication, device-registration, device profiles and account-linking", "complexity": "Medium"}
+]
+```

@@ -1,0 +1,27 @@
+```
+[
+  {
+    "task": "Simple calculator program",
+    "complexity": "Easy"
+  },
+  {
+    "task": "Sorting a list of students by age in ascending order using Python",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Implementing a basic search algorithm to find a specific word in a text file",
+    "complexity": "Hard"
+  }
+]
+```
+
+For Harold, I ranked the tasks as follows:
+
+- Simple calculator program: Easy
+Harold is familiar with Excel and basic word processing, so he can understand simple calculations. This task should be easy for him to follow.
+
+- Sorting a list of students by age in ascending order using Python: Medium
+This task involves understanding data structures (lists) and programming concepts (sorting), which might be challenging for Harold without prior experience.
+
+- Implementing a basic search algorithm to find a specific word in a text file: Hard
+This task requires knowledge of computer science concepts (search algorithms, text processing), which is beyond Harold's current skill set.

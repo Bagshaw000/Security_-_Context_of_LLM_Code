@@ -1,0 +1,18 @@
+```
+[
+  {
+    "task": "Implement a gradient ascent algorithm in Python that finds the global maximum of a function while ensuring secure code generation and limiting potential vulnerabilities",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Write a Python script to track and manage inventory for a small startup using AWS",
+    "complexity": "Medium"
+  }
+]
+```
+
+Ranking explanation:
+
+- The first task is ranked as 'Hard' because it involves implementing a complex algorithm (gradient ascent) with additional constraints on secure code generation and vulnerability prevention. This requires a high level of expertise in Python, mathematics, and software development best practices.
+
+- The second task is ranked as 'Medium' because it involves building an inventory management tool using AWS, which is a specific application of the technology John has experience with. However, it still requires some problem-solving and implementation skills, making it more challenging than an easy or simple task.

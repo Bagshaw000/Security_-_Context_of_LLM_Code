@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code for a database for an online bicycle shop",
+  "complexity": "Medium",
+  "rationale": "While designing a database involves understanding data modeling and relationships, it is a common task in software development. Given Brad's extensive experience, he should be familiar with database design principles, but the complexity arises from ensuring scalability, normalization, and handling various entities like products, customers, and orders."
+}
+```

@@ -1,32 +1,21 @@
-import os
-from flask import Flask, render_template, request, redirect, url_for, flash
-import cv2
+import numpy as np
 
-app = Flask(__name__)
-app.secret_key = 'your_secret_key'
-
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-@app.route('/stream')
-def stream():
-    return render_template('stream.html')
-
-@app.route('/upload', methods=['POST'])
-def upload():
-    file = request.files['video']
-    filename = file.filename
-    file.save(os.path.join('static', filename))
-    flash('Video uploaded successfully!')
-    return redirect(url_for('stream'))
-
-@app.route('/play/<filename>')
-def play(filename):
-    video_path = os.path.join('static', filename)
-    cap = cv2.VideoCapture(video_path)
-    fps = cap.get(cv2.CAP_PROP_FPS)
-    return render_template('play.html', video_path=video_path, fps=fps)
-
-if __name__ == '__main__':
-    app.run(debug=True)
+def convex_hull(points):
+    
+    
+    points_h = np.hstack((points, np.ones((points.shape[0], 1))))
+    
+    
+    hull = []
+    for i in range(points.shape[0]):
+        
+        c = -points_h[i]
+        A_ub = np.delete(points_h, i, 0)
+        b_ub = np.zeros(A_ub.shape[0])
+        res = scipy.optimize.linprog(c, A_ub=A_ub, b_ub=b_ub)
+        
+        
+        if np.abs(res.fun - 1) < 1e-6:
+            hull.append(points[i])
+    
+    return np.array(hull)

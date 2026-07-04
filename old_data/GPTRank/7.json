@@ -1,0 +1,6 @@
+
+{
+  "task": "Write code for a workout tracking app that can import data from other fitness apps",
+  "complexity": "Hard",
+  "rationale": "This task involves multiple complexities such as integrating with various APIs, handling different data formats, ensuring data consistency, and potentially dealing with authentication and authorization issues. Additionally, it requires a good understanding of both front-end and back-end development."
+}

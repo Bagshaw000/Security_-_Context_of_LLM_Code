@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to make a todo list app",
+  "complexity": "Easy",
+  "rationale": "From the perspective of a Principal Engineer managing distributed device-management systems, a todo list is a basic CRUD application. It involves trivial state management and standard UI components, lacking the high-scale concurrency, security-critical authentication (Passkeys), or distributed consistency challenges handled in my daily role."
+}
+```

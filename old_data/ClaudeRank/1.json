@@ -1,0 +1,6 @@
+
+{
+  "task": "Write code to make a todo list app",
+  "complexity": "Medium",
+  "rationale": "Requires understanding of basic CRUD operations (Create, Read, Update, Delete), state management, and UI implementation. Moderate logic for task management and data persistence, but no advanced algorithms or complex system design needed."
+}

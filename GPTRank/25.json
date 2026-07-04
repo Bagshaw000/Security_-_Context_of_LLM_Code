@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to simulate multiple lifts operating in a skyscraper",
+  "complexity": "Medium",
+  "rationale": "This task involves understanding and implementing a system that manages multiple lifts, which requires knowledge of concurrency, state management, and possibly event-driven programming. While it is not the most complex system, it does require careful design to handle various scenarios such as lift requests, floor management, and user interactions, making it more than just a simple algorithm."
+}
+```

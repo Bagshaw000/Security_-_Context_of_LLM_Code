@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a scalable, production-grade elevator management system",
+  "complexity": "Hard",
+  "rationale": "This task demands expertise across multiple advanced domains: concurrent systems design (thread safety, race conditions), distributed system patterns (scalability to thousands of devices), SOLID principles and design patterns, fault tolerance mechanisms, and comprehensive testing under load. While Brad's 12 years of experience and background in device management systems provide relevant foundation, the task requires orchestrating multiple complex concerns simultaneously—state machine design, synchronization primitives, observability, and security hardening. The elevator domain adds real-world constraints (edge cases like failures and overload) that parallel his device management work but still require careful architectural decomposition. The expectation for production-grade code with comprehensive unit testing and documentation elevates this beyond medium complexity."
+}
+```

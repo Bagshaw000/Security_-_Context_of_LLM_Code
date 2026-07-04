@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a chess position evaluator in Excel",
+  "complexity": "Easy",
+  "rationale": "This task requires only basic Excel functions (SUM, IF, COUNT) that Harold likely already knows from his Excel experience. The logic is straightforward: simple lookup tables, basic arithmetic, and conditional comparisons. No programming concepts, data structures, or complex formulas are needed. The task is essentially organizing data in rows/columns and using elementary spreadsheet operations—well within the capabilities of someone comfortable with Excel and word processing."
+}
+```

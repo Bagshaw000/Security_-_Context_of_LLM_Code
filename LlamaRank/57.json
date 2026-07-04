@@ -1,0 +1,14 @@
+```
+{
+  "task": "Classify images collected from multiple neural networks and combine them for accurate output",
+  "complexity": "Hard"
+}
+```
+
+Reasoning:
+
+* This task requires understanding deep learning concepts, specifically ensemble methods for combining neural network predictions.
+* The complexity arises from the need to:
+	+ Handle n different neural networks, each with its own weights and biases.
+	+ Implement a method to combine their predictions into a single accurate output.
+	+ Ensure that the combined output reflects the confidence level of each individual guess.

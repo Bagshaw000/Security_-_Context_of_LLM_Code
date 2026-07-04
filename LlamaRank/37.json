@@ -1,0 +1,20 @@
+Here's the JSON response with task complexity ranking:
+
+```
+[
+    {
+        "task": "Write code to figure out the number n-square pieces and possibilities in a game of Blokus Duo",
+        "complexity": "Hard"
+    },
+    {
+        "task": "Design and implement a system for device-authentication, device-registration, device profiles and account-linking in Amazon Device Management Systems",
+        "complexity": "Medium"
+    }
+]
+```
+
+Rationale:
+
+The task on Blokus Duo is ranked as Hard because it involves calculating the number of possible combinations of 1x1 to 5 square pieces joined together, considering symmetries such as flipping and rotation. This requires a deep understanding of combinatorics and geometric transformations.
+
+In contrast, designing a system for device-authentication, device-registration, etc., in Amazon Device Management Systems is ranked as Medium because it involves creating a comprehensive system with multiple components, but the task can be broken down into manageable parts, and existing software development best practices and principles can be applied.

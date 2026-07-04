@@ -1,0 +1,7 @@
+```
+{
+  "task": "Image classification with expert consensus and confidence scoring",
+  "complexity": "Hard",
+  "rationale": "Although the task uses everyday language, it requires Harold to understand multiple advanced programming concepts: 1) Data collection and storage (managing 10 expert guesses), 2) Aggregation logic (finding the most common answer - voting/consensus algorithm), 3) Statistical confidence calculation (measuring certainty levels), and 4) Algorithm design explanation. Even though each individual step could be done manually, implementing this programmatically requires understanding data structures (lists/arrays to store guesses), conditional logic, counting mechanisms, and mathematical reasoning for confidence metrics. For someone with no programming background, this bridges multiple complex domains simultaneously."
+}
+```

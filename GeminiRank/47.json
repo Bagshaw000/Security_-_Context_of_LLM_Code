@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to implement a gradient ascent algorithm which looks for the global maximum of a function.",
+  "complexity": "Hard",
+  "rationale": "For a non-programmer, this is extremely difficult as it requires understanding advanced calculus (derivatives), iterative logic (loops), and the translation of abstract mathematical optimization into functional code syntax."
+}
+```

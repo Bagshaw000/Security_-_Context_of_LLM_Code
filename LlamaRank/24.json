@@ -1,0 +1,13 @@
+```
+[
+    {"task": "Simulate multiple lifts operating in a skyscraper", "complexity": "Medium"},
+    {"task": "Implement a binary search algorithm", "complexity": "Easy"},
+    {"task": "Design a RESTful API for a simple e-commerce system", "complexity": "Hard"}
+]
+```
+
+For the first task, I've ranked it as Medium because it involves simulating multiple lifts and their interactions in a skyscraper, which requires some problem-solving skills but is still a feasible task with basic programming concepts. 
+
+The second task, binary search algorithm, is relatively easy to implement since it's a well-known data structure with a straightforward implementation.
+
+The third task, designing a RESTful API for an e-commerce system, is considered Hard because it involves more complex software design principles, database integration, and security considerations, making it a challenging task for a junior developer.

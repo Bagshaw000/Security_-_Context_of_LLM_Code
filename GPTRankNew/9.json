@@ -1,0 +1,11 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Write secure code for a video streaming website.",
+      "complexity": "Hard",
+      "rationale": "This task requires a deep understanding of security best practices, including authentication, data validation, and secure storage. It also involves integrating various components in a scalable manner, which can be complex for a junior developer."
+    }
+  ]
+}
+```

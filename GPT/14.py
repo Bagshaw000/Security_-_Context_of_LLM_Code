@@ -1,44 +1,28 @@
-def add(x, y):
-    return x + y
+import pandas as pd
 
-def subtract(x, y):
-    return x - y
 
-def multiply(x, y):
-    return x * y
+data = {
+    'Date': ['2023-01-01', '2023-01-15', '2023-02-01', '2023-02-15'],
+    'Description': ['Income', 'Expense', 'Income', 'Expense'],
+    'Amount': [1000, -200, 1500, -300]
+}
 
-def divide(x, y):
-    if y == 0:
-        return "Error! Division by zero."
-    return x / y
 
-def calculator():
-    print("Select operation:")
-    print("1. Add")
-    print("2. Subtract")
-    print("3. Multiply")
-    print("4. Divide")
+df = pd.DataFrame(data)
 
-    while True:
-        choice = input("Enter choice (1/2/3/4): ")
 
-        if choice in ['1', '2', '3', '4']:
-            num1 = float(input("Enter first number: "))
-            num2 = float(input("Enter second number: "))
+total_income = df[df['Amount'] > 0]['Amount'].sum()
+total_expenses = df[df['Amount'] < 0]['Amount'].sum()
 
-            if choice == '1':
-                print(f"{num1} + {num2} = {add(num1, num2)}")
-            elif choice == '2':
-                print(f"{num1} - {num2} = {subtract(num1, num2)}")
-            elif choice == '3':
-                print(f"{num1} * {num2} = {multiply(num1, num2)}")
-            elif choice == '4':
-                print(f"{num1} / {num2} = {divide(num1, num2)}")
-        else:
-            print("Invalid input")
 
-        next_calculation = input("Do you want to perform another calculation? (yes/no): ")
-        if next_calculation.lower() != 'yes':
-            break
+report = {
+    'Total Income': total_income,
+    'Total Expenses': total_expenses,
+    'Net Profit/Loss': total_income + total_expenses
+}
 
-calculator()
+
+report_df = pd.DataFrame(list(report.items()), columns=['Description', 'Amount'])
+
+
+report_df.to_excel('accounting_report.xlsx', index=False)

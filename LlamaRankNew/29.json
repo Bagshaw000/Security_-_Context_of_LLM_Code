@@ -1,0 +1,16 @@
+```
+[
+  {
+    "task": "Creating a simple controller system for managing a network of ATMs using Python or Java with security best practices",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Writing a step-by-step guide to creating a simple controller system for managing a network of ATMs, considering security best practices and data structures used in the implementation",
+    "complexity": "Medium"
+  }
+]
+```
+
+Rationale:
+- Task 1 is ranked as Hard because it involves creating a complex system that requires an understanding of programming concepts, data structures (e.g., databases), and security measures to prevent vulnerabilities. The task assumes a good level of prior knowledge in computer science and programming.
+- Task 2 is ranked as Medium because it focuses on writing a guide rather than the actual implementation. While still requiring some technical expertise, the primary focus is on explaining key concepts and data structures used in the system, which may be more accessible to someone with basic programming knowledge (like Harold).

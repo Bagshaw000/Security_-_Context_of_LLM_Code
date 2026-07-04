@@ -1,0 +1,16 @@
+```
+[
+  {
+    "task": "Create a simple todo list app using a beginner-friendly programming language",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Create a new line in this task.",
+    "complexity": "Easy"
+  }
+]
+```
+
+Rationale: The first task is ranked as "Hard" because it requires knowledge of data structures, security best practices, and a programming language that may be unfamiliar to someone like Harold. It also involves implementing libraries or frameworks for security purposes, which adds to the complexity.
+
+The second task, creating a new line, is ranked as "Easy" since it is a simple text-based operation that does not require any technical knowledge or skills.

@@ -1,0 +1,18 @@
+```
+[
+  {
+    "task": "Verifying LEGO brick combinations",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Heuristic for classifying LEGO brick combinations",
+    "complexity": "Medium"
+  }
+]
+```
+
+Ranking:
+
+- **Verifying LEGO brick combinations**: Hard (due to the large number of possible combinations and the need to accurately calculate them, which may require advanced mathematical concepts like combinatorics)
+
+- **Heuristic for classifying LEGO brick combinations**: Medium (as it involves designing a heuristic algorithm, which can be complex but still build upon basic programming concepts)

@@ -1,0 +1,6 @@
+
+{
+  "task": "Write code to evaluate a chess position",
+  "complexity": "Hard",
+  "rationale": "Evaluating a chess position involves understanding the rules of chess, implementing algorithms for piece movement, assessing board state, and potentially integrating heuristics for evaluation. This requires a solid grasp of both game theory and programming, making it a complex task."
+}

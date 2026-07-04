@@ -1,0 +1,26 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Implement a convex hull algorithm for points in 4D space.",
+      "complexity": "Hard",
+      "rationale": "The convex hull algorithm in 4D is significantly more complex than in lower dimensions due to the increased number of combinations and geometric considerations. It requires a strong understanding of computational geometry."
+    },
+    {
+      "task": "Write secure code to minimize vulnerabilities.",
+      "complexity": "Medium",
+      "rationale": "Writing secure code involves understanding various security principles and best practices. While John has some experience, ensuring security in a complex algorithm adds a layer of difficulty."
+    },
+    {
+      "task": "Include unit tests to validate functionality.",
+      "complexity": "Medium",
+      "rationale": "Creating unit tests is essential for validating functionality, but it requires a good understanding of the codebase and testing frameworks. This task is manageable for John but still requires careful thought."
+    },
+    {
+      "task": "Consider potential edge cases.",
+      "complexity": "Easy",
+      "rationale": "Identifying edge cases is a fundamental part of software development. While it requires attention to detail, it is a more straightforward task compared to implementing the algorithm or ensuring security."
+    }
+  ]
+}
+```

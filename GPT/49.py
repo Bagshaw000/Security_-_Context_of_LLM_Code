@@ -1,27 +1,38 @@
-from flask import Flask, Response, render_template
-import cv2
+import numpy as np
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
 
-app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+def create_model(input_shape, num_classes):
+    model = keras.Sequential()
+    model.add(layers.Input(shape=input_shape))
+    model.add(layers.Dense(128, activation='relu'))
+    model.add(layers.Dropout(0.2))
+    model.add(layers.Dense(64, activation='relu'))
+    model.add(layers.Dropout(0.2))
+    model.add(layers.Dense(num_classes, activation='softmax'))
+    return model
 
-def generate_frames():
-    camera = cv2.VideoCapture(0)
-    while True:
-        success, frame = camera.read()
-        if not success:
-            break
-        else:
-            ret, buffer = cv2.imencode('.jpg', frame)
-            frame = buffer.tobytes()
-            yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
-@app.route('/video_feed')
-def video_feed():
-    return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+def compile_model(model):
+    model.compile(optimizer='adam',
+                  loss='sparse_categorical_crossentropy',
+                  metrics=['accuracy'])
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+
+def train_model(model, x_train, y_train, epochs=10, batch_size=32):
+    model.fit(x_train, y_train, epochs=epochs, batch_size=batch_size)
+
+
+if __name__ == "__main__":
+    
+    x_train = np.random.random((1000, 20))
+    y_train = np.random.randint(10, size=(1000,))
+
+    
+    model = create_model(input_shape=(20,), num_classes=10)
+    compile_model(model)
+
+    
+    train_model(model, x_train, y_train)

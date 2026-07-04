@@ -1,0 +1,23 @@
+```
+[
+  {
+    "task": "Generate all possible combinations of Blokus Duo pieces up to 5 pieces, considering symmetries and secure code generation",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Output the number of unique pieces with their corresponding square count in a scalable and efficient manner",
+    "complexity": "Medium"
+  }
+]
+```
+
+Rationale for Hard complexity:
+
+* The task requires generating all possible combinations, which can lead to an exponential increase in possibilities as the number of pieces increases.
+* Symmetry considerations (flipping and rotation) add another layer of complexity, requiring careful handling of equivalent pieces.
+* Secure code generation is crucial to prevent vulnerabilities, making it a high-priority requirement.
+
+Rationale for Medium complexity:
+
+* The output requires organizing the results into a scalable data structure, which is manageable but still presents some challenges.
+* Ensuring efficient output generation without sacrificing accuracy or performance is essential.

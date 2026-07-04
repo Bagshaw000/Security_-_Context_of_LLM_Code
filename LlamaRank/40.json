@@ -1,0 +1,12 @@
+```
+[
+    {
+        "task": "Verifying LEGO brick combinations",
+        "complexity": "Easy"
+    },
+    {
+        "task": "Designing heuristic for evaluating brick combinations",
+        "complexity": "Medium"
+    }
+]
+```

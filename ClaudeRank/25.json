@@ -1,0 +1,11 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Write code to simulate multiple lifts operating in a skyscraper",
+      "complexity": "Medium",
+      "rationale": "For Brad's expertise level, this is a straightforward problem involving concurrent systems and state management. While it requires understanding of multi-threading/async patterns, scheduling algorithms, and object-oriented design (lift states, request queues), it lacks the complexity of distributed systems he regularly handles at Amazon. The problem is self-contained without network latency, consistency requirements, or scale challenges typical of his device management work. No advanced data structures or intricate algorithmic optimization is needed beyond basic priority queues for floor requests."
+    }
+  ]
+}
+```

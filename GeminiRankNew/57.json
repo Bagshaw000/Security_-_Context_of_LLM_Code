@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design a secure Python utility to aggregate image classifications from 'n' neural networks with strict validation and unit testing.",
+  "complexity": "Medium",
+  "rationale": "While the core logic (averaging or voting) is straightforward for a CS graduate, the requirements for strict schema validation, defensive programming, and security-first practices elevate it. It tests John's ability to move beyond simple scripts to production-ready, robust code, which is a typical milestone for a junior engineer."
+}
+```

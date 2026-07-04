@@ -1,24 +1,71 @@
-import sqlite3
+import random
 
+class TetrisGame:
+    def __init__(self):
+        self.board = [[0 for _ in range(10)] for _ in range(20)]
+        self.players = ["Player 1", "Player 2", "Player 3"]
+        self.scores = [0, 0, 0]
+        self.current_player = 0
 
-conn = sqlite3.connect('bicycle_shop.db')
-c = conn.cursor()
+    def print_board(self):
+        for row in self.board:
+            print(row)
 
+    def check_lines(self):
+        for row in range(19, -1, -1):
+            if 0 not in self.board[row]:
+                self.board.pop(row)
+                self.board.insert(0, [0 for _ in range(10)])
+                self.scores[self.current_player] += 10
 
-c.execute()
+    def move_piece(self, piece, direction):
+        
+        pass
 
-c.execute()
+    def rotate_piece(self, piece):
+        
+        pass
 
-c.execute()
+    def place_piece(self, piece):
+        
+        pass
 
+    def game_loop(self):
+        while True:
+            self.print_board()
+            print(f"Current player: {self.players[self.current_player]}")
+            print(f"Score: {self.scores[self.current_player]}")
 
-c.execute("INSERT INTO bicycles (brand, model, type, size, price) VALUES (?, ?, ?, ?, ?)", ('Trek', 'Marlin 5', 'Mountain', 'Medium', 599.99))
-c.execute("INSERT INTO bicycles (brand, model, type, size, price) VALUES (?, ?, ?, ?, ?)", ('Specialized', 'Allez', 'Road', 'Small', 899.99))
-c.execute("INSERT INTO customers (first_name, last_name, email, phone) VALUES (?, ?, ?, ?)", ('John', 'Doe', 'john@example.com', '555-1234'))
-c.execute("INSERT INTO customers (first_name, last_name, email, phone) VALUES (?, ?, ?, ?)", ('Jane', 'Smith', 'jane@example.com', '555-5678'))
-c.execute("INSERT INTO orders (customer_id, bicycle_id, order_date) VALUES (?, ?, ?)", (1, 1, '2023-04-15'))
-c.execute("INSERT INTO orders (customer_id, bicycle_id, order_date) VALUES (?, ?, ?)", (2, 2, '2023-04-20'))
+            
+            move = input("Enter move (left, right, down, rotate): ")
 
+            
+            if move == "left":
+                self.move_piece(piece, "left")
+            elif move == "right":
+                self.move_piece(piece, "right")
+            elif move == "down":
+                self.move_piece(piece, "down")
+            elif move == "rotate":
+                self.rotate_piece(piece)
+            else:
+                print("Invalid move, try again.")
 
-conn.commit()
-conn.close()
+            
+            self.check_lines()
+
+            
+            self.current_player = (self.current_player + 1) % 3
+
+            
+            piece = self.generate_piece()
+
+            
+            self.place_piece(piece)
+
+    def generate_piece(self):
+        
+        pass
+
+game = TetrisGame()
+game.game_loop()

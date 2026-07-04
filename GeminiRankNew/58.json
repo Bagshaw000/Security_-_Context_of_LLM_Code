@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design a production-grade, thread-safe ensemble classification module with Bayesian consensus and secure input validation for distributed systems.",
+  "complexity": "Hard",
+  "rationale": "As a Principal Engineer, I recognize this requires more than just logic; it demands a convergence of high-concurrency management, mathematical rigor in Bayesian aggregation, and strict security engineering. Ensuring low-latency performance while sanitizing heterogeneous payloads in a distributed, memory-safe environment involves complex trade-offs between availability and system integrity."
+}
+```

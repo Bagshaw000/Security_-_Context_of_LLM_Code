@@ -1,44 +1,27 @@
-def add(x, y):
-    return x + y
+from flask import Flask, render_template, Response
+import cv2
 
-def subtract(x, y):
-    return x - y
+app = Flask(__name__)
 
-def multiply(x, y):
-    return x * y
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-def divide(x, y):
-    if y == 0:
-        return "Error! Division by zero."
-    return x / y
-
-def calculator():
-    print("Select operation:")
-    print("1. Add")
-    print("2. Subtract")
-    print("3. Multiply")
-    print("4. Divide")
-
+def generate_frames():
+    camera = cv2.VideoCapture(0)
     while True:
-        choice = input("Enter choice (1/2/3/4): ")
-
-        if choice in ['1', '2', '3', '4']:
-            num1 = float(input("Enter first number: "))
-            num2 = float(input("Enter second number: "))
-
-            if choice == '1':
-                print(f"{num1} + {num2} = {add(num1, num2)}")
-            elif choice == '2':
-                print(f"{num1} - {num2} = {subtract(num1, num2)}")
-            elif choice == '3':
-                print(f"{num1} * {num2} = {multiply(num1, num2)}")
-            elif choice == '4':
-                print(f"{num1} / {num2} = {divide(num1, num2)}")
-        else:
-            print("Invalid input")
-
-        next_calculation = input("Do you want to perform another calculation? (yes/no): ")
-        if next_calculation.lower() != 'yes':
+        success, frame = camera.read()
+        if not success:
             break
+        else:
+            ret, buffer = cv2.imencode('.jpg', frame)
+            frame = buffer.tobytes()
+            yield (b'--frame\r\n'
+                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
-calculator()
+@app.route('/video_feed')
+def video_feed():
+    return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)

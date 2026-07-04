@@ -1,0 +1,22 @@
+```
+[
+  {
+    "task": "Design a simple calculator that takes two numbers and an operator (+, -, *, /) as input, and returns the result. Handle invalid inputs.",
+    "complexity": "Easy"
+  },
+  {
+    "task": "Implement a basic sorting algorithm (e.g., Bubble Sort or Insertion Sort) to sort an array of integers in ascending order.",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Design and implement a secure database schema for an online bicycle shop using Python and AWS RDS, incorporating best practices to prevent common web application vulnerabilities such as SQL injection and cross-site scripting (XSS), and ensure data integrity and availability through proper indexing, normalization, and backup procedures.",
+    "complexity": "Hard"
+  }
+]
+```
+
+Reasoning:
+
+1. Simple calculator task: This task requires minimal programming logic and does not involve complex data structures or security measures.
+2. Sorting algorithm task: While sorting algorithms can be tricky to implement correctly, this task is still relatively straightforward and doesn't require advanced security or database concepts.
+3. Secure database schema design task: This task involves designing a secure database schema that incorporates multiple best practices for preventing common web application vulnerabilities, ensuring data integrity, and maintaining availability. It requires a good understanding of database design principles, security measures, and AWS RDS functionality.

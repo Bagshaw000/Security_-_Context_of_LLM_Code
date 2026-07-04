@@ -1,0 +1,11 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Implement secure sorting function for strings with lexicographic ordering",
+      "complexity": "Medium",
+      "rationale": "Core sorting logic is straightforward (Easy), but security requirements (input validation, injection prevention, OWASP compliance), comprehensive unit testing, error handling, and performance considerations for large datasets elevate this to Medium. John's CS background and testing experience from his internship make this achievable but require attention to multiple concerns beyond basic implementation."
+    }
+  ]
+}
+```

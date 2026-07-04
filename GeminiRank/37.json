@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Generate and count unique n-square pieces (polyominoes) up to n=5 for Blokus Duo, accounting for rotational and reflective symmetries.",
+    "complexity": "Medium",
+    "rationale": "As a Principal Engineer, I recognize this as a classic combinatorial problem requiring recursive backtracking and spatial normalization. The core difficulty lies in implementing the Dihedral Group (D4) transformations to prune isomorphic shapes and defining a canonical form for deduplication. While the state space for n=5 is small, the logic for symmetry-invariant shape identification requires precise algorithmic rigor."
+  }
+]
+```

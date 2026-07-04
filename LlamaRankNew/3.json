@@ -1,0 +1,24 @@
+```
+[
+  {
+    "task": "Implement a todo list app using Python",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Create a secure todo list app with best practices for secure coding and error handling",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Design an access control system for the todo list app",
+    "complexity": "Hard"
+  }
+]
+```
+
+Reasoning:
+
+1. Implement a todo list app using Python: This task requires John to build a basic application, which is a medium-level complexity task. As a junior software engineer with experience in Python, he can handle this task with ease.
+
+2. Create a secure todo list app with best practices for secure coding and error handling: This task involves implementing security measures such as encryption, password hashing, and access control mechanisms, making it a hard task due to the complexity of secure coding practices and the need to ensure robustness through unit testing.
+
+3. Design an access control system for the todo list app: This task requires John to design a system that ensures user data is protected, which involves complex security considerations such as authentication, authorization, and access control mechanisms. Therefore, it's classified as hard due to its complexity and depth of knowledge required.

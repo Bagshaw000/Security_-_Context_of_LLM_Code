@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write a game of snake like that on the Nokia phones in 1997",
+  "complexity": "Easy",
+  "rationale": "For Brad's expertise level, this is straightforward. The task requires basic game mechanics (grid-based movement, collision detection, score tracking) and simple UI rendering. While it involves game loops and state management, these are fundamental concepts well within the scope of someone with 12 years of experience and strong algorithmic knowledge. No distributed systems, authentication complexity, or large-scale architecture considerations are needed. The main challenge is UI implementation, not algorithmic or system design complexity."
+}
+```

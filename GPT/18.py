@@ -1,43 +1,19 @@
-class TodoApp:
-    def __init__(self):
-        self.todos = []
+import openai
 
-    def add_task(self, task):
-        self.todos.append(task)
-        print(f'Task "{task}" added.')
-
-    def remove_task(self, task):
-        if task in self.todos:
-            self.todos.remove(task)
-            print(f'Task "{task}" removed.')
-        else:
-            print(f'Task "{task}" not found.')
-
-    def view_tasks(self):
-        if not self.todos:
-            print("No tasks in the list.")
-        else:
-            print("Todo List:")
-            for idx, task in enumerate(self.todos, start=1):
-                print(f"{idx}. {task}")
-
-    def run(self):
-        while True:
-            command = input("Enter a command (add, remove, view, exit): ").strip().lower()
-            if command == "add":
-                task = input("Enter the task: ")
-                self.add_task(task)
-            elif command == "remove":
-                task = input("Enter the task to remove: ")
-                self.remove_task(task)
-            elif command == "view":
-                self.view_tasks()
-            elif command == "exit":
-                print("Exiting the app.")
-                break
-            else:
-                print("Invalid command. Please try again.")
+def generate_summary(paper_text):
+    openai.api_key = 'your-api-key-here'
+    
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[
+            {"role": "user", "content": f"Please summarize the following research paper: {paper_text}"}
+        ]
+    )
+    
+    summary = response['choices'][0]['message']['content']
+    return summary
 
 if __name__ == "__main__":
-    app = TodoApp()
-    app.run()
+    research_paper = "Your research paper text goes here."
+    summary = generate_summary(research_paper)
+    print("Summary:", summary)

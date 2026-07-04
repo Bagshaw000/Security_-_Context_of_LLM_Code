@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code for a workout tracking app that can import data from other fitness apps",
+  "complexity": "Hard",
+  "rationale": "While the core UI is straightforward, the integration layer requires handling fragmented third-party APIs, diverse data formats (GPX, FIT, JSON), OAuth2 authentication flows, and building a scalable, idempotent ingestion pipeline to normalize and deduplicate data from multiple external sources."
+}
+```

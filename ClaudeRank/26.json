@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Write code to simulate multiple lifts operating in a skyscraper",
+    "complexity": "Hard",
+    "rationale": "This task requires understanding multiple advanced concepts: managing multiple simultaneous processes (lifts), tracking state (floor positions, directions), handling queues (waiting passengers), and coordinating interactions between independent entities. For Harold, this involves unfamiliar programming logic, complex data organization, and algorithmic thinking about how systems work together—concepts completely outside his Excel/word processing experience."
+  }
+]
+```

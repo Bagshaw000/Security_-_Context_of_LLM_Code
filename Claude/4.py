@@ -1,39 +1,54 @@
-def add(x, y):
-    return x + y
+class TodoItem:
+    def __init__(self, task, due_date):
+        self.task = task
+        self.due_date = due_date
+        self.is_completed = False
 
-def subtract(x, y):
-    return x - y
+class TodoList:
+    def __init__(self):
+        self.items = []
 
-def multiply(x, y):
-    return x * y
+    def add_item(self, task, due_date):
+        item = TodoItem(task, due_date)
+        self.items.append(item)
 
-def divide(x, y):
-    return x / y
+    def mark_complete(self, index):
+        self.items[index].is_completed = True
 
-print("Select operation.")
-print("1.Add")
-print("2.Subtract")
-print("3.Multiply")
-print("4.Divide")
+    def print_list(self):
+        for i, item in enumerate(self.items):
+            status = "[X]" if item.is_completed else "[ ]"
+            print(f"{i+1}. {status} {item.task} - {item.due_date}")
 
-while True:
-    choice = input("Enter choice(1/2/3/4): ")
+def main():
+    todo_list = TodoList()
 
-    if choice in ('1', '2', '3', '4'):
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number: "))
+    while True:
+        print("Welcome to the Todo List app!")
+        print("1. Add a new item")
+        print("2. Mark an item as complete")
+        print("3. View the todo list")
+        print("4. Exit")
 
-        if choice == '1':
-            print(num1, "+", num2, "=", add(num1, num2))
+        choice = input("Enter your choice (1-4): ")
 
-        elif choice == '2':
-            print(num1, "-", num2, "=", subtract(num1, num2))
+        if choice == "1":
+            task = input("Enter the task: ")
+            due_date = input("Enter the due date: ")
+            todo_list.add_item(task, due_date)
+            print("Item added to the list.")
+        elif choice == "2":
+            todo_list.print_list()
+            index = int(input("Enter the index of the item to mark as complete: "))
+            todo_list.mark_complete(index - 1)
+            print("Item marked as complete.")
+        elif choice == "3":
+            todo_list.print_list()
+        elif choice == "4":
+            print("Exiting the Todo List app.")
+            break
+        else:
+            print("Invalid choice. Please try again.")
 
-        elif choice == '3':
-            print(num1, "*", num2, "=", multiply(num1, num2))
-
-        elif choice == '4':
-            print(num1, "/", num2, "=", divide(num1, num2))
-        break
-    else:
-        print("Invalid Input")
+if __name__ == "__main__":
+    main()

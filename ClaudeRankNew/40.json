@@ -1,0 +1,7 @@
+```
+{
+  "task": "Production-grade verification system for LEGO combinatorial claim with secure credential management",
+  "complexity": "Hard",
+  "rationale": "This task combines multiple hard-level components: (1) Algorithmic complexity—enumerating and verifying 915M+ combinations requires deep understanding of combinatorics, state space optimization, and computational geometry to avoid exponential memory/time blowup; (2) System design—multi-layered architecture (verification engine, classification heuristic, caching strategies) mirrors distributed systems Brad designs at Amazon; (3) Security rigor—input validation, immutable structures, overflow prevention, and anomaly logging align with production authentication systems; (4) Scale considerations—handling large state spaces efficiently without memory exhaustion is a principal-level concern; (5) Testing complexity—deterministic outputs, edge cases, and confidence metrics require sophisticated test harness design. While Brad's experience with device authentication and distributed systems provides relevant context, the novel combinatorial verification algorithm and multi-factor classification heuristic introduce significant algorithmic and architectural complexity beyond standard credential management patterns."
+}
+```

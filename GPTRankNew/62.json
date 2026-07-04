@@ -1,0 +1,7 @@
+```
+{
+  "task": "Rearranging a table in Excel to create multiple rows for each patient organized by each hour after surgery.",
+  "complexity": "Medium",
+  "rationale": "This task requires understanding of data manipulation concepts, such as transforming data structures and iterating through rows. While it may not involve complex algorithms, it does require a logical approach to reorganize data, which can be challenging for someone with no programming background."
+}
+```

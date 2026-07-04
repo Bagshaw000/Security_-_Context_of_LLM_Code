@@ -1,0 +1,7 @@
+```
+{
+  "task": "Gather the classification outputs from n distinct neural networks for a given image. Develop a robust method to aggregate these classifications, ensuring the output reflects the most probable classification based on individual predictions. Additionally, calculate and present the confidence level associated with this final classification. Ensure that the implementation adheres to secure coding practices to mitigate vulnerabilities.",
+  "complexity": "Hard",
+  "rationale": "This task involves multiple complex components: aggregating outputs from distinct neural networks, implementing a robust aggregation method, calculating confidence levels, and ensuring secure coding practices. Each of these elements requires a deep understanding of machine learning principles, statistical methods, and security best practices, making it significantly more challenging than simpler tasks."
+}
+```

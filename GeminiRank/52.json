@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to implement a convex hull algorithm for 4D points",
+  "complexity": "Hard",
+  "rationale": "Moving beyond 3D requires generalized algorithms like Quickhull or the Beneath-Beyond method. Implementing these in 4D involves complex combinatorial data structures to track 3-facets and high-dimensional geometric predicates, making it significantly more difficult than standard 2D/3D computational geometry tasks."
+}
+```

@@ -1,44 +1,62 @@
-def add(x, y):
-    return x + y
+class TodoItem:
+    def __init__(self, task):
+        self.task = task
+        self.completed = False
 
-def subtract(x, y):
-    return x - y
+    def mark_completed(self):
+        self.completed = True
 
-def multiply(x, y):
-    return x * y
+    def __str__(self):
+        status = "✓" if self.completed else "✗"
+        return f"[{status}] {self.task}"
 
-def divide(x, y):
-    if y == 0:
-        return "Error! Division by zero."
-    return x / y
 
-def calculator():
-    print("Select operation:")
-    print("1. Add")
-    print("2. Subtract")
-    print("3. Multiply")
-    print("4. Divide")
+class TodoList:
+    def __init__(self):
+        self.items = []
 
+    def add_task(self, task):
+        self.items.append(TodoItem(task))
+
+    def remove_task(self, index):
+        if 0 <= index < len(self.items):
+            del self.items[index]
+
+    def mark_task_completed(self, index):
+        if 0 <= index < len(self.items):
+            self.items[index].mark_completed()
+
+    def show_tasks(self):
+        for index, item in enumerate(self.items):
+            print(f"{index + 1}. {item}")
+
+
+def main():
+    todo_list = TodoList()
     while True:
-        choice = input("Enter choice (1/2/3/4): ")
+        print("\nTodo List:")
+        todo_list.show_tasks()
+        print("\nOptions:")
+        print("1. Add task")
+        print("2. Remove task")
+        print("3. Mark task as completed")
+        print("4. Exit")
+        choice = input("Choose an option: ")
 
-        if choice in ['1', '2', '3', '4']:
-            num1 = float(input("Enter first number: "))
-            num2 = float(input("Enter second number: "))
-
-            if choice == '1':
-                print(f"{num1} + {num2} = {add(num1, num2)}")
-            elif choice == '2':
-                print(f"{num1} - {num2} = {subtract(num1, num2)}")
-            elif choice == '3':
-                print(f"{num1} * {num2} = {multiply(num1, num2)}")
-            elif choice == '4':
-                print(f"{num1} / {num2} = {divide(num1, num2)}")
-        else:
-            print("Invalid input")
-
-        next_calculation = input("Do you want to perform another calculation? (yes/no): ")
-        if next_calculation.lower() != 'yes':
+        if choice == "1":
+            task = input("Enter the task: ")
+            todo_list.add_task(task)
+        elif choice == "2":
+            index = int(input("Enter task number to remove: ")) - 1
+            todo_list.remove_task(index)
+        elif choice == "3":
+            index = int(input("Enter task number to mark as completed: ")) - 1
+            todo_list.mark_task_completed(index)
+        elif choice == "4":
             break
+        else:
+            print("Invalid option. Please try again.")
 
-calculator()
+
+if __name__ == "__main__":
+    main()

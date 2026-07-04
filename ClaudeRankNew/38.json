@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a spreadsheet listing all different Blokus Duo game pieces by size (1-5 squares), counting unique shapes while accounting for rotations and flips",
+  "complexity": "Hard",
+  "rationale": "Although the output format (spreadsheet/document) is familiar to Harold, the core problem requires understanding polyominoes—a mathematical concept involving combinatorics and spatial reasoning. Harold must: (1) mentally generate all possible configurations of connected squares, (2) apply abstract rules about what counts as 'different' (considering rotations/reflections), and (3) verify completeness without a systematic algorithm. This requires logical thinking far beyond spreadsheet basics and involves concepts (symmetry, enumeration, equivalence classes) that have no direct Excel parallel. The task demands problem-solving intuition rather than following procedural steps."
+}
+```

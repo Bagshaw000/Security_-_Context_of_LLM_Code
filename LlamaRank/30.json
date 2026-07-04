@@ -1,0 +1,37 @@
+Here is the response in JSON format:
+
+```
+[
+  {
+    "task": "Write code for a three-player game of Tetris",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Implement a binary search algorithm to find an element in a sorted array",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Design a system to optimize inventory management for a small startup",
+    "complexity": "Easy"
+  }
+]
+```
+
+Rationale:
+
+1. Writing code for a three-player game of Tetris is considered Hard because it requires:
+	* Implementing complex game logic, including collision detection, scoring, and AI.
+	* Managing multiple game states and player interactions.
+	* Ensuring the game runs smoothly on various hardware configurations.
+
+2. Implementing a binary search algorithm to find an element in a sorted array is considered Medium because it requires:
+	* Understanding data structures and algorithms.
+	* Writing efficient code with proper time complexity analysis.
+	* Handling edge cases, such as empty arrays or duplicate elements.
+
+3. Designing a system to optimize inventory management for a small startup is considered Easy because it involves:
+	* Applying existing knowledge of software design patterns (e.g., object-oriented programming).
+	* Creating data models and implementing basic CRUD operations.
+	* Optimizing the solution with techniques like caching, indexing, or batch processing.
+
+As a junior software engineer, John has experience with Python, AWS, and unit testing, which will be beneficial for this task. However, the complexity of the first task might require more advanced problem-solving skills and design thinking.

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Verify LEGO's claim about 2X4 brick combinations and design a heuristic for classifying them.",
+  "complexity": "Hard",
+  "rationale": "This task involves combinatorial mathematics and requires an understanding of algorithms to generate and classify combinations. It is complex due to the need for both verification of a mathematical claim and the design of a heuristic, which requires advanced problem-solving skills and knowledge of programming concepts."
+}
+```

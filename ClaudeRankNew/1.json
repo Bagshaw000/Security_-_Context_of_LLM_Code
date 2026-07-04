@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a production-grade calculator system with enterprise-level security and architectural considerations",
+  "complexity": "Hard",
+  "rationale": "While a basic calculator is trivial, this task demands expertise across multiple dimensions critical to Brad's experience: (1) Security-first design requiring threat modeling and vulnerability mitigation, (2) Distributed systems architecture with microservices integration patterns he's actively working with, (3) Enterprise patterns (circuit breakers, graceful degradation) requiring architectural maturity, (4) High-throughput optimization and latency constraints, (5) SOLID principles application at scale, (6) Comprehensive testing and monitoring infrastructure, (7) Edge case handling (numeric precision, overflow) across distributed contexts. The complexity stems not from calculator logic itself, but from the production-grade, security-hardened, distributed systems perspective demanded—directly aligned with his Device Management Systems role requiring secure authentication and registration patterns."
+}
+```

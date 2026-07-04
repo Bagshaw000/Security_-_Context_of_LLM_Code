@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a robust ATM controller system with HSM integration, mTLS, and atomic transaction handling.",
+  "complexity": "Hard",
+  "rationale": "From my perspective at Amazon, this is 'Hard' because it requires orchestrating distributed state across multiple tiers while maintaining strict ACID properties. Integrating hardware-level security (HSM) and mutual TLS adds significant implementation overhead, and ensuring thread-safe, race-condition-free financial operations in a high-concurrency environment demands advanced architectural rigor beyond standard application logic."
+}
+```

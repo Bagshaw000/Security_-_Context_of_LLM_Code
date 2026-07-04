@@ -1,0 +1,6 @@
+
+{
+  "task": "Write code to generate accounting reports",
+  "complexity": "Medium",
+  "rationale": "Generating accounting reports involves data aggregation, formatting, and possibly complex calculations. While it may not require advanced algorithms, it does require a good understanding of financial data and reporting standards."
+}

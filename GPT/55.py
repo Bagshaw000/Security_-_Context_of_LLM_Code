@@ -1,27 +1,25 @@
-from flask import Flask, render_template, Response
-import cv2
+from itertools import combinations
 
-app = Flask(__name__)
+def max_probability_coins(coins, n):
+    def probability_of_heads(selected_coins):
+        prob = 1
+        for coin in selected_coins:
+            prob *= coin
+        return prob
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+    max_prob = 0
+    best_combination = []
 
-def generate_frames():
-    camera = cv2.VideoCapture(0)
-    while True:
-        success, frame = camera.read()
-        if not success:
-            break
-        else:
-            ret, buffer = cv2.imencode('.jpg', frame)
-            frame = buffer.tobytes()
-            yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+    for combo in combinations(coins, n):
+        prob = probability_of_heads(combo)
+        if prob > max_prob:
+            max_prob = prob
+            best_combination = combo
 
-@app.route('/video_feed')
-def video_feed():
-    return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+    return best_combination, max_prob
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+
+coins = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]  
+n = 4  
+result = max_probability_coins(coins, n)
+print(result)

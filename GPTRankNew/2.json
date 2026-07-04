@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a simple calculator program that can perform basic arithmetic operations like addition, subtraction, multiplication, and division.",
+  "complexity": "Medium",
+  "rationale": "While the task involves basic arithmetic operations, it requires understanding programming concepts such as functions, input handling, and output. Additionally, ensuring security and minimizing vulnerabilities adds a layer of complexity that goes beyond simple formula creation in Excel."
+}
+```

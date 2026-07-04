@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a secure, scalable accounting reports generation system for enterprise environments",
+  "complexity": "Hard",
+  "rationale": "While Brad's background in distributed systems, authentication, and access control directly applies to several requirements (RBAC, encryption, audit logging), this task demands mastery across multiple complex domains simultaneously: (1) Financial data sensitivity requires deep security expertise beyond typical device auth; (2) Multi-tiered architecture with eventual consistency patterns adds distributed system complexity; (3) Comprehensive compliance and audit requirements introduce regulatory constraints; (4) Balancing idempotency, circuit breakers, rate limiting, and error handling requires sophisticated system design; (5) Security-focused testing across authentication, authorization, and data validation boundaries is extensive. The integration of these 10 interconnected requirements—not individually challenging for Brad, but collectively demanding—requires orchestrating security, scalability, compliance, and resilience in a cohesive system. His device auth experience provides a foundation, but accounting systems have distinct compliance and financial integrity demands."
+}
+```

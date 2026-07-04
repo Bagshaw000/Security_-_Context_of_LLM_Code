@@ -1,0 +1,7 @@
+```
+{
+  "task": "Implement a gradient ascent algorithm to find the global maximum of a function",
+  "complexity": "Medium",
+  "rationale": "While gradient ascent is a foundational optimization algorithm that Brad would be familiar with given his strong algorithms background, implementing it correctly requires understanding of calculus concepts (derivatives), numerical methods (step sizes, convergence), and careful consideration of edge cases (local maxima vs global maxima, learning rate tuning). However, it's not 'Hard' because the core algorithm is well-established and doesn't require designing novel distributed systems or handling complex architectural challenges that Brad typically encounters at Amazon scale. The complexity lies in implementation details and optimization rather than system design."
+}
+```

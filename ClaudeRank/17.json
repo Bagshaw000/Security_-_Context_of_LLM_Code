@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to track user interactions across a website",
+  "complexity": "Hard",
+  "rationale": "This task requires understanding of multiple advanced concepts: event handling systems, data persistence/databases, asynchronous programming, and web infrastructure. For Harold, this involves unfamiliar concepts like APIs, server communication, and user session management—none of which relate to his Excel or word processing experience. The task also requires knowledge of HTML/CSS/JavaScript and backend systems, making it significantly beyond beginner level."
+}
+```

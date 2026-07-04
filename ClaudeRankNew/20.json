@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a simple tool that uses AI to automatically write summaries of research papers",
+  "complexity": "Hard",
+  "rationale": "Despite the task being framed as 'simple,' it requires Harold to understand several advanced concepts: API integration (connecting to external AI services), file handling (reading and writing documents programmatically), authentication/security (API keys and passwords), and data privacy considerations. For someone with only Excel and Word experience, this involves a significant conceptual leap from spreadsheets to programming logic, external service communication, and security practices. The safety requirements add additional complexity by requiring understanding of authentication, data handling, and verification processes that go beyond basic computer literacy."
+}
+```

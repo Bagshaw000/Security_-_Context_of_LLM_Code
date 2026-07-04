@@ -1,50 +1,53 @@
-import tkinter as tk
+import csv
 from datetime import datetime
 
-class TodoList:
-    def __init__(self, master):
-        self.master = master
-        master.title("Todo List")
+class WorkoutTracker:
+    def __init__(self):
+        self.workouts = []
 
-        self.tasks = []
-        self.task_entries = []
+    def import_data(self, file_path):
+        try:
+            with open(file_path, 'r') as file:
+                reader = csv.DictReader(file)
+                for row in reader:
+                    workout = {
+                        'date': datetime.strptime(row['date'], '%Y-%m-%d'),
+                        'activity': row['activity'],
+                        'duration': float(row['duration']),
+                        'calories': float(row['calories'])
+                    }
+                    self.workouts.append(workout)
+            print(f'Successfully imported {len(self.workouts)} workouts.')
+        except FileNotFoundError:
+            print('Error: File not found.')
+        except (ValueError, KeyError):
+            print('Error: Invalid data format in the file.')
 
-        self.label = tk.Label(master, text="Todo List")
-        self.label.pack()
+    def get_total_duration(self):
+        total_duration = sum(workout['duration'] for workout in self.workouts)
+        return total_duration
 
-        self.task_entry = tk.Entry(master)
-        self.task_entry.pack()
+    def get_total_calories(self):
+        total_calories = sum(workout['calories'] for workout in self.workouts)
+        return total_calories
 
-        self.add_button = tk.Button(master, text="Add Task", command=self.add_task)
-        self.add_button.pack()
+    def get_workouts_by_activity(self, activity):
+        return [workout for workout in self.workouts if workout['activity'] == activity]
 
-        self.list_box = tk.Listbox(master)
-        self.list_box.pack()
+    def get_workouts_by_date(self, date):
+        return [workout for workout in self.workouts if workout['date'].date() == date.date()]
 
-        self.delete_button = tk.Button(master, text="Delete Task", command=self.delete_task)
-        self.delete_button.pack()
 
-        self.save_button = tk.Button(master, text="Save Tasks", command=self.save_tasks)
-        self.save_button.pack()
+tracker = WorkoutTracker()
+tracker.import_data('fitness_data.csv')
+print(f'Total duration: {tracker.get_total_duration()} minutes')
+print(f'Total calories: {tracker.get_total_calories()} calories')
 
-    def add_task(self):
-        task = self.task_entry.get().strip()
-        if task:
-            self.tasks.append(task)
-            self.list_box.insert(tk.END, task)
-            self.task_entry.delete(0, tk.END)
+print('Workouts by activity:')
+for activity, workouts in [(activity, tracker.get_workouts_by_activity(activity)) for activity in set(workout['activity'] for workout in tracker.workouts)]:
+    print(f'{activity}: {len(workouts)} workouts')
 
-    def delete_task(self):
-        selected = self.list_box.curselection()
-        if selected:
-            self.tasks.pop(selected[0])
-            self.list_box.delete(selected[0])
-
-    def save_tasks(self):
-        with open("todo_list.txt", "w") as f:
-            for task in self.tasks:
-                f.write(f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - {task}\n")
-
-root = tk.Tk()
-todo_list = TodoList(root)
-root.mainloop()
+print('Workouts by date:')
+for date in set(workout['date'].date() for workout in tracker.workouts):
+    workouts = tracker.get_workouts_by_date(date)
+    print(f'{date}: {len(workouts)} workouts')

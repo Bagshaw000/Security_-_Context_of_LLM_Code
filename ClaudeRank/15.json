@@ -1,0 +1,11 @@
+```
+{
+  "ranking": [
+    {
+      "task": "Write code to track user interactions across a website",
+      "complexity": "Medium",
+      "rationale": "Requires understanding of event handling, data collection, and storage patterns. John has AWS experience which is useful for backend infrastructure. However, this involves frontend tracking logic, analytics implementation, and ensuring data consistency across sessions—concepts beyond his current junior-level experience. His startup background with inventory tracking provides some foundation for data collection patterns, but web analytics adds complexity with browser APIs, session management, and potential privacy/compliance considerations."
+    }
+  ]
+}
+```

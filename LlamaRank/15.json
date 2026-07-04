@@ -1,0 +1,8 @@
+```
+{
+  "task": "Write code to track user interactions across a website",
+  "complexity": "Hard"
+}
+```
+
+Rational: This task requires the implementation of a robust tracking system, which involves collecting and analyzing large amounts of data. It also necessitates dealing with potential security concerns such as data protection and privacy. The complexity level is high due to the need for a comprehensive solution that can handle various user interactions, ensuring scalability, reliability, and data integrity.

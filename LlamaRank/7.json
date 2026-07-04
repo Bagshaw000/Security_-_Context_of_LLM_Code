@@ -1,0 +1,16 @@
+Here is the ranking of the coding tasks in terms of complexity:
+
+```
+[
+    {"task": "Write code for a database for an online bicycle shop", "complexity": "Medium"},
+
+]
+```
+
+Rationale for ranking:
+
+* The task "Write code for a database for an online bicycle shop" requires knowledge of data structures, algorithms, and software design patterns. However, it is still a relatively contained problem that can be solved using existing libraries and frameworks, making it Medium complexity.
+* The task "Design a scalable algorithm to sort a large list of unique IDs" is a classic problem in computer science that requires a deep understanding of algorithms and data structures. It also requires considering factors such as memory efficiency and performance, making it Hard complexity.
+* The task "Implement a simple calculator that takes in two numbers and an operator as input" is a basic programming exercise that can be solved using basic data types and control structures, making it Easy complexity.
+
+Note: As Brad has 12 years of professional software development experience and has worked on large-scale projects, he may find these tasks relatively manageable.

@@ -1,0 +1,30 @@
+```
+[
+  {
+    "task": "Design a simple calculator that takes in two numbers and an operator (+, -, *, /) as input and returns the result.",
+    "complexity": "Easy"
+  },
+  {
+    "task": "Write a function to check if a string is a palindrome using Python.",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Implement a binary search algorithm to find an element in a sorted array.",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Design and implement a video streaming website using Python and AWS, incorporating best practices for secure coding and vulnerability mitigation.",
+    "complexity": "Hard"
+  }
+]
+```
+
+Rationale:
+
+1. Simple calculator: This task requires basic mathematical operations and input validation, which are straightforward to implement. It's an ideal task for beginners.
+
+2. Palindrome check: This task involves string manipulation and a simple algorithm to determine if the string is the same forwards and backwards. While it does require some thought, it's still a relatively contained problem with a clear solution.
+
+3. Binary search: This task requires a more complex data structure (a sorted array) and an algorithm that searches through the array efficiently. It also involves handling edge cases, making it a more challenging task.
+
+4. Video streaming website: This task is extremely complex due to the requirement for secure coding, vulnerability mitigation, user authentication, content protection, and robust error handling, among other features. It also requires knowledge of AWS services and CI/CD pipelines, making it a significant undertaking even for experienced developers like John.

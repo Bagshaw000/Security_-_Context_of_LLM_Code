@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code for a three-player game of Tetris",
+  "complexity": "Hard",
+  "rationale": "Requires game loop management, real-time collision detection, graphics rendering, multi-player state synchronization, and complex game logic. While John has Python experience, building a multiplayer game involves architectural challenges (networking/concurrent updates, UI/game engine design) beyond typical business application development from his internship. The three-player aspect adds significant complexity compared to single-player Tetris."
+}
+```

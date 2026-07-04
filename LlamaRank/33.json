@@ -1,0 +1,22 @@
+```
+[
+  {
+    "task": "Evaluate a chess position",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Implement unit tests for a Python function",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Design and implement a simple inventory management tool in Python",
+    "complexity": "Easy"
+  }
+]
+```
+
+Rationale:
+
+* Evaluating a chess position is a complex task, as it requires understanding of game theory, algorithms, and possibly machine learning. It's unlikely that a junior software engineer like John would be expected to implement this from scratch.
+* Implementing unit tests for a Python function is a medium-complexity task, as it requires understanding of testing principles, mocking libraries, and how to write testable code.
+* Designing and implementing a simple inventory management tool in Python is an easy task, as it typically involves using existing libraries or frameworks, such as AWS, and applying basic software development skills.

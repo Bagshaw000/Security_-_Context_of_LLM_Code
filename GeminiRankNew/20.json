@@ -1,0 +1,24 @@
+```
+[
+  {
+    "task": "Setting up the Python environment and basic script structure",
+    "complexity": "Medium",
+    "rationale": "For a non-coder, moving from a visual interface like Word to a text-based coding environment requires learning entirely new logic and syntax."
+  },
+  {
+    "task": "Integrating an AI service (API) for text summarization",
+    "complexity": "Hard",
+    "rationale": "This involves managing external connections and data formats that are much more abstract than simple Excel formulas."
+  },
+  {
+    "task": "Securing private access keys in a separate file",
+    "complexity": "Medium",
+    "rationale": "While conceptually like a password-protected Excel sheet, it requires understanding file paths and 'environment variables' which are hidden from typical users."
+  },
+  {
+    "task": "Implementing safeguards against harmful commands (Input Sanitization)",
+    "complexity": "Hard",
+    "rationale": "Preventing 'prompt injection' or malicious code is a sophisticated security task that requires deep knowledge of how programs interpret data."
+  }
+]
+```

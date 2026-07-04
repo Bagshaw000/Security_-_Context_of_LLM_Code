@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write a game of snake like that on the Nokia phones in 1997",
+  "complexity": "Easy",
+  "rationale": "For a Principal Engineer, this is a foundational exercise involving simple state management, a basic game loop, and standard data structures like a queue or linked list for the snake's body. It lacks the architectural complexity, scalability, or security constraints of distributed device-management systems."
+}
+```

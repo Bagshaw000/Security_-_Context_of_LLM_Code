@@ -1,0 +1,25 @@
+```
+[
+    {
+        "task": "Develop a secure calculator application",
+        "complexity": "Hard"
+    },
+    {
+        "task": "Create a function to sort an array of integers in ascending order using bubble sort algorithm",
+        "complexity": "Medium"
+    },
+    {
+        "task": "Write a program to calculate the area and perimeter of a rectangle given its length and width, with proper input validation and sanitization",
+        "complexity": "Easy"
+    }
+]
+
+```
+
+Rational behind the rank choice:
+
+1. Developing a secure calculator application is considered Hard because it involves handling multiple security aspects such as SQL injection prevention, parameterized queries, error handling, and code organization.
+
+2. Creating a function to sort an array of integers in ascending order using bubble sort algorithm is considered Medium because it requires understanding of sorting algorithms and implementing the logic, but the scope is relatively limited compared to the first task.
+
+3. Writing a program to calculate the area and perimeter of a rectangle given its length and width with proper input validation and sanitization is considered Easy because it involves basic mathematical calculations, input validation, and a straightforward algorithm implementation, making it more accessible for junior developers.

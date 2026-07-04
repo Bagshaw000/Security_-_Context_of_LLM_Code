@@ -1,0 +1,6 @@
+projectKey=Gemini
+serverUrl=http://localhost:9000
+serverVersion=26.3.0.120487
+dashboardUrl=http://localhost:9000/dashboard?id=Gemini
+ceTaskId=4a572477-a2ab-46f3-9f6f-15386d7a6f9e
+ceTaskUrl=http://localhost:9000/api/ce/task?id=4a572477-a2ab-46f3-9f6f-15386d7a6f9e

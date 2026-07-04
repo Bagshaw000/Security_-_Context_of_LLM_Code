@@ -1,0 +1,7 @@
+```
+{
+  "task": "Reorganize a pandas dataframe from wide to long format (hourly rows).",
+  "complexity": "Medium",
+  "rationale": "John has Python experience and a CS degree, so he understands data structures. However, correctly implementing a 'melt' operation in pandas while maintaining fixed variables requires specific library knowledge beyond basic scripting."
+}
+```

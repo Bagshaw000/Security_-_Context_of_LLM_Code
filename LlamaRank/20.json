@@ -1,0 +1,13 @@
+```
+[
+  {"task": "Write a program that calculates the area and perimeter of a rectangle given its length and width", "complexity": "Easy"},
+  {"task": "Create a simple chatbot that responds to basic user queries", "complexity": "Medium"},
+  {"task": "Implement a data structure to store and retrieve research paper metadata using an LLM (Large Language Model)", "complexity": "Hard"}
+]
+```
+
+Rationale:
+
+1. The first task requires basic mathematical calculations, which is easily understandable by anyone familiar with basic algebra.
+2. The second task involves basic programming concepts such as conditional statements, loops, and functions, but it's still a relatively simple task compared to the third one.
+3. The third task involves understanding complex data structures (e.g., dictionaries, lists), interacting with an LLM, and handling potential errors or edge cases, making it much more challenging for someone without prior programming experience.

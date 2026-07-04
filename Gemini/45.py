@@ -1,96 +1,71 @@
-import os
-import boto3
+import numpy as np
 import unittest
-from flask import Flask, render_template_string, request, Response, redirect, url_for
-from botocore.exceptions import NoCredentialsError
 
-app = Flask(__name__)
-
-
-S3_BUCKET = os.environ.get('S3_BUCKET_NAME', 'bristol-video-storage')
-S3_KEY = os.environ.get('AWS_ACCESS_KEY_ID')
-S3_SECRET = os.environ.get('AWS_SECRET_ACCESS_KEY')
-S3_REGION = os.environ.get('AWS_REGION', 'eu-west-2')
-
-s3_client = boto3.client(
-    's3',
-    aws_access_key_id=S3_KEY,
-    aws_secret_access_key=S3_SECRET,
-    region_name=S3_REGION
-)
-
-
-INDEX_HTML = 
-
-PLAYER_HTML = 
-
-@app.route('/')
-def index():
+def target_function(x):
     
-    try:
-        response = s3_client.list_objects_v2(Bucket=S3_BUCKET)
-        videos = [obj['Key'] for obj in response.get('Contents', []) if obj['Key'].endswith('.mp4')]
-    except Exception as e:
-        print(f"Error fetching from S3: {e}")
-        videos = []
-    return render_template_string(INDEX_HTML, videos=videos)
+    return -x**4 + 4*x**2 + x
 
-@app.route('/upload', methods=['POST'])
-def upload():
+def target_gradient(x):
     
-    if 'video_file' not in request.files:
-        return redirect(url_for('index'))
-    file = request.files['video_file']
-    if file.filename == '':
-        return redirect(url_for('index'))
-    
-    try:
-        s3_client.upload_fileobj(
-            file, 
-            S3_BUCKET, 
-            file.filename,
-            ExtraArgs={'ContentType': 'video/mp4'}
-        )
-    except NoCredentialsError:
-        return "AWS Credentials not found", 403
-    
-    return redirect(url_for('index'))
+    return -4 * (x**3) + 8 * x + 1
 
-@app.route('/watch/<filename>')
-def watch(filename):
+def gradient_ascent_step(grad_func, start_x, learning_rate=0.01, tolerance=1e-7, max_iter=1000):
     
-    return render_template_string(PLAYER_HTML, filename=filename)
-
-@app.route('/stream_source/<filename>')
-def stream_source(filename):
-    
-    def generate():
-        response = s3_client.get_object(Bucket=S3_BUCKET, Key=filename)
-        for chunk in response['Body'].iter_chunks(chunk_size=1024*1024): 
-            yield chunk
+    current_x = start_x
+    for _ in range(max_iter):
+        gradient = grad_func(current_x)
+        step = learning_rate * gradient
+        
+        
+        if abs(step) < tolerance:
+            break
             
-    return Response(generate(), mimetype='video/mp4')
+        current_x += step
+    return current_x
 
-
-class VideoAppTests(unittest.TestCase):
-    def setUp(self):
-        app.config['TESTING'] = True
-        self.client = app.test_client()
-
-    def test_homepage_load(self):
-        
-        response = self.client.get('/')
-        self.assertEqual(response.status_code, 200)
-
-    def test_upload_redirect(self):
-        
-        response = self.client.post('/upload', data={'video_file': (None, '')})
-        self.assertEqual(response.status_code, 302)
-
-if __name__ == '__main__':
+def find_global_maximum(func, grad_func, search_range, num_restarts=50):
     
-    import sys
-    if len(sys.argv) > 1 and sys.argv[1] == 'test':
-        unittest.main(argv=[sys.argv[0]])
-    else:
-        app.run(host='0.0.0.0', port=5000, debug=True)
+    best_x = None
+    max_val = -float('inf')
+    
+    low, high = search_range
+    
+    for _ in range(num_restarts):
+        
+        start_x = np.random.uniform(low, high)
+        candidate_x = gradient_ascent_step(grad_func, start_x)
+        candidate_val = func(candidate_x)
+        
+        
+        if candidate_val > max_val:
+            max_val = candidate_val
+            best_x = candidate_x
+                
+    return best_x, max_val
+
+class TestOptimization(unittest.TestCase):
+    
+    def test_parabola_maximum(self):
+        
+        f = lambda x: -(x - 5)**2 + 20
+        f_grad = lambda x: -2 * (x - 5)
+        
+        
+        x_max, _ = find_global_maximum(f, f_grad, (0, 10), num_restarts=10)
+        self.assertAlmostEqual(x_max, 5.0, places=4)
+
+if __name__ == "__main__":
+    
+    bounds = (-3, 3)
+    
+    
+    optimal_x, optimal_val = find_global_maximum(target_function, target_gradient, bounds)
+    
+    print(f"Search Results:")
+    print(f"Estimated Global Maximum at x = {optimal_x:.6f}")
+    print(f"Function Value f(x) = {optimal_val:.6f}")
+    
+    
+    print("\nExecuting Unit Tests...")
+    suite = unittest.TestLoader().loadTestsFromTestCase(TestOptimization)
+    unittest.TextTestRunner(verbosity=1).run(suite)

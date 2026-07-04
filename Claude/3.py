@@ -1,50 +1,60 @@
-def add(a, b):
-    return a + b
+import datetime
 
-def subtract(a, b):
-    return a - b
+class TodoItem:
+    def __init__(self, title, description, due_date):
+        self.title = title
+        self.description = description
+        self.due_date = due_date
+        self.completed = False
 
-def multiply(a, b):
-    return a * b
+class TodoList:
+    def __init__(self):
+        self.items = []
 
-def divide(a, b):
-    return a / b
+    def add_item(self, item):
+        self.items.append(item)
+
+    def complete_item(self, index):
+        self.items[index].completed = True
+
+    def display_items(self):
+        for i, item in enumerate(self.items):
+            status = "[X]" if item.completed else "[ ]"
+            print(f"{i+1}. {status} {item.title} - {item.due_date}")
 
 def main():
-    print("Welcome to the calculator!")
+    todo_list = TodoList()
+
     while True:
-        print("Select an operation:")
-        print("1. Addition")
-        print("2. Subtraction")
-        print("3. Multiplication")
-        print("4. Division")
-        print("5. Exit")
+        print("1. Add a new item")
+        print("2. Mark an item as complete")
+        print("3. Display todo list")
+        print("4. Exit")
 
-        choice = input("Enter your choice (1-5): ")
+        choice = input("Enter your choice (1-4): ")
 
-        if choice == '1':
-            num1 = float(input("Enter the first number: "))
-            num2 = float(input("Enter the second number: "))
-            result = add(num1, num2)
-            print(f"The result is: {result}")
-        elif choice == '2':
-            num1 = float(input("Enter the first number: "))
-            num2 = float(input("Enter the second number: "))
-            result = subtract(num1, num2)
-            print(f"The result is: {result}")
-        elif choice == '3':
-            num1 = float(input("Enter the first number: "))
-            num2 = float(input("Enter the second number: "))
-            result = multiply(num1, num2)
-            print(f"The result is: {result}")
-        elif choice == '4':
-            num1 = float(input("Enter the first number: "))
-            num2 = float(input("Enter the second number: "))
-            result = divide(num1, num2)
-            print(f"The result is: {result}")
-        elif choice == '5':
-            print("Exiting the calculator...")
+        if choice == "1":
+            title = input("Enter the title: ")
+            description = input("Enter the description: ")
+            due_date_str = input("Enter the due date (YYYY-MM-DD): ")
+            due_date = datetime.datetime.strptime(due_date_str, "%Y-%m-%d").date()
+            item = TodoItem(title, description, due_date)
+            todo_list.add_item(item)
+            print("Item added to the todo list.")
+
+        elif choice == "2":
+            todo_list.display_items()
+            index = int(input("Enter the index of the item to mark as complete: "))
+            todo_list.complete_item(index - 1)
+            print("Item marked as complete.")
+
+        elif choice == "3":
+            todo_list.display_items()
+
+        elif choice == "4":
+            print("Exiting the todo list app...")
             break
+
         else:
             print("Invalid choice. Please try again.")
 

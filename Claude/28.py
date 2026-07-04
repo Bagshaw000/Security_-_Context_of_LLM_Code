@@ -1,50 +1,42 @@
-import tkinter as tk
+class ATMController:
+    def __init__(self, atm_network):
+        self.atm_network = atm_network
+        self.registered_atms = {}
+        self.registered_users = {}
 
-class TodoList:
-    def __init__(self, master):
-        self.master = master
-        master.title("Todo List")
+    def register_atm(self, atm_id, location, status):
+        self.registered_atms[atm_id] = {'location': location, 'status': status}
 
-        self.task_list = []
-        self.task_entries = []
+    def unregister_atm(self, atm_id):
+        if atm_id in self.registered_atms:
+            del self.registered_atms[atm_id]
 
-        self.label = tk.Label(master, text="Todo List")
-        self.label.grid(row=0, column=0, columnspan=2, padx=10, pady=10)
+    def register_user(self, user_id, account_info):
+        self.registered_users[user_id] = account_info
 
-        self.entry = tk.Entry(master)
-        self.entry.grid(row=1, column=0, padx=10, pady=10)
+    def authenticate_user(self, user_id, password):
+        if user_id in self.registered_users:
+            if self.registered_users[user_id]['password'] == password:
+                return True
+        return False
 
-        self.add_button = tk.Button(master, text="Add Task", command=self.add_task)
-        self.add_button.grid(row=1, column=1, padx=10, pady=10)
+    def get_atm_status(self, atm_id):
+        if atm_id in self.registered_atms:
+            return self.registered_atms[atm_id]['status']
+        return None
 
-        self.task_frame = tk.Frame(master)
-        self.task_frame.grid(row=2, column=0, columnspan=2, padx=10, pady=10)
+    def update_atm_status(self, atm_id, new_status):
+        if atm_id in self.registered_atms:
+            self.registered_atms[atm_id]['status'] = new_status
 
-    def add_task(self):
-        task = self.entry.get()
-        if task:
-            self.task_list.append(task)
-            self.entry.delete(0, tk.END)
-            self.display_tasks()
-
-    def display_tasks(self):
-        for widget in self.task_frame.winfo_children():
-            widget.destroy()
-
-        for i, task in enumerate(self.task_list):
-            task_entry = tk.Entry(self.task_frame)
-            task_entry.insert(0, task)
-            task_entry.grid(row=i, column=0, padx=5, pady=5)
-            self.task_entries.append(task_entry)
-
-            delete_button = tk.Button(self.task_frame, text="Delete", command=lambda i=i: self.delete_task(i))
-            delete_button.grid(row=i, column=1, padx=5, pady=5)
-
-    def delete_task(self, index):
-        self.task_list.pop(index)
-        self.task_entries.pop(index)
-        self.display_tasks()
-
-root = tk.Tk()
-todo_list = TodoList(root)
-root.mainloop()
+    def process_transaction(self, user_id, atm_id, transaction_type, amount):
+        if user_id in self.registered_users and atm_id in self.registered_atms:
+            if self.registered_atms[atm_id]['status'] == 'active':
+                if transaction_type == 'withdrawal':
+                    if self.registered_users[user_id]['balance'] >= amount:
+                        self.registered_users[user_id]['balance'] -= amount
+                        return True
+                elif transaction_type == 'deposit':
+                    self.registered_users[user_id]['balance'] += amount
+                    return True
+        return False

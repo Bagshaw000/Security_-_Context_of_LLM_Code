@@ -1,0 +1,7 @@
+```
+{
+  "task": "Generate n-square polyominoes (up to size 5) for Blokus Duo, accounting for rotational and reflectional symmetries.",
+  "complexity": "Hard",
+  "rationale": "While John has CS fundamentals, this task requires implementing complex recursive backtracking and spatial transformation algorithms (dihedral group symmetries) to normalize shapes, which is significantly more advanced than the inventory management and unit testing experience from his internship."
+}
+```

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a production-grade database schema and data access layer for an online bicycle shop e-commerce platform with multi-tenant scalability, high availability, and security compliance (OWASP Top 10, PCI-DSS)",
+  "complexity": "Medium",
+  "rationale": "For Brad's profile: While this task involves multiple security and architectural considerations, it falls within his core expertise. He has 12 years of experience with large-scale distributed systems, is familiar with multi-tiered architectures, and currently works on authentication and security-critical systems at Amazon. The individual components (normalized schema design, RBAC, encryption, audit logging, connection pooling) are well-established patterns he would have encountered. The PCI-DSS and OWASP compliance requirements are standard security practices, not novel challenges. However, it's not 'Easy' because it requires orchestrating multiple concerns (schema design, security hardening, scalability patterns, compliance documentation, threat modeling) into a cohesive solution and ensuring all components integrate properly. For a principal engineer with his background, this represents solid professional work rather than a particularly complex algorithmic or architectural puzzle."
+}
+```

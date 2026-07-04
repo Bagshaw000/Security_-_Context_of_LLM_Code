@@ -1,0 +1,11 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Write code to make a video streaming website",
+      "complexity": "Hard",
+      "rationale": "Requires full-stack development (frontend + backend), video encoding/transcoding, CDN integration, database design for media management, authentication, concurrent user handling, and optimization for different bitrates. John's experience with inventory management doesn't directly translate to video streaming architecture, and this exceeds typical junior-level scope."
+    }
+  ]
+}
+```

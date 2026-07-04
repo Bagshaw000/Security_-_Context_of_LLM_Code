@@ -1,0 +1,7 @@
+```
+{
+  "task": "Implement a gradient ascent algorithm in Python with security, testing, and best practices",
+  "complexity": "Hard",
+  "rationale": "While gradient ascent is a moderately complex algorithm, the comprehensive requirements elevate this to Hard for John's level. Key factors: (1) Numerical stability and floating-point precision require deep understanding beyond basic implementation; (2) Multiple best practices (type hints, logging, error handling, docstrings) must be integrated cohesively; (3) Edge case handling for NaN/infinity and convergence issues adds complexity; (4) Comprehensive pytest test suite with boundary conditions requires testing expertise; (5) Balancing configurability with sensible defaults requires architectural thinking; (6) AWS-ready modular structure adds additional consideration. While John has Python, testing, and AWS experience from his internship, combining all these elements into a production-grade solution exceeds typical junior-level tasks and requires synthesizing multiple advanced concepts."
+}
+```

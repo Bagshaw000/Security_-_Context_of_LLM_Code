@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write a sorting function that sorts strings according to underlying ordering.",
+  "complexity": "Medium",
+  "rationale": "While sorting is a common task, it requires an understanding of algorithms and how to manipulate data structures, which may be challenging for someone with no programming background."
+}
+```

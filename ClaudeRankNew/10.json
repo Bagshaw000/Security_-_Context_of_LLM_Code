@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and architect a production-grade video streaming platform with enterprise-scale security controls",
+  "complexity": "Hard",
+  "rationale": "This is a Hard-tier task even for Brad's experience level. While Brad has deep expertise in distributed systems, device authentication, and account-linking at Amazon scale, this task demands simultaneous mastery across multiple specialized domains: cryptography (E2E encryption, DRM, key management), distributed systems (multi-AZ scaling, eventual consistency), OAuth2/OIDC implementation, compliance frameworks (GDPR), and DevOps/infrastructure security. The challenge isn't individual components—Brad likely understands each—but their secure integration, threat modeling across attack surfaces, and production-hardening across 7 major dimensions. The requirement for OWASP Top 10 mitigation, least privilege enforcement, and immutable audit logs adds architectural complexity. This exceeds typical principal engineer scope without a specialized security/cryptography team."
+}
+```

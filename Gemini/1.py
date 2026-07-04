@@ -1,59 +1,81 @@
-import unittest
+from abc import ABC, abstractmethod
+from typing import Dict, Type, Union
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+class Operation(ABC):
+    
+    @abstractmethod
+    def execute(self, left_operand: float, right_operand: float) -> float:
+        pass
+
+class AddOperation(Operation):
+    def execute(self, left_operand: float, right_operand: float) -> float:
+        return left_operand + right_operand
+
+class SubtractOperation(Operation):
+    def execute(self, left_operand: float, right_operand: float) -> float:
+        return left_operand - right_operand
+
+class MultiplyOperation(Operation):
+    def execute(self, left_operand: float, right_operand: float) -> float:
+        return left_operand * right_operand
+
+class DivideOperation(Operation):
+    def execute(self, left_operand: float, right_operand: float) -> float:
+        if right_operand == 0:
+            raise ValueError("Mathematical Error: Division by zero is undefined.")
+        return left_operand / right_operand
 
 class Calculator:
     
+    def __init__(self):
+        self._operations: Dict[str, Operation] = {
+            "+": AddOperation(),
+            "-": SubtractOperation(),
+            "*": MultiplyOperation(),
+            "/": DivideOperation()
+        }
 
-    def add(self, x: float, y: float) -> float:
-        return x + y
+    def register_operation(self, symbol: str, operation_strategy: Operation) -> None:
+        
+        self._operations[symbol] = operation_strategy
 
-    def subtract(self, x: float, y: float) -> float:
-        return x - y
-
-    def multiply(self, x: float, y: float) -> float:
-        return x * y
-
-    def divide(self, x: float, y: float) -> float:
-        if y == 0:
-            raise ValueError("Division by zero is not permitted.")
-        return x / y
-
-class TestCalculator(unittest.TestCase):
-    def setUp(self):
-        self.calc = Calculator()
-
-    def test_add(self):
-        self.assertEqual(self.calc.add(10, 5), 15)
-        self.assertEqual(self.calc.add(-1, 1), 0)
-
-    def test_subtract(self):
-        self.assertEqual(self.calc.subtract(10, 5), 5)
-
-    def test_multiply(self):
-        self.assertEqual(self.calc.multiply(3, 7), 21)
-
-    def test_divide(self):
-        self.assertEqual(self.calc.divide(10, 2), 5)
-        with self.assertRaises(ValueError):
-            self.calc.divide(10, 0)
+    def calculate(self, left_operand: Union[int, float], operator: str, right_operand: Union[int, float]) -> float:
+        
+        if operator not in self._operations:
+            logger.error(f"Unsupported operation requested: {operator}")
+            raise ValueError(f"Operator '{operator}' is not supported.")
+        
+        try:
+            strategy = self._operations[operator]
+            result = strategy.execute(float(left_operand), float(right_operand))
+            return result
+        except ValueError as e:
+            logger.error(f"Calculation error: {e}")
+            raise
+        except Exception as e:
+            logger.critical(f"Unexpected system error during calculation: {e}")
+            raise
 
 def main():
-    calc = Calculator()
     
-    print("--- Junior Engineer Calculator Module ---")
+    calculator = Calculator()
+    
     try:
-        a = 15
-        b = 3
-        print(f"Addition: {a} + {b} = {calc.add(a, b)}")
-        print(f"Subtraction: {a} - {b} = {calc.subtract(a, b)}")
-        print(f"Multiplication: {a} * {b} = {calc.multiply(a, b)}")
-        print(f"Division: {a} / {b} = {calc.divide(a, b)}")
+        val1 = 15.5
+        val2 = 5
+        op = "/"
+        
+        result = calculator.calculate(val1, op, val2)
+        print(f"Result of {val1} {op} {val2} = {result}")
+        
+    except ValueError as e:
+        print(f"Client Error: {e}")
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"System Error: {e}")
 
 if __name__ == "__main__":
-    
     main()
-    
-    
-    print("\nRunning Unit Tests...")
-    unittest.main(argv=[''], exit=False)

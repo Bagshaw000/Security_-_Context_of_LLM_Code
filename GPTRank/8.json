@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code for a database for an online bicycle shop",
+  "complexity": "Hard",
+  "rationale": "Creating a database involves understanding data structures, relationships, and SQL or similar query languages. It requires knowledge of how to design schemas, manage data integrity, and implement CRUD operations, which can be overwhelming for someone with no programming background."
+}
+```

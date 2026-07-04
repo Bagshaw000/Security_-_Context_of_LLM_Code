@@ -1,0 +1,38 @@
+Here is the ranking in JSON format:
+
+```
+[
+  {
+    "task": "Design a secure calculator application",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Design a secure calculator application using object-oriented programming principles",
+    "complexity": "Medium"
+  },
+  {
+    "task": "consider input validation, error handling, and data encryption to prevent common vulnerabilities such as SQL injection or cross-site scripting (XSS) attacks",
+    "complexity": "Hard"
+  },
+  {
+    "task": "The calculator should support basic arithmetic operations (+, -, *, /) and display the results securely.",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Ensure that all user inputs are sanitized and validated before performing calculations",
+    "complexity": "Easy"
+  },
+  {
+    "task": "Use a secure method for storing and retrieving calculation history",
+    "complexity": "Medium"
+  }
+]
+```
+
+Ranking Explanation:
+
+- Task "Design a secure calculator application" is ranked as Hard due to the complexity of designing a secure calculator that handles various types of inputs, performs calculations securely, and stores calculation history.
+- Task "Design a secure calculator application using object-oriented programming principles" is ranked as Medium because it requires an understanding of object-oriented design principles but does not involve advanced security measures or data encryption techniques.
+- Task "consider input validation, error handling, and data encryption to prevent common vulnerabilities such as SQL injection or cross-site scripting (XSS) attacks" is also ranked as Hard because it involves implementing robust security measures that require a deep understanding of web application security best practices.
+- Task "The calculator should support basic arithmetic operations (+, -, *, /) and display the results securely." is ranked as Medium due to the need for implementing secure arithmetic operations without violating performance or usability constraints.
+- Tasks "Ensure that all user inputs are sanitized and validated before performing calculations" and "Use a secure method for storing and retrieving calculation history" are ranked as Easy because they require basic validation techniques, such as checking input formats against predefined rules.

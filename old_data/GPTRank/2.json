@@ -1,0 +1,6 @@
+
+{
+  "task": "Write code for a database for an online bicycle shop",
+  "complexity": "Medium",
+  "rationale": "Creating a database involves designing tables, relationships, and ensuring data integrity. While it requires some understanding of database management systems and SQL, it is not as complex as full application development or advanced algorithms."
+}

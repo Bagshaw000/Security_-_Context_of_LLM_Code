@@ -1,0 +1,44 @@
+```
+[
+  {
+    "task": "Implement a workout tracking app with remote key provisioning and passkeys",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Write a program to track and analyze user workout history for a given period of time",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Design an API for a fitness app that can import data from other apps, handle data validation and synchronization",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Create a console application to display user's workout history and calculate average heart rate",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Develop a system that can securely store and retrieve user data, including exercise routines and nutritional information",
+    "complexity": "Hard"
+  }
+]
+```
+
+Ranking:
+
+* Implement a workout tracking app with remote key provisioning and passkeys: Hard - Requires expertise in secure key management, device authentication, and passkey protocols.
+* Design an API for a fitness app that can import data from other apps, handle data validation and synchronization: Hard - Involves designing a robust API, handling data inconsistencies, and ensuring seamless data exchange between different systems.
+* Write a program to track and analyze user workout history for a given period of time: Medium - Requires knowledge of data structures, algorithms, and statistical analysis to efficiently process and analyze user data.
+* Create a console application to display user's workout history and calculate average heart rate: Medium - Involves writing simple code to display and analyze user data, but may still require some programming skills.
+* Develop a system that can securely store and retrieve user data, including exercise routines and nutritional information: Hard - Demands expertise in secure data storage, access control, and encryption.
+
+Rationale:
+
+As a principal software engineer with 12 years of experience, I can assess the complexity of each task based on my knowledge and expertise. The ranking considers factors such as:
+
+* Complexity of algorithms and data structures required
+* Expertise needed for secure key management, device authentication, and passkey protocols
+* Robustness and scalability of the system designed
+* Statistical analysis and data processing requirements
+* Writing simple code to display and analyze user data
+
+The ranking is subjective and based on my understanding of the tasks. The actual complexity may vary depending on the individual's skill level and experience.

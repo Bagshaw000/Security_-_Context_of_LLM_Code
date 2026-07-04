@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write a sorting function that sorts strings according to underlying ordering",
+  "complexity": "Easy",
+  "rationale": "This is a fundamental algorithm task that John learned during his CS degree. String sorting uses basic comparison operations and can be implemented with built-in language features or simple sorting algorithms (bubble sort, merge sort). John's educational background and practical experience make this straightforward. No complex data structures, AWS knowledge, or advanced patterns are required."
+}
+```

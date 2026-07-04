@@ -1,44 +1,45 @@
-def add(x, y):
-    return x + y
+class TodoList:
+    def __init__(self):
+        self.tasks = []
 
-def subtract(x, y):
-    return x - y
+    def add_task(self, task):
+        self.tasks.append(task)
+        print(f'Task "{task}" added.')
 
-def multiply(x, y):
-    return x * y
-
-def divide(x, y):
-    if y == 0:
-        return "Error! Division by zero."
-    return x / y
-
-def calculator():
-    print("Select operation:")
-    print("1. Add")
-    print("2. Subtract")
-    print("3. Multiply")
-    print("4. Divide")
-
-    while True:
-        choice = input("Enter choice (1/2/3/4): ")
-
-        if choice in ['1', '2', '3', '4']:
-            num1 = float(input("Enter first number: "))
-            num2 = float(input("Enter second number: "))
-
-            if choice == '1':
-                print(f"{num1} + {num2} = {add(num1, num2)}")
-            elif choice == '2':
-                print(f"{num1} - {num2} = {subtract(num1, num2)}")
-            elif choice == '3':
-                print(f"{num1} * {num2} = {multiply(num1, num2)}")
-            elif choice == '4':
-                print(f"{num1} / {num2} = {divide(num1, num2)}")
+    def remove_task(self, task):
+        if task in self.tasks:
+            self.tasks.remove(task)
+            print(f'Task "{task}" removed.')
         else:
-            print("Invalid input")
+            print(f'Task "{task}" not found.')
 
-        next_calculation = input("Do you want to perform another calculation? (yes/no): ")
-        if next_calculation.lower() != 'yes':
+    def view_tasks(self):
+        if not self.tasks:
+            print("No tasks in the list.")
+        else:
+            print("Your tasks:")
+            for idx, task in enumerate(self.tasks, start=1):
+                print(f"{idx}. {task}")
+
+def main():
+    todo_list = TodoList()
+    while True:
+        print("\nOptions: add, remove, view, exit")
+        choice = input("What would you like to do? ").strip().lower()
+        
+        if choice == "add":
+            task = input("Enter the task: ")
+            todo_list.add_task(task)
+        elif choice == "remove":
+            task = input("Enter the task to remove: ")
+            todo_list.remove_task(task)
+        elif choice == "view":
+            todo_list.view_tasks()
+        elif choice == "exit":
+            print("Goodbye!")
             break
+        else:
+            print("Invalid option. Please try again.")
 
-calculator()
+if __name__ == "__main__":
+    main()

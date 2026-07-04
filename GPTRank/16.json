@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to track user interactions across a website",
+  "complexity": "Medium",
+  "rationale": "While tracking user interactions involves understanding event handling and possibly integrating with analytics services, it requires a solid grasp of front-end technologies and user experience considerations. The complexity arises from ensuring accurate data collection, handling various user actions, and potentially dealing with privacy concerns."
+}
+```

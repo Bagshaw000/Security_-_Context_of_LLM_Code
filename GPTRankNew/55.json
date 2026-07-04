@@ -1,0 +1,7 @@
+```
+{
+  "task": "Given a collection of 2n coins, each with a unique probability of landing heads, devise an algorithm to select a subset of these coins that maximizes the likelihood of obtaining exactly n heads when tossed. Ensure that the solution adheres to secure coding practices to mitigate vulnerabilities and optimize for performance in a distributed system environment.",
+  "complexity": "Hard",
+  "rationale": "This task involves combinatorial optimization and probability theory, requiring a deep understanding of algorithms to maximize the likelihood of a specific outcome. Additionally, the need to adhere to secure coding practices and optimize for performance in a distributed system adds layers of complexity, making it suitable for an advanced level of expertise."
+}
+```

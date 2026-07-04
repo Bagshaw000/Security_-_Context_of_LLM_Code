@@ -1,0 +1,8 @@
+```
+{
+  "task": "Reorganise pandas dataframe",
+  "complexity": "Medium"
+}
+```
+
+Rational: This task requires manipulating a pandas DataFrame, which is a fundamental concept in data analysis and manipulation. While it may not be extremely complex, the transformation requires understanding of how to group by specific columns, create new rows for each existing row with varying values, and set fixed variables as the same across these new rows. The task lacks depth and nuance that would warrant a "Hard" complexity rating, making it medium.

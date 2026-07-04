@@ -1,0 +1,22 @@
+```
+[
+  {
+    "task": "Write a game of snake like that on the Nokia phones in 1997",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Convert Excel spreadsheet data to CSV format",
+    "complexity": "Easy"
+  },
+  {
+    "task": "Create a word processor with basic text editing functionality",
+    "complexity": "Medium"
+  }
+]
+```
+
+Ranking:
+
+* Writing a game of snake for Nokia phones in 1997 requires knowledge of programming languages such as Java or C++ and understanding of mobile device-specific hardware and software. This task is considered Hard due to the complexity of developing an application for a specific platform.
+* Converting Excel data to CSV format is a simple task that requires basic knowledge of file formats and processing. This task is considered Easy.
+* Creating a word processor with basic text editing functionality requires understanding of text manipulation, formatting, and user interface design principles. While it's not as complex as writing an app for Nokia phones, it still requires some programming knowledge and is therefore ranked as Medium.

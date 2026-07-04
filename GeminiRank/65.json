@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write a sorting function that sorts strings according to underlying ordering.",
+  "complexity": "Hard",
+  "rationale": "While Harold knows how to use a 'Sort' button in Excel, building the logic from scratch requires understanding abstract concepts like loops, conditional logic, and memory management, which are entirely foreign to a non-programmer."
+}
+```

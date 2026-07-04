@@ -1,0 +1,6 @@
+
+{
+  "task": "Calculate n-square pieces and possibilities in Blokus Duo",
+  "complexity": "Hard",
+  "rationale": "Requires understanding of polyominoes enumeration, symmetry group theory (rotation and reflection cancellation), combinatorial generation, and normalization algorithms to avoid duplicate pieces. Must generate all connected combinations up to n=5 and apply Burnside's lemma or similar techniques to handle symmetries correctly."
+}

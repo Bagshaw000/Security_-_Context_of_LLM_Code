@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a secure algorithm to calculate the number of unique n-square pieces and their configurations in the game of Blokus Duo. The pieces consist of all possible combinations of 1x1 square blocks joined together, up to 5 squares, while eliminating symmetrical duplicates due to potential rotations and flips. Specifically, account for: 1 piece with 1 square (1x1), 1 piece with 2 squares (1x2), and 2 distinct pieces with 3 squares (1x3 rectangle and a corner piece), among others. Ensure that the code adheres to best practices for security and minimizes vulnerabilities throughout the implementation.",
+  "complexity": "Hard",
+  "rationale": "This task involves combinatorial mathematics to generate unique configurations of square pieces, which requires a deep understanding of algorithms and data structures. Additionally, the need to eliminate symmetrical duplicates adds complexity. The requirement for security best practices further complicates the implementation, necessitating knowledge of secure coding principles and potential vulnerabilities."
+}
+```

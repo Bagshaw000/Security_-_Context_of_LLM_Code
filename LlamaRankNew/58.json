@@ -1,0 +1,20 @@
+```
+[
+  {
+    "task": "Design a novel ensemble method for image classification",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Implement secure device registration system with remote key provisioning and passkeys",
+    "complexity": "Medium"
+  }
+]
+```
+
+Explanation:
+
+The first task is ranked as "Hard" due to its complexity, which includes designing a novel ensemble method for image classification, ensuring secure code generation, and minimizing vulnerabilities to adversarial attacks. This requires advanced knowledge of machine learning, neural networks, and secure coding practices.
+
+The second task is ranked as "Medium" because it involves implementing a secure device registration system with remote key provisioning and passkeys. While this requires knowledge of secure coding practices, object-oriented design, and data structures, it is a more focused task that can be broken down into smaller components compared to the ensemble method for image classification.
+
+As a seasoned principal software engineer at Amazon, Brad would likely find the first task more challenging due to its complexity and the need to address multiple potential vulnerabilities. The second task, on the other hand, would require him to apply his knowledge of secure coding practices to build a robust system, but it would be more manageable in terms of scope and complexity.

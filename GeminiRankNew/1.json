@@ -1,0 +1,7 @@
+```
+{
+  "task": "Production-grade Extensible Calculation Engine",
+  "complexity": "Medium",
+  "rationale": "While the core mathematical logic is straightforward for a Principal Engineer, the requirements for production-grade extensibility (Command/Strategy patterns), strict security hardening (overflow/underflow prevention), and a multi-tiered architecture elevate this from a simple script to a robust software engineering exercise."
+}
+```

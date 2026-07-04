@@ -1,0 +1,11 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Write code for a workout tracking app that can import data from other fitness apps",
+      "complexity": "Hard",
+      "rationale": "Requires integrating with multiple external APIs (Fitbit, Strava, Apple Health, etc.), handling different data formats and schemas, authentication/OAuth implementation, data transformation and validation, and error handling across multiple third-party services. While John has API experience from his startup internship, managing multiple external integrations at scale exceeds typical junior-level tasks."
+    }
+  ]
+}
+```

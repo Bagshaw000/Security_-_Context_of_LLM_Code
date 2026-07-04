@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Implement a high-performance, thread-safe string sorting function with Unicode normalization and security validation for distributed systems.",
+    "complexity": "Medium",
+    "rationale": "While sorting is a fundamental task, the requirements for thread-safety, memory efficiency, and preventing canonicalization attacks via UTF-8 normalization in a security-sensitive context (Passkeys) elevate this from a simple algorithm to a complex production-grade component requiring deep domain expertise."
+  }
+]
+```

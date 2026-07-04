@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to track user interactions across a website",
+  "complexity": "Medium",
+  "rationale": "While basic event listeners are trivial, building a robust system requires handling high-volume asynchronous data streams, ensuring cross-device identity stitching (my specialty), and maintaining strict privacy compliance and data integrity across a distributed architecture."
+}
+```

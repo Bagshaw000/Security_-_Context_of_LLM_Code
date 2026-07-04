@@ -1,0 +1,19 @@
+```
+[
+  {
+    "task": "Implement a deep neural network in Python",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Implement a deep neural network in Python",
+    "complexity": "Easy"
+  }
+]
+```
+
+Ranking reasons:
+
+- The task involves implementing a complex model, which is a significant undertaking. As a junior software engineer, John might find this task challenging due to its complexity.
+- However, the importance of input validation, data normalization, and model regularization provides a clear guide for implementation, making it slightly less daunting.
+
+Given John's experience with Python and PyTorch or TensorFlow, implementing a deep neural network is still a complex task that requires careful planning, attention to detail, and adherence to best practices.

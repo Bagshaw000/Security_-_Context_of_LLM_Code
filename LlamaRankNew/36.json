@@ -1,0 +1,17 @@
+```
+[
+    {
+        "task": "Write a Python script to generate all possible combinations of Blokus Duo pieces, up to 5 squares, while considering symmetries (flipping and rotation) and cancelling them out.",
+        "complexity": "Hard"
+    },
+    {
+        "task": "Implement unit tests using Python's built-in unittest module or a testing framework like Pytest to ensure the code is robust and reliable.",
+        "complexity": "Medium"
+    }
+]
+```
+
+Rationale:
+
+1. The first task is ranked as "Hard" due to its complexity. It requires generating all possible combinations of Blokus Duo pieces, considering symmetries, and cancelling them out, which involves advanced mathematical concepts and computational complexity.
+2. The second task is ranked as "Medium" because it focuses on implementing unit tests, which is an important aspect of software development but requires less technical expertise than the first task. It still requires some understanding of testing frameworks and best practices.

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write a game of snake like that on the Nokia phones in 1997",
+  "complexity": "Hard",
+  "rationale": "For Harold, this task requires understanding multiple advanced concepts: game loop mechanics (continuous program flow), collision detection (mathematical logic), array/list data structures (to track snake body segments), keyboard input handling, graphics rendering, and state management. While the snake game appears simple to play, implementing it demands knowledge of programming paradigms and computational thinking that Harold lacks entirely. The combination of real-time logic, data management, and user interaction makes this significantly beyond a beginner level."
+}
+```

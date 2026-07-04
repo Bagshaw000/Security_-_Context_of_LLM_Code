@@ -1,0 +1,7 @@
+```
+{
+  "task": "Implement a secure and well-tested convex hull algorithm for 4D points in Python",
+  "complexity": "Hard",
+  "rationale": "While John has relevant experience in Python, unit testing, and working on production tools, this task combines several challenging aspects: (1) Convex hull algorithms in 4D space require advanced computational geometry knowledge beyond typical junior-level work, (2) Security-focused implementation with input validation and injection attack prevention adds complexity, (3) Comprehensive edge case testing and error handling demands meticulous planning, (4) Performance optimization for large datasets requires algorithm analysis skills. Although his inventory management background helps with scalability thinking and his testing experience is directly applicable, the geometric algorithms and security hardening requirements elevate this beyond medium complexity."
+}
+```

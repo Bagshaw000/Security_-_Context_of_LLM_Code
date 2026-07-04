@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design a production-ready module to select a subset of 2n trials maximizing the probability of exactly n successes using log-space DP and OO design.",
+  "complexity": "Hard",
+  "rationale": "The task combines complex combinatorial optimization with the Poisson Binomial Distribution. Implementing this for high-scale distributed systems requires balancing algorithmic efficiency, numerical stability (log-space arithmetic) to prevent precision loss, and rigorous production-grade security/validation constraints typical of a Principal Engineer's scope."
+}
+```

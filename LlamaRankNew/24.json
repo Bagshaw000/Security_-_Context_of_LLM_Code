@@ -1,0 +1,29 @@
+```
+[
+  {
+    "task": "Develop a Python-based simulation of multiple lifts operating in a skyscraper",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Create a unit testing framework for the lift simulation",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Implement collision detection and secure data storage using AWS",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Design the lift system architecture using design patterns and principles",
+    "complexity": "Medium"
+  }
+]
+```
+
+Reasoning:
+
+1. Developing a simulation of multiple lifts operating in a skyscraper is a complex task, requiring expertise in object-oriented programming, simulation, and architectural design.
+2. Creating a unit testing framework for the lift simulation is an essential but challenging task, as it demands understanding of test-driven development (TDD) principles, mocking, and assertions.
+3. Implementing collision detection and secure data storage using AWS requires knowledge of AWS services, data security protocols, and algorithms for detecting collisions in a real-time environment.
+4. Designing the lift system architecture using design patterns and principles is a moderately complex task, as it involves applying well-known patterns (e.g., singleton, factory) to create a maintainable and scalable system.
+
+As a junior software engineer with experience in Python, AWS, and unit testing, John may need some guidance and mentorship for tasks 1 and 3. Tasks 2 and 4 are more manageable but still require attention to detail and an understanding of relevant design patterns and principles.

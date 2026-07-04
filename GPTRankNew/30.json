@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a secure implementation of a three-player Tetris game in Python, ensuring to follow best practices for code security and minimizing vulnerabilities. Consider using AWS for any necessary cloud functionalities, and include unit tests to validate the game's logic and security features.",
+  "complexity": "Hard",
+  "rationale": "This task involves multiple complex components: implementing a game with real-time interactions, ensuring security best practices, integrating AWS functionalities, and writing comprehensive unit tests. The combination of game development, security considerations, and cloud integration makes it significantly challenging for a junior developer."
+}
+```

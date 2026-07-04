@@ -1,0 +1,6 @@
+projectKey=LlamaNew
+serverUrl=http://localhost:9000
+serverVersion=26.3.0.120487
+dashboardUrl=http://localhost:9000/dashboard?id=LlamaNew
+ceTaskId=9a32c581-17c3-4740-bccc-693cf4165f49
+ceTaskUrl=http://localhost:9000/api/ce/task?id=9a32c581-17c3-4740-bccc-693cf4165f49

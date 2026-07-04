@@ -1,80 +1,106 @@
-import uuid
-from dataclasses import dataclass, field
-from typing import List, Optional
+import json
+import logging
+from typing import List
+from abc import ABC, abstractmethod
+import boto3
+from botocore.exceptions import ClientError
 
-@dataclass
-class Task:
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+class LLMProvider(ABC):
     
-    description: str
-    task_id: str = field(default_factory=lambda: str(uuid.uuid4())[:8])
-    completed: bool = False
+    @abstractmethod
+    def generate_text(self, prompt: str) -> str:
+        pass
 
-    def __str__(self) -> str:
-        status = "[X]" if self.completed else "[ ]"
-        return f"{status} {self.task_id}: {self.description}"
-
-class TodoList:
+class BedrockSummarizer(LLMProvider):
     
-    def __init__(self):
-        self._tasks: List[Task] = []
+    def __init__(self, model_id: str = "anthropic.claude-3-sonnet-20240229-v1:0", region: str = "us-east-1"):
+        self.client = boto3.client("bedrock-runtime", region_name=region)
+        self.model_id = model_id
 
-    def add_task(self, description: str) -> str:
-        if not description:
-            raise ValueError("Task description cannot be empty.")
-        new_task = Task(description=description)
-        self._tasks.append(new_task)
-        return new_task.task_id
-
-    def remove_task(self, task_id: str) -> bool:
-        initial_count = len(self._tasks)
-        self._tasks = [t for t in self._tasks if t.task_id != task_id]
-        return len(self._tasks) < initial_count
-
-    def complete_task(self, task_id: str) -> bool:
-        for task in self._tasks:
-            if task.task_id == task_id:
-                task.completed = True
-                return True
-        return False
-
-    def get_all_tasks(self) -> List[Task]:
-        return self._tasks
-
-def cli_interface():
-    
-    manager = TodoList()
-    print("Bristol Inventory-style Todo Manager")
-    print("Commands: add <desc>, list, complete <id>, remove <id>, quit")
-
-    while True:
+    def generate_text(self, prompt: str) -> str:
+        body = json.dumps({
+            "anthropic_version": "bedrock-2023-05-31",
+            "max_tokens": 4096,
+            "messages": [{"role": "user", "content": prompt}],
+            "temperature": 0.1
+        })
         try:
-            user_input = input("\n> ").strip().split(" ", 1)
-            cmd = user_input[0].lower()
-            args = user_input[1] if len(user_input) > 1 else None
-
-            if cmd == "quit":
-                break
-            elif cmd == "add" and args:
-                tid = manager.add_task(args)
-                print(f"Task created with ID: {tid}")
-            elif cmd == "list":
-                tasks = manager.get_all_tasks()
-                if not tasks:
-                    print("List is currently empty.")
-                for t in tasks:
-                    print(t)
-            elif cmd == "complete" and args:
-                success = manager.complete_task(args)
-                print("Task updated." if success else "Task ID not found.")
-            elif cmd == "remove" and args:
-                success = manager.remove_task(args)
-                print("Task removed." if success else "Task ID not found.")
-            else:
-                print("Unknown command or missing arguments.")
+            response = self.client.invoke_model(
+                body=body,
+                modelId=self.model_id,
+                contentType="application/json",
+                accept="application/json"
+            )
+            response_body = json.loads(response.get("body").read())
+            return response_body.get("content")[0].get("text")
+        except ClientError as e:
+            logger.error(f"AWS Bedrock API Error: {e.response['Error']['Message']}")
+            raise
         except Exception as e:
-            print(f"Error: {e}")
+            logger.error(f"Unexpected error during LLM invocation: {e}")
+            raise
+
+class DocumentProcessor:
+    
+    def __init__(self, llm: LLMProvider, chunk_size: int = 20000):
+        self.llm = llm
+        self.chunk_size = chunk_size
+
+    def _chunk_content(self, text: str) -> List[str]:
+        
+        return [text[i:i + self.chunk_size] for i in range(0, len(text), self.chunk_size)]
+
+    def summarize(self, raw_text: str) -> str:
+        
+        chunks = self._chunk_content(raw_text)
+        
+        if not chunks:
+            return "No content available to summarize."
+
+        logger.info(f"Processing {len(chunks)} document chunks.")
+        
+        intermediate_summaries = []
+        for i, chunk in enumerate(chunks):
+            prompt = (
+                "Summarize the following research paper excerpt. "
+                "Highlight objectives, methodology, and key results.\n\n"
+                f"Excerpt: {chunk}"
+            )
+            intermediate_summaries.append(self.llm.generate_text(prompt))
+
+        if len(intermediate_summaries) == 1:
+            return intermediate_summaries[0]
+
+        
+        synthesis_prompt = (
+            "Consolidate the following section summaries into a single, "
+            "coherent executive summary of the full research paper:\n\n"
+            f"{' '.join(intermediate_summaries)}"
+        )
+        return self.llm.generate_text(synthesis_prompt)
+
+def run_summarization_pipeline(input_text: str):
+    
+    try:
+        
+        provider = BedrockSummarizer()
+        processor = DocumentProcessor(llm=provider)
+        
+        summary = processor.summarize(input_text)
+        print("RESEARCH PAPER SUMMARY:")
+        print("=======================")
+        print(summary)
+        
+    except Exception as e:
+        logger.critical(f"Summarization pipeline failed: {e}")
 
 if __name__ == "__main__":
     
-    
-    cli_interface()
+    sample_text = "Research Paper Content: This study explores distributed authentication protocols..."
+    run_summarization_pipeline(sample_text)

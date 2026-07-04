@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a secure and scalable todo list application, ensuring adherence to best practices in object-oriented design and data structures. The application should implement robust authentication and authorization mechanisms to protect user data, while also considering potential vulnerabilities such as SQL injection and cross-site scripting. Additionally, design the system to be easily extensible for future features, and ensure it can operate efficiently in a distributed environment.",
+  "complexity": "Hard",
+  "rationale": "This task involves multiple complex components including secure authentication, data protection against vulnerabilities, adherence to best practices in design, and scalability in a distributed system. The need for extensibility adds further complexity, requiring careful architectural planning and implementation."
+}
+```

@@ -1,78 +1,90 @@
 import unittest
+import sys
 
 class Calculator:
     
-    def add(self, a: float, b: float) -> float:
+
+    def add(self, a, b):
         return a + b
 
-    def subtract(self, a: float, b: float) -> float:
+    def subtract(self, a, b):
         return a - b
 
-    def multiply(self, a: float, b: float) -> float:
+    def multiply(self, a, b):
         return a * b
 
-    def divide(self, a: float, b: float) -> float:
+    def divide(self, a, b):
         if b == 0:
-            raise ValueError("Division by zero is undefined.")
+            raise ValueError("Error: Division by zero is undefined.")
         return a / b
 
-class TestCalculator(unittest.TestCase):
-    
-    def setUp(self):
-        self.calc = Calculator()
-
-    def test_add(self):
-        self.assertEqual(self.calc.add(10.5, 4.5), 15.0)
-
-    def test_subtract(self):
-        self.assertEqual(self.calc.subtract(10, 5), 5)
-
-    def test_multiply(self):
-        self.assertEqual(self.calc.multiply(3, 7), 21)
-
-    def test_divide(self):
-        self.assertEqual(self.calc.divide(10, 2), 5)
-
-    def test_divide_by_zero(self):
-        with self.assertRaises(ValueError):
-            self.calc.divide(10, 0)
+def display_menu():
+    print("\n--- Junior Engineer Calculator CLI ---")
+    print("Available operations: add, subtract, multiply, divide")
+    print("Type 'exit' to close the program.")
+    print("Type 'test' to run unit tests.")
 
 def main():
     calc = Calculator()
-    print("--- Junior Engineer Calculator Utility ---")
     
-    try:
-        val1 = float(input("Enter first operand: "))
-        operation = input("Enter operation (+, -, *, /): ").strip()
-        val2 = float(input("Enter second operand: "))
+    while True:
+        display_menu()
+        choice = input("Select operation or command: ").strip().lower()
 
-        if operation == '+':
-            result = calc.add(val1, val2)
-        elif operation == '-':
-            result = calc.subtract(val1, val2)
-        elif operation == '*':
-            result = calc.multiply(val1, val2)
-        elif operation == '/':
-            result = calc.divide(val1, val2)
+        if choice == 'exit':
+            print("Shutting down...")
+            break
+        
+        if choice == 'test':
+            print("Running suite of unit tests...")
+            
+            suite = unittest.TestLoader().loadTestsFromTestCase(TestCalculator)
+            unittest.TextTestRunner(verbosity=2).run(suite)
+            continue
+
+        if choice in ['add', 'subtract', 'multiply', 'divide']:
+            try:
+                x = float(input("Enter first number: "))
+                y = float(input("Enter second number: "))
+
+                if choice == 'add':
+                    print(f"Result: {calc.add(x, y)}")
+                elif choice == 'subtract':
+                    print(f"Result: {calc.subtract(x, y)}")
+                elif choice == 'multiply':
+                    print(f"Result: {calc.multiply(x, y)}")
+                elif choice == 'divide':
+                    print(f"Result: {calc.divide(x, y)}")
+            except ValueError as e:
+                print(f"Input Error: {e}")
         else:
-            print("Unsupported operation.")
-            return
+            print("Invalid selection. Please try again.")
 
-        print(f"Output: {result}")
+class TestCalculator(unittest.TestCase):
+    
 
-    except ValueError as e:
-        print(f"Error: {e}")
-    except Exception as e:
-        print(f"An unexpected system error occurred: {e}")
+    def setUp(self):
+        self.calc = Calculator()
+
+    def test_addition(self):
+        self.assertEqual(self.calc.add(5, 5), 10)
+        self.assertEqual(self.calc.add(-1, 1), 0)
+
+    def test_subtraction(self):
+        self.assertEqual(self.calc.subtract(20, 5), 15)
+
+    def test_multiplication(self):
+        self.assertEqual(self.calc.multiply(3, 4), 12)
+        self.assertEqual(self.calc.multiply(10, 0), 0)
+
+    def test_division(self):
+        self.assertEqual(self.calc.divide(10, 2), 5)
+        with self.assertRaises(ValueError):
+            self.calc.divide(10, 0)
 
 if __name__ == "__main__":
     
-    print("Executing internal unit tests...")
-    suite = unittest.TestLoader().loadTestsFromTestCase(TestCalculator)
-    result = unittest.TextTestRunner(verbosity=0).run(suite)
-    
-    if result.wasSuccessful():
-        print("Tests passed. Launching application...\n")
-        main()
+    if len(sys.argv) > 1 and sys.argv[1] == 'run-tests':
+        unittest.main(argv=[sys.argv[0]])
     else:
-        print("Tests failed. Aborting launch.")
+        main()

@@ -1,0 +1,18 @@
+```
+[
+  {
+    "task": "Design a secure controller system for a network of ATMs",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Implement a distributed architecture to enable seamless communication between ATMs",
+    "complexity": "Medium"
+  }
+]
+```
+
+Rationale:
+
+- The task requires designing a complex system with multiple security features, industry-standard protocols, and secure coding practices, making it a challenging task that is classified as Hard complexity.
+
+- Implementing a distributed architecture, while important for scalability and reliability, can be achieved using established patterns and design principles, which makes this aspect Medium complexity.

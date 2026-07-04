@@ -1,0 +1,41 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Explain what a video streaming website is",
+      "complexity": "Easy",
+      "rationale": "Requires only conceptual understanding and analogies (YouTube comparison). No programming knowledge needed. Similar to explaining a new teaching concept."
+    },
+    {
+      "task": "Break down main parts needed (storage, structure)",
+      "complexity": "Easy",
+      "rationale": "Involves organizing concepts (filing cabinet analogy) rather than coding. Relates to Harold's Excel experience with data organization. No technical implementation required."
+    },
+    {
+      "task": "Show simple code examples with detailed comments",
+      "complexity": "Medium",
+      "rationale": "Requires basic coding syntax understanding and explaining programming logic. Harold has no code experience, making it moderately challenging despite 'simple' examples. Needs translation of logic into plain English."
+    },
+    {
+      "task": "Highlight security measures in the code",
+      "complexity": "Medium",
+      "rationale": "Requires understanding both coding AND security concepts (authentication, authorization, encryption). More abstract than basic code syntax. Needs practical examples of vulnerabilities."
+    },
+    {
+      "task": "Explain technical words before using them",
+      "complexity": "Easy",
+      "rationale": "Vocabulary building task. Harold is an English teacher, making this natural. Just requires clear definitions and contextual usage."
+    },
+    {
+      "task": "Identify security problems and solutions",
+      "complexity": "Hard",
+      "rationale": "Requires understanding threats (password attacks, unauthorized access, data breaches) and their solutions. Abstract security concepts are difficult without programming foundation. Needs critical thinking about vulnerabilities."
+    },
+    {
+      "task": "Recommend safest, simplest approach overall",
+      "complexity": "Hard",
+      "rationale": "Requires synthesizing all previous knowledge, making architectural decisions, and balancing security vs. simplicity. Demands judgment on trade-offs without technical experience as reference point."
+    }
+  ]
+}
+```

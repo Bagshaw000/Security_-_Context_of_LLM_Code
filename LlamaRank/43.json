@@ -1,0 +1,32 @@
+```
+[
+    {
+        "task": "Write a game of snake like that on the Nokia phones in 1997",
+        "complexity": "Hard"
+    },
+    {
+        "task": "Design a high-performance caching system for a large e-commerce platform",
+        "complexity": "Hard"
+    },
+    {
+        "task": "Develop an efficient algorithm to sort a list of unique elements with constraints",
+        "complexity": "Medium"
+    },
+    {
+        "task": "Implement a RESTful API using Node.js and Express for a real-time chat application",
+        "complexity": "Medium"
+    },
+    {
+        "task": "Create a 2D game with collision detection and scoring system using C++ and SDL",
+        "complexity": "Easy"
+    }
+]
+```
+
+Rationale:
+
+* Writing a Snake-like game on Nokia phones in 1997 would require dealing with the limitations of ancient technology, such as limited processing power, memory constraints, and the need to work within a specific platform's guidelines. This makes it a challenging task that deserves a Hard complexity rating.
+* Designing a high-performance caching system for a large e-commerce platform requires expertise in distributed systems, data structures, and algorithms, making it a complex task suitable for a Hard complexity rating.
+* Developing an efficient algorithm to sort a list of unique elements with constraints is a classic problem in computer science that still requires careful consideration of data structures and algorithms. However, the scope and requirements are relatively manageable, making it a Medium complexity task.
+* Implementing a RESTful API using Node.js and Express for a real-time chat application requires knowledge of modern web development frameworks and technologies, but the overall scope is more focused on software design rather than complex algorithms or performance-critical systems. This makes it a Medium complexity task.
+* Creating a 2D game with collision detection and scoring system using C++ and SDL is a project that can be tackled by developers familiar with game development and C++. While it requires some technical expertise, the scope is more focused on game development rather than complex algorithms or distributed systems. This makes it an Easy complexity task.

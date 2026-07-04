@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a simple version of the classic Snake game, similar to the one found on Nokia phones in 1997. Please ensure that the code is secure and minimizes any potential vulnerabilities.",
+  "complexity": "Hard",
+  "rationale": "Developing a game involves understanding game mechanics, user input handling, and graphics rendering, which are complex concepts. Additionally, ensuring code security adds another layer of difficulty, requiring knowledge of potential vulnerabilities and secure coding practices."
+}
+```

@@ -1,0 +1,29 @@
+```
+[
+  {
+    "task": "Input validation and data sanitization",
+    "complexity": "Easy",
+    "rationale": "Standard procedural checks for types and ranges (0-1) are fundamental skills for a CS graduate with Python experience."
+  },
+  {
+    "task": "PEP 8 compliance",
+    "complexity": "Easy",
+    "rationale": "Adhering to style guides is a basic requirement often assisted by automated linting tools."
+  },
+  {
+    "task": "Comprehensive unit testing",
+    "complexity": "Medium",
+    "rationale": "Requires identifying diverse edge cases and ensuring coverage for the mathematical logic, building on John's previous experience."
+  },
+  {
+    "task": "AWS production-readiness",
+    "complexity": "Medium",
+    "rationale": "Involves operational considerations like resource management and environment configuration, which is more advanced than basic coding."
+  },
+  {
+    "task": "Algorithm for maximizing probability of n heads",
+    "complexity": "Hard",
+    "rationale": "This is a complex combinatorial optimization problem requiring deep knowledge of dynamic programming and probability theory to ensure efficiency and correctness."
+  }
+]
+```

@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Reorganize a wide-format Pandas dataframe (Patient ID, metadata, hours 1-10) into a long-format dataframe with a 'Time since surgery' column while maintaining static variables.",
+    "complexity": "Easy",
+    "rationale": "This is a standard data manipulation task known as 'melting' or 'unpivoting.' For a Principal Engineer with Brad's background in complex distributed systems, performing a single-function call in a high-level library like Pandas is a trivial, entry-level operation."
+  }
+]
+```

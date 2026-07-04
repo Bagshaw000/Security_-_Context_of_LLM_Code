@@ -1,0 +1,7 @@
+```
+{
+  "task": "Find the outer boundary of a group of points in four-dimensional space.",
+  "complexity": "Hard",
+  "rationale": "This task involves advanced concepts in geometry and multidimensional data handling, which require a strong understanding of algorithms and data structures. Additionally, ensuring code safety and minimizing security issues adds another layer of complexity, making it unsuitable for someone with no programming background."
+}
+```

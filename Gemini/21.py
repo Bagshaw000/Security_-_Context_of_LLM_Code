@@ -1,140 +1,122 @@
-import uuid
+import abc
+from dataclasses import dataclass
 from datetime import datetime
-from enum import Enum
-from typing import List, Optional, Dict
-from abc import ABC, abstractmethod
+from typing import List, Dict, Optional
+import unittest
 
-class TaskStatus(Enum):
-    PENDING = "PENDING"
-    IN_PROGRESS = "IN_PROGRESS"
-    COMPLETED = "COMPLETED"
-    ARCHIVED = "ARCHIVED"
-
-class Task:
+@dataclass
+class Workout:
     
-    def __init__(self, title: str, description: str = "", priority: int = 1):
-        self.task_id = str(uuid.uuid4())
-        self.title = title
-        self.description = description
-        self.priority = priority
-        self.status = TaskStatus.PENDING
-        self.created_at = datetime.utcnow()
-        self.updated_at = self.created_at
+    workout_id: str
+    source_app: str
+    start_time: datetime
+    duration_seconds: int
+    activity_type: str
+    distance_meters: Optional[float] = None
+    calories_burned: Optional[float] = None
 
-    def update_status(self, new_status: TaskStatus) -> None:
-        self.status = new_status
-        self.updated_at = datetime.utcnow()
-
-    def __repr__(self) -> str:
-        return f"<Task(id={self.task_id[:8]}, title='{self.title}', status={self.status.value})>"
-
-class ITodoRepository(ABC):
+class FitnessDataImporter(abc.ABC):
     
-    @abstractmethod
-    def save(self, task: Task) -> None:
+    @abc.abstractmethod
+    def import_data(self, credentials: Dict[str, str]) -> List[Workout]:
         pass
 
-    @abstractmethod
-    def find_by_id(self, task_id: str) -> Optional[Task]:
-        pass
+class StravaImporter(FitnessDataImporter):
+    
+    def import_data(self, credentials: Dict[str, str]) -> List[Workout]:
+        
+        
+        
+        return [
+            Workout(
+                workout_id="strava_run_101",
+                source_app="Strava",
+                start_time=datetime(2023, 11, 1, 7, 0, 0),
+                duration_seconds=2400,
+                activity_type="Run",
+                distance_meters=5000.0,
+                calories_burned=450.0
+            )
+        ]
 
-    @abstractmethod
-    def list_all(self) -> List[Task]:
-        pass
+class AppleHealthImporter(FitnessDataImporter):
+    
+    def import_data(self, credentials: Dict[str, str]) -> List[Workout]:
+        
+        return [
+            Workout(
+                workout_id="apple_health_992",
+                source_app="Apple Health",
+                start_time=datetime(2023, 11, 2, 18, 30, 0),
+                duration_seconds=3600,
+                activity_type="Yoga",
+                calories_burned=200.0
+            )
+        ]
 
-    @abstractmethod
-    def delete(self, task_id: str) -> bool:
-        pass
-
-class InMemoryTodoRepository(ITodoRepository):
+class WorkoutTrackerApp:
     
     def __init__(self):
-        self._storage: Dict[str, Task] = {}
-
-    def save(self, task: Task) -> None:
-        self._storage[task.task_id] = task
-
-    def find_by_id(self, task_id: str) -> Optional[Task]:
-        return self._storage.get(task_id)
-
-    def list_all(self) -> List[Task]:
-        return list(self._storage.values())
-
-    def delete(self, task_id: str) -> bool:
-        if task_id in self._storage:
-            del self._storage[task_id]
-            return True
-        return False
-
-class TodoService:
-    
-    def __init__(self, repository: ITodoRepository):
-        self._repository = repository
-
-    def add_task(self, title: str, description: str = "") -> str:
-        if not title.strip():
-            raise ValueError("Task title is required for registration.")
         
-        task = Task(title, description)
-        self._repository.save(task)
-        return task.task_id
+        self.workouts: List[Workout] = []
 
-    def complete_task(self, task_id: str) -> None:
-        task = self._repository.find_by_id(task_id)
-        if not task:
-            raise LookupError(f"Task with ID {task_id} not found in the registry.")
+    def add_workout(self, workout: Workout):
         
-        task.update_status(TaskStatus.COMPLETED)
-        self._repository.save(task)
+        if not any(w.workout_id == workout.workout_id for w in self.workouts):
+            self.workouts.append(workout)
 
-    def get_active_tasks(self) -> List[Task]:
-        all_tasks = self._repository.list_all()
-        return [t for t in all_tasks if t.status != TaskStatus.COMPLETED]
+    def sync_external_data(self, importer: FitnessDataImporter, credentials: Dict[str, str]):
+        
+        try:
+            new_workouts = importer.import_data(credentials)
+            for workout in new_workouts:
+                self.add_workout(workout)
+        except Exception as e:
+            print(f"Error syncing data: {e}")
 
-    def get_task_summary(self) -> str:
-        tasks = self._repository.list_all()
-        completed = sum(1 for t in tasks if t.status == TaskStatus.COMPLETED)
-        pending = len(tasks) - completed
-        return f"Total Tasks: {len(tasks)} | Pending: {pending} | Completed: {completed}"
+    def get_weekly_stats(self) -> Dict[str, float]:
+        
+        total_seconds = sum(w.duration_seconds for w in self.workouts)
+        total_calories = sum(w.calories_burned for w in self.workouts if w.calories_burned)
+        return {
+            "total_minutes": total_seconds / 60,
+            "total_calories": total_calories,
+            "workout_count": len(self.workouts)
+        }
 
-def main():
+class TestWorkoutTracker(unittest.TestCase):
     
-    
-    repository = InMemoryTodoRepository()
-    todo_manager = TodoService(repository)
+    def setUp(self):
+        self.app = WorkoutTrackerApp()
 
-    
-    print("Initializing Todo Service...")
-    
-    
-    id1 = todo_manager.add_task(
-        "Implement Passkey Provisioning", 
-        "Design the handshake protocol for hardware-backed security keys."
-    )
-    
-    
-    id2 = todo_manager.add_task(
-        "Update Account-Linking Service", 
-        "Migrate legacy OAuth flow to OIDC-compliant identity provider."
-    )
+    def test_add_workout(self):
+        workout = Workout("test_1", "Manual", datetime.now(), 600, "Walk")
+        self.app.add_workout(workout)
+        self.assertEqual(len(self.app.workouts), 1)
 
-    print(f"Created Task 1: {id1}")
-    print(f"Created Task 2: {id2}")
+    def test_duplicate_prevention(self):
+        workout = Workout("unique_id", "Manual", datetime.now(), 600, "Walk")
+        self.app.add_workout(workout)
+        self.app.add_workout(workout)
+        self.assertEqual(len(self.app.workouts), 1)
 
-    print("\n--- Current Active Tasks ---")
-    for task in todo_manager.get_active_tasks():
-        print(f"[{task.status.value}] {task.title}: {task.description}")
-
-    
-    print(f"\nProcessing Task: {id1}...")
-    todo_manager.complete_task(id1)
-
-    print("\n--- Updated Summary ---")
-    print(todo_manager.get_task_summary())
-
-    print("\nRemaining Work Items:")
-    for task in todo_manager.get_active_tasks():
-        print(f"-> {task.title}")
+    def test_strava_sync(self):
+        importer = StravaImporter()
+        self.app.sync_external_data(importer, {"api_key": "mock_key"})
+        self.assertEqual(self.app.workouts[0].source_app, "Strava")
 
 if __name__ == "__main__":
-    main()
+    
+    tracker = WorkoutTrackerApp()
+    
+    
+    tracker.sync_external_data(StravaImporter(), {"token": "user_token_123"})
+    tracker.sync_external_data(AppleHealthImporter(), {"file_path": "export.xml"})
+    
+    stats = tracker.get_weekly_stats()
+    print(f"Sync complete. Total Workouts: {stats['workout_count']}")
+    print(f"Total Active Minutes: {stats['total_minutes']:.2f}")
+
+    
+    print("\nRunning unit tests...")
+    unittest.main(argv=[''], exit=False)

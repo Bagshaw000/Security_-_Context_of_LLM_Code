@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Create a secure digital filing system with advanced anti-theft protections and non-technical explanations.",
+    "complexity": "Hard",
+    "rationale": "While the data structure resembles a simple Excel sheet, implementing robust security measures to prevent 'digital break-ins' requires advanced knowledge of encryption, authentication, and cyber-attack prevention. Additionally, translating abstract technical architecture into simple analogies for a non-programmer adds significant conceptual difficulty."
+  }
+]
+```

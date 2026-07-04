@@ -1,26 +1,45 @@
-import sqlite3
+class ChessPosition:
+    def __init__(self):
+        self.board = [
+            ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'],
+            ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'],
+            [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+            [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+            [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+            [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+            ['p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'],
+            ['r', 'n', 'b', 'q', 'k', 'b', 'n', 'r']
+        ]
+        self.white_pieces = ['P', 'R', 'N', 'B', 'Q', 'K']
+        self.black_pieces = ['p', 'r', 'n', 'b', 'q', 'k']
 
+    def evaluate(self):
+        white_score = 0
+        black_score = 0
+        for row in range(8):
+            for col in range(8):
+                piece = self.board[row][col]
+                if piece in self.white_pieces:
+                    white_score += self.get_piece_value(piece)
+                elif piece in self.black_pieces:
+                    black_score += self.get_piece_value(piece)
+        return white_score - black_score
 
-conn = sqlite3.connect('bicycle_shop.db')
+    def get_piece_value(self, piece):
+        if piece == 'p' or piece == 'P':
+            return 1
+        elif piece == 'n' or piece == 'N':
+            return 3
+        elif piece == 'b' or piece == 'B':
+            return 3
+        elif piece == 'r' or piece == 'R':
+            return 5
+        elif piece == 'q' or piece == 'Q':
+            return 9
+        elif piece == 'k' or piece == 'K':
+            return 0
+        else:
+            return 0
 
-
-cursor = conn.cursor()
-
-
-cursor.execute()
-
-cursor.execute()
-
-cursor.execute()
-
-
-cursor.execute("INSERT INTO bicycles (model, brand, size, price) VALUES (?, ?, ?, ?)", ("Mountain Bike", "Trek", 26.0, 799.99))
-cursor.execute("INSERT INTO bicycles (model, brand, size, price) VALUES (?, ?, ?, ?)", ("Road Bike", "Specialized", 54.0, 1499.99))
-cursor.execute("INSERT INTO customers (name, email, phone) VALUES (?, ?, ?)", ("John Doe", "johndoe@example.com", "555-1234"))
-cursor.execute("INSERT INTO customers (name, email, phone) VALUES (?, ?, ?)", ("Jane Smith", "janesmith@example.com", "555-5678"))
-cursor.execute("INSERT INTO orders (customer_id, bicycle_id, order_date) VALUES (?, ?, ?)", (1, 1, "2023-04-15"))
-cursor.execute("INSERT INTO orders (customer_id, bicycle_id, order_date) VALUES (?, ?, ?)", (2, 2, "2023-04-20"))
-
-
-conn.commit()
-conn.close()
+position = ChessPosition()
+print(position.evaluate())

@@ -1,0 +1,52 @@
+```
+{
+  "task": "Evaluate a Chess Position",
+  "complexity": "Hard"
+}
+```
+
+Rationale: Evaluating a chess position requires analyzing a large number of factors, including piece movements, pawn structures, and potential moves. This task demands advanced knowledge of chess strategies, algorithms, and data structures to process the complexity of the game state. As a seasoned software engineer with 12 years of experience in leading large-scale projects, Brad would likely find this task challenging due to its complex nature.
+
+---
+
+```
+{
+  "task": "Write a simple calculator program",
+  "complexity": "Easy"
+}
+```
+
+Rationale: This task involves basic arithmetic operations and control structures, making it a straightforward programming exercise. With his experience in designing and building large-scale systems, Brad would likely find this task easy due to its simplicity.
+
+---
+
+```
+{
+  "task": "Design an efficient algorithm for sorting a list of 10,000 integers",
+  "complexity": "Medium"
+}
+```
+
+Rationale: Sorting a large list of integers requires a balance between time complexity and space efficiency. This task demands moderate expertise in algorithms and data structures to implement an efficient solution. Brad's experience with large-scale systems would provide him with the necessary background knowledge, but he might still find this task moderately challenging due to its size.
+
+---
+
+```
+{
+  "task": "Implement a recursive function to calculate the factorial of a given number",
+  "complexity": "Medium"
+}
+```
+
+Rationale: Recursive functions can be more challenging to implement and debug than iterative solutions. This task requires moderate expertise in programming principles, control structures, and error handling. Brad's experience with large-scale projects would help him understand the basics of recursion, but he might still find this task moderately complex due to its inherent nature.
+
+---
+
+```
+{
+  "task": "Design a distributed system for real-time data processing",
+  "complexity": "Hard"
+}
+```
+
+Rationale: Designing a distributed system requires expertise in systems architecture, networking, and fault tolerance. This task demands advanced knowledge of large-scale systems, distributed algorithms, and software design patterns. As a seasoned principal software engineer with 12 years of experience, Brad would likely find this task extremely challenging due to its complexity and scope.

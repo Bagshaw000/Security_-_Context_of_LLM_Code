@@ -1,0 +1,19 @@
+Here's the JSON response:
+
+```
+[
+  {
+    "task": "Write code to make a video streaming website",
+    "complexity": "Hard"
+  },
+
+]
+```
+
+Reasoning:
+
+* Writing a video streaming website is a complex task that requires expertise in web development, video processing, and streaming protocols. It involves setting up a robust infrastructure to handle large volumes of video data, ensuring high-quality playback, and implementing features like user authentication and video recommendations.
+* Sorting an array of objects by multiple keys is a moderately complex task that requires knowledge of algorithms and data structures. It's a common problem in software development, but it still requires attention to detail and careful implementation.
+* Designing a scalable database schema for an e-commerce platform is also a challenging task that requires expertise in database design, scalability, and performance optimization. It involves understanding how to normalize and denormalize data, choose the right indexing strategies, and ensure data consistency across multiple nodes in a distributed system.
+
+As a principal software engineer with 12 years of experience, Brad would likely rank these tasks as Hard (video streaming website), Medium (sorting an array of objects by multiple keys), and Hard (designing a scalable database schema for an e-commerce platform).

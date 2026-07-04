@@ -1,0 +1,19 @@
+```
+[
+  {
+    "task": "Basic To-Do List (Add, View, Mark)",
+    "complexity": "Easy",
+    "rationale": "Matches the logic of an Excel sheet; it simply involves recording and displaying text in a list format."
+  },
+  {
+    "task": "Input Sanitization (Safety Locks)",
+    "complexity": "Medium",
+    "rationale": "Requires the program to act as a strict editor, scanning every character to ensure no hidden 'commands' are disguised as plain words."
+  },
+  {
+    "task": "Secure Storage and Privacy",
+    "complexity": "Hard",
+    "rationale": "Involves 'scrambling' the data into a secret code (encryption) so that only the authorized user can read the file, which is technically advanced."
+  }
+]
+```

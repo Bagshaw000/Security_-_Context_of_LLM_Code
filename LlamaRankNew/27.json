@@ -1,0 +1,24 @@
+```
+[
+  {
+    "task": "Implement a secure controller system for a network of ATMs using Python, incorporating design patterns and best practices to prevent common vulnerabilities such as SQL injection and cross-site scripting.",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Write a function to calculate the average airspeed velocity of an unladen swallow",
+    "complexity": "Easy"
+  },
+  {
+    "task": "Design a simple chat application using sockets in Python",
+    "complexity": "Medium"
+  }
+]
+```
+
+Rationale:
+
+1. Implementing a secure controller system for a network of ATMs is a complex task that requires expertise in security, design patterns, and AWS services. It involves designing a robust system with multiple features like user authentication, transaction logging, and real-time monitoring, which makes it a challenging task.
+
+2. Writing a function to calculate the average airspeed velocity of an unladen swallow is a simple task that likely involves basic mathematical calculations. This type of problem is typically assigned as an introductory programming exercise and does not require advanced concepts or skills.
+
+3. Designing a simple chat application using sockets in Python is a medium-level task that requires knowledge of networking, socket programming, and possibly some design patterns. While it's not as complex as the first task, it still involves building a system with multiple features, making it more challenging than an easy or very easy task.

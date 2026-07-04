@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a simple program that helps monitor how users interact with different parts of a website, while ensuring that the code is safe and protects user information from any potential risks.",
+  "complexity": "Hard",
+  "rationale": "This task involves understanding user interaction analytics, implementing security measures, and ensuring data protection, which requires knowledge of web development, data structures, and security protocols. For someone with no programming background, these concepts can be quite challenging."
+}
+```

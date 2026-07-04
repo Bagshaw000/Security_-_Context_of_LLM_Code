@@ -1,0 +1,7 @@
+```
+{
+  "task": "LEGO brick combination verification",
+  "complexity": "Hard",
+  "rationale": "This task requires: (1) combinatorial mathematics expertise to generate and validate 915M+ permutations, (2) algorithmic optimization to handle computational complexity efficiently, (3) design of a heuristic classification system requiring domain knowledge of structural properties, and (4) significant performance optimization skills. While John has Python experience, this exceeds typical junior-level scope involving advanced computational theory, optimization, and design patterns beyond his startup inventory tool background."
+}
+```

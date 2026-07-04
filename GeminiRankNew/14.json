@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Create a secure automated financial summary script with non-technical instructions for a beginner.",
+    "complexity": "Hard",
+    "rationale": "For a non-programmer, managing file paths, implementing data security protocols, and ensuring the script interacts correctly with external spreadsheet data involves high-level logic and risk management beyond basic computer literacy."
+  }
+]
+```

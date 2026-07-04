@@ -1,0 +1,6 @@
+
+{
+  "task": "Write code to make a video streaming website",
+  "complexity": "Hard",
+  "rationale": "Creating a video streaming website involves multiple complex components such as user authentication, video encoding, storage, streaming protocols, and a responsive front-end. Additionally, it requires knowledge of server-side programming, database management, and possibly cloud services, making it a challenging task."
+}

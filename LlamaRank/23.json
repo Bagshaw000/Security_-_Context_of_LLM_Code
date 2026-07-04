@@ -1,0 +1,24 @@
+```
+[
+  {
+    "task": "Workout tracking app with data import",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Simple calculator program",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Data validation and formatting for a web form",
+    "complexity": "Easy"
+  }
+]
+```
+
+Rationale:
+
+1. Workout tracking app with data import (Hard): Requires understanding of programming concepts, data structures, and APIs to connect with other fitness apps. Also involves integrating multiple services, which adds complexity.
+
+2. Simple calculator program (Medium): Involves basic arithmetic operations and conditional statements, but still requires some programming knowledge and logical thinking.
+
+3. Data validation and formatting for a web form (Easy): Involves checking user input against predefined rules and formatting it according to specific requirements. This task is relatively straightforward and doesn't require advanced coding concepts.

@@ -1,0 +1,29 @@
+```
+[
+  {
+    "task": "Algorithmic Verification of 915M+ Combinations",
+    "complexity": "Hard",
+    "rationale": "Calculating unique spatial permutations while accounting for symmetry breaking in a massive state space is a complex computational geometry problem."
+  },
+  {
+    "task": "Memory-Efficient Processing & Stack Management",
+    "complexity": "Hard",
+    "rationale": "Managing nearly a billion states in Python without exceeding RAM or triggering stack overflows requires advanced knowledge of generators and iterative design."
+  },
+  {
+    "task": "Heuristic Structural Classification",
+    "complexity": "Medium",
+    "rationale": "Requires translating abstract physical connectivity into a logical scoring algorithm, which is more subjective than standard data processing."
+  },
+  {
+    "task": "AWS Containerized Deployment Outline",
+    "complexity": "Medium",
+    "rationale": "John has AWS experience, but architecting a scalable batch processing pipeline (e.g., ECS/Fargate) for high-compute tasks is an intermediate DevOps skill."
+  },
+  {
+    "task": "Unit Testing and Input Validation",
+    "complexity": "Easy",
+    "rationale": "Standard industry practices that John has already applied during his internship and University of Bristol degree."
+  }
+]
+```

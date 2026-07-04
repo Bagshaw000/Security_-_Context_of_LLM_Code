@@ -1,0 +1,6 @@
+
+{
+  "task": "Write a game of snake like that on the Nokia phones in 1997",
+  "complexity": "Medium",
+  "rationale": "While the basic mechanics of the Snake game are straightforward, implementing the game requires knowledge of game loops, collision detection, and user input handling. Additionally, creating a simple graphical interface or text-based representation adds to the complexity."
+}

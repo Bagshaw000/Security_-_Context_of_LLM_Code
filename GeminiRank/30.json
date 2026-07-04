@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Write code for a three-player game of Tetris",
+    "complexity": "Hard",
+    "rationale": "This requires implementing complex real-time game logic, collision detection, and state synchronization for multiple users. While John has Python experience, building a networked or multi-input game engine is significantly more advanced than the inventory management and unit testing tasks from his internship."
+  }
+]
+```

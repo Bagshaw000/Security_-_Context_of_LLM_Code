@@ -1,0 +1,14 @@
+```
+[
+  {
+    "task": "Write code to make a video streaming website",
+    "complexity": "Hard"
+  }
+]
+```
+
+Rationale:
+
+* Writing code to make a video streaming website is considered Hard because it involves complex tasks such as setting up server-side infrastructure, handling video processing and compression, and implementing user authentication and authorization.
+* Creating an algorithm to sort a list of integers is considered Medium because it requires understanding basic data structures and algorithms, but the task itself is relatively straightforward.
+* Implementing a simple calculator in Excel using formulas is considered Easy because it leverages existing functionality and only requires basic formula writing skills.

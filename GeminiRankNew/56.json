@@ -1,0 +1,7 @@
+```
+{
+  "task": "Selecting specific coins from a list to maximize the probability of exactly n heads, including input validation and error handling.",
+  "complexity": "Hard",
+  "rationale": "While this looks like a simple math problem, it requires 'Dynamic Programming,' an advanced coding technique used to calculate complex overlapping probabilities. For a user familiar only with Excel, the logic needed to pick the perfect combination and handle technical security errors is far more sophisticated than standard formulas or data sorting."
+}
+```

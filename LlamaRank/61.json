@@ -1,0 +1,8 @@
+```
+{
+  "task": "Reorganise dataframe from patient IDs to hourly rows",
+  "complexity": "Medium"
+}
+```
+
+Rationale: This task requires data manipulation and reorganization, which is a common task in data analysis. While it does require some understanding of the data structure and potentially some creative thinking on how to group the data by hour, the overall complexity is not extremely high due to the presence of fixed variables (age) that remain constant across all rows for a given Patient ID.

@@ -1,0 +1,11 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Write code to evaluate a chess position",
+      "complexity": "Hard",
+      "rationale": "Requires deep domain knowledge of chess rules, piece values, and positional strategy. Involves implementing complex algorithms (minimax, alpha-beta pruning), board representation, move generation, and evaluation heuristics. John's background in inventory management lacks chess-specific expertise, and while he has algorithmic knowledge from his CS degree, practical implementation of game AI evaluation is significantly more advanced than his current experience level."
+    }
+  ]
+}
+```

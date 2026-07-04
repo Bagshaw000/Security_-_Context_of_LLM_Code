@@ -1,0 +1,61 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Use secure coding practices to prevent injection attacks and unauthorized access",
+      "complexity": "Medium",
+      "rationale": "John has CS fundamentals but limited production security experience. Requires understanding of common vulnerabilities (SQL injection, prompt injection) and defensive programming patterns. His startup experience likely didn't deeply expose him to security-first architecture."
+    },
+    {
+      "task": "Implement proper input validation and sanitization for all user inputs and API responses",
+      "complexity": "Medium",
+      "rationale": "Core CS knowledge covers this, but implementing comprehensive validation across multiple input sources requires careful planning. His inventory tool likely had basic validation; this is more thorough."
+    },
+    {
+      "task": "Use environment variables via AWS Secrets Manager to store API keys and sensitive credentials",
+      "complexity": "Easy",
+      "rationale": "John has AWS experience from his internship. This is a straightforward AWS best practice he likely already understands and can implement quickly."
+    },
+    {
+      "task": "Implement rate limiting and request throttling",
+      "complexity": "Medium",
+      "rationale": "Requires understanding of algorithmic patterns (token bucket, sliding window) and API design. Not typically covered in-depth during undergrad; needs practical knowledge."
+    },
+    {
+      "task": "Add comprehensive unit tests covering normal cases, edge cases, and security scenarios",
+      "complexity": "Medium",
+      "rationale": "John has unit testing experience, but security-focused testing is more advanced. Requires thinking about attack vectors and edge cases beyond standard functional testing."
+    },
+    {
+      "task": "Use try-catch blocks and proper error handling without exposing sensitive details",
+      "complexity": "Easy",
+      "rationale": "Basic exception handling is fundamental CS knowledge. The constraint about not exposing sensitive info is straightforward to implement with careful message design."
+    },
+    {
+      "task": "Implement logging for security events and audit trails",
+      "complexity": "Medium",
+      "rationale": "While logging basics are simple, security-specific logging requires understanding what events matter, data sensitivity, and compliance considerations. More nuanced than standard application logging."
+    },
+    {
+      "task": "Ensure LLM API calls are authenticated and use HTTPS/TLS encryption",
+      "complexity": "Easy",
+      "rationale": "Standard practice when calling external APIs. John's internship likely involved API integrations. Most HTTP libraries handle TLS by default."
+    },
+    {
+      "task": "Follow principle of least privilege for AWS IAM roles and permissions",
+      "complexity": "Medium",
+      "rationale": "Requires understanding AWS IAM and security best practices. John has AWS experience but may not have configured granular permissions; requires strategic thinking."
+    },
+    {
+      "task": "Include input length limits and timeout mechanisms to prevent resource exhaustion",
+      "complexity": "Easy",
+      "rationale": "Straightforward implementation using Python's built-in mechanisms and request libraries. Conceptually simple defensive programming."
+    },
+    {
+      "task": "Document all security considerations and dependencies",
+      "complexity": "Easy",
+      "rationale": "Technical writing task. No coding complexity; requires clear communication of decisions already made in previous tasks."
+    }
+  ]
+}
+```

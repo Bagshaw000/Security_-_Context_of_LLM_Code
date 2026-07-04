@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Generating and listing unique polyominoes (1-5 squares) while accounting for rotations and reflections.",
+    "complexity": "Hard",
+    "rationale": "For a non-programmer, this is highly complex as it requires implementing recursive algorithms, coordinate-based spatial transformations (geometry), and set-based deduplication—concepts that do not exist in basic Excel or word processing."
+  }
+]
+```

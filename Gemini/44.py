@@ -1,70 +1,160 @@
+import turtle
+import time
+import random
 
 
 
+delay = 0.1
+score = 0
+high_score = 0
 
-inventory = [
-    {"Brand": "Trek", "Model": "Domane", "Price": 1200, "Quantity": 5},
-    {"Brand": "Giant", "Model": "Defy", "Price": 1100, "Quantity": 3},
-    {"Brand": "Specialized", "Model": "Allez", "Price": 1000, "Quantity": 8}
-]
 
-def show_inventory():
-    
-    print("\n--- CURRENT BICYCLE INVENTORY ---")
-    
-    for bike in inventory:
-        print(f"Brand: {bike['Brand']} | Model: {bike['Model']} | Price: ${bike['Price']} | In Stock: {bike['Quantity']}")
-    print("----------------------------------")
+window = turtle.Screen()
+window.title("Nokia Snake Game for Harold")
+window.bgcolor("black")
+window.setup(width=600, height=600)
+window.tracer(0) 
 
-def add_bike():
-    
-    print("\n--- ADD A NEW BICYCLE ---")
-    brand = input("What is the brand name? ")
-    model = input("What is the model name? ")
-    price = input("What is the price? ")
-    stock = input("How many do you have in the shop? ")
 
-    
-    new_bike = {
-        "Brand": brand,
-        "Model": model,
-        "Price": price,
-        "Quantity": stock
-    }
+head = turtle.Turtle()
+head.speed(0)
+head.shape("square")
+head.color("green")
+head.penup()
+head.goto(0, 0)
+head.direction = "stop"
 
-    
-    inventory.append(new_bike)
-    print(f"Successfully added the {brand} {model} to your database.")
 
-def search_bike():
-    
-    search_name = input("\nWhich brand are you looking for? ")
-    found = False
-    for bike in inventory:
-        if bike["Brand"].lower() == search_name.lower():
-            print(f"Found: {bike['Brand']} {bike['Model']} - Price: ${bike['Price']}")
-            found = True
-    if not found:
-        print("Sorry, we don't have that brand in the database.")
+food = turtle.Turtle()
+food.speed(0)
+food.shape("circle")
+food.color("red")
+food.penup()
+food.goto(0, 100)
+
+
+segments = []
+
+
+pen = turtle.Turtle()
+pen.speed(0)
+pen.shape("square")
+pen.color("white")
+pen.penup()
+pen.hideturtle()
+pen.goto(0, 260)
+pen.write("Score: 0  High Score: 0", align="center", font=("Courier", 24, "normal"))
+
+
+def go_up():
+    if head.direction != "down":
+        head.direction = "up"
+
+def go_down():
+    if head.direction != "up":
+        head.direction = "down"
+
+def go_left():
+    if head.direction != "right":
+        head.direction = "left"
+
+def go_right():
+    if head.direction != "left":
+        head.direction = "right"
+
+
+def move():
+    if head.direction == "up":
+        y = head.ycor()
+        head.sety(y + 20)
+    if head.direction == "down":
+        y = head.ycor()
+        head.sety(y - 20)
+    if head.direction == "left":
+        x = head.xcor()
+        head.setx(x - 20)
+    if head.direction == "right":
+        x = head.xcor()
+        head.setx(x + 20)
+
+
+window.listen()
+window.onkeypress(go_up, "Up")
+window.onkeypress(go_down, "Down")
+window.onkeypress(go_left, "Left")
+window.onkeypress(go_right, "Right")
 
 
 while True:
-    print("\nBICYCLE SHOP DATABASE SYSTEM")
-    print("1. View all bicycles in stock")
-    print("2. Add a new bicycle to the list")
-    print("3. Search for a brand")
-    print("4. Close the program")
-    
-    choice = input("\nWhat would you like to do? (Type 1, 2, 3, or 4): ")
+    window.update()
 
-    if choice == "1":
-        show_inventory()
-    elif choice == "2":
-        add_bike()
-    elif choice == "3":
-        search_bike()
-    elif choice == "4":
-        print("Closing the database. Have a great day, Harold!")
-        break
-    else:
-        print("That wasn't a valid option. Please try typing 1, 2, 3, or 4.")
+    
+    if head.xcor() > 290 or head.xcor() < -290 or head.ycor() > 290 or head.ycor() < -290:
+        time.sleep(1)
+        head.goto(0, 0)
+        head.direction = "stop"
+
+        
+        for segment in segments:
+            segment.goto(1000, 1000)
+        segments.clear()
+        
+        score = 0
+        delay = 0.1
+        pen.clear()
+        pen.write("Score: {}  High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal"))
+
+    
+    if head.distance(food) < 20:
+        
+        x = random.randint(-280, 280)
+        y = random.randint(-280, 280)
+        food.goto(x, y)
+
+        
+        new_segment = turtle.Turtle()
+        new_segment.speed(0)
+        new_segment.shape("square")
+        new_segment.color("grey")
+        new_segment.penup()
+        segments.append(new_segment)
+
+        
+        score += 10
+        if score > high_score:
+            high_score = score
+        
+        pen.clear()
+        pen.write("Score: {}  High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal"))
+
+    
+    for index in range(len(segments)-1, 0, -1):
+        x = segments[index-1].xcor()
+        y = segments[index-1].ycor()
+        segments[index].goto(x, y)
+
+    
+    if len(segments) > 0:
+        x = head.xcor()
+        y = head.ycor()
+        segments[0].goto(x, y)
+
+    move()
+
+    
+    for segment in segments:
+        if segment.distance(head) < 20:
+            time.sleep(1)
+            head.goto(0, 0)
+            head.direction = "stop"
+            for segment in segments:
+                segment.goto(1000, 1000)
+            segments.clear()
+            score = 0
+            delay = 0.1
+            pen.clear()
+            pen.write("Score: {}  High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal"))
+
+    time.sleep(delay)
+
+window.mainloop()

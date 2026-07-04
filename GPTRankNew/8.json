@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a secure database design for an online bicycle shop.",
+  "complexity": "Hard",
+  "rationale": "Designing a secure database involves understanding data relationships, security principles, and potential vulnerabilities. This requires knowledge of database concepts and security measures, which are complex for someone with no programming background."
+}
+```

@@ -1,43 +1,55 @@
-class TodoApp:
+class ATM:
+    def __init__(self, atm_id, balance):
+        self.atm_id = atm_id
+        self.balance = balance
+
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+            return amount
+        else:
+            return "Insufficient funds"
+
+    def deposit(self, amount):
+        self.balance += amount
+        return self.balance
+
+    def get_balance(self):
+        return self.balance
+
+
+class ATMNetwork:
     def __init__(self):
-        self.todos = []
+        self.atms = {}
 
-    def add_task(self, task):
-        self.todos.append(task)
-        print(f'Task "{task}" added.')
+    def add_atm(self, atm_id, balance):
+        self.atms[atm_id] = ATM(atm_id, balance)
 
-    def remove_task(self, task):
-        if task in self.todos:
-            self.todos.remove(task)
-            print(f'Task "{task}" removed.')
+    def withdraw_from_atm(self, atm_id, amount):
+        if atm_id in self.atms:
+            return self.atms[atm_id].withdraw(amount)
         else:
-            print(f'Task "{task}" not found.')
+            return "ATM not found"
 
-    def view_tasks(self):
-        if not self.todos:
-            print("No tasks in the list.")
+    def deposit_to_atm(self, atm_id, amount):
+        if atm_id in self.atms:
+            return self.atms[atm_id].deposit(amount)
         else:
-            print("Todo List:")
-            for idx, task in enumerate(self.todos, start=1):
-                print(f"{idx}. {task}")
+            return "ATM not found"
 
-    def run(self):
-        while True:
-            command = input("Enter a command (add, remove, view, exit): ").strip().lower()
-            if command == "add":
-                task = input("Enter the task: ")
-                self.add_task(task)
-            elif command == "remove":
-                task = input("Enter the task to remove: ")
-                self.remove_task(task)
-            elif command == "view":
-                self.view_tasks()
-            elif command == "exit":
-                print("Exiting the app.")
-                break
-            else:
-                print("Invalid command. Please try again.")
+    def get_atm_balance(self, atm_id):
+        if atm_id in self.atms:
+            return self.atms[atm_id].get_balance()
+        else:
+            return "ATM not found"
 
-if __name__ == "__main__":
-    app = TodoApp()
-    app.run()
+
+
+network = ATMNetwork()
+network.add_atm("ATM001", 1000)
+network.add_atm("ATM002", 2000)
+
+print(network.withdraw_from_atm("ATM001", 150))  
+print(network.get_atm_balance("ATM001"))          
+print(network.deposit_to_atm("ATM002", 500))      
+print(network.get_atm_balance("ATM002"))          

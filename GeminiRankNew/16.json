@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Design a high-scale, secure interaction-tracking framework for Amazon Device Management Systems.",
+    "complexity": "Hard",
+    "rationale": "The task requires architecting a distributed, multi-tiered system that simultaneously solves for high-throughput ingestion, low-latency client performance, and rigorous security (PII/XSS/Session hijacking). Implementing backend idempotency and strict schema validation at scale while maintaining high availability involves significant complexity in distributed systems coordination and data integrity."
+  }
+]
+```

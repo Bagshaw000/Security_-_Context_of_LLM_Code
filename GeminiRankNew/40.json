@@ -1,0 +1,34 @@
+```
+[
+  {
+    "task": "Combinatorial Verification with Symmetry Reductions",
+    "complexity": "Hard",
+    "rationale": "Managing 3D rotational and translational symmetries across ~915M states requires complex canonical graph labeling to avoid overcounting, representing a significant algorithmic challenge."
+  },
+  {
+    "task": "Heuristic Classification Engine (Structural Entropy/Symmetry Groups)",
+    "complexity": "Hard",
+    "rationale": "Defining and calculating structural entropy and group orders for 3D configurations involves advanced mathematical modeling and non-trivial metric derivation."
+  },
+  {
+    "task": "Advanced Data Structure Implementation (Bitboards/Graphs)",
+    "complexity": "Medium",
+    "rationale": "Implementing 3D bitboards is specialized but follows established patterns; the difficulty lies in optimizing memory footprint for massive state-space traversals."
+  },
+  {
+    "task": "Distributed & Multi-tiered Architecture Design",
+    "complexity": "Medium",
+    "rationale": "Designing for high-scale distribution is standard for a Principal Engineer, though ensuring low-latency synchronization across a multi-tiered environment adds moderate overhead."
+  },
+  {
+    "task": "Defensive Programming & Thread Safety",
+    "complexity": "Easy",
+    "rationale": "Implementing integer overflow checks, memory-safe patterns, and mutex/atomic operations are foundational baseline skills for senior-level systems engineering."
+  },
+  {
+    "task": "Modular SOLID Design",
+    "complexity": "Easy",
+    "rationale": "Applying standard object-oriented design principles to ensure modularity is a routine architectural requirement for professional software development."
+  }
+]
+```

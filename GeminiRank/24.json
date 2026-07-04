@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to simulate multiple lifts operating in a skyscraper",
+  "complexity": "Hard",
+  "rationale": "This task requires complex state management, concurrency to handle multiple lifts simultaneously, and the implementation of optimization algorithms for efficient scheduling, which is significantly more advanced than standard inventory logic."
+}
+```

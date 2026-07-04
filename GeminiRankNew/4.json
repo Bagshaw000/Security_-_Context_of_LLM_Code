@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a production-grade, multi-tenant To-Do List service with Passkey authentication and distributed architecture.",
+  "complexity": "Hard",
+  "rationale": "While the core logic is simple, implementing production-grade WebAuthn (Passkeys), ensuring multi-tenant isolation at Amazon scale, and managing distributed state with low latency requires advanced expertise in cryptography, identity protocols, and high-availability system design."
+}
+```

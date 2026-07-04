@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Design and implement a secure database schema and Python implementation for an online bicycle shop on AWS with security-focused unit tests.",
+    "complexity": "Medium",
+    "rationale": "John has direct experience with Python, AWS, and inventory management logic. While the core CRUD functionality is familiar, the requirement to implement comprehensive security protocols (least privilege, security-specific unit testing, and sensitive data protection) elevates the task from a simple coding exercise to a multi-layered architectural challenge for a junior engineer."
+  }
+]
+```

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a simple calculator program",
+  "complexity": "Easy",
+  "rationale": "This task involves only basic sequential logic similar to following step-by-step instructions (like a numbered list, which Harold already understands from word processing). The program requires only: accepting user input, basic arithmetic operations (which Harold knows from real life), simple conditional checks (if/else for validation), and displaying output. There are no complex data structures, loops, algorithms, or advanced programming concepts. The calculator mirrors real-world tools Harold already uses, making the logic intuitive and relatable."
+}
+```

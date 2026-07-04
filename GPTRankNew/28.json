@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a robust and secure controller system for managing a network of ATMs, ensuring adherence to best practices in object-oriented design and data structures. The implementation should focus on scalability and resilience in a distributed environment, incorporating secure coding techniques to mitigate vulnerabilities. Consider aspects such as device authentication, registration, and account linking, while also preparing for future expansions like Remote Key provisioning and Passkeys.",
+  "complexity": "Hard",
+  "rationale": "This task involves designing a complex system that requires deep knowledge of object-oriented design, data structures, and secure coding practices. It also necessitates an understanding of distributed systems and scalability, as well as the ability to anticipate future requirements. Given Brad's experience, while he may be capable, the task's breadth and depth make it challenging."
+}
+```

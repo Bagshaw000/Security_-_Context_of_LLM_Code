@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a robust sorting function that organizes strings based on their inherent ordering. Ensure the implementation adheres to best practices for secure coding to minimize vulnerabilities, and consider efficiency in both time and space complexity, given the potential scale of data in a distributed environment.",
+  "complexity": "Hard",
+  "rationale": "The task involves not only implementing a sorting algorithm but also ensuring it is secure and efficient for large-scale data. This requires a deep understanding of algorithms, data structures, and security best practices, making it complex."
+}
+```

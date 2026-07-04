@@ -1,0 +1,17 @@
+```
+[
+    {
+        "task": "Implement a deep neural network in Python",
+        "complexity": "Hard"
+    },
+    {
+        "task": "Assist senior developers to build a tool that helps companies to track and manage their inventory",
+        "complexity": "Medium"
+    }
+]
+```
+
+Ranking explanation:
+
+* Implementing a deep neural network in Python is considered Hard due to the complexity of designing, training, and tuning such models. It requires advanced knowledge of neural networks, optimization techniques, and programming skills.
+* Assisting senior developers to build a tool that helps companies to track and manage their inventory is considered Medium because it involves working with existing codebases, collaborating with team members, and understanding business requirements. While it still requires technical expertise, the task doesn't involve complex algorithmic or theoretical concepts.

@@ -1,97 +1,99 @@
+import boto3
+import json
+import pypdf
 import unittest
+from botocore.exceptions import ClientError
 
-class TodoItem:
+class ResearchPaperSummarizer:
     
-    def __init__(self, title, description=""):
-        self.title = title
-        self.description = description
-        self.completed = False
+    def __init__(self, region_name="us-east-1"):
+        
+        self.bedrock_runtime = boto3.client(
+            service_name="bedrock-runtime",
+            region_name=region_name
+        )
 
-    def mark_complete(self):
-        self.completed = True
-
-    def __str__(self):
-        status = "[x]" if self.completed else "[ ]"
-        return f"{status} {self.title} - {self.description}"
-
-class TodoManager:
-    
-    def __init__(self):
-        self.tasks = []
-
-    def add_task(self, title, description=""):
-        if not title:
-            raise ValueError("Task title cannot be empty")
-        new_item = TodoItem(title, description)
-        self.tasks.append(new_item)
-        return new_item
-
-    def delete_task(self, index):
+    def extract_text_from_pdf(self, file_path):
+        
         try:
-            return self.tasks.pop(index)
-        except IndexError:
+            reader = pypdf.PdfReader(file_path)
+            full_text = ""
+            for page in reader.pages:
+                text = page.extract_text()
+                if text:
+                    full_text += text + "\n"
+            return full_text
+        except FileNotFoundError:
+            print(f"Error: The file {file_path} was not found.")
+            return None
+        except Exception as e:
+            print(f"An unexpected error occurred during PDF parsing: {e}")
             return None
 
-    def get_tasks(self):
-        return self.tasks
-
-class TestTodoApp(unittest.TestCase):
-    
-    def setUp(self):
-        self.manager = TodoManager()
-
-    def test_add_task(self):
-        self.manager.add_task("Deploy to AWS", "Update Lambda functions")
-        self.assertEqual(len(self.manager.get_tasks()), 1)
-        self.assertEqual(self.manager.get_tasks()[0].title, "Deploy to AWS")
-
-    def test_complete_task(self):
-        task = self.manager.add_task("Code Review")
-        task.mark_complete()
-        self.assertTrue(self.manager.get_tasks()[0].completed)
-
-    def test_delete_task(self):
-        self.manager.add_task("Unit Testing")
-        self.manager.delete_task(0)
-        self.assertEqual(len(self.manager.get_tasks()), 0)
-
-def run_cli():
-    
-    manager = TodoManager()
-    
-    
-    manager.add_task("Inventory API", "Fix the bottleneck in the GET /items endpoint")
-    manager.add_task("CloudFormation", "Review the new stack template for staging")
-    
-    print("--- John's Junior Dev Todo List ---")
-    while True:
-        print("\nCurrent Tasks:")
-        for i, task in enumerate(manager.get_tasks()):
-            print(f"{i}. {task}")
+    def generate_summary(self, text, model_id="anthropic.claude-3-haiku-20240307-v1:0"):
         
-        print("\nOptions: [1] Add [2] Complete [3] Delete [4] Run Tests [5] Exit")
-        choice = input("Select an option: ")
+        if not text:
+            return "No text provided for summarization."
 
-        if choice == '1':
-            t = input("Enter title: ")
-            d = input("Enter description: ")
-            manager.add_task(t, d)
-        elif choice == '2':
-            idx = int(input("Enter task index to complete: "))
-            tasks = manager.get_tasks()
-            if 0 <= idx < len(tasks):
-                tasks[idx].mark_complete()
-        elif choice == '3':
-            idx = int(input("Enter task index to delete: "))
-            manager.delete_task(idx)
-        elif choice == '4':
-            print("\nRunning unit tests...")
-            suite = unittest.TestLoader().loadTestsFromTestCase(TestTodoApp)
-            unittest.TextTestRunner(verbosity=1).run(suite)
-        elif choice == '5':
-            break
-        else:
-            print("Invalid selection.")
+        
+        
+        prompt_config = {
+            "anthropic_version": "bedrock-2023-05-31",
+            "max_tokens": 1024,
+            "messages": [
+                {
+                    "role": "user",
+                    "content": f"Summarize the following research paper. Focus on the core methodology, findings, and conclusion:\n\n{text[:20000]}"
+                }
+            ]
+        }
+
+        try:
+            response = self.bedrock_runtime.invoke_model(
+                body=json.dumps(prompt_config),
+                modelId=model_id,
+                contentType="application/json",
+                accept="application/json"
+            )
+            
+            response_body = json.loads(response.get("body").read())
+            return response_body.get("content")[0].get("text")
+        
+        except ClientError as e:
+            return f"AWS Bedrock Client Error: {e}"
+        except Exception as e:
+            return f"Error during summary generation: {e}"
+
+
+class TestSummarizer(unittest.TestCase):
+    def setUp(self):
+        self.summarizer = ResearchPaperSummarizer()
+
+    def test_initialization(self):
+        self.assertIsNotNone(self.summarizer.bedrock_runtime)
+
+    def test_empty_text_summary(self):
+        result = self.summarizer.generate_summary("")
+        self.assertEqual(result, "No text provided for summarization.")
+
+def main():
+    
+    summarizer = ResearchPaperSummarizer()
+    
+    
+    pdf_path = "sample_paper.pdf"
+    
+    print(f"Processing: {pdf_path}...")
+    paper_content = summarizer.extract_text_from_pdf(pdf_path)
+    
+    if paper_content:
+        summary = summarizer.generate_summary(paper_content)
+        print("\n--- Research Paper Summary ---")
+        print(summary)
+    else:
+        print("Failed to extract content from the PDF.")
 
 if __name__ == "__main__":
-    run_cli()
+    
+    
+    main()

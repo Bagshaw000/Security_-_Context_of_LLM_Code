@@ -1,50 +1,57 @@
-import tkinter as tk
-from datetime import datetime
+class Lift:
+    def __init__(self, num_floors, capacity):
+        self.num_floors = num_floors
+        self.capacity = capacity
+        self.current_floor = 1
+        self.passengers = []
+
+    def call_lift(self, floor):
+        if floor < 1 or floor > self.num_floors:
+            return "Invalid floor"
+        self.move_to_floor(floor)
+        return f"Lift arrived at floor {self.current_floor}"
+
+    def board_passengers(self, passengers):
+        if len(passengers) > self.capacity:
+            return "Lift capacity exceeded"
+        self.passengers.extend(passengers)
+        return f"Passengers boarded: {len(self.passengers)}"
+
+    def disembark_passengers(self, floor):
+        disembarking = [p for p in self.passengers if p.destination == floor]
+        self.passengers = [p for p in self.passengers if p.destination != floor]
+        return f"{len(disembarking)} passengers disembarked at floor {floor}"
+
+    def move_to_floor(self, floor):
+        self.current_floor = floor
+
+class Skyscraper:
+    def __init__(self, num_floors, num_lifts, capacity):
+        self.num_floors = num_floors
+        self.lifts = [Lift(num_floors, capacity) for _ in range(num_lifts)]
+
+    def call_lift(self, floor, passengers):
+        available_lifts = [lift for lift in self.lifts if len(lift.passengers) < lift.capacity]
+        if not available_lifts:
+            return "No available lifts"
+        closest_lift = min(available_lifts, key=lambda x: abs(x.current_floor - floor))
+        return closest_lift.board_passengers(passengers)
+
+    def run_simulation(self, passenger_requests):
+        for floor, passengers in passenger_requests.items():
+            self.call_lift(floor, passengers)
+            for lift in self.lifts:
+                lift.disembark_passengers(floor)
+
+class Passenger:
+    def __init__(self, destination):
+        self.destination = destination
 
 
-root = tk.Tk()
-root.title("Todo List App")
-
-
-tasks = []
-
-
-def add_task():
-    task = entry.get()
-    if task:
-        tasks.append({"task": task, "completed": False, "timestamp": datetime.now()})
-        entry.delete(0, tk.END)
-        update_listbox()
-
-
-def complete_task(index):
-    tasks[index]["completed"] = not tasks[index]["completed"]
-    update_listbox()
-
-
-def update_listbox():
-    listbox.delete(0, tk.END)
-    for task in tasks:
-        status = "[X]" if task["completed"] else "[ ]"
-        listbox.insert(tk.END, f"{status} {task['task']}")
-
-
-entry = tk.Entry(root)
-entry.pack(pady=10)
-
-add_button = tk.Button(root, text="Add Task", command=add_task)
-add_button.pack(pady=10)
-
-
-listbox = tk.Listbox(root, width=50)
-listbox.pack(pady=10)
-
-scrollbar = tk.Scrollbar(root, command=listbox.yview)
-scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-listbox.config(yscrollcommand=scrollbar.set)
-
-
-listbox.bind("<<ListboxSelect>>", lambda event: complete_task(listbox.curselection()[0]))
-
-
-root.mainloop()
+skyscraper = Skyscraper(num_floors=50, num_lifts=5, capacity=10)
+passenger_requests = {
+    2: [Passenger(destination=10), Passenger(destination=15), Passenger(destination=20)],
+    5: [Passenger(destination=15), Passenger(destination=30), Passenger(destination=40)],
+    10: [Passenger(destination=25), Passenger(destination=35), Passenger(destination=45)],
+}
+skyscraper.run_simulation(passenger_requests)

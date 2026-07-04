@@ -1,0 +1,7 @@
+```
+{
+  "task": "Select n coins from 2n coins to maximize probability of getting exactly n heads",
+  "complexity": "Hard",
+  "rationale": "This task combines multiple challenging elements: (1) The core algorithmic problem requires understanding of dynamic programming and probability theory - selecting an optimal subset to maximize a complex probability function is non-trivial; (2) John has Python experience but the mathematical foundation needed here (probability optimization, DP formulation) goes beyond typical junior-level work; (3) Production-ready requirements add significant overhead: comprehensive unit testing, security validation, type hints, logging, and complexity analysis are enterprise-level expectations; (4) While John has some AWS/testing experience, this problem demands deeper CS fundamentals (greedy vs DP trade-offs, numerical stability, edge case handling) that typically require mid-level expertise; (5) The security focus and need to explain mathematical approach suggests this is designed for someone with 2-3+ years of experience, not fresh graduate level."
+}
+```

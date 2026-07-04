@@ -1,0 +1,7 @@
+```
+{
+  "task": "Combine classifications from n neural networks and output most likely classification with confidence level",
+  "complexity": "Medium",
+  "rationale": "John has foundational CS knowledge and practical experience with Python and testing. The task requires understanding of ensemble methods and basic statistics (voting/averaging), which are intermediate concepts. However, it doesn't require deep ML expertise or custom neural network implementation. The main challenges are: (1) designing an effective combination strategy (majority voting, weighted average, or confidence-based fusion), (2) implementing confidence calculation logic, and (3) handling edge cases. Given his startup experience with system design, he can approach the architectural aspect, but the ML-specific components (confidence thresholding, ensemble theory) would require some learning. No AWS or complex infrastructure needed here."
+}
+```

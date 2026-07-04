@@ -1,0 +1,29 @@
+Here are the ranked coding tasks with their complexity level and rationales:
+
+```
+[
+  {
+    "task": "Implementing a Convex Hull Algorithm for 4D Points",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Designing a Caching System for High-Traffic Web Applications",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Building a Scalable Data Processing Pipeline using Apache Beam",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Writing Efficient Code for a Large-Scale E-commerce Platform",
+    "complexity": "Easy"
+  }
+]
+```
+
+Rationale:
+
+* Implementing a Convex Hull Algorithm for 4D Points is Hard because it requires advanced knowledge of algorithms and data structures, particularly in handling higher-dimensional space. This task would require expertise in computational geometry and the ability to optimize complex algorithms.
+* Designing a Caching System for High-Traffic Web Applications is Medium because it involves understanding caching strategies, data storage, and optimization techniques to reduce latency. While not as complex as convex hulls, this task requires a solid grasp of software design patterns and performance optimization.
+* Building a Scalable Data Processing Pipeline using Apache Beam is Medium because it demands knowledge of distributed computing frameworks, data processing models, and efficient coding practices. This task requires expertise in parallel processing, scalability, and fault tolerance.
+* Writing Efficient Code for a Large-Scale E-commerce Platform is Easy because, although it involves optimizing performance-critical code, the underlying algorithms and data structures are more familiar to experienced software engineers like Brad.

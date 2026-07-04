@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a secure Python script that utilizes a large language model (LLM) to generate concise summaries of research papers. Ensure the code follows best practices to minimize vulnerabilities, including input validation and error handling.",
+  "complexity": "Hard",
+  "rationale": "This task requires a deep understanding of security best practices, knowledge of LLMs, and the ability to implement robust error handling and input validation. Given John's junior status and limited experience with security-focused coding, this task is complex."
+}
+```

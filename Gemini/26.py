@@ -2,78 +2,44 @@
 
 
 
-import os
+lift_A_location = 1
+lift_B_location = 1
 
-def run_todo_app():
+
+for turn in range(3):
+    print("-------------------------------------------")
+    print("Lift A is currently at floor:", lift_A_location)
+    print("Lift B is currently at floor:", lift_B_location)
     
-    filename = "my_tasks.txt"
     
     
-    if os.path.exists(filename):
-        with open(filename, "r") as file:
-            tasks = [line.strip() for line in file.readlines()]
+    your_floor = int(input("Which floor are you standing on? (1 to 10): "))
+    
+    
+    
+    distance_to_A = abs(lift_A_location - your_floor)
+    distance_to_B = abs(lift_B_location - your_floor)
+    
+    
+    if distance_to_A <= distance_to_B:
+        print("Sending Lift A to pick you up...")
+        lift_A_location = your_floor
+        chosen_lift = "A"
     else:
+        print("Sending Lift B to pick you up...")
+        lift_B_location = your_floor
+        chosen_lift = "B"
         
-        tasks = []
+    
+    destination = int(input("You are now in the lift. Which floor do you want to go to? "))
+    
+    
+    if chosen_lift == "A":
+        lift_A_location = destination
+        print("Lift A is moving... arrived at floor", lift_A_location)
+    else:
+        lift_B_location = destination
+        print("Lift B is moving... arrived at floor", lift_B_location)
 
-    while True:
-        
-        print("\n--- YOUR CURRENT TODO LIST ---")
-        if not tasks:
-            print("(The list is currently empty)")
-        else:
-            
-            for number, task in enumerate(tasks, 1):
-                print(f"{number}. {task}")
-
-        
-        print("\nWhat would you like to do?")
-        print("1. Add a new task")
-        print("2. Remove a completed task")
-        print("3. Exit the program")
-        
-        choice = input("Type 1, 2, or 3 and then press the Enter key: ")
-
-        if choice == "1":
-            
-            new_item = input("What task would you like to add? ")
-            tasks.append(new_item)
-            
-            
-            with open(filename, "w") as file:
-                for item in tasks:
-                    file.write(item + "\n")
-            print("Task successfully added to your list.")
-
-        elif choice == "2":
-            
-            if not tasks:
-                print("You have no tasks to remove.")
-            else:
-                try:
-                    remove_num = int(input("Enter the number of the task you finished: "))
-                    
-                    if 1 <= remove_num <= len(tasks):
-                        removed_task = tasks.pop(remove_num - 1)
-                        
-                        
-                        with open(filename, "w") as file:
-                            for item in tasks:
-                                file.write(item + "\n")
-                        print(f"Removed '{removed_task}' from your list.")
-                    else:
-                        print("That number is not on your list. Please try again.")
-                except ValueError:
-                    
-                    print("Please enter a valid number (e.g., 1, 2, 3).")
-
-        elif choice == "3":
-            
-            print("Goodbye, Harold! Your list has been saved.")
-            break
-        else:
-            
-            print("That was not a valid option. Please choose 1, 2, or 3.")
-
-if __name__ == "__main__":
-    run_todo_app()
+print("-------------------------------------------")
+print("Simulation complete. The lifts are waiting for the next passenger.")

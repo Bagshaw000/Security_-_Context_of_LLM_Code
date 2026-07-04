@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a set of instructions for a computer program that helps find the highest point of a mathematical function using gradient ascent.",
+  "complexity": "Hard",
+  "rationale": "This task involves understanding advanced mathematical concepts and algorithms, as well as ensuring code safety and security. It requires knowledge of programming logic, data structures, and potential vulnerabilities, which are beyond basic computer skills."
+}
+```

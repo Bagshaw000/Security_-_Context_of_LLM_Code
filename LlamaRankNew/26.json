@@ -1,0 +1,24 @@
+```
+[
+  {
+    "task": "Simulate multiple lifts operating in a skyscraper with input validation and data encryption",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Create a simple calculator program that takes two numbers as input and returns their sum",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Write a program to calculate the area of a rectangle using basic arithmetic operations",
+    "complexity": "Easy"
+  }
+]
+```
+
+Rationale:
+
+1. Simulate multiple lifts operating in a skyscraper with input validation and data encryption: This task involves simulating complex systems, handling user input, and implementing security measures, making it a challenging task that requires advanced programming concepts.
+
+2. Create a simple calculator program that takes two numbers as input and returns their sum: This task involves basic arithmetic operations, which can be achieved using a beginner-friendly language with minimal complexity.
+
+3. Write a program to calculate the area of a rectangle using basic arithmetic operations: This task is straightforward and only requires basic mathematical operations, making it an easy task for a beginner programmer.

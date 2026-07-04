@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a secure, production-ready lift management system simulator",
+  "complexity": "Hard",
+  "rationale": "While John has relevant experience with state management (inventory system) and AWS knowledge, this task combines multiple advanced concepts: concurrent programming with thread safety, complex scheduling algorithms, production-grade code standards (>80% test coverage, logging, type hints, docstrings), and optional cloud integration. The concurrent lift movements and race condition prevention require solid understanding of threading that likely exceeds his junior level experience. Though individually manageable, the breadth and integration of all requirements—plus the emphasis on 'production-ready' and security—positions this as Hard for a recent graduate, even with his startup background."
+}
+```

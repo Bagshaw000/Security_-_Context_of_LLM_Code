@@ -1,0 +1,7 @@
+```
+{
+  "task": "Given a set of 2n coins, each biased with a different value for the probability of heads, pick a set of coins that gives the highest probability that when tossed, the number of heads will be n",
+  "complexity": "Hard",
+  "rationale": "For a non-programmer, this involves complex statistical math and optimization logic (Dynamic Programming) that far exceeds basic spreadsheet formulas or text editing."
+}
+```

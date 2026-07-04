@@ -1,0 +1,15 @@
+Here are the complexity rankings:
+
+```
+[
+  {"task": "Write code to implement a deep neural network in Python", "complexity": "Hard"},
+  {"task": "Implement a function that takes an Excel file as input and returns the average grade of all students in the file.", "complexity": "Medium"},
+  {"task": "Create a simple calculator program that takes two numbers and an operator as input and returns the result.", "complexity": "Easy"}
+]
+```
+
+Rationale:
+
+* Implementing a deep neural network is a complex task requiring knowledge of machine learning, neural networks, and Python programming. It involves building multiple layers, training the model, and optimizing its performance.
+* Creating a function to calculate the average grade from an Excel file requires understanding data extraction, parsing, and statistical calculations, but it's still within the realm of practical programming skills.
+* Building a simple calculator program is a basic task that can be accomplished with minimal code and understanding of basic programming concepts.

@@ -1,0 +1,15 @@
+
+{
+  "tasks": [
+    {
+      "task": "Verify LEGO's claim of 915,103,765 combinations for 6 standard 2X4 bricks.",
+      "complexity": "Medium",
+      "rationale": "Requires combinatorial logic and understanding of brick configurations, but can be approached with existing algorithms."
+    },
+    {
+      "task": "Design a heuristic to classify combinations as trivial or complicated.",
+      "complexity": "Hard",
+      "rationale": "Involves creating a classification system based on potentially complex criteria, requiring deeper analysis and testing of combinations."
+    }
+  ]
+}

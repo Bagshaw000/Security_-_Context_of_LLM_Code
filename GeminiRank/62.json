@@ -1,0 +1,7 @@
+```
+{
+  "task": "Reorganizing patient data from a wide format (one row per patient) to a long format (multiple rows per patient based on hourly data).",
+  "complexity": "Hard",
+  "rationale": "For someone with no programming background, the concept of 'unpivoting' or 'melting' data is conceptually difficult. It requires understanding how to programmatically restructure a table so that static information repeats while time-based columns are converted into rows, which is a significant leap from basic Excel usage."
+}
+```

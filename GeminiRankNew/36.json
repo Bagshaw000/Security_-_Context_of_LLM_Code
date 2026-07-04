@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a Python script to calculate unique free n-polyominoes (n=1-5) using canonical forms, symmetry handling, and unit testing.",
+  "complexity": "Medium",
+  "rationale": "As a CS graduate, John has the algorithmic foundation to handle the combinatorial logic and coordinate normalization required. However, implementing spatial symmetry (rotations/reflections) and canonical representations is significantly more complex than standard inventory CRUD tasks, requiring careful recursive logic and set theory."
+}
+```

@@ -1,0 +1,12 @@
+```
+{
+    "tasks": [
+        {
+            "task": "Design a simulation in Python that models multiple lifts operating within a skyscraper",
+            "complexity": "Hard"
+        }
+    ]
+}
+```
+
+Rationale: The task requires modeling complex interactions between multiple objects (lifts) and their environment, which is indicative of a high-complexity problem. Object-oriented design, input validation, and error handling are also mentioned as required features, which suggest a sophisticated coding challenge suitable for an experienced software engineer like Brad.

@@ -1,0 +1,13 @@
+
+{
+  "Task": [
+    "Design a basic ATM system",
+    "Implement user authentication API endpoint",
+    "Develop a business logic layer for transaction validation"
+  ],
+  "Complexity": {
+    "Easy": [],
+    "Medium": ["Implement data storage and retrieval mechanisms"],
+    "Hard": ["Develop a robust security system with encryption and secure authentication protocols"]
+  }
+}

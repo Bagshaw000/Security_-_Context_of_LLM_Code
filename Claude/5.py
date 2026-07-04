@@ -1,37 +1,48 @@
-print("Welcome to the Calculator!")
+import tkinter as tk
 
-def add(a, b):
-    return a + b
 
-def subtract(a, b):
-    return a - b
+root = tk.Tk()
+root.title("Todo List App")
 
-def multiply(a, b):
-    return a * b
 
-def divide(a, b):
-    return a / b
+tasks = []
 
-print("Select operation:")
-print("1. Add")
-print("2. Subtract")
-print("3. Multiply")
-print("4. Divide")
 
-while True:
-    choice = input("Enter choice (1/2/3/4): ")
+def add_task():
+    task = entry.get()
+    if task:
+        tasks.append(task)
+        entry.delete(0, tk.END)
+        update_listbox()
 
-    if choice in ('1', '2', '3', '4'):
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number: "))
 
-        if choice == '1':
-            print(num1, "+", num2, "=", add(num1, num2))
-        elif choice == '2':
-            print(num1, "-", num2, "=", subtract(num1, num2))
-        elif choice == '3':
-            print(num1, "*", num2, "=", multiply(num1, num2))
-        elif choice == '4':
-            print(num1, "/", num2, "=", divide(num1, num2))
-    else:
-        print("Invalid input")
+def remove_task():
+    selected = listbox.curselection()
+    if selected:
+        tasks.pop(selected[0])
+        update_listbox()
+
+
+def update_listbox():
+    listbox.delete(0, tk.END)
+    for task in tasks:
+        listbox.insert(tk.END, task)
+
+
+label = tk.Label(root, text="Todo List")
+label.pack(pady=10)
+
+entry = tk.Entry(root)
+entry.pack(pady=5)
+
+add_button = tk.Button(root, text="Add Task", command=add_task)
+add_button.pack(pady=5)
+
+remove_button = tk.Button(root, text="Remove Task", command=remove_task)
+remove_button.pack(pady=5)
+
+listbox = tk.Listbox(root, width=30)
+listbox.pack(pady=10)
+
+
+root.mainloop()

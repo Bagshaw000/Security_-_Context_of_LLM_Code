@@ -1,0 +1,6 @@
+
+{
+  "task": "Write code to simulate multiple lifts operating in a skyscraper",
+  "complexity": "Hard",
+  "rationale": "This task involves multiple components such as managing lift states, handling requests, optimizing routes, and ensuring efficient operation under various conditions. It requires a good understanding of algorithms and data structures, making it complex."
+}

@@ -1,27 +1,32 @@
-from flask import Flask, render_template, Response
-import cv2
+import numpy as np
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Activation
 
-app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+input_shape = (100,)
 
-def generate_frames():
-    cap = cv2.VideoCapture(0)
-    while True:
-        success, frame = cap.read()
-        if not success:
-            break
-        else:
-            ret, buffer = cv2.imencode('.jpg', frame)
-            frame = buffer.tobytes()
-            yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
-@app.route('/video_feed')
-def video_feed():
-    return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+model = Sequential()
+model.add(Dense(64, input_shape=input_shape))
+model.add(Activation('relu'))
+model.add(Dense(32))
+model.add(Activation('relu'))
+model.add(Dense(1))
+model.add(Activation('sigmoid'))
 
-if __name__ == '__main__':
-    app.run(debug=True)
+
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+
+X_train = np.random.rand(1000, 100)
+y_train = np.random.randint(2, size=(1000, 1))
+model.fit(X_train, y_train, epochs=10, batch_size=32, validation_split=0.2)
+
+
+X_test = np.random.rand(100, 100)
+y_test = np.random.randint(2, size=(100, 1))
+loss, accuracy = model.evaluate(X_test, y_test)
+print('Test loss:', loss)
+print('Test accuracy:', accuracy)

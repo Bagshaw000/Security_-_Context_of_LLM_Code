@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write secure Python code to implement a deep neural network, ensuring to follow best practices for security and minimizing vulnerabilities. Consider using libraries like TensorFlow or PyTorch, and include unit tests to validate the functionality of your implementation.",
+  "complexity": "Hard",
+  "rationale": "Implementing a deep neural network requires a solid understanding of machine learning concepts, neural network architecture, and the specific libraries (TensorFlow or PyTorch). Additionally, ensuring security best practices adds complexity, as it involves knowledge of potential vulnerabilities and secure coding techniques. The requirement for unit tests further complicates the task, as it necessitates a thorough understanding of testing methodologies."
+}
+```

@@ -1,0 +1,6 @@
+
+{
+  "task": "Write code to generate summaries of research papers using an LLM",
+  "complexity_rank": "Medium",
+  "rationale": "Requires API integration with LLM services and handling of document input/output, but is straightforward once LLM basics are understood. Main challenges include prompt engineering, token management, and error handling rather than complex algorithmic logic."
+}

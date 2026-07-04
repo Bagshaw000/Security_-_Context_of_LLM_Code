@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to implement a deep neural network in Python",
+  "complexity": "Hard",
+  "rationale": "From my perspective at Amazon, a true implementation requires building the backpropagation engine, matrix calculus, and optimization logic from scratch. While frameworks exist, the algorithmic complexity of managing weights, gradients, and activation functions manually is high and requires rigorous mathematical precision."
+}
+```

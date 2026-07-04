@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a secure Python script for research paper summarization using AWS Bedrock/SageMaker, featuring IAM integration, prompt injection mitigation, and security-focused unit testing.",
+  "complexity": "Hard",
+  "rationale": "While John has foundational AWS and Python skills, this task requires integrating multiple advanced domains: cloud infrastructure, LLM orchestration, and specialized security engineering. Preventing prompt injection and designing unit tests for non-deterministic AI outputs are complex challenges that typically exceed the scope of junior-level experience."
+}
+```

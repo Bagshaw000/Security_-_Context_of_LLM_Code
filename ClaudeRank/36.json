@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to figure out the number n-square pieces and possibilities in a game of Blokus Duo",
+  "complexity": "Hard",
+  "rationale": "This task requires understanding of combinatorial geometry and polyomino theory. John would need to: (1) Generate all possible polyominoes up to 5 squares, (2) Implement rotation and reflection operations, (3) Normalize pieces to eliminate symmetries (canonical form), (4) Count unique pieces per size. While John has solid fundamentals from his CS degree and practical experience, this goes beyond typical business logic and requires algorithmic thinking in an unfamiliar domain. The symmetry cancellation logic, in particular, requires careful implementation to avoid counting duplicates."
+}
+```

@@ -1,0 +1,19 @@
+Here's the ranking in JSON format:
+
+```
+[
+  {
+    "task": "Write code to make a calculator",
+    "complexity": "Hard"
+  },
+  
+]
+```
+
+Rationale for ranking:
+
+* Writing code to make a calculator requires understanding of programming concepts, data types, and control structures, making it more complex.
+* Creating a web page with user input validation involves HTML, CSS, JavaScript, and security concerns, which is still challenging but less than the complexity of writing a calculator.
+* Sorting a list of integers in ascending order using sorting algorithms (such as bubble sort or merge sort) requires basic understanding of data structures and algorithms, making it relatively easy.
+
+For Harold, I would recommend starting with the "Sort a list of integers" task to gain confidence before moving on to more complex tasks.

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Reorganize a pandas DataFrame to have multiple rows per 'Patient ID', organized by hour, while maintaining fixed variables.",
+  "complexity": "Medium",
+  "rationale": "This task requires a good understanding of pandas for data manipulation, including reshaping data and maintaining consistency across rows. While it is not overly complex, it does involve multiple steps and attention to detail, which may be challenging for a junior developer."
+}
+```

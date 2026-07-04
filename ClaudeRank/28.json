@@ -1,0 +1,11 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Write code to implement a controller system for a network of ATMs",
+      "complexity": "Medium",
+      "rationale": "For Brad's expertise level, this task involves distributed system design, state management, and network communication—familiar concepts from his large-scale system work at Amazon. However, it lacks the extreme scale, real-time constraints, and cryptographic complexity of his current passkeys/device provisioning work. The core challenge (coordinating multiple nodes, handling transactions, fault tolerance) is well within his wheelhouse but doesn't require cutting-edge distributed systems techniques or security protocols he routinely handles."
+    }
+  ]
+}
+```

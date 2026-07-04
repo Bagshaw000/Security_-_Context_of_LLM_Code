@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a secure and scalable video streaming website, ensuring adherence to best practices in object-oriented design and data structures. Focus on implementing robust authentication and authorization mechanisms to protect user data and prevent vulnerabilities. Consider a multi-tiered architecture to support high availability and performance, while also incorporating features for device registration and account linking. Ensure the code is modular and maintainable, with thorough documentation and testing to facilitate future enhancements.",
+  "complexity": "Hard",
+  "rationale": "This task involves multiple complex components such as secure authentication, multi-tier architecture, and scalability considerations. It requires a deep understanding of object-oriented design, data structures, and best practices in software engineering. Additionally, the need for thorough documentation and testing adds to the complexity, making it suitable for an experienced engineer like Brad."
+}
+```

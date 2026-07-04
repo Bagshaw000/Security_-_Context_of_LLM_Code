@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a secure and efficient code solution to evaluate a chess position, ensuring adherence to best practices in object-oriented design and data structures. Focus on minimizing vulnerabilities and optimizing performance for large-scale applications, considering potential edge cases and security implications in a distributed environment.",
+  "complexity": "Hard",
+  "rationale": "This task requires a deep understanding of both chess algorithms and secure coding practices. It involves complex data structures, performance optimization for large-scale applications, and the need to address security vulnerabilities in a distributed environment. Given Brad's experience, while he may have the skills to tackle this, the multifaceted nature of the task elevates its complexity."
+}
+```

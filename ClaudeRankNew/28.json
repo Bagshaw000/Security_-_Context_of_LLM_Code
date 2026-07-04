@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a highly secure, scalable controller system architecture for managing a distributed network of ATMs",
+  "complexity": "Hard",
+  "rationale": "While Brad's 12 years of experience and direct expertise in device authentication, registration, and credential provisioning make this task well-aligned with his background, the complexity remains Hard due to: (1) multiple interconnected concerns requiring simultaneous mastery—distributed systems design, cryptography, and security protocols; (2) critical security requirements demanding deep understanding of mTLS, credential rotation, replay attack prevention, and audit mechanisms; (3) inherent distributed system challenges including eventual consistency, network partitions, and failover coordination; (4) production-grade code quality standards requiring sophisticated OOP design, idempotent operations, and comprehensive testing. For Brad specifically, this elevates from 'Medium-Hard' to 'Hard' because the scope requires synthesizing his specialized knowledge across multiple domains (device management + ATM-specific constraints + distributed architecture) rather than working primarily within one domain."
+}
+```

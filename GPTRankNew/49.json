@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a secure implementation of a deep neural network in Python, ensuring adherence to best practices in object-oriented design and robust data structures. Focus on minimizing vulnerabilities and enhancing security, particularly in the context of device authentication and registration systems. Consider scalability and maintainability for large-scale, distributed environments.",
+  "complexity": "Hard",
+  "rationale": "This task involves advanced concepts such as deep neural networks, security best practices, and scalability in distributed systems. It requires a deep understanding of both machine learning and secure software design, making it complex. Additionally, ensuring robustness against vulnerabilities in a critical area like device authentication adds to the difficulty."
+}
+```

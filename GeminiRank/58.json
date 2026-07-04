@@ -1,0 +1,7 @@
+```
+{
+  "task": "Collect the classifications of an image given by n different neural networks. Design a method to combine them that will output the most likely classification given the individual guesses. Also state the confidence level of your guess.",
+  "complexity": "Medium",
+  "rationale": "From the perspective of a Principal Engineer, this is a standard ensemble learning problem. While implementing basic voting or averaging is simple, designing a robust statistical method (like Bayesian inference or weighted soft-voting) to accurately calculate confidence levels across heterogeneous model outputs requires moderate algorithmic depth beyond basic data structures."
+}
+```

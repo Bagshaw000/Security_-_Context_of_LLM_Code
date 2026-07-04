@@ -1,0 +1,7 @@
+```
+{
+  "task": "Production-grade ensemble classification system with security and distributed deployment",
+  "complexity": "Hard",
+  "rationale": "This task demands Hard-level expertise across multiple domains: (1) Advanced ML systems design (ensemble methods, confidence calibration, uncertainty quantification); (2) Security architecture (threat modeling, adversarial input handling, model poisoning prevention); (3) Distributed systems (multi-tiered AWS deployment, audit trails, monitoring); (4) Production-grade engineering (immutable patterns, fail-secure design, comprehensive testing). While Brad's background in large-scale distributed systems and authentication aligns well, the ML rigor, statistical confidence intervals, and adversarial attack surface require deep specialization. The intersection of ML robustness, security hardening, and distributed architecture—with compliance requirements—places this solidly in Hard territory."
+}
+```

@@ -1,0 +1,12 @@
+```
+[
+  {
+    "task": "Pick a subset of coins to get the highest possible probability of getting exactly n heads",
+    "complexity": "Easy"
+  },
+  {
+    "task": "Calculate probabilities using Excel formulas",
+    "complexity": "Medium"
+  }
+]
+```

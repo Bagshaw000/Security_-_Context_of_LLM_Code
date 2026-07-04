@@ -1,44 +1,39 @@
-import tkinter as tk
+import time
 from datetime import datetime
 
-class TodoListApp:
-    def __init__(self, master):
-        self.master = master
-        master.title("Todo List App")
+class UserInteractionTracker:
+    def __init__(self):
+        self.user_interactions = []
 
-        self.todo_list = []
-        self.completed_list = []
+    def track_page_view(self, user_id, page_url, timestamp=None):
+        if not timestamp:
+            timestamp = datetime.now()
+        self.user_interactions.append({
+            'user_id': user_id,
+            'page_url': page_url,
+            'timestamp': timestamp
+        })
 
-        self.task_entry = tk.Entry(master)
-        self.task_entry.pack()
+    def track_button_click(self, user_id, button_id, timestamp=None):
+        if not timestamp:
+            timestamp = datetime.now()
+        self.user_interactions.append({
+            'user_id': user_id,
+            'button_id': button_id,
+            'timestamp': timestamp
+        })
 
-        self.add_button = tk.Button(master, text="Add Task", command=self.add_task)
-        self.add_button.pack()
+    def track_form_submission(self, user_id, form_id, timestamp=None):
+        if not timestamp:
+            timestamp = datetime.now()
+        self.user_interactions.append({
+            'user_id': user_id,
+            'form_id': form_id,
+            'timestamp': timestamp
+        })
 
-        self.todo_listbox = tk.Listbox(master, width=50)
-        self.todo_listbox.pack()
+    def get_user_interactions(self, user_id):
+        return [interaction for interaction in self.user_interactions if interaction['user_id'] == user_id]
 
-        self.complete_button = tk.Button(master, text="Complete Task", command=self.complete_task)
-        self.complete_button.pack()
-
-        self.completed_listbox = tk.Listbox(master, width=50)
-        self.completed_listbox.pack()
-
-    def add_task(self):
-        task = self.task_entry.get()
-        if task:
-            self.todo_list.append((task, datetime.now()))
-            self.todo_listbox.insert(tk.END, f"{task} - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-            self.task_entry.delete(0, tk.END)
-
-    def complete_task(self):
-        selected = self.todo_listbox.curselection()
-        if selected:
-            task, timestamp = self.todo_list.pop(selected[0])
-            self.completed_list.append((task, timestamp))
-            self.completed_listbox.insert(tk.END, f"{task} - {timestamp.strftime('%Y-%m-%d %H:%M:%S')}")
-            self.todo_listbox.delete(selected)
-
-root = tk.Tk()
-app = TodoListApp(root)
-root.mainloop()
+    def get_interactions_by_time_range(self, start_time, end_time):
+        return [interaction for interaction in self.user_interactions if start_time <= interaction['timestamp'] <= end_time]

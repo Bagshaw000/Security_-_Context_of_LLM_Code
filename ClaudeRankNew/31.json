@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a secure, production-ready three-player networked Tetris game architecture suitable for deployment in a distributed environment",
+  "complexity": "Hard",
+  "rationale": "While the core Tetris game logic is straightforward, this task compounds difficulty across multiple dimensions: (1) distributed systems design requiring consensus on game state across three players with potential network failures; (2) security architecture at enterprise scale (OAuth 2.0, encryption, OWASP compliance, threat modeling) far exceeds typical game development; (3) concurrent state management in multi-threaded environments with race condition prevention; (4) comprehensive testing strategy spanning unit, integration, and security domains; (5) production-grade error handling, logging, and monitoring. For Brad specifically, while this aligns with his distributed systems expertise, the breadth of security requirements (authentication, authorization, injection prevention, DOS mitigation) and the necessity to architect this as a scalable system—not just implement game logic—elevates this beyond medium complexity. The task demands holistic system design rather than isolated algorithmic problem-solving."
+}
+```

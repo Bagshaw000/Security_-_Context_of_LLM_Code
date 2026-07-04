@@ -1,0 +1,18 @@
+Here's the ranking of the tasks by complexity for Harold:
+
+```
+[
+  {
+    "task": "Tracking user interactions across a website",
+    "complexity": "Hard"
+  }
+]
+```
+
+Rationale:
+
+1. Tracking user interactions across a website: This task requires understanding of web development, JavaScript, and server-side technologies like Node.js or Python. It also involves data storage and analysis, making it the most complex task.
+
+2. Sorting a list of students based on their grades: This task is relatively simple as it only involves basic sorting algorithms like Bubble Sort or Selection Sort. It requires minimal programming knowledge, but some understanding of data structures.
+
+3. Creating a simple calculator in Excel: This task is straightforward and can be accomplished with basic Excel formulas and functions. No programming knowledge is required, making it the easiest task for Harold.

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a secure database schema for an online bicycle shop, ensuring best practices in object-oriented design and data structures. The solution should prioritize data integrity and security, addressing potential vulnerabilities. Consider multi-tiered architecture principles and scalability for future growth, while incorporating features for user authentication, product management, and transaction processing.",
+  "complexity": "Hard",
+  "rationale": "This task involves multiple complex components such as designing a secure database schema, ensuring data integrity, and addressing security vulnerabilities. It requires a deep understanding of object-oriented design, data structures, and multi-tiered architecture principles. Additionally, the need for scalability and integration of various features like user authentication and transaction processing adds to the complexity, making it a challenging task even for an experienced engineer."
+}
+```

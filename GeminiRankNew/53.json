@@ -1,0 +1,19 @@
+```
+[
+  {
+    "task": "Data Input and Basic Validation",
+    "complexity": "Easy",
+    "rationale": "Aligns with Harold's Excel experience; involves simple checks to ensure entries are numbers and formatted correctly."
+  },
+  {
+    "task": "2D Boundary Calculation (Convex Hull)",
+    "complexity": "Medium",
+    "rationale": "Requires moving beyond spreadsheets to understand basic geometric algorithms and logical sequencing in a programming language."
+  },
+  {
+    "task": "4D Convex Hull with Security Constraints",
+    "complexity": "Hard",
+    "rationale": "Involves complex multi-dimensional mathematics and rigorous error-handling that are far outside the scope of basic computer literacy."
+  }
+]
+```

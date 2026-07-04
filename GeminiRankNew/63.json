@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write a robust Python function to sort a list of strings lexicographically with strict validation, security measures, and unit tests.",
+  "complexity": "Medium",
+  "rationale": "While sorting is a fundamental skill for a CS graduate, the requirements for production-grade defensive programming—specifically handling resource exhaustion and type-confusion—elevate the task from a simple script to a more complex engineering exercise for a junior developer."
+}
+```

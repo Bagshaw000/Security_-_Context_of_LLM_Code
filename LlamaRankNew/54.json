@@ -1,0 +1,23 @@
+```
+[
+    {
+        "task": "Selecting a subset of coins to achieve the highest probability of obtaining n heads when tossed",
+        "complexity": "Hard"
+    },
+    {
+        "task": "Building a tool that helps companies to track and manage their inventory",
+        "complexity": "Medium"
+    }
+]
+```
+
+Rationale:
+
+1. The first task is ranked as Hard because it involves developing an algorithm with the following complexities:
+   - Handling bias in coin tossing
+   - Ensuring secure code practices for minimizing vulnerabilities
+   - Achieving reliable results
+
+2. The second task is ranked as Medium because it involved:
+   - Assisting senior developers during a project
+   - Using tools and technologies such as AWS, Python, and unit testing

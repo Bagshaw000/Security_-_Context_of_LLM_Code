@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code for a three-player game of Tetris",
+  "complexity": "Hard",
+  "rationale": "Developing a three-player Tetris game involves complex game mechanics, real-time rendering, and synchronization of multiple players' actions. It requires a deep understanding of game design principles, state management, and potentially network programming for multiplayer functionality. Given Brad's experience, he may find the design and architecture aspects manageable, but the intricacies of handling multiple players and ensuring a smooth gaming experience elevate the complexity."
+}
+```

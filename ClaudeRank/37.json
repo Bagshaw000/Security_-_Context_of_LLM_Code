@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to figure out the number n-square pieces and possibilities in a game of Blokus Duo",
+  "complexity": "Medium",
+  "rationale": "While this task involves combinatorial generation and geometric transformations (rotation/flipping), it doesn't require distributed systems knowledge or complex architectural decisions that Brad typically handles. The problem is well-defined with clear constraints (polyominoes up to 5 squares). Implementation requires solid understanding of: (1) recursive generation of polyominoes, (2) canonical form computation to eliminate symmetries, (3) set-based deduplication. For Brad's experience level, this is straightforward algorithmically but moderately involved in execution. It's neither trivial (Easy) nor architecturally/algorithmically complex (Hard)."
+}
+```

@@ -1,25 +1,41 @@
-here is the Python code for a calculator:
+import datetime
+from collections import defaultdict
 
-import tkinter as tk
+def generate_accounting_report(transactions):
+    
+    account_balances = defaultdict(float)
 
-def calculate():
-    try:
-        value = eval(entry.get())
-        result.set(value)
-    except:
-        result.set("Error")
+    
+    for transaction in transactions:
+        account, amount = transaction
+        account_balances[account] += amount
 
-root = tk.Tk()
-root.title("Calculator")
+    
+    report = []
+    report.append("Accounting Report")
+    report.append("-" * 20)
+    report.append("Account\tBalance")
+    report.append("-" * 20)
 
-entry = tk.Entry(root, font=("Arial", 20))
-entry.pack(pady=10)
+    for account, balance in account_balances.items():
+        report.append(f"{account}\t{balance:.2f}")
 
-button = tk.Button(root, text="Calculate", command=calculate, font=("Arial", 16))
-button.pack(pady=10)
+    report.append("-" * 20)
+    report.append(f"Total\t{sum(account_balances.values()):.2f}")
+    report.append("-" * 20)
+    report.append(f"Generated on {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
-result = tk.StringVar()
-result_label = tk.Label(root, textvariable=result, font=("Arial", 20))
-result_label.pack(pady=10)
+    return "\n".join(report)
 
-root.mainloop()
+
+transactions = [
+    ("Cash", 1000.0),
+    ("Accounts Receivable", 5000.0),
+    ("Inventory", 2500.0),
+    ("Accounts Payable", -3000.0),
+    ("Rent Expense", -1200.0),
+    ("Utilities Expense", -500.0)
+]
+
+report = generate_accounting_report(transactions)
+print(report)

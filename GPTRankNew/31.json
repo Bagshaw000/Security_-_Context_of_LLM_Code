@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a secure implementation of a three-player Tetris game, ensuring adherence to best practices in object-oriented design and data structures. Focus on minimizing vulnerabilities and incorporating robust error handling. The code should be structured for scalability and maintainability, suitable for a multi-tiered, distributed environment.",
+  "complexity": "Hard",
+  "rationale": "This task involves multiple complex components: designing a game with three players requires intricate game logic and state management. Ensuring security and minimizing vulnerabilities adds another layer of complexity, especially in a distributed environment. Additionally, adhering to best practices in object-oriented design and data structures while ensuring scalability and maintainability makes this a challenging task, suitable for an experienced engineer like Brad."
+}
+```

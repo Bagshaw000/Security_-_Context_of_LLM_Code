@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a secure Python function to evaluate a chess position, ensuring that the code is robust against common vulnerabilities. Consider implementing unit tests to validate the functionality and reliability of your solution.",
+  "complexity": "Hard",
+  "rationale": "This task requires a deep understanding of both chess logic and secure coding practices. Additionally, implementing unit tests adds complexity, as it necessitates thorough testing of various scenarios. Given John's junior status and limited experience, this task may be challenging."
+}
+```

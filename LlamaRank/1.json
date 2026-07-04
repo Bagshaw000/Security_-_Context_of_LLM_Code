@@ -1,0 +1,15 @@
+```
+[
+  {
+    "task": "Design a basic calculator system that takes user input and performs arithmetic operations",
+    "complexity": "Easy"
+  }
+ 
+]
+```
+
+Rationale:
+
+1. Task "Design a basic calculator system..." is assigned an Easy complexity because it requires only basic understanding of arithmetic operations and data structures.
+2. Task "Create a simple command-line calculator..." is assigned a Medium complexity as it involves implementing multiple algorithms for arithmetic operations, handling user input, and error checking.
+3. Task "Develop a full-featured graphical calculator..." is assigned a Hard complexity due to the need for creating a complex GUI, handling advanced mathematical operations, and ensuring stability in a potentially resource-intensive environment.

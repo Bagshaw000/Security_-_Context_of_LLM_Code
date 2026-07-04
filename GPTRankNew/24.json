@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a Python program to simulate multiple lifts operating in a skyscraper, ensuring secure coding practices to minimize vulnerabilities. The simulation should include features like lift movement, floor requests, and user interactions, while adhering to best practices for input validation and error handling.",
+  "complexity": "Hard",
+  "rationale": "This task involves multiple components such as simulating lift mechanics, managing user interactions, and implementing secure coding practices. It requires a solid understanding of object-oriented programming, concurrency, and error handling, which may be challenging for a junior developer with limited experience."
+}
+```

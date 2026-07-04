@@ -1,0 +1,6 @@
+
+{
+  "task": "Write a game of snake like that on the Nokia phones in 1997",
+  "complexity": "Medium",
+  "rationale": "Requires game loop logic, collision detection, and keyboard input handling. The core mechanics are straightforward but implementing smooth gameplay, proper state management, and responsive controls adds moderate complexity. Graphics/rendering can be kept simple with basic 2D rendering."
+}

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to generate accounting reports",
+  "complexity": "Medium",
+  "rationale": "From a principal engineer's perspective, while the basic logic is simple, the complexity lies in ensuring transactional consistency across distributed data stores, handling massive data aggregation at scale, and implementing strict auditability and idempotency required for financial systems."
+}
+```

@@ -1,97 +1,86 @@
-import sqlite3
+import chess
 import unittest
-from datetime import datetime
 
-class BicycleShopDB:
+class ChessEvaluator:
     
-    def __init__(self, db_name=":memory:"):
-        self.conn = sqlite3.connect(db_name)
-        self.cursor = self.conn.cursor()
-        self._create_schema()
-
-    def _create_schema(self):
-        
-        self.cursor.execute()
-        self.cursor.execute()
-        self.cursor.execute()
-        self.conn.commit()
-
-    def add_product(self, brand, model, category, price, stock):
-        query = "INSERT INTO products (brand, model, category, price, stock_quantity) VALUES (?, ?, ?, ?, ?)"
-        self.cursor.execute(query, (brand, model, category, price, stock))
-        self.conn.commit()
-        return self.cursor.lastrowid
-
-    def update_stock(self, product_id, quantity_change):
-        
-        query = "UPDATE products SET stock_quantity = stock_quantity + ? WHERE product_id = ?"
-        self.cursor.execute(query, (quantity_change, product_id))
-        self.conn.commit()
-
-    def get_inventory_report(self):
-        self.cursor.execute("SELECT brand, model, stock_quantity FROM products WHERE stock_quantity < 5")
-        return self.cursor.fetchall()
-
-    def register_customer(self, first_name, last_name, email):
-        try:
-            query = "INSERT INTO customers (first_name, last_name, email) VALUES (?, ?, ?)"
-            self.cursor.execute(query, (first_name, last_name, email))
-            self.conn.commit()
-            return self.cursor.lastrowid
-        except sqlite3.IntegrityError:
-            return None
-
-    def close(self):
-        self.conn.close()
-
-class TestBicycleShopSystem(unittest.TestCase):
     
-    def setUp(self):
-        self.db = BicycleShopDB(":memory:")
+    
+    PIECE_VALUES = {
+        chess.PAWN: 100,
+        chess.KNIGHT: 320,
+        chess.BISHOP: 330,
+        chess.ROOK: 500,
+        chess.QUEEN: 900,
+        chess.KING: 20000
+    }
 
-    def test_product_insertion(self):
-        product_id = self.db.add_product("Specialized", "Tarmac SL7", "Road", 5500.00, 10)
-        self.db.cursor.execute("SELECT brand FROM products WHERE product_id = ?", (product_id,))
-        brand = self.db.cursor.fetchone()[0]
-        self.assertEqual(brand, "Specialized")
+    def __init__(self, fen: str = None):
+        
+        self.board = chess.Board(fen) if fen else chess.Board()
 
-    def test_stock_management(self):
-        product_id = self.db.add_product("Trek", "Fuel EX", "Mountain", 3200.00, 5)
-        self.db.update_stock(product_id, -2)
-        self.db.cursor.execute("SELECT stock_quantity FROM products WHERE product_id = ?", (product_id,))
-        stock = self.db.cursor.fetchone()[0]
-        self.assertEqual(stock, 3)
+    def evaluate(self) -> int:
+        
+        if self.board.is_checkmate():
+            
+            return -30000 if self.board.turn == chess.WHITE else 30000
+        
+        if self.board.is_draw() or self.board.is_stalemate():
+            return 0
 
-    def test_low_stock_report(self):
-        self.db.add_product("Giant", "Defy", "Road", 2000.00, 2)
-        self.db.add_product("Cannondale", "Topstone", "Gravel", 1800.00, 20)
-        low_stock = self.db.get_inventory_report()
-        self.assertEqual(len(low_stock), 1)
-        self.assertEqual(low_stock[0][0], "Giant")
+        score = 0
+        
+        
+        for piece_type, value in self.PIECE_VALUES.items():
+            white_pieces = self.board.pieces(piece_type, chess.WHITE)
+            black_pieces = self.board.pieces(piece_type, chess.BLACK)
+            
+            score += len(white_pieces) * value
+            score -= len(black_pieces) * value
 
-    def tearDown(self):
-        self.db.close()
+        return score
+
+class TestChessEvaluator(unittest.TestCase):
+    
+    
+    def test_starting_position(self):
+        evaluator = ChessEvaluator()
+        self.assertEqual(evaluator.evaluate(), 0)
+
+    def test_white_advantage(self):
+        
+        board = chess.Board()
+        board.remove_piece_at(chess.D8)
+        evaluator = ChessEvaluator(board.fen())
+        self.assertEqual(evaluator.evaluate(), 900)
+
+    def test_black_advantage(self):
+        
+        board = chess.Board()
+        board.remove_piece_at(chess.A1)
+        evaluator = ChessEvaluator(board.fen())
+        self.assertEqual(evaluator.evaluate(), -500)
+
+    def test_checkmate_evaluation(self):
+        
+        fools_mate_fen = "rnb1kbnr/pppp1ppp/8/4p3/6Pq/5P2/PPPPP2P/RNBQKBNR w KQkq - 1 3"
+        evaluator = ChessEvaluator(fools_mate_fen)
+        self.assertEqual(evaluator.evaluate(), -30000)
+
+def main():
+    
+    current_board = chess.Board()
+    evaluator = ChessEvaluator()
+    print(f"Starting Position Evaluation: {evaluator.evaluate()}")
+    
+    
+    current_board.push_san("e4")
+    evaluator = ChessEvaluator(current_board.fen())
+    print(f"Evaluation after 1. e4: {evaluator.evaluate()}")
 
 if __name__ == "__main__":
     
-    unittest.main(argv=['first-arg-is-ignored'], exit=False)
-
-    
-    shop = BicycleShopDB("bicycle_inventory.db")
+    main()
     
     
-    bike_1 = shop.add_product("Canyon", "Grizl", "Gravel", 2400.00, 8)
-    bike_2 = shop.add_product("Santa Cruz", "Tallboy", "Mountain", 4500.00, 3)
     
-    
-    customer_id = shop.register_customer("Alice", "Smith", "alice.smith@example.com")
-    
-    
-    if bike_2:
-        shop.update_stock(bike_2, -1)
-    
-    print("Database processing complete. Low stock alerts generated for items under 5 units:")
-    for item in shop.get_inventory_report():
-        print(f"ALERT: {item[0]} {item[1]} is low on stock ({item[2]} remaining)")
-    
-    shop.close()
+    unittest.main(exit=False)

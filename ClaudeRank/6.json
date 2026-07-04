@@ -1,0 +1,11 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Write code for a database for an online bicycle shop",
+      "complexity": "Medium",
+      "rationale": "John has foundational database experience from his inventory management internship. Designing an e-commerce database requires understanding of relational schemas, foreign keys, and normalization—concepts he likely encountered. However, it's more complex than basic CRUD operations due to multiple entities (products, users, orders, inventory) and relationships. No advanced features like replication or optimization are implied, keeping it within Medium range rather than Hard."
+    }
+  ]
+}
+```

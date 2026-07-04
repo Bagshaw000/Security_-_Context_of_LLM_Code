@@ -1,0 +1,22 @@
+```
+[
+  {
+    "task": "Write code for a workout tracking app that can import data from other fitness apps",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Implement a binary search algorithm in Python",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Create a RESTful API using Flask and handle CRUD operations",
+    "complexity": "Easy"
+  }
+]
+```
+
+Rationale:
+
+* The workout tracking app task is ranked as Hard because it requires integrating with multiple fitness apps, handling different data formats, and possibly performing complex calculations to ensure accurate tracking. This would require a good understanding of API integration, data processing, and software design patterns.
+* The binary search algorithm task is ranked as Medium because it requires implementing an efficient search algorithm, but the complexity is relatively contained within a single data structure. A junior developer with experience in Python and data structures should be able to tackle this task.
+* The RESTful API task is ranked as Easy because it involves building a simple API using a framework like Flask, which provides pre-built functionality for handling HTTP requests and responses. This task requires less complexity than the other two due to the existing library support.

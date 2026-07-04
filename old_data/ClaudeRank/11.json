@@ -1,0 +1,6 @@
+
+{
+  "task": "Write code to evaluate a chess position",
+  "rank": "Hard",
+  "rationale": "Requires knowledge of chess rules, piece values, positional analysis (pawn structure, piece mobility, king safety), and potentially advanced evaluation techniques like material count and tactical patterns. Implementation is complex with many edge cases."
+}

@@ -1,0 +1,6 @@
+
+{
+  "task": "Write code to implement a controller system for a network of ATMs",
+  "complexity": "Hard",
+  "rationale": "Implementing a controller system for ATMs involves multiple components such as user authentication, transaction management, error handling, and network communication. It requires a solid understanding of system design, concurrency, and security, making it a complex task."
+}

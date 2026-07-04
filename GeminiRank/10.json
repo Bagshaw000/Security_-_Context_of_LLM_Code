@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to make a video streaming website",
+  "complexity": "Hard",
+  "rationale": "From a principal engineering perspective, this requires architecting complex distributed systems for multi-format transcoding, low-latency CDN integration, adaptive bitrate streaming (HLS/DASH), and high-throughput storage, while ensuring robust DRM and device-specific security protocols."
+}
+```

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Given a set of 2n coins, each biased with a different value for the probability of heads, pick a set of coins that gives the highest probability that when tossed, the number of heads will be n",
+  "complexity": "Hard",
+  "rationale": "This problem requires understanding of probability theory, combinatorial optimization, and dynamic programming. The solver must: (1) model the probability distribution for different coin subsets, (2) recognize this as a variant of the subset selection problem with probabilistic constraints, (3) implement efficient algorithms to search through exponential solution space, and (4) handle non-linear probability calculations. While Brad's background in algorithms and large-scale systems is relevant, the intersection of probability theory with combinatorial optimization and the lack of a greedy solution makes this Hard. The problem cannot be solved with standard techniques alone and requires mathematical insight into binomial probability distributions."
+}
+```

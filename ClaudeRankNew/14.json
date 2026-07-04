@@ -1,0 +1,11 @@
+```
+{
+  "task": "Create a financial data tool that reads from a file, sums data by category, and generates a summary report",
+  "complexity": "Medium",
+  "rationale": {
+    "why_not_easy": "Requires understanding file input/output operations, data organization by categories, and basic logic flow - concepts beyond Excel's point-and-click interface",
+    "why_not_hard": "The operations needed (reading files, summing numbers, organizing data) are straightforward; no advanced algorithms, database design, or complex data structures required",
+    "medium_justification": "Harold must bridge from Excel knowledge to programming concepts like variables, loops, and functions, but the task itself involves only fundamental operations (read, calculate, display). The requirement for clear explanations and security awareness adds moderate cognitive load for a beginner"
+  }
+}
+```

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a secure backend for a video streaming application with AWS S3/CloudFront integration and advanced security mitigations.",
+  "complexity": "Hard",
+  "rationale": "While John has Python and AWS experience, this task requires high-level architectural design and advanced security engineering (SSRF/IDOR mitigation) that exceeds the typical scope of a junior developer or a supervised internship."
+}
+```

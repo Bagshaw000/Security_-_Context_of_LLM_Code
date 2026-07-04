@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code for a three-player game of Tetris",
+  "complexity": "Hard",
+  "rationale": "Creating a three-player game of Tetris involves complex game mechanics, real-time user input handling, collision detection, and possibly network synchronization for multiplayer functionality. This requires a solid understanding of game development principles, data structures, and algorithms, which may be challenging for a junior developer."
+}
+```

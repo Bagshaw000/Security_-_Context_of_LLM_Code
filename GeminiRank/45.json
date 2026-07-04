@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to implement a gradient ascent algorithm which looks for the global maximum of a function.",
+  "complexity": "Hard",
+  "rationale": "While John likely encountered basic optimization in his degree, finding a global maximum—rather than just a local one—requires implementing advanced strategies like random restarts or momentum. This involves sophisticated mathematical logic and algorithmic tuning beyond typical junior-level CRUD or infrastructure tasks."
+}
+```

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to make a video streaming website",
+  "complexity": "Hard",
+  "rationale": "For Brad's expertise level, this is Hard because it requires: (1) Distributed systems design - handling concurrent streams across multiple servers/CDNs, (2) Real-time media processing - video encoding, transcoding, adaptive bitrate streaming (HLS/DASH), (3) State management at scale - user sessions, playback progress, (4) Security considerations - DRM, authentication tokens, rate limiting, (5) Infrastructure orchestration - load balancing, caching strategies, (6) Database design - handling millions of user interactions. While Brad's experience with device authentication and distributed systems translates well, video streaming adds unique challenges in media handling and real-time optimization that extend beyond typical backend systems work."
+}
+```

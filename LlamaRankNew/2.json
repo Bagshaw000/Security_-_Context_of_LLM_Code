@@ -1,0 +1,15 @@
+```
+[
+  {"task": "Create a simple calculator program in Python", "complexity": "Medium"},
+  {"task": "Understand secure coding practices (SQL injection and cross-site scripting)", "complexity": "Easy"},
+  {"task": "Test code thoroughly using debuggers and version control systems", "complexity": "Hard"}
+]
+```
+
+Rationale:
+
+1. **Create a simple calculator program in Python**: This task involves creating a basic program with a few functions, requiring an understanding of programming concepts such as variables, data types, and control structures.
+2. **Understand secure coding practices (SQL injection and cross-site scripting)**: This task focuses on security best practices that are relatively easy to learn and apply, making it a good starting point for beginners.
+3. **Test code thoroughly using debuggers and version control systems**: Testing and debugging can be complex, especially when working with tools like debuggers and version control systems, which require a good understanding of software development concepts.
+
+Note: For Harold, the English teacher, starting with secure coding practices (Easy) will help him build confidence before diving into more complex tasks.

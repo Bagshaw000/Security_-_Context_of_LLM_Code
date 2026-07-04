@@ -1,0 +1,7 @@
+```
+{
+  "task": "Implement a gradient ascent algorithm to find global maximum of a function",
+  "complexity": "Hard",
+  "rationale": "Requires understanding of calculus (derivatives, gradients), optimization theory, and numerical methods. While John has Python experience, gradient ascent involves mathematical concepts beyond typical startup development work. Implementation requires handling edge cases (local maxima, convergence criteria, learning rates) and debugging non-obvious numerical issues. His internship experience with inventory management tools wouldn't have exposed him to optimization algorithms."
+}
+```

@@ -1,0 +1,11 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Write code to simulate multiple lifts operating in a skyscraper",
+      "complexity": "Hard",
+      "rationale": "Requires concurrent programming (threading/async), state management for multiple lifts, complex scheduling algorithms for lift dispatch logic, event handling, and synchronization. John's background lacks concurrent systems experience despite his Python knowledge. The inventory management tool likely didn't involve real-time multi-entity coordination at this complexity level."
+    }
+  ]
+}
+```

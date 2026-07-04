@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Verify 915,103,765 LEGO combinations and design a heuristic to rate their complexity.",
+    "complexity": "Hard",
+    "rationale": "To Harold, this goes far beyond Excel formulas. It requires advanced 3D spatial modeling, complex recursive logic to prevent double-counting, and the creation of an abstract scoring system for nearly a billion physical permutations."
+  }
+]
+```

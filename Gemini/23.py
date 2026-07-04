@@ -1,131 +1,89 @@
-import uuid
-from datetime import datetime, timezone
-from typing import List, Optional, Dict
-from abc import ABC, abstractmethod
-import logging
+import csv
 
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
 
-class Task:
+my_workout_log = []
+
+def add_workout():
     
-    def __init__(self, description: str):
-        self.task_id = str(uuid.uuid4())
-        self.description = description
-        self.is_completed = False
-        self.created_at = datetime.now(timezone.utc)
-        self.updated_at = self.created_at
+    print("\n--- RECORD A NEW WORKOUT ---")
+    date = input("Enter the date (e.g., 2023-10-27): ")
+    exercise = input("What exercise did you do? ")
+    sets = input("How many sets? ")
+    reps = input("How many repetitions per set? ")
+    weight = input("How much weight did you use (lbs/kg)? ")
 
-    def complete(self) -> None:
-        self.is_completed = True
-        self.updated_at = datetime.now(timezone.utc)
-
-    def to_dict(self) -> dict:
-        return {
-            "task_id": self.task_id,
-            "description": self.description,
-            "is_completed": self.is_completed,
-            "created_at": self.created_at.isoformat(),
-            "updated_at": self.updated_at.isoformat()
-        }
-
-class TaskRepository(ABC):
     
-    @abstractmethod
-    def save(self, task: Task) -> None:
-        pass
+    workout_entry = {
+        "Date": date,
+        "Exercise": exercise,
+        "Sets": sets,
+        "Reps": reps,
+        "Weight": weight
+    }
 
-    @abstractmethod
-    def get_by_id(self, task_id: str) -> Optional[Task]:
-        pass
-
-    @abstractmethod
-    def list_all(self) -> List[Task]:
-        pass
-
-    @abstractmethod
-    def delete(self, task_id: str) -> bool:
-        pass
-
-class InMemoryTaskRepository(TaskRepository):
     
-    def __init__(self):
-        self._storage: Dict[str, Task] = {}
+    my_workout_log.append(workout_entry)
+    print("Workout saved successfully!")
 
-    def save(self, task: Task) -> None:
-        self._storage[task.task_id] = task
-
-    def get_by_id(self, task_id: str) -> Optional[Task]:
-        return self._storage.get(task_id)
-
-    def list_all(self) -> List[Task]:
-        return list(self._storage.values())
-
-    def delete(self, task_id: str) -> bool:
-        if task_id in self._storage:
-            del self._storage[task_id]
-            return True
-        return False
-
-class TodoService:
+def show_all_workouts():
     
-    def __init__(self, repository: TaskRepository):
-        self.repository = repository
+    print("\n--- YOUR WORKOUT HISTORY ---")
+    if not my_workout_log:
+        print("Your notebook is currently empty.")
+        return
 
-    def add_task(self, description: str) -> str:
-        if not description or len(description.strip()) == 0:
-            raise ValueError("Task description cannot be empty")
+    
+    print("Date       | Exercise   | Sets | Reps | Weight")
+    print("-" * 55)
+    
+    for entry in my_workout_log:
         
-        task = Task(description)
-        self.repository.save(task)
-        logger.info(f"Created task: {task.task_id}")
-        return task.task_id
+        print(f"{entry['Date']:10} | {entry['Exercise']:10} | {entry['Sets']:4} | {entry['Reps']:4} | {entry['Weight']}")
 
-    def complete_task(self, task_id: str) -> bool:
-        task = self.repository.get_by_id(task_id)
-        if task:
-            task.complete()
-            self.repository.save(task)
-            logger.info(f"Completed task: {task_id}")
-            return True
-        logger.warning(f"Task not found: {task_id}")
-        return False
-
-    def get_active_tasks(self) -> List[Task]:
-        return [t for t in self.repository.list_all() if not t.is_completed]
-
-    def get_all_tasks(self) -> List[Task]:
-        return self.repository.list_all()
-
-def main():
+def import_from_csv():
     
+    print("\n--- IMPORT DATA FROM ANOTHER APP ---")
+    print("Instructions: Place your file in the same folder as this program.")
+    filename = input("Enter the exact name of the file (e.g., my_data.csv): ")
     
-    repo = InMemoryTaskRepository()
-    todo_service = TodoService(repo)
-
     try:
-        
-        task1_id = todo_service.add_task("Review Passkey implementation design")
-        task2_id = todo_service.add_task("Finalize Remote Key provisioning protocols")
-        
-        print(f"Current Tasks: {[t.description for t in todo_service.get_active_tasks()]}")
-
-        
-        todo_service.complete_task(task1_id)
-
-        
-        active = todo_service.get_active_tasks()
-        print(f"Remaining Tasks: {[t.description for t in active]}")
-        
-        
-        all_tasks = todo_service.get_all_tasks()
-        for t in all_tasks:
-            status = "DONE" if t.is_completed else "PENDING"
-            print(f"[{status}] {t.task_id}: {t.description}")
-
+        with open(filename, mode='r', encoding='utf-8') as file:
+            
+            reader = csv.DictReader(file)
+            for row in reader:
+                my_workout_log.append(row)
+        print(f"Successfully imported data from {filename}!")
+    except FileNotFoundError:
+        print(f"Error: Could not find a file named '{filename}'.")
     except Exception as e:
-        logger.error(f"Application error: {str(e)}")
+        print(f"An error occurred: {e}")
+
+def main_menu():
+    
+    while True:
+        print("\n==============================")
+        print("   HAROLD'S WORKOUT TRACKER")
+        print("==============================")
+        print("1. Add a new workout")
+        print("2. View your history")
+        print("3. Import data from a file (CSV)")
+        print("4. Exit program")
+
+        choice = input("\nWhat would you like to do? (Type 1, 2, 3, or 4): ")
+
+        if choice == '1':
+            add_workout()
+        elif choice == '2':
+            show_all_workouts()
+        elif choice == '3':
+            import_from_csv()
+        elif choice == '4':
+            print("Closing the tracker. Great job today!")
+            break
+        else:
+            print("I didn't understand that choice. Please type a number from 1 to 4.")
+
 
 if __name__ == "__main__":
-    main()
+    main_menu()

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Given a set of 2n coins, each biased with a different value for the probability of heads, pick a set of coins that gives the highest probability that when tossed, the number of heads will be n",
+  "complexity": "Hard",
+  "rationale": "This problem involves optimizing a Poisson Binomial Distribution. Unlike standard greedy algorithms, finding a subset that maximizes a specific point probability (exactly 'n' heads) requires dynamic programming or sophisticated statistical analysis to balance the mean and variance across a non-linear probability space."
+}
+```

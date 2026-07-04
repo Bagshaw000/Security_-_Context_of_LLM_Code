@@ -1,0 +1,31 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Input validation and security (FEN notation parsing with OWASP guidelines)",
+      "complexity": "Medium",
+      "rationale": "Requires understanding of FEN notation format, input sanitization techniques, and OWASP principles. John has CS fundamentals but limited security-specific experience. FEN validation logic is moderately complex but not algorithmically challenging."
+    },
+    {
+      "task": "Chess position evaluation function (material count, piece positioning)",
+      "complexity": "Medium",
+      "rationale": "Requires domain knowledge of chess rules and evaluation heuristics. Implementing basic metrics (material value, piece placement) is straightforward for a CS graduate, but optimizing for accuracy requires chess understanding John may not have."
+    },
+    {
+      "task": "Comprehensive unit testing suite",
+      "complexity": "Medium",
+      "rationale": "John has unit testing experience from his internship. Writing tests for valid positions, edge cases, and boundary conditions is methodical work. Moderate complexity due to volume and variety of test cases needed, not conceptual difficulty."
+    },
+    {
+      "task": "Modular architecture design and AWS-ready deployment setup",
+      "complexity": "Hard",
+      "rationale": "Requires designing a scalable, production-ready system with environment variables, configuration management, and AWS best practices. John has AWS exposure but designing from scratch for production deployment—beyond a startup tool—presents architectural challenges beyond his demonstrated experience level."
+    },
+    {
+      "task": "Overall integration and documentation",
+      "complexity": "Medium",
+      "rationale": "Synthesizing all components, writing clear documentation, and ensuring deployment readiness. Straightforward execution given the other tasks are complete, though requires attention to detail and clarity."
+    }
+  ]
+}
+```

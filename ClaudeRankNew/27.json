@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a secure controller system for managing a network of ATMs",
+  "complexity": "Hard",
+  "rationale": "While John has relevant foundational experience (Python, AWS, unit testing, modular architecture from inventory tool), this task introduces several advanced challenges beyond his current expertise: (1) Security-critical system requiring deep knowledge of encryption, key management (KMS), authentication/authorization patterns, and OWASP guidelines - areas not demonstrated in his internship; (2) Cryptographic implementation (PINs, data encryption at rest/in transit) requires specialized security knowledge; (3) Designing secure database schemas with proper hashing is more complex than typical CRUD operations; (4) Production-ready security code demands understanding threat modeling and attack vectors; (5) Multiple AWS services (RDS, KMS, VPC) need coordinated use beyond basic cloud experience. The task expects junior-level execution of senior-level security architecture, making it Hard rather than Medium."
+}
+```

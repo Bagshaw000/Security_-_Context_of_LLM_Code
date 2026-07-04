@@ -1,42 +1,31 @@
-Here's an example of a Python code for a video streaming website:
+Here is the Python code for the problem you described:
 
-from flask import Flask, render_template, request, redirect, url_for
-from flask_sqlalchemy import SQLAlchemy
-import os
+import random
 
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///videos.db'
-db = SQLAlchemy(app)
+def pick_coins(n):
+    coins = [random.uniform(0, 1) for _ in range(2 * n)]
+    coins.sort(reverse=True)
+    return coins[:n]
 
-class Video(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(100), nullable=False)
-    description = db.Column(db.Text, nullable=False)
-    video_file = db.Column(db.String(100), nullable=False)
+def simulate_tosses(coins):
+    heads = 0
+    for coin in coins:
+        if random.random() < coin:
+            heads += 1
+    return heads
 
-@app.route('/')
-def index():
-    videos = Video.query.all()
-    return render_template('index.html', videos=videos)
+def main():
+    n = int(input("Enter the value of n: "))
+    selected_coins = pick_coins(n)
+    print("Selected coins:", selected_coins)
 
-@app.route('/upload', methods=['GET', 'POST'])
-def upload():
-    if request.method == 'POST':
-        title = request.form['title']
-        description = request.form['description']
-        video_file = request.files['video_file']
-        filename = video_file.filename
-        video_file.save(os.path.join('static/videos', filename))
-        new_video = Video(title=title, description=description, video_file=filename)
-        db.session.add(new_video)
-        db.session.commit()
-        return redirect(url_for('index'))
-    return render_template('upload.html')
+    num_simulations = 100000
+    heads_count = 0
+    for _ in range(num_simulations):
+        if simulate_tosses(selected_coins) == n:
+            heads_count += 1
+    probability = heads_count / num_simulations
+    print("Probability of getting n heads:", probability)
 
-@app.route('/video/<int:id>')
-def watch_video(id):
-    video = Video.query.get_or_404(id)
-    return render_template('watch.html', video=video)
-
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,6 @@
+
+{
+  "task": "Write code for a database for an online bicycle shop",
+  "complexity": "Medium",
+  "rationale": "Requires designing multiple related tables (products, customers, orders, inventory), understanding relationships and normalization, and implementing basic CRUD operations. Not trivial but achievable with standard database design patterns."
+}

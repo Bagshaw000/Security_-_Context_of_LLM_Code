@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a production-ready backend module for a workout tracking application with secure third-party API ingestion and AWS integration.",
+  "complexity": "Hard",
+  "rationale": "While John has relevant Python and AWS experience, 'production-ready' requirements involving third-party API integration, robust security sanitization, and strict IAM least-privilege configurations are high-responsibility tasks that typically require more architectural experience than a recent graduate possesses."
+}
+```

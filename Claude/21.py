@@ -1,36 +1,49 @@
-import tkinter as tk
+import os
+import json
+import requests
+from datetime import datetime
 
-class TodoList:
-    def __init__(self, master):
-        self.master = master
-        master.title("Todo List")
+class WorkoutTracker:
+    def __init__(self, user_id):
+        self.user_id = user_id
+        self.data_sources = []
+        self.workouts = []
 
-        self.task_list = []
-        self.task_entry = tk.Entry(master)
-        self.task_entry.pack()
+    def add_data_source(self, source_name, api_key):
+        self.data_sources.append((source_name, api_key))
 
-        self.add_button = tk.Button(master, text="Add Task", command=self.add_task)
-        self.add_button.pack()
+    def import_data(self):
+        for source_name, api_key in self.data_sources:
+            if source_name == "Fitbit":
+                self.import_fitbit_data(api_key)
+            elif source_name == "Strava":
+                self.import_strava_data(api_key)
+            elif source_name == "Apple Health":
+                self.import_apple_health_data(api_key)
 
-        self.task_listbox = tk.Listbox(master)
-        self.task_listbox.pack()
+    def import_fitbit_data(self, api_key):
+        
+        pass
 
-        self.delete_button = tk.Button(master, text="Delete Task", command=self.delete_task)
-        self.delete_button.pack()
+    def import_strava_data(self, api_key):
+        
+        pass
 
-    def add_task(self):
-        task = self.task_entry.get()
-        if task:
-            self.task_list.append(task)
-            self.task_listbox.insert(tk.END, task)
-            self.task_entry.delete(0, tk.END)
+    def import_apple_health_data(self, api_key):
+        
+        pass
 
-    def delete_task(self):
-        selected = self.task_listbox.curselection()
-        if selected:
-            self.task_list.pop(selected[0])
-            self.task_listbox.delete(selected[0])
+    def save_workouts(self, file_path):
+        with open(file_path, "w") as file:
+            json.dump(self.workouts, file)
 
-root = tk.Tk()
-todo_list = TodoList(root)
-root.mainloop()
+    def load_workouts(self, file_path):
+        with open(file_path, "r") as file:
+            self.workouts = json.load(file)
+
+
+tracker = WorkoutTracker("john_doe")
+tracker.add_data_source("Fitbit", "abc123")
+tracker.add_data_source("Strava", "def456")
+tracker.import_data()
+tracker.save_workouts("workouts.json")

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code for a three-player game of Tetris",
+  "complexity": "Hard",
+  "rationale": "Requires understanding of game loops, real-time graphics rendering, collision detection, score management for multiple players, game state synchronization, and complex data structures to track falling pieces and grid states. For Harold with no programming background, this involves numerous unfamiliar concepts simultaneously."
+}
+```

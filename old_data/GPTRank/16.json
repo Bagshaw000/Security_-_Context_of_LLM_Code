@@ -1,0 +1,6 @@
+
+{
+  "task": "Write code to implement a deep neural network in Python",
+  "complexity": "Hard",
+  "rationale": "Implementing a deep neural network requires a solid understanding of neural network architecture, backpropagation, optimization algorithms, and often involves using libraries like TensorFlow or PyTorch. It also requires knowledge of data preprocessing and model evaluation."
+}

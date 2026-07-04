@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a production-grade string sorting function with security and internationalization support",
+  "complexity": "Hard",
+  "rationale": "For Brad's experience level, this ranks as Hard due to: (1) Security requirements across multiple attack vectors (buffer overflows, injection attacks, memory leaks) demand deep system-level knowledge; (2) Internationalization with configurable collation strategies requires understanding of Unicode, locale-specific ordering, and edge cases; (3) Production-grade implies performance optimization in distributed systems—aligning with Brad's large-scale system background but adding algorithmic complexity; (4) The context of device authentication/account-linking introduces domain-specific constraints and failure modes with security implications; (5) Comprehensive testing, secure logging, and error handling across security-critical paths requires architectural thinking; (6) Balancing performance, security, and correctness simultaneously elevates difficulty. While Brad has the foundation to solve this, the breadth of concerns (security + i18n + scale + auth context) makes it non-trivial."
+}
+```

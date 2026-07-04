@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a robust, production-grade solution to enumerate and catalog all unique polyomino pieces (n-square tetrominoes) used in Blokus Duo with symmetry normalization",
+  "complexity": "Hard",
+  "rationale": "While the core polyomino generation algorithm itself is moderately complex, the production-grade requirements elevate this to Hard for Brad's context: (1) Canonical form and symmetry normalization requires deep algorithmic knowledge and careful implementation to avoid bugs; (2) Thread-safety with immutable data structures adds architectural complexity; (3) Security hardening (overflow prevention, OOM protection, input validation) requires defensive programming discipline; (4) Comprehensive testing strategy with edge cases and integration tests demands significant effort; (5) SOLID principles, documentation standards, and auditability requirements are enterprise-grade demands; (6) The combination of mathematical correctness, systems-level concerns (memory management, concurrency, security), and code quality standards makes this a complex delivery. For Brad specifically, while he has the skills to handle this, the production requirements and security considerations push it beyond a straightforward algorithmic problem into full systems engineering territory."
+}
+```

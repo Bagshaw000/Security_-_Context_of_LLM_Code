@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a secure, production-grade user interaction tracking system for a multi-tenant web platform at Amazon scale",
+  "complexity": "Hard",
+  "rationale": "This is a Hard-tier task even for Brad's expertise level due to multiple intersecting domains: (1) Distributed systems architecture requiring event sourcing, eventual consistency, and multi-region orchestration; (2) Cryptography implementation (TLS 1.3, AES-256, field-level encryption) with zero-trust principles; (3) Regulatory compliance (GDPR/CCPA) with immutable audit trails and data residency constraints; (4) High-throughput design with circuit breakers and graceful degradation at Amazon scale; (5) Comprehensive security testing including threat modeling and chaos engineering. While Brad has the foundational knowledge (distributed systems, auth, security), the integration complexity across security, compliance, scalability, and cryptographic correctness simultaneously elevates this beyond typical senior-level work into architectural territory requiring deep expertise in multiple specialized domains."
+}
+```

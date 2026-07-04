@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to implement a deep neural network in Python",
+  "complexity": "Medium",
+  "rationale": "For Brad's profile: While Brad has strong fundamentals in data structures, algorithms, and system design, DNNs are outside his core expertise domain (device authentication, registration, provisioning). However, this task is 'Medium' not 'Hard' because: (1) Mature frameworks (TensorFlow, PyTorch) abstract away complexity, (2) Basic DNN implementation follows established patterns, (3) No distributed systems or authentication domain expertise required. It would be 'Hard' only if requiring novel architectures, optimization, or production-scale deployment."
+}
+```

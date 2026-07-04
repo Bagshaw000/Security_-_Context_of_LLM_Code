@@ -1,0 +1,7 @@
+```
+{
+  "task": "Secure Terminal-based Nokia Snake Game",
+  "complexity": "Medium",
+  "rationale": "While John has Python and unit testing experience, implementing real-time terminal UI logic (e.g., curses), managing game state loops, and ensuring strict security/resource management moves this beyond a basic script into a complex modular project for a recent graduate."
+}
+```

@@ -1,0 +1,14 @@
+```
+[
+  {
+    "task": "Generate Accounting Reports",
+    "complexity": "Hard"
+  }
+]
+```
+
+Rationale:
+
+* Generate Accounting Reports: This task involves complex data processing, data analysis, and reporting. It requires a deep understanding of accounting principles and the ability to design an efficient system for generating reports. The complexity level is high due to the need to handle large datasets and create customized reports.
+* Design a New Data Structure: This task requires creativity and problem-solving skills to design an efficient data structure that meets specific requirements. While it can be challenging, it's not as complex as generating accounting reports.
+* Implement Object-Oriented Design Principles: This task involves applying fundamental principles of object-oriented design, such as encapsulation, inheritance, and polymorphism. It requires a solid understanding of OOP concepts, but the complexity level is relatively low compared to generating accounting reports.

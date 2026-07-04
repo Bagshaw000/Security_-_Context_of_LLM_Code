@@ -1,0 +1,34 @@
+```
+[
+  {
+    "task": "Design secure backend with Python (Flask/Django), JWT authentication, RBAC, and input validation",
+    "complexity": "Medium",
+    "rationale": "John has Python experience and understands authentication basics from his CS degree. However, implementing production-grade JWT tokens, role-based access control, and injection attack prevention requires deeper security knowledge beyond his startup internship exposure. This is achievable with some research but not trivial."
+  },
+  {
+    "task": "Implement AWS infrastructure (S3, CloudFront, IAM, encryption TLS 1.2+)",
+    "complexity": "Hard",
+    "rationale": "While John has AWS experience, architecting secure cloud infrastructure with proper IAM least-privilege roles, CDN security configurations, and encryption protocols is significantly more complex than typical startup tool development. This requires advanced AWS knowledge and security architecture skills."
+  },
+  {
+    "task": "Create comprehensive unit tests for authentication, authorization, validation, and error handling",
+    "complexity": "Medium",
+    "rationale": "John has unit testing experience from his internship. Testing authentication flows and authorization checks requires understanding security edge cases, but the testing framework and methodology align with his existing skillset. Moderate complexity due to security-focused test scenarios."
+  },
+  {
+    "task": "Implement secure coding practices (input sanitization, parameterized queries, rate limiting, sensitive data handling)",
+    "complexity": "Hard",
+    "rationale": "This requires deep security expertise across multiple domains (SQL injection prevention, API abuse mitigation, secrets management). John's startup experience likely didn't expose him to these nuanced security practices at production scale, making this the hardest component."
+  },
+  {
+    "task": "Document security assumptions, threat models, and AWS Secrets Manager integration",
+    "complexity": "Hard",
+    "rationale": "Threat modeling and formal security documentation are advanced practices rarely encountered in junior roles or startups. Requires security architecture thinking and OWASP knowledge beyond typical internship exposure."
+  },
+  {
+    "task": "Ensure OWASP Top 10 compliance (injection, broken auth, data exposure, deserialization)",
+    "complexity": "Hard",
+    "rationale": "OWASP Top 10 mastery is an advanced security specialization. While John may have learned about these vulnerabilities theoretically, applying them comprehensively across a production system is well beyond junior-level expectations and startup experience."
+  }
+]
+```

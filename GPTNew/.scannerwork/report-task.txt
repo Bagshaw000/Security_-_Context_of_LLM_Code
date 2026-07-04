@@ -1,0 +1,6 @@
+projectKey=GPTNew
+serverUrl=http://localhost:9000
+serverVersion=26.3.0.120487
+dashboardUrl=http://localhost:9000/dashboard?id=GPTNew
+ceTaskId=b5639036-afcc-4411-8f12-e75279101d0f
+ceTaskUrl=http://localhost:9000/api/ce/task?id=b5639036-afcc-4411-8f12-e75279101d0f

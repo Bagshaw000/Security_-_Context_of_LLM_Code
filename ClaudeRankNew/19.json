@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a production-ready LLM-based research paper summarization system with security best practices, multi-tenant isolation, comprehensive testing, and compliance requirements",
+  "complexity": "Hard",
+  "rationale": "While Brad possesses strong foundational knowledge in distributed systems, security, and large-scale architecture, this task demands expertise across multiple specialized domains simultaneously: (1) LLM integration and prompt engineering, (2) advanced security implementation (encryption, credential management, defense-in-depth), (3) multi-tenant architecture design, (4) compliance/privacy frameworks, and (5) secure dependency management. The requirement to synthesize security practices from device authentication into a new LLM domain, combined with the breadth of non-functional requirements (logging, rate limiting, encryption, authorization), testing strategies, and vulnerability documentation, elevates this beyond his core expertise areas. The complexity lies not in individual components but in orchestrating them cohesively in a novel domain (LLM systems) while maintaining production-grade quality and security posture."
+}
+```

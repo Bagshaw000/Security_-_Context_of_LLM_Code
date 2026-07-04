@@ -1,0 +1,6 @@
+
+[
+  {"task": "Find all prime numbers between 1 and 100", "complexity": "Easy"},
+  {"task": "Implement a sorting algorithm (Bubble Sort or Selection Sort) for an array of 10 elements", "complexity": "Medium"},
+  {"task": "Create a web scraper using Python and BeautifulSoup to extract data from a website", "complexity": "Hard"}
+]

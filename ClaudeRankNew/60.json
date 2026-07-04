@@ -1,0 +1,7 @@
+```
+{
+  "task": "Restructure pandas dataframe from wide to long format with validation and testing",
+  "complexity": "Medium",
+  "rationale": "This task is Medium complexity for John because: (1) Core requirement (pandas melt) is straightforward and aligns with his data manipulation experience; (2) Input validation and null handling are standard practices he likely encountered during his internship; (3) Unit testing is within his skillset; (4) However, combining all requirements together with attention to memory efficiency for large datasets (thousands of records) and ensuring secure coding practices adds moderate challenge; (5) The task doesn't require advanced algorithms or architectural decisions, but demands careful attention to detail across multiple aspects (validation, efficiency, testing)."
+}
+```

@@ -1,36 +1,45 @@
-import tkinter as tk
+Here's a simple Python code to simulate multiple lifts operating in a skyscraper:
 
-class TodoApp:
-    def __init__(self, master):
-        self.master = master
-        master.title("Todo List App")
+import random
+import time
 
-        self.task_list = []
-        self.task_entry = tk.Entry(master)
-        self.task_entry.pack()
+class Lift:
+    def __init__(self, name, num_floors):
+        self.name = name
+        self.num_floors = num_floors
+        self.current_floor = 1
+        self.passengers = []
 
-        self.add_button = tk.Button(master, text="Add Task", command=self.add_task)
-        self.add_button.pack()
+    def move_to_floor(self, floor):
+        print(f"{self.name} is moving from floor {self.current_floor} to floor {floor}.")
+        self.current_floor = floor
 
-        self.task_listbox = tk.Listbox(master, width=50)
-        self.task_listbox.pack()
+    def add_passenger(self, passenger):
+        self.passengers.append(passenger)
+        print(f"{passenger} has entered {self.name}.")
 
-        self.delete_button = tk.Button(master, text="Delete Task", command=self.delete_task)
-        self.delete_button.pack()
+    def remove_passenger(self, passenger):
+        self.passengers.remove(passenger)
+        print(f"{passenger} has exited {self.name}.")
 
-    def add_task(self):
-        task = self.task_entry.get()
-        if task:
-            self.task_list.append(task)
-            self.task_listbox.insert(tk.END, task)
-            self.task_entry.delete(0, tk.END)
+def simulate_lifts(num_lifts, num_floors, num_passengers):
+    lifts = []
+    passengers = [f"Passenger {i+1}" for i in range(num_passengers)]
 
-    def delete_task(self):
-        selected = self.task_listbox.curselection()
-        if selected:
-            self.task_list.pop(selected[0])
-            self.task_listbox.delete(selected[0])
+    for i in range(num_lifts):
+        lift = Lift(f"Lift {i+1}", num_floors)
+        lifts.append(lift)
 
-root = tk.Tk()
-app = TodoApp(root)
-root.mainloop()
+    while True:
+        for lift in lifts:
+            for passenger in passengers:
+                if random.random() < 0.1:
+                    lift.add_passenger(passenger)
+                    target_floor = random.randint(1, lift.num_floors)
+                    if target_floor != lift.current_floor:
+                        lift.move_to_floor(target_floor)
+                    lift.remove_passenger(passenger)
+        time.sleep(1)
+
+
+simulate_lifts(3, 20, 50)

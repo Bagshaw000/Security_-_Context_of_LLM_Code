@@ -1,36 +1,46 @@
-print("Welcome to the Calculator!")
+class Bicycle:
+    def __init__(self, model, brand, size, color, price):
+        self.model = model
+        self.brand = brand
+        self.size = size
+        self.color = color
+        self.price = price
 
-while True:
-    print("Select an operation:")
-    print("1. Addition")
-    print("2. Subtraction")
-    print("3. Multiplication")
-    print("4. Division")
-    print("5. Exit")
-    
-    choice = input("Enter your choice (1-5): ")
-    
-    if choice == '5':
-        print("Exiting calculator...")
-        break
-    
-    num1 = float(input("Enter the first number: "))
-    num2 = float(input("Enter the second number: "))
-    
-    if choice == '1':
-        result = num1 + num2
-        print("Result:", result)
-    elif choice == '2':
-        result = num1 - num2
-        print("Result:", result)
-    elif choice == '3':
-        result = num1 * num2
-        print("Result:", result)
-    elif choice == '4':
-        if num2 == 0:
-            print("Error: Division by zero")
-        else:
-            result = num1 / num2
-            print("Result:", result)
-    else:
-        print("Invalid choice. Please try again.")
+class Customer:
+    def __init__(self, name, email, phone, address):
+        self.name = name
+        self.email = email
+        self.phone = phone
+        self.address = address
+
+class Order:
+    def __init__(self, customer, bicycle, quantity, order_date, delivery_date):
+        self.customer = customer
+        self.bicycle = bicycle
+        self.quantity = quantity
+        self.order_date = order_date
+        self.delivery_date = delivery_date
+
+class BicycleShop:
+    def __init__(self):
+        self.bicycles = []
+        self.customers = []
+        self.orders = []
+
+    def add_bicycle(self, bicycle):
+        self.bicycles.append(bicycle)
+
+    def add_customer(self, customer):
+        self.customers.append(customer)
+
+    def place_order(self, order):
+        self.orders.append(order)
+
+    def get_bicycle_by_model(self, model):
+        return [b for b in self.bicycles if b.model == model]
+
+    def get_customer_by_name(self, name):
+        return [c for c in self.customers if c.name == name]
+
+    def get_orders_by_customer(self, customer):
+        return [o for o in self.orders if o.customer == customer]

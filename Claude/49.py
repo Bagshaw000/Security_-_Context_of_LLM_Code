@@ -1,31 +1,30 @@
-from flask import Flask, render_template, request, redirect, url_for
-import os
-from werkzeug.utils import secure_filename
+import numpy as np
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Activation
 
-app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = 'uploads/'
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+input_size = 100
+output_size = 50
 
-@app.route('/upload', methods=['POST'])
-def upload_file():
-    if 'file' not in request.files:
-        return redirect(url_for('index'))
-    file = request.files['file']
-    if file.filename == '':
-        return redirect(url_for('index'))
-    if file:
-        filename = secure_filename(file.filename)
-        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        return redirect(url_for('watch', filename=filename))
 
-@app.route('/watch/<filename>')
-def watch(filename):
-    file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-    return render_template('watch.html', file_path=file_path)
+model = Sequential()
+model.add(Dense(256, input_dim=input_size, activation='relu'))
+model.add(Dense(128, activation='relu'))
+model.add(Dense(64, activation='relu'))
+model.add(Dense(output_size, activation='sigmoid'))
 
-if __name__ == '__main__':
-    app.run(debug=True)
+
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+
+
+X_train = np.random.rand(1000, input_size)
+y_train = np.random.rand(1000, output_size)
+model.fit(X_train, y_train, epochs=100, batch_size=32)
+
+
+X_test = np.random.rand(100, input_size)
+y_test = np.random.rand(100, output_size)
+loss, accuracy = model.evaluate(X_test, y_test)
+print('Test loss:', loss)
+print('Test accuracy:', accuracy)

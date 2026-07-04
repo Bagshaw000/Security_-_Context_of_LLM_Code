@@ -1,0 +1,7 @@
+```
+{
+  "task": "LEGO brick combination verification and classification",
+  "complexity": "Hard",
+  "rationale": "This task requires: (1) understanding combinatorial mathematics and permutations with constraints, (2) designing a state-space exploration algorithm to enumerate valid configurations (accounting for 3D spatial constraints and brick connectivity rules), (3) implementing efficient deduplication logic to avoid counting isomorphic arrangements, (4) defining a heuristic that meaningfully classifies structural complexity (likely involving graph theory metrics like connectivity, symmetry, or stability), and (5) optimizing for performance given the large solution space. While Brad's experience with distributed systems and design patterns is transferable, this is fundamentally an algorithmic problem requiring deep combinatorial reasoning—beyond typical CRUD or service-oriented development."
+}
+```

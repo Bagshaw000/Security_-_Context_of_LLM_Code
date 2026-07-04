@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a secure implementation to track user interactions across a website, ensuring that the code adheres to best practices for security and minimizes vulnerabilities. Consider using Python and AWS, and include unit tests to validate functionality.",
+  "complexity": "Hard",
+  "rationale": "This task involves multiple complex components: implementing security best practices, ensuring minimal vulnerabilities, and integrating with AWS services. Additionally, it requires a solid understanding of web security principles and thorough testing, which can be challenging for a junior developer."
+}
+```

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a simple visitor tracking system for website interactions (button clicks, form submissions, page visits) with privacy protection and beginner-friendly implementation",
+  "complexity": "Medium",
+  "rationale": "While the core concept is straightforward (recording events like a notebook), this task involves multiple layers: understanding web basics, implementing data collection safely, ensuring privacy compliance (GDPR/data protection laws), securing data against breaches, and choosing appropriate tools. For Harold with no programming experience, the *security and legal requirements* elevate this from 'Easy' to 'Medium'—he'd need to learn about encryption, data storage best practices, and regulatory compliance, not just basic button-tracking code. However, it's not 'Hard' because modern no-code/low-code solutions (Google Analytics, Hotjar) handle much complexity automatically."
+}
+```

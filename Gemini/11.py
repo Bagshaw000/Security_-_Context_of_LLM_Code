@@ -1,45 +1,42 @@
-
-
-
-print("--- Harold's Classroom Calculator ---")
-
+import os
+import sys
+import subprocess
 
 
 try:
-    first_number = float(input("Step 1: Type your first number and press Enter: "))
-    second_number = float(input("Step 2: Type your second number and press Enter: "))
+    from flask import Flask, render_template_string, send_from_directory
+except ImportError:
+    print("Setting up necessary components, please wait...")
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "flask"])
+    from flask import Flask, render_template_string, send_from_directory
 
-    print("\nStep 3: What would you like to do with these numbers?")
-    print("Type + to Add")
-    print("Type - to Subtract")
-    print("Type * to Multiply")
-    print("Type / to Divide")
 
-    choice = input("Enter your choice here: ")
+app = Flask(__name__)
 
+
+html_design = 
+
+@app.route('/')
+def home_page():
     
-    if choice == "+":
-        answer = first_number + second_number
-        print("\nThe answer is:", answer)
-    elif choice == "-":
-        answer = first_number - second_number
-        print("\nThe answer is:", answer)
-    elif choice == "*":
-        answer = first_number * second_number
-        print("\nThe answer is:", answer)
-    elif choice == "/":
-        
-        if second_number == 0:
-            print("\nError: You cannot divide by zero.")
-        else:
-            answer = first_number / second_number
-            print("\nThe answer is:", answer)
-    else:
-        print("\nThat was not a valid symbol. Please run the program again.")
+    return render_template_string(html_design)
 
-except ValueError:
+@app.route('/video_file')
+def serve_video():
     
-    print("\nError: Please only type numbers (like 10 or 5.5), not words.")
+    
+    current_folder = os.path.dirname(os.path.abspath(__file__))
+    return send_from_directory(current_folder, 'lesson.mp4')
 
-
-input("\nPress the Enter key to close the calculator.")
+if __name__ == '__main__':
+    
+    print("----------------------------------------------------------------")
+    print("INSTRUCTIONS FOR HAROLD:")
+    print("1. Find your video file and rename it to: lesson.mp4")
+    print("2. Put that video file in the same folder as this Python script.")
+    print("3. Open your web browser (like Chrome, Edge, or Safari).")
+    print("4. In the address bar at the top, type: http://127.0.0.1:5000")
+    print("----------------------------------------------------------------")
+    
+    
+    app.run(host='127.0.0.1', port=5000)

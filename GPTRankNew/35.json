@@ -1,0 +1,21 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Create a simple program that can analyze a chess position and provide insights about it.",
+      "complexity": "Hard",
+      "rationale": "This task requires understanding of chess rules, algorithms for position analysis, and programming concepts, which are complex for a beginner."
+    },
+    {
+      "task": "Ensure that the code is safe and free from any vulnerabilities.",
+      "complexity": "Medium",
+      "rationale": "While ensuring code safety is important, it involves understanding security practices and potential vulnerabilities, which can be challenging for someone with no programming background."
+    },
+    {
+      "task": "Think of it like a set of instructions that a computer can follow.",
+      "complexity": "Easy",
+      "rationale": "This analogy is simple and relatable for someone with no programming experience, making it easier to grasp the basic concept of programming."
+    }
+  ]
+}
+```

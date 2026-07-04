@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "High-performance, multi-threaded lift simulation with secure, distributed architecture.",
+    "complexity": "Hard",
+    "rationale": "Managing shared state across multiple concurrent actors requires advanced synchronization primitives to prevent race conditions. Implementing optimized multi-lift scheduling algorithms (e.g., LOOK/SCAN) while ensuring thread safety, input validation, and distributed system resiliency adds significant architectural depth beyond a standard simulation."
+  }
+]
+```

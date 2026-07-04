@@ -1,0 +1,7 @@
+```
+{
+  "task": "Calculator Application Development",
+  "complexity": "Medium",
+  "rationale": "While the core calculator logic is straightforward (Easy), the comprehensive requirements elevate this to Medium complexity. John has relevant experience with unit testing, Python, and AWS from his internship, which directly applies here. The task requires: solid understanding of PEP 8 standards and code documentation (internship-level), comprehensive unit testing with 90% coverage (within his skillset), input validation and secure coding practices (standard junior developer expectations), and edge case handling (typical interview/assessment standard). However, it doesn't involve complex algorithms, system design, or advanced AWS architecture - keeping it Medium rather than Hard. The combination of multiple quality requirements tests depth across several areas rather than complexity in any single area."
+}
+```

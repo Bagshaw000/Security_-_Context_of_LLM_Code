@@ -1,0 +1,10 @@
+
+{
+  "tasks": [
+    {
+      "task": "Write code to figure out the number n-square pieces and possibilities in a game of Blokus Duo.",
+      "complexity": "Hard",
+      "rationale": "This task involves combinatorial geometry and requires generating all unique configurations of pieces while accounting for symmetries (rotations and reflections). The complexity increases with the number of squares, making it a challenging problem."
+    }
+  ]
+}

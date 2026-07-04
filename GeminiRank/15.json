@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to track user interactions across a website",
+  "complexity": "Medium",
+  "rationale": "While John has backend experience with Python and AWS, this task requires full-stack integration, including client-side JavaScript for event listeners and session management. Designing a scalable data ingestion pipeline and ensuring data integrity across different pages is a significant step up from his previous experience in inventory management."
+}
+```

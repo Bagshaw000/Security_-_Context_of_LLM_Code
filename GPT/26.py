@@ -1,45 +1,33 @@
-class TodoList:
-    def __init__(self):
-        self.tasks = []
+class Lift:
+    def __init__(self, id):
+        self.id = id
+        self.current_floor = 0
+        self.requests = []
 
-    def add_task(self, task):
-        self.tasks.append(task)
-        print(f'Task "{task}" added.')
+    def move_to(self, floor):
+        self.current_floor = floor
+        print(f"Lift {self.id} moving to floor {floor}")
 
-    def remove_task(self, task):
-        if task in self.tasks:
-            self.tasks.remove(task)
-            print(f'Task "{task}" removed.')
-        else:
-            print(f'Task "{task}" not found.')
+    def add_request(self, floor):
+        self.requests.append(floor)
+        print(f"Lift {self.id} received request for floor {floor}")
 
-    def view_tasks(self):
-        if not self.tasks:
-            print("No tasks in the list.")
-        else:
-            print("Todo List:")
-            for idx, task in enumerate(self.tasks, start=1):
-                print(f"{idx}. {task}")
+    def service_requests(self):
+        while self.requests:
+            next_floor = self.requests.pop(0)
+            self.move_to(next_floor)
 
-def main():
-    todo_list = TodoList()
-    while True:
-        print("\nOptions: add, remove, view, exit")
-        choice = input("Choose an option: ").strip().lower()
-        
-        if choice == 'add':
-            task = input("Enter the task: ")
-            todo_list.add_task(task)
-        elif choice == 'remove':
-            task = input("Enter the task to remove: ")
-            todo_list.remove_task(task)
-        elif choice == 'view':
-            todo_list.view_tasks()
-        elif choice == 'exit':
-            print("Exiting the Todo List app.")
-            break
-        else:
-            print("Invalid option. Please try again.")
+class Building:
+    def __init__(self, num_lifts):
+        self.lifts = [Lift(i) for i in range(num_lifts)]
 
-if __name__ == "__main__":
-    main()
+    def request_lift(self, floor):
+        closest_lift = min(self.lifts, key=lambda lift: abs(lift.current_floor - floor))
+        closest_lift.add_request(floor)
+        closest_lift.service_requests()
+
+
+building = Building(3)
+building.request_lift(5)
+building.request_lift(2)
+building.request_lift(8)

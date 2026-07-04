@@ -1,0 +1,24 @@
+```
+[
+  {
+    "task": "Write a game of snake like that on the Nokia phones in 1997",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Implement a simple calculator using Python",
+    "complexity": "Easy"
+  },
+  {
+    "task": "Design a microservice-based API for user authentication using Node.js and Express",
+    "complexity": "Medium"
+  }
+]
+```
+
+Rationale:
+
+1. Writing a game of snake like that on Nokia phones in 1997: This task requires knowledge of ancient mobile development technologies, such as the Symbian operating system and Java ME. It also needs to consider the limitations of 1997-era hardware and software constraints, which would make it challenging.
+
+2. Implementing a simple calculator using Python: As a junior software engineer with experience in Python, this task should be within John's capabilities. Python is an easy-to-learn language with extensive libraries, making it suitable for simple tasks like building a calculator.
+
+3. Designing a microservice-based API for user authentication using Node.js and Express: This task involves more advanced concepts such as service design, database integration, and network protocols. While John has experience with unit testing and AWS, designing a full-fledged microservice architecture might be outside his comfort zone, making it medium-complexity.

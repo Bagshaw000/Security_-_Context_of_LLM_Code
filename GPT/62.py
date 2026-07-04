@@ -1,28 +1,35 @@
 import pandas as pd
 
-class AccountingReport:
-    def __init__(self, transactions):
-        self.transactions = transactions
 
-    def generate_report(self):
-        df = pd.DataFrame(self.transactions)
-        report = {
-            'Total Income': df[df['Type'] == 'Income']['Amount'].sum(),
-            'Total Expenses': df[df['Type'] == 'Expense']['Amount'].sum(),
-            'Net Profit': df[df['Type'] == 'Income']['Amount'].sum() - df[df['Type'] == 'Expense']['Amount'].sum(),
-            'Income by Category': df[df['Type'] == 'Income'].groupby('Category')['Amount'].sum(),
-            'Expenses by Category': df[df['Type'] == 'Expense'].groupby('Category')['Amount'].sum(),
-        }
-        return report
+data = {
+    'Patient ID': [1, 2],
+    'age': [30, 45],
+    'sex': ['M', 'F'],
+    'procedure type': ['A', 'B'],
+    'hour_1': [1, 2],
+    'hour_2': [3, 4],
+    'hour_3': [5, 6],
+    'hour_4': [7, 8],
+    'hour_5': [9, 10],
+    'hour_6': [11, 12],
+    'hour_7': [13, 14],
+    'hour_8': [15, 16],
+    'hour_9': [17, 18],
+    'hour_10': [19, 20]
+}
+
+df = pd.DataFrame(data)
 
 
-transactions = [
-    {'Type': 'Income', 'Amount': 1000, 'Category': 'Sales'},
-    {'Type': 'Expense', 'Amount': 200, 'Category': 'Rent'},
-    {'Type': 'Income', 'Amount': 500, 'Category': 'Services'},
-    {'Type': 'Expense', 'Amount': 150, 'Category': 'Utilities'},
-]
+melted_df = df.melt(id_vars=['Patient ID', 'age', 'sex', 'procedure type'], 
+                     value_vars=[f'hour_{i}' for i in range(1, 11)], 
+                     var_name='Hour', value_name='Value')
 
-report_generator = AccountingReport(transactions)
-report = report_generator.generate_report()
-print(report)
+
+melted_df['Time since surgery'] = melted_df['Hour'].str.extract('(\d+)').astype(int)
+final_df = melted_df[['Patient ID', 'age', 'sex', 'procedure type', 'Time since surgery', 'Value']]
+
+
+final_df = final_df.sort_values(by=['Patient ID', 'Time since surgery']).reset_index(drop=True)
+
+print(final_df)

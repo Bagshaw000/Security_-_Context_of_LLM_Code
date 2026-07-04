@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to track user interactions across a website",
+  "complexity": "Hard",
+  "rationale": "For someone limited to basic word processing, this task is extremely difficult as it requires understanding event listeners, server-side data storage, and state management—concepts that do not exist in standard document or spreadsheet use."
+}
+```

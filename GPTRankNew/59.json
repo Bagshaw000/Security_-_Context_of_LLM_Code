@@ -1,0 +1,7 @@
+```
+{
+  "task": "Gather the classifications of an image from n different neural networks. Create a simple method to combine these classifications to determine the most likely overall classification based on the individual results. Additionally, include a way to express how confident you are in this final classification.",
+  "complexity": "Hard",
+  "rationale": "This task involves understanding neural networks, data aggregation, and confidence scoring, which require knowledge of advanced programming concepts and data structures. It is not suitable for someone with no programming experience."
+}
+```

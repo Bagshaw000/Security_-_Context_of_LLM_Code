@@ -1,6 +1,6 @@
-projectKey=GPT
+projectKey=GPT1
 serverUrl=http://localhost:9000
 serverVersion=26.3.0.120487
-dashboardUrl=http://localhost:9000/dashboard?id=GPT
-ceTaskId=2568d4ca-54ad-4090-823e-5057ac507938
-ceTaskUrl=http://localhost:9000/api/ce/task?id=2568d4ca-54ad-4090-823e-5057ac507938
+dashboardUrl=http://localhost:9000/dashboard?id=GPT1
+ceTaskId=95035646-c001-43a4-926a-1381379329cb
+ceTaskUrl=http://localhost:9000/api/ce/task?id=95035646-c001-43a4-926a-1381379329cb

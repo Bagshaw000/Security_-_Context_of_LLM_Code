@@ -1,43 +1,37 @@
-class TodoApp:
+import json
+import requests
+
+class WorkoutTracker:
     def __init__(self):
-        self.todos = []
+        self.workouts = []
 
-    def add_task(self, task):
-        self.todos.append(task)
-        print(f'Task "{task}" added.')
+    def import_data(self, source_url):
+        try:
+            response = requests.get(source_url)
+            response.raise_for_status()
+            data = response.json()
+            self.workouts.extend(data['workouts'])
+            print("Data imported successfully.")
+        except requests.exceptions.RequestException as e:
+            print(f"Error importing data: {e}")
 
-    def remove_task(self, task):
-        if task in self.todos:
-            self.todos.remove(task)
-            print(f'Task "{task}" removed.')
-        else:
-            print(f'Task "{task}" not found.')
+    def add_workout(self, workout):
+        self.workouts.append(workout)
+        print("Workout added successfully.")
 
-    def view_tasks(self):
-        if not self.todos:
-            print("No tasks in the list.")
-        else:
-            print("Todo List:")
-            for idx, task in enumerate(self.todos, start=1):
-                print(f"{idx}. {task}")
+    def view_workouts(self):
+        for workout in self.workouts:
+            print(workout)
 
-    def run(self):
-        while True:
-            command = input("Enter a command (add, remove, view, exit): ").strip().lower()
-            if command == "add":
-                task = input("Enter the task: ")
-                self.add_task(task)
-            elif command == "remove":
-                task = input("Enter the task to remove: ")
-                self.remove_task(task)
-            elif command == "view":
-                self.view_tasks()
-            elif command == "exit":
-                print("Exiting the app.")
-                break
-            else:
-                print("Invalid command. Please try again.")
+    def save_to_file(self, filename):
+        with open(filename, 'w') as f:
+            json.dump({'workouts': self.workouts}, f)
+        print("Workouts saved to file.")
+
 
 if __name__ == "__main__":
-    app = TodoApp()
-    app.run()
+    tracker = WorkoutTracker()
+    tracker.import_data("https://api.example.com/fitness_data")
+    tracker.add_workout({"date": "2023-10-01", "type": "Running", "duration": 30, "calories": 300})
+    tracker.view_workouts()
+    tracker.save_to_file("workouts.json")

@@ -1,0 +1,19 @@
+
+[
+  {
+    "task": "Design the database schema",
+    "complexity": "Easy"
+  },
+  {
+    "task": "Create database tables (customers, products, orders, etc.)",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Develop a data model to store product variations and inventory levels",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Implement data relationships between tables (e.g., one-to-many, many-to-many)",
+    "complexity": "Medium-Hard"
+  }
+]

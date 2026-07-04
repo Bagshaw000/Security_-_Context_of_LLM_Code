@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to implement a controller system for a network of ATMs",
+  "complexity": "Hard",
+  "rationale": "As a Principal Engineer, I recognize this requires managing distributed state, ensuring strict ACID compliance for financial integrity, implementing secure device-level authentication, and handling complex failure modes across a high-availability, multi-tiered network."
+}
+```

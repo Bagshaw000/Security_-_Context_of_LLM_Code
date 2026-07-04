@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write a game of snake like that on the Nokia phones in 1997",
+  "complexity": "Medium",
+  "rationale": "John has a strong CS foundation and Python skills, but game development requires managing real-time loops, input polling, and coordinate-based collision detection, which differs from his experience in backend inventory management and AWS."
+}
+```

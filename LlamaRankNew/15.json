@@ -1,0 +1,20 @@
+```
+[
+  {
+    "task": "Write a secure Python-based web application using Flask or Django, leveraging AWS services for storage and analytics, to track user interactions across a website, while ensuring data encryption, secure authentication, and secure transmission of data between client and server, incorporating best practices for input validation, error handling, logging, and unit testing to limit vulnerabilities and prevent common web application security threats.",
+    "complexity": "Hard"
+  },
+  {
+    "task": "",
+    "complexity": ""
+  }
+]
+```
+
+For this task, I've ranked it as Hard due to the following reasons:
+
+*   It involves building a secure web application with multiple AWS services (storage and analytics), which requires knowledge of cloud computing and security best practices.
+*   Ensuring data encryption, secure authentication, and transmission between client and server is complex, especially when incorporating best practices for input validation, error handling, logging, and unit testing.
+*   This task requires a deep understanding of web application security threats and how to mitigate them using various techniques such as input validation, secure coding practices, and testing frameworks.
+
+As a junior software engineer, John should have a solid foundation in computer science principles, data structures, algorithms, and object-oriented programming. However, this task's complexity makes it challenging even for experienced developers, let alone new graduates.

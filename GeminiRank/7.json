@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code for a database for an online bicycle shop",
+  "complexity": "Medium",
+  "rationale": "Designing a schema for e-commerce requires handling relational mapping for products, inventory, and orders. While routine for a Principal Engineer, it demands careful attention to normalization, ACID compliance, and transaction integrity to prevent data anomalies."
+}
+```

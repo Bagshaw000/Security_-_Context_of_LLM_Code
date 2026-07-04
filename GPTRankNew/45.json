@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a secure implementation of a gradient ascent algorithm in Python that efficiently searches for the global maximum of a given function. Ensure that the code follows best practices to minimize vulnerabilities and includes appropriate error handling and input validation.",
+  "complexity": "Hard",
+  "rationale": "This task requires a deep understanding of optimization algorithms, secure coding practices, and error handling. Given John's junior level and limited experience with complex algorithms and security considerations, this task is challenging."
+}
+```

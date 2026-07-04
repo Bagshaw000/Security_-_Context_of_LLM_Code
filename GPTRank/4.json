@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to make a todo list app",
+  "complexity": "Medium",
+  "rationale": "While creating a todo list app involves fundamental programming concepts such as CRUD operations, user interface design, and data storage, it requires a moderate level of complexity due to the need for user interaction, state management, and possibly backend integration. Given Brad's extensive experience, he can handle this task efficiently, but it still involves multiple components that require thoughtful design."
+}
+```

@@ -1,0 +1,10 @@
+
+{
+  "tasks": [
+    {
+      "task": "Write code to make a calculator",
+      "complexity": "Medium",
+      "rationale": "Creating a calculator involves understanding user input, implementing arithmetic operations, and managing potential errors. While the basic functionality can be straightforward, adding features like a GUI or advanced operations increases complexity."
+    }
+  ]
+}

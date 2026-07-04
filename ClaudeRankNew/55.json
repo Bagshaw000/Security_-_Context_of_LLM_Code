@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design a secure algorithm for coin selection optimization problem with mathematical proof, secure implementation, scalability, and production-ready requirements",
+  "complexity": "Hard",
+  "rationale": "This task combines multiple challenging dimensions: (1) Non-trivial algorithmic problem requiring dynamic programming or advanced optimization techniques; (2) Mathematical rigor demanding formal proof of correctness; (3) Production-grade requirements including thread-safety, comprehensive error handling, and logging; (4) Security concerns with input validation and overflow prevention; (5) Scalability considerations for large n values; (6) Enterprise design patterns and SOLID principles application. While Brad's experience with large-scale distributed systems and security protocols (device-authentication, passkeys) provides relevant context, the mathematical optimization component, combined with security hardening and production readiness across all dimensions, elevates this beyond typical medium-complexity work. This requires synthesis of algorithm design, formal verification, security engineering, and systems thinking simultaneously."
+}
+```

@@ -1,0 +1,16 @@
+```
+[
+  {
+    "task": "Picking coins to get a specific number of heads",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Designing and building large-scale systems in a multi-tiered, distributed environment",
+    "complexity": "Hard"
+  }
+]
+```
+
+I ranked this task as Medium because it involves combinatorial optimization (choosing coins to maximize the probability of getting a certain number of heads) with some mathematical concepts involved. It's not extremely difficult, but requires thinking about probability and coin selection.
+
+Designing and building large-scale systems in a multi-tiered, distributed environment is rated Hard because it involves complex system architecture, scalability considerations, and potentially complex interactions between different components, requiring a high level of expertise in software engineering and system design.

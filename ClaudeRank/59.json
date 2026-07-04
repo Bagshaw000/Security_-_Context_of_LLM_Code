@@ -1,0 +1,7 @@
+```
+{
+  "task": "Collect classifications from n neural networks and combine them to output the most likely classification with confidence level",
+  "complexity": "Hard",
+  "rationale": "For Harold: This task requires understanding multiple advanced concepts simultaneously - neural networks (black box AI systems), data aggregation from multiple sources, statistical methods for combining predictions (voting/averaging), and confidence calculation. Even with programming experience, this would be challenging. For Harold specifically, this involves unfamiliar domains (machine learning, neural networks) with no Excel equivalent, multiple layers of abstraction, and abstract problem-solving beyond basic data entry."
+}
+```

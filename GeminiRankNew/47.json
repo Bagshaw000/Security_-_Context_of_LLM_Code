@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Write a script to find the absolute highest point of a mathematical curve using gradient ascent logic, including safety checks and security best practices.",
+    "complexity": "Hard",
+    "rationale": "This requires translating abstract calculus (derivatives) into iterative programming logic. For someone limited to Excel, managing 'local vs. global' maxima, implementing loops, and adding professional-grade security/error handling is significantly more complex than standard spreadsheet formulas."
+  }
+]
+```

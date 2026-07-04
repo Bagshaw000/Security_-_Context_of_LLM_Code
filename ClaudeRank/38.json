@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to figure out the number n-square pieces and possibilities in a game of Blokus Duo",
+  "complexity": "Hard",
+  "rationale": "This task requires understanding of multiple advanced programming concepts: (1) Combinatorics - generating all possible arrangements of connected squares; (2) Geometric transformations - implementing rotation and flip operations; (3) Symmetry detection - recognizing and eliminating duplicate pieces that are rotations/reflections of each other; (4) Data structures - storing and comparing complex shapes; (5) Graph theory - determining if squares are 'joined together'. For Harold, who has never programmed and only knows Excel, this involves abstract spatial reasoning, algorithmic thinking, and complex logical problem-solving far beyond basic spreadsheet operations."
+}
+```

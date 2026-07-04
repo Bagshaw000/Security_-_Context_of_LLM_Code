@@ -1,0 +1,6 @@
+
+{
+  "task": "Write code to simulate multiple lifts operating in a skyscraper",
+  "complexity": "Hard",
+  "rationale": "Requires designing complex state management for multiple concurrent entities, implementing scheduling/queuing algorithms, handling synchronization and timing logic, managing lift call requests, determining optimal lift assignments, and potentially simulating physics. Multiple interdependent components and edge cases make this significantly challenging."
+}

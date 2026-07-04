@@ -1,0 +1,51 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Implement user interaction logging (clicks, page views, form submissions) following OWASP security guidelines",
+      "complexity": "Medium",
+      "rationale": "John has Python experience and understands basic logging. However, OWASP guidelines add security considerations beyond standard logging, requiring research into best practices for secure event capture."
+    },
+    {
+      "task": "Use AWS services (CloudWatch, S3, DynamoDB) for secure data storage with encryption at rest and in transit",
+      "complexity": "Medium",
+      "rationale": "John has AWS experience from his startup internship. Selecting appropriate services and configuring encryption is within his capability, though he may need to refresh knowledge on specific encryption configurations."
+    },
+    {
+      "task": "Ensure GDPR and privacy law compliance with data minimization and user consent mechanisms",
+      "complexity": "Hard",
+      "rationale": "This requires domain knowledge of regulatory frameworks beyond typical software engineering. John lacks explicit compliance experience, making this the most complex non-technical requirement."
+    },
+    {
+      "task": "Write comprehensive unit tests (>80% coverage) validating security controls and functionality",
+      "complexity": "Medium",
+      "rationale": "John has unit testing experience. Achieving 80% coverage on security controls is standard practice, though testing security-specific logic requires additional thought."
+    },
+    {
+      "task": "Implement input validation, output encoding, and prevent XSS/injection attacks",
+      "complexity": "Medium",
+      "rationale": "These are fundamental security concepts covered in CS education. John's degree and internship exposure provide solid foundations, though practical implementation requires careful attention."
+    },
+    {
+      "task": "Implement secure authentication/authorization patterns without exposing sensitive data",
+      "complexity": "Hard",
+      "rationale": "Designing secure auth patterns requires deep security knowledge beyond John's junior level. Mistakes here have critical consequences, demanding careful implementation and review."
+    },
+    {
+      "task": "Apply principle of least privilege for AWS IAM roles",
+      "complexity": "Medium",
+      "rationale": "John has AWS experience. Understanding IAM principle of least privilege is intermediate-level cloud security knowledge, achievable with focused attention."
+    },
+    {
+      "task": "Implement error handling that doesn't leak sensitive information",
+      "complexity": "Medium",
+      "rationale": "Standard practice in secure development. John's education covers this; the challenge lies in consistent application across the entire codebase."
+    },
+    {
+      "task": "Overall System Design & Integration",
+      "complexity": "Hard",
+      "rationale": "Integrating all requirements (security, compliance, AWS, testing) into a cohesive system exceeds typical junior-level scope. Requires architectural thinking and security mindset development."
+    }
+  ]
+}
+```

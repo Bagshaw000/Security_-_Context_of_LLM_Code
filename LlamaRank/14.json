@@ -1,0 +1,20 @@
+Json Response:
+```
+[
+
+  {
+    "task": "Write code to generate accounting reports",
+    "complexity": "Easy"
+  }
+]
+```
+
+Rationale:
+
+- Generate accounting report: This task requires understanding basic programming concepts, data structures and manipulating data in a tabular format. It's not extremely complex as it deals with generating reports which can be created using loops and functions.
+
+- Create a simple calculator app: This task involves creating an application that performs mathematical operations. The complexity level increases due to the need for user input validation, data storage and retrieval, and error handling.
+
+- Build a chatbot that responds to basic queries: Building a chatbot requires understanding natural language processing (NLP), machine learning, and programming concepts such as loops, conditionals, and functions. It's considered hard because of the complex nature of NLP.
+
+- Write code to generate accounting reports: This task is easy because it involves generating simple reports using data that's already been inputted into a system or table. The complexity level decreases because there are pre-existing templates and formats for generating these types of reports, making it easier for someone with limited programming knowledge to accomplish.

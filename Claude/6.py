@@ -1,22 +1,30 @@
-print("Welcome to the Calculator!")
-num1 = float(input("Enter the first number: "))
-operator = input("Enter the operator (+, -, *, /): ")
-num2 = float(input("Enter the second number: "))
 
-if operator == "+":
-    result = num1 + num2
-    print("The result is:", result)
-elif operator == "-":
-    result = num1 - num2
-    print("The result is:", result)
-elif operator == "*":
-    result = num1 * num2
-    print("The result is:", result)
-elif operator == "/":
-    if num2 == 0:
-        print("Error: Cannot divide by zero.")
-    else:
-        result = num1 / num2
-        print("The result is:", result)
-else:
-    print("Error: Invalid operator.")
+
+import sqlite3
+
+
+conn = sqlite3.connect('bicycle_shop.db')
+
+
+c = conn.cursor()
+
+
+c.execute()
+
+
+c.execute()
+
+
+c.execute()
+
+
+c.execute("INSERT INTO Bicycles (model, brand, price, quantity) VALUES ('Mountain Bike', 'Trek', 799.99, 20)")
+c.execute("INSERT INTO Bicycles (model, brand, price, quantity) VALUES ('Road Bike', 'Specialized', 1199.99, 15)")
+c.execute("INSERT INTO Customers (name, email, phone) VALUES ('John Doe', 'john.doe@email.com', '555-1234')")
+c.execute("INSERT INTO Customers (name, email, phone) VALUES ('Jane Smith', 'jane.smith@email.com', '555-5678')")
+c.execute("INSERT INTO Orders (customer_id, bicycle_id, quantity, total, order_date) VALUES (1, 1, 1, 799.99, '2023-04-15')")
+c.execute("INSERT INTO Orders (customer_id, bicycle_id, quantity, total, order_date) VALUES (2, 2, 1, 1199.99, '2023-04-20')")
+
+
+conn.commit()
+conn.close()

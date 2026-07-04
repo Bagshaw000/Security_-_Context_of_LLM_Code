@@ -1,0 +1,7 @@
+```
+{
+  "task": "Implement a deep neural network in Python with security and best practices standards",
+  "complexity": "Hard",
+  "rationale": "While John has foundational Python, AWS, and testing experience from his internship, this task demands expertise beyond his current level: (1) Deep learning frameworks (TensorFlow/PyTorch) require specialized knowledge he likely hasn't developed; (2) OWASP security guidelines and secure ML practices are advanced topics typically learned through dedicated study or senior mentorship; (3) Achieving 80% test coverage on a neural network requires sophisticated testing strategies; (4) Secure model persistence and production-ready design patterns exceed typical junior-level exposure; (5) The requirement for 'production-ready code a senior developer would review' sets a high bar. However, the task is achievable with research and mentorship given his strong CS foundation and prior exposure to secure, maintainable code practices at his internship."
+}
+```

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to make a calculator",
+  "complexity": "Medium",
+  "rationale": "For a beginner, this requires moving beyond simple text to learning how to store data (variables), receive user input, and use 'if/then' logic to choose operations, which are concepts not present in basic word processing."
+}
+```

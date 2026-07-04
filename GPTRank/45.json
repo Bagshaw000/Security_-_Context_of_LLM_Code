@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to implement a gradient ascent algorithm which looks for the global maximum of a function.",
+  "complexity": "Hard",
+  "rationale": "This task requires a solid understanding of optimization algorithms, calculus, and potentially advanced mathematical concepts. Given John's background, while he has experience with Python, this task may involve complexities beyond his current skill level, especially in ensuring convergence and handling edge cases."
+}
+```

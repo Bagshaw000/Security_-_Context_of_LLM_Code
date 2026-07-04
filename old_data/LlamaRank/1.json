@@ -1,0 +1,5 @@
+    {
+      "task": "Create a simple text-based todo list app with CRUD operations",
+      "complexity": "Medium",
+      "rational": "This task involves basic data structures (e.g., array) and algorithms (e.g., searching), but requires some coding and organizational skills."
+    }

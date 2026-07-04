@@ -1,0 +1,7 @@
+```
+{
+  "task": "Normalize wide-format clinical dataset to long-format using pandas with defensive programming and input validation.",
+  "complexity": "Easy",
+  "rational": "From the perspective of a Principal Engineer, this is a routine data transformation task. The core logic relies on a standard pandas 'melt' operation. While the requirements emphasize security and memory efficiency, the problem lacks algorithmic depth, distributed state management, or the high-concurrency challenges Brad typically handles in device-authentication systems."
+}
+```

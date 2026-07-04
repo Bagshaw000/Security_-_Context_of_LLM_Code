@@ -1,0 +1,11 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Write code to implement a deep neural network in Python",
+      "complexity": "Hard",
+      "rationale": "Requires advanced knowledge of machine learning concepts (backpropagation, activation functions, optimization algorithms) and mathematical foundations (linear algebra, calculus). While John has Python experience, DNN implementation demands specialized ML expertise beyond typical software engineering. His background in inventory management and general Python doesn't cover ML fundamentals needed for this task."
+    }
+  ]
+}
+```

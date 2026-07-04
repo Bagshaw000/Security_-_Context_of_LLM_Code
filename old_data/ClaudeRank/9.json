@@ -1,0 +1,6 @@
+
+{
+  "task": "Write code to implement a controller system for a network of ATMs",
+  "rank": "Hard",
+  "rationale": "Requires handling multiple complex concerns: distributed system architecture, transaction management, state synchronization across nodes, error handling for network failures, security protocols, database consistency, and real-time communication between ATMs and central controller. Demands knowledge of system design, concurrency, and fault tolerance."
+}

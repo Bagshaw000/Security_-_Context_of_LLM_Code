@@ -1,0 +1,18 @@
+Here's the answer in JSON format:
+
+```
+[
+    {
+        "task": "Implementing a gradient ascent algorithm",
+        "complexity": "Hard"
+    },
+    {
+        "task": "Ranking coding tasks by complexity",
+        "complexity": "Easy"
+    }
+]
+```
+
+For ranking, I have assigned "Hard" to the task of implementing a gradient ascent algorithm as it involves understanding and applying complex mathematical concepts such as calculus, optimization, and numerical methods. 
+
+The reasoning behind assigning "Easy" for the second task is that it requires only a general understanding of how to rank tasks by complexity and doesn't require actual implementation or technical expertise in coding.

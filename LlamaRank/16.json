@@ -1,0 +1,24 @@
+Here is the ranking of the coding tasks in terms of complexity:
+
+```
+[
+    {
+        "task": "Write a program that calculates the sum of all numbers in an array",
+        "complexity": "Easy"
+    },
+    {
+        "task": "Implement a sorting algorithm to sort an array of integers",
+        "complexity": "Medium"
+    },
+    {
+        "task": "Create a function to validate user input for a login form",
+        "complexity": "Medium"
+    },
+    {
+        "task": "Design and implement a caching system for frequent database queries",
+        "complexity": "Hard"
+    }
+]
+```
+
+For Brad, the task is ranked as Hard due to the complexity of designing and implementing a caching system that can efficiently handle frequent database queries. This requires a deep understanding of data structures, algorithms, and software design patterns.

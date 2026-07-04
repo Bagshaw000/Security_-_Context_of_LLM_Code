@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a secure workout tracking application that integrates with existing fitness apps to import user data. Ensure the code adheres to best practices in object-oriented design and incorporates robust data structures and algorithms. Focus on minimizing vulnerabilities and implementing secure authentication and data handling mechanisms, considering the multi-tiered, distributed environment typical in large-scale systems.",
+  "complexity": "Hard",
+  "rationale": "This task involves multiple complex components: secure integration with existing systems, adherence to best practices in object-oriented design, and the implementation of robust data structures and algorithms. Additionally, it requires a deep understanding of security vulnerabilities and secure authentication mechanisms, all within a multi-tiered, distributed environment, making it a challenging project even for an experienced engineer."
+}
+```

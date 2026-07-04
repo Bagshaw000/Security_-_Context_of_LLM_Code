@@ -1,0 +1,17 @@
+```
+[
+  {
+    "task": "Write code for a database for an online bicycle shop",
+    "complexity": "Hard"
+  },
+
+]
+```
+
+Rationale:
+
+- The database task is ranked as Hard because it involves designing, implementing, and managing a complex database system for an online bicycle shop, which requires a deep understanding of database modeling, normalization, and optimization techniques.
+
+- The unit testing task is ranked as Medium because it involves writing test cases to validate existing Python functions, which requires knowledge of testing principles and mocking frameworks. However, this task is considered medium complexity because the implementation is relatively straightforward compared to designing a complex database system.
+
+- The inventory management tool development task is ranked as Easy because it involves leveraging existing AWS services (e.g., DynamoDB, S3) and familiar technologies (e.g., Python), which would be a more manageable task for John given his recent experience in an internship.

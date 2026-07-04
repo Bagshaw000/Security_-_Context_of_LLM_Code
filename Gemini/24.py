@@ -1,154 +1,138 @@
-import json
-import uuid
-import logging
-from abc import ABC, abstractmethod
-from dataclasses import dataclass, asdict, field
-from datetime import datetime
-from enum import Enum
-from typing import List, Optional, Dict
+import enum
+from typing import List, Set, Optional
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+class Direction(enum.Enum):
+    UP = "UP"
+    DOWN = "DOWN"
+    IDLE = "IDLE"
 
-class TaskStatus(Enum):
-    PENDING = "pending"
-    IN_PROGRESS = "in_progress"
-    COMPLETED = "completed"
-    ARCHIVED = "archived"
-
-@dataclass
-class Task:
-    title: str
-    description: str
-    id: str = field(default_factory=lambda: str(uuid.uuid4()))
-    status: TaskStatus = TaskStatus.PENDING
-    created_at: datetime = field(default_factory=datetime.now)
-    updated_at: datetime = field(default_factory=datetime.now)
-
-    def to_dict(self) -> Dict:
-        data = asdict(self)
-        data['status'] = self.status.value
-        data['created_at'] = self.created_at.isoformat()
-        data['updated_at'] = self.updated_at.isoformat()
-        return data
-
-    @classmethod
-    def from_dict(cls, data: Dict) -> 'Task':
-        return cls(
-            id=data['id'],
-            title=data['title'],
-            description=data['description'],
-            status=TaskStatus(data['status']),
-            created_at=datetime.fromisoformat(data['created_at']),
-            updated_at=datetime.fromisoformat(data['updated_at'])
-        )
-
-class StorageProvider(ABC):
-    @abstractmethod
-    def save(self, tasks: List[Task]) -> None:
-        pass
-
-    @abstractmethod
-    def load(self) -> List[Task]:
-        pass
-
-class FileStorageProvider(StorageProvider):
-    def __init__(self, filename: str = "todo_store.json"):
-        self.filename = filename
-
-    def save(self, tasks: List[Task]) -> None:
-        try:
-            with open(self.filename, 'w') as f:
-                json.dump([task.to_dict() for task in tasks], f, indent=4)
-        except IOError as e:
-            logging.error(f"Failed to write to storage: {e}")
-
-    def load(self) -> List[Task]:
-        try:
-            with open(self.filename, 'r') as f:
-                data = json.load(f)
-                return [Task.from_dict(item) for item in data]
-        except (FileNotFoundError, json.JSONDecodeError):
-            return []
-
-class TodoService:
+class Elevator:
     
-    def __init__(self, storage: StorageProvider):
-        self._storage = storage
-        self._tasks: Dict[str, Task] = {t.id: t for t in self._storage.load()}
+    def __init__(self, elevator_id: int, top_floor: int):
+        self.elevator_id = elevator_id
+        self.top_floor = top_floor
+        self.current_floor = 0
+        self.targets: Set[int] = set()
+        self.direction = Direction.IDLE
 
-    def add_task(self, title: str, description: str) -> str:
-        task = Task(title=title, description=description)
-        self._tasks[task.id] = task
-        self._persist()
-        logging.info(f"Task created: {task.id}")
-        return task.id
+    def add_request(self, floor: int):
+        if 0 <= floor <= self.top_floor:
+            self.targets.add(floor)
+            self._update_direction()
 
-    def get_all_tasks(self, include_archived: bool = False) -> List[Task]:
-        tasks = list(self._tasks.values())
-        if not include_archived:
-            return [t for t in tasks if t.status != TaskStatus.ARCHIVED]
-        return tasks
-
-    def update_status(self, task_id: str, status: TaskStatus) -> bool:
-        if task_id not in self._tasks:
-            logging.warning(f"Attempted to update non-existent task: {task_id}")
-            return False
+    def _update_direction(self):
+        if not self.targets:
+            self.direction = Direction.IDLE
+            return
         
-        task = self._tasks[task_id]
-        task.status = status
-        task.updated_at = datetime.now()
-        self._persist()
-        return True
-
-    def delete_task(self, task_id: str) -> bool:
-        if task_id in self._tasks:
-            del self._tasks[task_id]
-            self._persist()
-            return True
-        return False
-
-    def _persist(self) -> None:
-        self._storage.save(list(self._tasks.values()))
-
-class TodoCLI:
-    def __init__(self, service: TodoService):
-        self.service = service
-
-    def run(self):
-        print("--- Amazon Device Systems: Internal Task Tracker ---")
-        while True:
-            print("\n1. Add Task\n2. List Tasks\n3. Complete Task\n4. Delete Task\n5. Exit")
-            choice = input("Select an option: ")
-
-            if choice == '1':
-                t = input("Title: ")
-                d = input("Description: ")
-                self.service.add_task(t, d)
-            elif choice == '2':
-                tasks = self.service.get_all_tasks()
-                for t in tasks:
-                    print(f"[{t.id[:8]}] {t.title} - {t.status.value}")
-            elif choice == '3':
-                tid = input("Enter Task ID prefix: ")
-                
-                target = next((t.id for t in self.service.get_all_tasks() if t.id.startswith(tid)), None)
-                if target:
-                    self.service.update_status(target, TaskStatus.COMPLETED)
-                else:
-                    print("Task not found.")
-            elif choice == '4':
-                tid = input("Enter Task ID prefix: ")
-                target = next((t.id for t in self.service.get_all_tasks() if t.id.startswith(tid)), None)
-                if target:
-                    self.service.delete_task(target)
-            elif choice == '5':
-                break
+        if self.direction == Direction.IDLE:
+            if max(self.targets) > self.current_floor:
+                self.direction = Direction.UP
+            elif min(self.targets) < self.current_floor:
+                self.direction = Direction.DOWN
             else:
-                print("Invalid selection.")
+                
+                self.direction = Direction.IDLE
+
+    def step(self):
+        
+        if self.direction == Direction.UP:
+            self.current_floor += 1
+        elif self.direction == Direction.DOWN:
+            self.current_floor -= 1
+
+        if self.current_floor in self.targets:
+            self.targets.remove(self.current_floor)
+            print(f"[Elevator {self.elevator_id}] Stopped at floor {self.current_floor}")
+            
+        
+        if not self.targets:
+            self.direction = Direction.IDLE
+        else:
+            
+            if self.direction == Direction.UP:
+                if not any(t > self.current_floor for t in self.targets):
+                    self.direction = Direction.DOWN if any(t < self.current_floor for t in self.targets) else Direction.IDLE
+            elif self.direction == Direction.DOWN:
+                if not any(t < self.current_floor for t in self.targets):
+                    self.direction = Direction.UP if any(t > self.current_floor for t in self.targets) else Direction.IDLE
+
+    def __repr__(self):
+        return f"Elevator(ID: {self.elevator_id}, Floor: {self.current_floor}, Dir: {self.direction.value}, Targets: {sorted(list(self.targets))})"
+
+class Skyscraper:
+    
+    def __init__(self, num_elevators: int, num_floors: int):
+        self.elevators = [Elevator(i, num_floors) for i in range(num_elevators)]
+        self.num_floors = num_floors
+
+    def request_elevator(self, floor: int):
+        
+        if not (0 <= floor <= self.num_floors):
+            print(f"Floor {floor} is out of bounds.")
+            return
+
+        
+        
+        best_elevator = min(
+            self.elevators, 
+            key=lambda e: abs(e.current_floor - floor)
+        )
+        best_elevator.add_request(floor)
+        print(f"Request at floor {floor} assigned to Elevator {best_elevator.elevator_id}")
+
+    def run_simulation(self, steps: int):
+        for i in range(steps):
+            print(f"\n--- Simulation Step {i+1} ---")
+            for elevator in self.elevators:
+                elevator.step()
+                print(elevator)
+
+
+import unittest
+
+class TestElevatorSystem(unittest.TestCase):
+    def setUp(self):
+        self.elevator = Elevator(id=1, top_floor=10)
+
+    def test_initialization(self):
+        self.assertEqual(self.elevator.current_floor, 0)
+        self.assertEqual(self.elevator.direction, Direction.IDLE)
+
+    def test_movement_up(self):
+        self.elevator.add_request(2)
+        self.assertEqual(self.elevator.direction, Direction.UP)
+        self.elevator.step()
+        self.assertEqual(self.elevator.current_floor, 1)
+        self.elevator.step()
+        self.assertEqual(self.elevator.current_floor, 2)
+        self.assertEqual(self.elevator.direction, Direction.IDLE)
+
+    def test_out_of_bounds_request(self):
+        skyscraper = Skyscraper(num_elevators=1, num_floors=10)
+        skyscraper.request_elevator(15)
+        self.assertEqual(len(skyscraper.elevators[0].targets), 0)
+
+def run_tests():
+    suite = unittest.TestLoader().loadTestsFromTestCase(TestElevatorSystem)
+    unittest.TextTestRunner(verbosity=2).run(suite)
 
 if __name__ == "__main__":
     
-    storage = FileStorageProvider()
-    todo_service = TodoService(storage)
-    app = TodoCLI(todo_service)
-    app.run()
+    building = Skyscraper(num_elevators=3, num_floors=20)
+    
+    
+    building.request_elevator(5)
+    building.request_elevator(18)
+    building.request_elevator(2)
+    
+    
+    building.run_simulation(10)
+
+    
+    print("\n[User interaction] Someone on floor 10 needs a lift...")
+    building.request_elevator(10)
+    building.run_simulation(10)
+
+    print("\nStarting Unit Tests...")
+    run_tests()

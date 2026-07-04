@@ -1,0 +1,6 @@
+
+{
+  "task": "Write code to make a calculator",
+  "complexity": "Easy",
+  "rationale": "Basic arithmetic operations (+, -, *, /) are straightforward to implement. Requires fundamental programming concepts like variables, operators, and functions. No complex algorithms or advanced data structures needed."
+}

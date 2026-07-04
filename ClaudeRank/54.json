@@ -1,0 +1,7 @@
+```
+{
+  "task": "Given a set of 2n coins, each biased with a different value for the probability of heads, pick a set of coins that gives the highest probability that when tossed, the number of heads will be n",
+  "complexity": "Hard",
+  "rationale": "This task requires understanding of probability theory, combinatorial optimization, and dynamic programming. John would need to: (1) model the probability distribution of coin outcomes, (2) understand that selecting n coins from 2n coins to maximize P(exactly n heads) involves non-trivial mathematical insight, (3) likely implement a DP solution with state management. While John has foundational CS knowledge and some practical experience, this problem goes beyond typical junior-level tasks and requires specialized mathematical reasoning not typically covered in standard internships."
+}
+```

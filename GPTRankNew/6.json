@@ -1,0 +1,31 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Write secure code for a database system tailored for an online bicycle shop.",
+      "complexity": "Hard",
+      "rationale": "This task requires a deep understanding of security best practices, database design, and potential vulnerabilities. It also involves integrating AWS services, which can be complex for a junior developer. Additionally, writing unit tests for security features adds to the complexity."
+    },
+    {
+      "task": "Ensure that the design incorporates best practices for data protection.",
+      "complexity": "Medium",
+      "rationale": "While understanding data protection best practices is essential, implementing them effectively requires a solid grasp of security principles and may involve more advanced concepts that a junior developer might find challenging."
+    },
+    {
+      "task": "Minimize vulnerabilities in the database system.",
+      "complexity": "Medium",
+      "rationale": "Identifying and minimizing vulnerabilities requires knowledge of common security flaws and how to mitigate them. This can be moderately complex, especially for someone with limited experience."
+    },
+    {
+      "task": "Consider using Python and AWS.",
+      "complexity": "Easy",
+      "rationale": "Since John has experience with Python and AWS, this aspect of the task is relatively straightforward for him, making it the least complex."
+    },
+    {
+      "task": "Include unit tests to validate the functionality and security of the database.",
+      "complexity": "Medium",
+      "rationale": "Writing unit tests is a common practice, but ensuring they effectively cover security aspects adds a layer of complexity that may challenge a junior developer."
+    }
+  ]
+}
+```

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a tool in Excel that finds the highest point of a curved line by taking small steps upward",
+  "complexity": "Medium",
+  "rationale": "While the underlying concept (gradient descent optimization) is mathematically complex, this task is **Medium** rather than Hard because: (1) It only requires Excel formulas, which Harold already knows, (2) No programming language learning is needed, (3) The implementation involves repetitive simple calculations rather than coding logic. However, it's not Easy because: (1) Harold must understand iterative processes (stepping upward repeatedly), (2) Requires setting up formulas that reference previous results, (3) Needs logical thinking about when to stop iterating, (4) Demands careful setup to avoid infinite loops or crashes."
+}
+```

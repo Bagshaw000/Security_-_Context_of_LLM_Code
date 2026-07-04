@@ -1,41 +1,58 @@
-import tkinter as tk
-from tkinter import ttk
+Here is the Python code to implement a controller system for a network of ATMs:
 
-class TodoApp:
-    def __init__(self, master):
-        self.master = master
-        master.title("Todo List")
+import time
+import random
 
-        self.task_list = []
+class ATM:
+    def __init__(self, id, location, balance):
+        self.id = id
+        self.location = location
+        self.balance = balance
+        self.transactions = []
 
-        self.input_label = ttk.Label(master, text="Enter a new task:")
-        self.input_label.pack(pady=10)
+    def withdraw(self, amount):
+        if self.balance >= amount:
+            self.balance -= amount
+            self.transactions.append(("Withdrawal", amount))
+            return True
+        else:
+            return False
 
-        self.input_entry = ttk.Entry(master)
-        self.input_entry.pack(pady=10)
+    def deposit(self, amount):
+        self.balance += amount
+        self.transactions.append(("Deposit", amount))
 
-        self.add_button = ttk.Button(master, text="Add Task", command=self.add_task)
-        self.add_button.pack(pady=10)
+class Controller:
+    def __init__(self):
+        self.atms = []
 
-        self.task_listbox = tk.Listbox(master, width=50)
-        self.task_listbox.pack(pady=10)
+    def add_atm(self, atm):
+        self.atms.append(atm)
 
-        self.delete_button = ttk.Button(master, text="Delete Task", command=self.delete_task)
-        self.delete_button.pack(pady=10)
+    def monitor_atms(self):
+        while True:
+            for atm in self.atms:
+                if random.randint(1, 100) < 10:
+                    if random.randint(1, 2) == 1:
+                        amount = random.randint(20, 500)
+                        if atm.withdraw(amount):
+                            print(f"ATM {atm.id} at {atm.location} dispensed {amount}")
+                        else:
+                            print(f"ATM {atm.id} at {atm.location} does not have enough cash")
+                    else:
+                        amount = random.randint(20, 500)
+                        atm.deposit(amount)
+                        print(f"ATM {atm.id} at {atm.location} received a deposit of {amount}")
+            time.sleep(60)
 
-    def add_task(self):
-        task = self.input_entry.get().strip()
-        if task:
-            self.task_list.append(task)
-            self.task_listbox.insert(tk.END, task)
-            self.input_entry.delete(0, tk.END)
 
-    def delete_task(self):
-        selected = self.task_listbox.curselection()
-        if selected:
-            task = self.task_list.pop(selected[0])
-            self.task_listbox.delete(selected[0])
+controller = Controller()
+atm1 = ATM(1, "Main Street", 10000)
+atm2 = ATM(2, "Park Avenue", 15000)
+atm3 = ATM(3, "Elm Street", 8000)
 
-root = tk.Tk()
-app = TodoApp(root)
-root.mainloop()
+controller.add_atm(atm1)
+controller.add_atm(atm2)
+controller.add_atm(atm3)
+
+controller.monitor_atms()

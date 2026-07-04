@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a secure calculator application in Python that includes basic arithmetic operations (addition, subtraction, multiplication, and division). Ensure the code is robust against common vulnerabilities, such as input validation issues and division by zero errors. Incorporate unit tests to verify the functionality and security of the application.",
+  "complexity": "Medium",
+  "rationale": "While the basic arithmetic operations are straightforward, ensuring security against vulnerabilities and implementing robust input validation adds complexity. Additionally, incorporating unit tests requires a good understanding of testing principles, which may be challenging for a junior developer."
+}
+```

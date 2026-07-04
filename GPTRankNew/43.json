@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a secure implementation of a classic Snake game reminiscent of the 1997 Nokia version, ensuring adherence to best practices in object-oriented design and data structures. Focus on creating a robust architecture that minimizes vulnerabilities, particularly in user input handling and game state management. Consider scalability and maintainability in a multi-tiered environment, and ensure that the code is well-documented for future enhancements.",
+  "complexity": "Hard",
+  "rationale": "This task requires a deep understanding of object-oriented design principles and data structures, as well as the ability to implement security best practices. The need for a robust architecture that handles user input securely and manages game state effectively adds to the complexity. Additionally, considerations for scalability and maintainability in a multi-tiered environment further elevate the difficulty, making it a challenging project even for an experienced engineer like Brad."
+}
+```

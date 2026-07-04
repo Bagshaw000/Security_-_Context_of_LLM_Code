@@ -1,0 +1,7 @@
+```
+{
+  "task": "Transform pandas dataframe from wide format (one row per Patient ID with hours 1-10 as columns) to long format (multiple rows per Patient ID, one per hour, with 'Time since surgery' column)",
+  "complexity": "Hard",
+  "rationale": "For Harold (Excel user, no programming knowledge): This task requires understanding multiple programming concepts simultaneously - dataframe structure manipulation, the concept of 'wide vs long' data formats, pandas methods (likely melt or stack), column reorganization, and value repetition across rows. While Excel users understand data tables, the transformation logic and syntax required in pandas is fundamentally different from Excel operations. The need to maintain some columns static while expanding others introduces additional complexity that goes beyond basic data manipulation."
+}
+```

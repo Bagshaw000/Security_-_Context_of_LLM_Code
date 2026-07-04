@@ -1,0 +1,10 @@
+
+{
+  "tasks": [
+    {
+      "task": "Write a sorting function that sorts strings according to underlying ordering.",
+      "complexity": "Medium",
+      "rationale": "While sorting algorithms are well-defined, implementing a custom sorting function that respects specific underlying ordering can involve additional complexity, such as handling edge cases and defining the ordering criteria."
+    }
+  ]
+}

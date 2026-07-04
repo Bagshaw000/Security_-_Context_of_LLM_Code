@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Write a game of snake like that on the Nokia phones in 1997",
+    "complexity": "Hard",
+    "rationale": "For someone with no coding experience, this requires mastering complex logic including real-time updates, coordinate systems, and collision detection, which are far more advanced than basic document or spreadsheet editing."
+  }
+]
+```

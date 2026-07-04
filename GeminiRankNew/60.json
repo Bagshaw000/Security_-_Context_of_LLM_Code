@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Transforming a pandas DataFrame from wide to long format with strict input validation and modularity.",
+    "complexity": "Easy",
+    "rationale": "The core logic (pandas melt) is a fundamental data manipulation task. John's CS degree and internship experience with Python and unit testing make the added requirements for validation and clean code standard applications of his existing skills."
+  }
+]
+```

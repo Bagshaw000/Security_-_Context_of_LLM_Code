@@ -1,0 +1,16 @@
+```
+[
+  {
+    "task": "Write code to generate accounting reports",
+    "complexity": "Hard"
+  }
+]
+```
+
+Rationale:
+
+- Generating accounting reports requires complex data processing, database interactions, and report generation logic, which makes it a hard task.
+
+- Sorting an array of objects by a specific property involves basic sorting algorithms and data manipulation techniques, but may require handling edge cases, making it a medium task.
+
+- Implementing a binary search algorithm is a fundamental data structure concept that can be learned with basic understanding of algorithms and data structures.

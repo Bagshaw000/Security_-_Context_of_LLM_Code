@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code for a database for an online bicycle shop",
+  "complexity": "Easy",
+  "rationale": "For Brad's expertise level, this is a straightforward task. It involves basic database design with standard entities (products, customers, orders, inventory) and relationships. No distributed systems, authentication complexity, or large-scale architectural challenges are present. This falls well within the scope of foundational database design that Brad mastered early in his 12-year career."
+}
+```

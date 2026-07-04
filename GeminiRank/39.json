@@ -1,0 +1,7 @@
+```
+{
+  "task": "Verify 915,103,765 LEGO combinations and design a complexity heuristic.",
+  "complexity": "Hard",
+  "rationale": "This requires advanced combinatorial optimization and spatial modeling to handle nearly a billion permutations efficiently. For a junior developer, the mathematical depth and high-performance computing requirements exceed typical experience in inventory tools or unit testing."
+}
+```

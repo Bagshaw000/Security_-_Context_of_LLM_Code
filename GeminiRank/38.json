@@ -1,0 +1,7 @@
+```
+{
+  "task": "Calculating Blokus Duo piece combinations (n-square polyominoes)",
+  "complexity": "Hard",
+  "rationale": "This task requires advanced spatial reasoning and recursion to identify unique shapes. For a beginner, managing geometric transformations like rotations and flips through abstract mathematical logic is significantly more difficult than standard data entry or basic Excel formulas."
+}
+```

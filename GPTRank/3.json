@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to make a todo list app",
+  "complexity": "Medium",
+  "rationale": "While creating a todo list app involves basic CRUD operations, it requires understanding of data structures, user interface design, and possibly state management. Given John's background, this task is manageable but may present challenges in integrating all components effectively."
+}
+```

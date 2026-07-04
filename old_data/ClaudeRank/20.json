@@ -1,0 +1,6 @@
+
+{
+  "task": "Reshape pandas dataframe from wide to long format",
+  "complexity": "Medium",
+  "rationale": "Requires understanding of pandas melt/pivot operations and data structure transformation. Not trivial (involves multiple steps: melting columns, handling fixed variables, renaming), but well within standard pandas functionality without advanced concepts like custom algorithms or complex logic."
+}

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create simple instructions for building a basic workout tracking notebook in Excel",
+  "complexity": "Easy",
+  "rationale": "This task aligns perfectly with Harold's existing Excel skills. It requires only basic Excel features (columns, simple SUM formulas, password protection) that are accessible through Excel's standard UI. No programming knowledge, data structures, or coding concepts are needed. The main requirement is clear documentation in plain English, which matches Harold's strength as an English teacher. The task is essentially translating familiar Excel functionality into instructional writing rather than learning new technical concepts."
+}
+```

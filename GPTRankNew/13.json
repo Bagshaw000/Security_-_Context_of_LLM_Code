@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a secure code solution for generating accounting reports, ensuring adherence to best practices in object-oriented design and data structures. Focus on minimizing vulnerabilities and implementing robust authentication and authorization mechanisms, suitable for a multi-tiered, distributed environment.",
+  "complexity": "Hard",
+  "rationale": "This task involves multiple complex components, including secure coding practices, adherence to object-oriented design principles, and the implementation of robust authentication and authorization mechanisms. Given Brad's experience, he can handle it, but the task's requirements for security and scalability in a distributed environment elevate its complexity significantly."
+}
+```

@@ -1,0 +1,24 @@
+```
+[
+  {
+    "task": "Reorganize patient data into hourly post-surgery DataFrame",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Securely reorganize patient data for time series analysis",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Use pandas and Python to manipulate patient data with secure coding practices",
+    "complexity": "Easy"
+  }
+]
+```
+
+Ranking:
+
+- Easy: The task of rewriting the code using pandas with secure coding practices is a fundamental skill for junior software engineers. It's a common task that requires attention to detail but doesn't involve complex algorithms or data structures.
+  
+- Medium: Reorganizing patient data into an hourly post-surgery DataFrame requires some understanding of time series data and manipulation techniques, which might be challenging for junior developers without extensive experience.
+
+- Hard: Adding secure coding practices while handling sensitive data like patient information poses significant challenges. It demands a thorough understanding of security best practices, data privacy laws, and potential vulnerabilities, making it more difficult for junior developers to complete on their own.

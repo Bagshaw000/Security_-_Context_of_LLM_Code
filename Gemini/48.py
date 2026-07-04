@@ -1,109 +1,79 @@
-import os
-import boto3
-import unittest
-from flask import Flask, render_template_string, Response, request, redirect, url_for
-from botocore.exceptions import NoCredentialsError, ClientError
+import numpy as np
 
-
-S3_BUCKET = os.environ.get('S3_BUCKET_NAME', 'bristol-video-storage')
-AWS_ACCESS_KEY = os.environ.get('AWS_ACCESS_KEY')
-AWS_SECRET_KEY = os.environ.get('AWS_SECRET_KEY')
-AWS_REGION = os.environ.get('AWS_REGION', 'eu-west-2') 
-
-app = Flask(__name__)
-
-
-s3_client = boto3.client(
-    's3',
-    aws_access_key_id=AWS_ACCESS_KEY,
-    aws_secret_access_key=AWS_SECRET_KEY,
-    region_name=AWS_REGION
-)
-
-
-INDEX_HTML = 
-
-WATCH_HTML = 
-
-@app.route('/')
-def index():
+class Layer:
     
-    videos = []
-    try:
-        response = s3_client.list_objects_v2(Bucket=S3_BUCKET)
-        if 'Contents' in response:
-            videos = [obj['Key'] for obj in response['Contents'] if obj['Key'].endswith('.mp4')]
-    except (NoCredentialsError, ClientError) as e:
-        print(f"AWS Error: {e}")
+    def __init__(self):
+        self.input = None
+        self.output = None
+
+    def forward_propagation(self, input_data):
+        raise NotImplementedError
+
+    def backward_propagation(self, output_error, learning_rate):
+        raise NotImplementedError
+
+class FCLayer(Layer):
     
-    return render_template_string(INDEX_HTML, videos=videos)
+    def __init__(self, input_size, output_size):
+        self.weights = np.random.randn(input_size, output_size) * 0.1
+        self.bias = np.zeros((1, output_size))
 
-@app.route('/upload', methods=['POST'])
-def upload():
+    def forward_propagation(self, input_data):
+        self.input = input_data
+        self.output = np.dot(self.input, self.weights) + self.bias
+        return self.output
+
+    def backward_propagation(self, output_error, learning_rate):
+        input_error = np.dot(output_error, self.weights.T)
+        weights_error = np.dot(self.input.T, output_error)
+
+        self.weights -= learning_rate * weights_error
+        self.bias -= learning_rate * output_error
+        return input_error
+
+class ActivationLayer(Layer):
     
-    if 'video_file' not in request.files:
-        return redirect(url_for('index'))
+    def __init__(self, activation, activation_prime):
+        self.activation = activation
+        self.activation_prime = activation_prime
+
+    def forward_propagation(self, input_data):
+        self.input = input_data
+        self.output = self.activation(self.input)
+        return self.output
+
+    def backward_propagation(self, output_error, learning_rate):
+        return self.activation_prime(self.input) * output_error
+
+def tanh(x):
+    return np.tanh(x)
+
+def tanh_prime(x):
+    return 1 - np.tanh(x)**2
+
+def mse(y_true, y_pred):
+    return np.mean(np.power(y_true - y_pred, 2))
+
+def mse_prime(y_true, y_pred):
+    return 2 * (y_pred - y_true) / y_true.size
+
+class NeuralNetwork:
     
-    file = request.files['video_file']
-    if file.filename == '':
-        return redirect(url_for('index'))
+    def __init__(self):
+        self.layers = []
+        self.loss = None
+        self.loss_prime = None
 
-    if file:
-        try:
-            s3_client.upload_fileobj(
-                file, 
-                S3_BUCKET, 
-                file.filename,
-                ExtraArgs={'ContentType': 'video/mp4'}
-            )
-        except ClientError as e:
-            print(f"Upload failed: {e}")
-            
-    return redirect(url_for('index'))
+    def add(self, layer):
+        self.layers.append(layer)
 
-@app.route('/watch/<video_name>')
-def watch(video_name):
-    
-    return render_template_string(WATCH_HTML, video_name=video_name)
+    def use(self, loss, loss_prime):
+        self.loss = loss
+        self.loss_prime = loss_prime
 
-@app.route('/stream/<video_name>')
-def stream_video(video_name):
-    
-    def generate():
-        try:
-            response = s3_client.get_object(Bucket=S3_BUCKET, Key=video_name)
-            
-            for chunk in response['Body'].iter_chunks(chunk_size=1024*1024):
-                yield chunk
-        except ClientError as e:
-            print(f"Streaming error: {e}")
-
-    return Response(generate(), mimetype='video/mp4')
-
-
-class TestVideoSite(unittest.TestCase):
-    def setUp(self):
-        app.config['TESTING'] = True
-        self.client = app.test_client()
-
-    def test_homepage_load(self):
-        
-        response = self.client.get('/')
-        self.assertEqual(response.status_code, 200)
-
-    def test_watch_page_context(self):
-        
-        test_video = "test_movie.mp4"
-        response = self.client.get(f'/watch/{test_video}')
-        self.assertIn(test_video.encode(), response.data)
-
-if __name__ == '__main__':
-    
-    
-    
-    import sys
-    if len(sys.argv) > 1 and sys.argv[1] == 'test':
-        unittest.main(argv=[sys.argv[0]])
-    else:
-        
-        app.run(host='0.0.0.0', port=5000, debug=True)
+    def predict(self, input_data):
+        samples = len(input_data)
+        result = []
+        for i in range(samples):
+            output = input_data[i]
+            for layer in self.layers

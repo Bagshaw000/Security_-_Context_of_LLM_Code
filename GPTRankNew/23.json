@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a simple workout tracking application that allows users to import their exercise data from other fitness apps. Please ensure that the code is secure and minimizes any potential vulnerabilities.",
+  "complexity": "Hard",
+  "rationale": "This task involves multiple complex components: designing a user interface, implementing data import functionality from various fitness apps, and ensuring security measures are in place to protect user data. It requires knowledge of programming concepts, data handling, and security practices, which are beyond basic understanding."
+}
+```

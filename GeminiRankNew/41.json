@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Verify 915,103,765 LEGO combinations with a grading system and efficiency constraints.",
+    "complexity": "Hard",
+    "rationale": "This task requires advanced combinatorial mathematics and recursive algorithms to navigate 3D spatial permutations. For a non-programmer, the logic involves complex symmetry detection and memory optimization that far exceeds basic spreadsheet functions or simple linear instructions."
+  }
+]
+```

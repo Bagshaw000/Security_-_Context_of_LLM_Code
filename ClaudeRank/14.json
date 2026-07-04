@@ -1,0 +1,11 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Write code to generate accounting reports",
+      "complexity": "Hard",
+      "rationale": "Requires understanding of accounting principles, data manipulation, conditional logic, file I/O operations, and formatting. Needs knowledge of loops, variables, and data organization—concepts unfamiliar to someone with only Excel experience. While Excel can generate reports, coding this requires multiple programming concepts layered together."
+    }
+  ]
+}
+```

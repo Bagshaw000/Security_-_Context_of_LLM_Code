@@ -1,0 +1,24 @@
+```
+[
+    {
+        "task": "Pick a set of coins to get a certain number of heads with the highest probability",
+        "complexity": "Hard"
+    },
+    {
+        "task": "Implement unit testing for a function that calculates the average of an array of integers",
+        "complexity": "Medium"
+    },
+    {
+        "task": "Design a tool to track and manage inventory in a small startup",
+        "complexity": "Easy"
+    }
+]
+```
+
+Ranking explanation:
+
+1. **Pick a set of coins to get a certain number of heads with the highest probability**: This task requires advanced mathematical concepts, such as combinatorics and probabilistic optimization. It also involves dealing with multiple variables (the probabilities of different coin values) and finding an optimal solution, making it a complex task.
+
+2. **Implement unit testing for a function that calculates the average of an array of integers**: Unit testing is a standard practice in software development, but implementing comprehensive tests for a simple function like this one can still be challenging. It requires some knowledge of testing frameworks and programming best practices.
+
+3. **Design a tool to track and manage inventory in a small startup**: As someone who has experience working on similar projects (e.g., the internship at the small startup), John should be able to tackle this task with ease. The problem is more focused on design decisions, data structures, and user interface, which are familiar territory for him.

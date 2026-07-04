@@ -1,92 +1,132 @@
-import os
-import boto3
-import unittest
-from flask import Flask, request, redirect, url_for, render_template_string
-from botocore.exceptions import NoCredentialsError
+import numpy as np
+from typing import List, Callable, Optional
+from abc import ABC, abstractmethod
 
-
-
-app = Flask(__name__)
-
-
-
-S3_BUCKET = os.environ.get('S3_BUCKET_NAME', 'bristol-video-storage-bucket')
-S3_REGION = os.environ.get('AWS_DEFAULT_REGION', 'eu-west-2')
-s3_client = boto3.client('s3', region_name=S3_REGION)
-
-
-
-INDEX_HTML = 
-
-WATCH_HTML = 
-
-@app.route('/')
-def index():
+class Layer(ABC):
     
-    try:
-        response = s3_client.list_objects_v2(Bucket=S3_BUCKET)
-        
-        videos = [obj['Key'] for obj in response.get('Contents', []) if obj['Key'].lower().endswith('.mp4')]
-    except Exception as e:
-        print(f"Error fetching from S3: {e}")
-        videos = []
-    return render_template_string(INDEX_HTML, videos=videos)
+    def __init__(self) -> None:
+        self.input: Optional[np.ndarray] = None
+        self.output: Optional[np.ndarray] = None
 
-@app.route('/upload', methods=['POST'])
-def upload():
+    @abstractmethod
+    def forward(self, input_data: np.ndarray) -> np.ndarray:
+        
+        pass
+
+    @abstractmethod
+    def backward(self, output_gradient: np.ndarray, learning_rate: float) -> np.ndarray:
+        
+        pass
+
+class DenseLayer(Layer):
     
-    if 'video_file' not in request.files:
-        return "No file part in the request", 400
-    file = request.files['video_file']
-    if file.filename == '':
-        return "No selected file", 400
+    def __init__(self, input_size: int, output_size: int) -> None:
+        super().__init__()
+        
+        self.weights = np.random.randn(input_size, output_size) * np.sqrt(2. / input_size)
+        self.bias = np.zeros((1, output_size))
+
+    def forward(self, input_data: np.ndarray) -> np.ndarray:
+        self.input = input_data
+        self.output = np.dot(self.input, self.weights) + self.bias
+        return self.output
+
+    def backward(self, output_gradient: np.ndarray, learning_rate: float) -> np.ndarray:
+        weights_gradient = np.dot(self.input.T, output_gradient)
+        input_gradient = np.dot(output_gradient, self.weights.T)
+        
+        
+        self.weights -= learning_rate * weights_gradient
+        self.bias -= learning_rate * output_gradient
+        return input_gradient
+
+class ActivationLayer(Layer):
     
-    try:
-        
-        s3_client.upload_fileobj(
-            file, 
-            S3_BUCKET, 
-            file.filename,
-            ExtraArgs={'ContentType': 'video/mp4'}
-        )
-        return redirect(url_for('index'))
-    except NoCredentialsError:
-        return "AWS credentials not configured", 500
-    except Exception as e:
-        return f"Upload failed: {str(e)}", 500
+    def __init__(self, activation: Callable[[np.ndarray], np.ndarray], 
+                 activation_prime: Callable[[np.ndarray], np.ndarray]) -> None:
+        super().__init__()
+        self.activation = activation
+        self.activation_prime = activation_prime
 
-@app.route('/watch/<path:filename>')
-def watch(filename):
+    def forward(self, input_data: np.ndarray) -> np.ndarray:
+        self.input = input_data
+        self.output = self.activation(self.input)
+        return self.output
+
+    def backward(self, output_gradient: np.ndarray, learning_rate: float) -> np.ndarray:
+        return output_gradient * self.activation_prime(self.input)
+
+def tanh(x: np.ndarray) -> np.ndarray:
+    return np.tanh(x)
+
+def tanh_prime(x: np.ndarray) -> np.ndarray:
+    return 1 - np.tanh(x) ** 2
+
+def mse(y_true: np.ndarray, y_pred: np.ndarray) -> float:
+    return np.mean(np.power(y_true - y_pred, 2))
+
+def mse_prime(y_true: np.ndarray, y_pred: np.ndarray) -> np.ndarray:
+    return 2 * (y_pred - y_true) / np.size(y_true)
+
+class NeuralNetwork:
     
-    try:
+    def __init__(self) -> None:
+        self.layers: List[Layer] = []
+        self.loss: Optional[Callable] = None
+        self.loss_prime: Optional[Callable] = None
+
+    def add(self, layer: Layer) -> None:
+        self.layers.append(layer)
+
+    def configure(self, loss: Callable, loss_prime: Callable) -> None:
+        self.loss = loss
+        self.loss_prime = loss_prime
+
+    def predict(self, input_data: np.ndarray) -> List[np.ndarray]:
+        results = []
+        for sample in input_data:
+            output = sample
+            for layer in self.layers:
+                output = layer.forward(output)
+            results.append(output)
+        return results
+
+    def train(self, x_train: np.ndarray, y_train: np.ndarray, 
+              epochs: int, learning_rate: float) -> None:
         
-        url = s3_client.generate_presigned_url(
-            'get_object',
-            Params={'Bucket': S3_BUCKET, 'Key': filename},
-            ExpiresIn=3600  
-        )
-        return render_template_string(WATCH_HTML, filename=filename, url=url)
-    except Exception as e:
-        return f"Could not generate stream: {str(e)}", 500
+        for epoch in range(epochs):
+            error = 0
+            for x, y in zip(x_train, y_train):
+                
+                output = x
+                for layer in self.layers:
+                    output = layer.forward(output)
+                
+                error += self.loss(y, output)
 
+                
+                gradient = self.loss_prime(y, output)
+                for layer in reversed(self.layers):
+                    gradient = layer.backward(gradient, learning_rate)
+            
+            
+            
 
-
-class TestVideoApp(unittest.TestCase):
-    def setUp(self):
-        app.config['TESTING'] = True
-        self.client = app.test_client()
-
-    def test_homepage_load(self):
-        
-        response = self.client.get('/')
-        self.assertEqual(response.status_code, 200)
-
-    def test_upload_redirect_no_data(self):
-        
-        response = self.client.post('/upload')
-        self.assertEqual(response.status_code, 400)
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     
-    print(f"Starting BristolStream on port 5000... connecting to bucket: {S3_BUCKET}")
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    X_TRAIN = np.array([[[0, 0]], [[0, 1]], [[1, 0]], [[1, 1]]])
+    Y_TRAIN = np.array([[[0]], [[1]], [[1]], [[0]]])
+
+    model = NeuralNetwork()
+    model.add(DenseLayer(2, 3))
+    model.add(ActivationLayer(tanh, tanh_prime))
+    model.add(DenseLayer(3, 1))
+    model.add(ActivationLayer(tanh, tanh_prime))
+
+    model.configure(mse, mse_prime)
+    model.train(X_TRAIN, Y_TRAIN, epochs=1000, learning_rate=0.1)
+
+    
+    predictions = model.predict(X_TRAIN)
+    for i, pred in enumerate(predictions):
+        print(f"Input: {X_TRAIN[i][0]} | Predicted: {pred[0][0]:.4f} | Target: {Y_TRAIN[i][0][0]}")

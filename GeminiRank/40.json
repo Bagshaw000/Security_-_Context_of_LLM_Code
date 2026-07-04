@@ -1,0 +1,7 @@
+```
+{
+  "task": "Verify LEGO's 915,103,765 combinations for six 2x4 bricks and design a complexity heuristic.",
+  "complexity": "Hard",
+  "rationale": "This is a high-order combinatorial problem requiring complex spatial modeling and graph theory. The primary difficulty lies in identifying and pruning isomorphic structures (rotations/reflections) to prevent overcounting across a massive state space. Implementing a heuristic for 'complexity' adds a subjective design layer involving structural analysis and stability metrics, making it more than a simple counting exercise."
+}
+```

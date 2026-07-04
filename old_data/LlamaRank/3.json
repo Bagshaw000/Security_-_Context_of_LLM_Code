@@ -1,0 +1,15 @@
+
+[
+  {
+    "task": "Write a program to check if a string is a palindrome",
+    "complexity": "Easy"
+  },
+  {
+    "task": "Create a RESTful API for user authentication",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Develop a full-stack web application using React and Node.js",
+    "complexity": "Hard"
+  }
+]

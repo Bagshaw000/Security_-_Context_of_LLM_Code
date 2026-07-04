@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to implement a controller system for a network of ATMs",
+  "complexity": "Hard",
+  "rationale": "For a junior engineer, this task is highly complex as it requires managing distributed state, ensuring transactional integrity (ACID properties), handling concurrent requests, and implementing robust error recovery across a network, which goes significantly beyond basic inventory tracking or unit testing."
+}
+```

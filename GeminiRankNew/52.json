@@ -1,0 +1,7 @@
+```
+{
+  "task": "Production-grade, thread-safe 4D Convex Hull algorithm for multi-dimensional anomaly detection.",
+  "complexity": "Hard",
+  "rationale": "Generalizing convex hulls to 4D is mathematically intensive, requiring advanced knowledge of simplices and hyperplanes. Combining this with thread-safety, strict OOD, and the requirement to robustly handle degenerate cases (coplanarity/duplicates) to prevent algorithmic complexity attacks in a high-throughput environment exceeds standard implementation difficulty and requires expert-level systems engineering."
+}
+```

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a production-grade solution to enumerate unique free polyominoes up to n=5 using canonical representation and SDL principles.",
+  "complexity": "Medium",
+  "rationale": "For a Principal Engineer, the algorithmic scale (n=5) is trivial; however, the requirement for a production-grade, symmetry-invariant system using canonical forms—combined with strict SDL constraints like resource exhaustion protection—requires disciplined object-oriented design and rigorous edge-case handling beyond a simple script."
+}
+```

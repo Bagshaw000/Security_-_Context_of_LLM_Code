@@ -1,0 +1,7 @@
+```
+{
+  "task": "Implement a secure, production-ready modular deep neural network on AWS with robust data validation.",
+  "complexity": "Hard",
+  "rationale": "While John has Python and AWS basics, building a deep neural network requires specialized ML knowledge. Combining this with advanced security hardening, injection prevention, and production-grade architecture exceeds the typical scope of a junior engineer who previously only assisted on inventory tools."
+}
+```

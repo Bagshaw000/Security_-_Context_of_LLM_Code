@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Develop a robust and secure Python module to evaluate a chess position from a FEN string using clean architecture and heuristic evaluation.",
+    "complexity": "Hard",
+    "rationale": "While John has Python and testing skills, this task requires advanced domain knowledge (chess logic), strict security-focused parsing, and high-level architectural patterns (Clean Architecture) that go beyond typical junior-level internship experience."
+  }
+]
+```

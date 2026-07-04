@@ -1,0 +1,7 @@
+```
+{
+  "task": "Implement a production-ready deep neural network for anomaly detection in device-authentication flows with high security and scalability standards.",
+  "complexity": "Hard",
+  "rationale": "This requires high-level mastery of deep learning, distributed systems, and security engineering. Integrating a performant model into a high-throughput authentication pipeline while mitigating adversarial attacks and ensuring strict data privacy exceeds standard software development, demanding the expertise of a Principal Engineer."
+}
+```

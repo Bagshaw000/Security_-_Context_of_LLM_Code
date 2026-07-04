@@ -1,0 +1,7 @@
+```
+{
+  "task": "Understand convex hull concept and 4D points with beginner-friendly explanation and simple code",
+  "complexity": "Hard",
+  "rationale": "Despite the request for simplicity, this task involves multiple challenging layers for Harold: (1) Understanding geometric concepts (convex hull) requires spatial reasoning beyond Excel experience, (2) Extending to 4D points adds abstract thinking that has no everyday Excel equivalent, (3) Implementing even 'simple' code requires learning programming syntax and logic flow, (4) Balancing explanation, code, comments, and safety measures requires juggling multiple concerns simultaneously. While the code itself uses basic features, the underlying mathematical and computational concepts are fundamentally foreign to someone with only Excel/word processing experience."
+}
+```

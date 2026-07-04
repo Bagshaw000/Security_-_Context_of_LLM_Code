@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Design and implement a secure, high-performance service for generating accounting reports.",
+    "complexity": "Hard",
+    "rationale": "Achieving atomicity, idempotency, and strict data integrity at Amazon scale requires complex distributed systems design. Integrating the security rigor of identity management (like Key Provisioning) into a high-throughput reporting engine involves sophisticated concurrency control, multi-tiered validation, and hardened access patterns."
+  }
+]
+```

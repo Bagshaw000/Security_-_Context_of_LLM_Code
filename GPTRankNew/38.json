@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a program that calculates the number of unique n-square pieces and their arrangements in the game of Blokus Duo. The pieces consist of combinations of 1x1 square blocks, up to 5 squares, while eliminating duplicates caused by flipping or rotating the pieces. For example, there is 1 piece with 1 square (a simple 1x1), 1 piece with 2 squares (a simple 1x2), and 2 pieces with 3 squares (a 1x3 rectangle and a corner shape). Please ensure the code is secure and minimizes vulnerabilities.",
+  "complexity": "Hard",
+  "rationale": "This task involves combinatorial mathematics and requires understanding of geometric transformations (flipping and rotating), which are complex concepts. Additionally, ensuring code security adds another layer of difficulty. Given Harold's background, this task would be challenging without prior programming knowledge."
+}
+```

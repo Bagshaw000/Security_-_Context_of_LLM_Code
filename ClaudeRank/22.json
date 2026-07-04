@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code for a workout tracking app that can import data from other fitness apps",
+  "complexity": "Hard",
+  "rationale": "This task requires designing a multi-system integration architecture with multiple third-party APIs (Strava, MyFitnessPal, Garmin, etc.), handling authentication/OAuth flows, data transformation and normalization across different schemas, error handling for API rate limits and failures, and data consistency management. For Brad specifically, while he has distributed systems expertise, this involves API federation patterns similar to account-linking work at Amazon, making it appropriately challenging but within his domain experience. The complexity lies in orchestrating multiple external integrations reliably at scale."
+}
+```

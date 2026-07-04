@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to implement a convex hull algorithm for 4D points",
+  "complexity": "Hard",
+  "rationale": "Requires advanced geometric algorithm knowledge beyond typical junior developer experience. Convex hull in 4D involves complex computational geometry concepts (higher-dimensional polytopes, facet enumeration) that weren't covered in John's internship work on inventory management. While John has solid fundamentals in Python, this task demands deep mathematical understanding and algorithmic complexity far exceeding his current skill level."
+}
+```

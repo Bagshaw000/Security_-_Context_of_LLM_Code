@@ -1,0 +1,14 @@
+```
+[
+  {
+    "task": "Design and implement a secure, scalable Todo List app",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Design and implement a secure, scalable Todo List app with a focus on object-oriented design, data structures, and algorithms",
+    "complexity": "Hard"
+  }
+]
+```
+
+Rationale: Both tasks are of high complexity due to the requirement for a secure, scalable, and object-oriented design. The addition of focusing on algorithms and adherence to industry-standard security best practices further increases the difficulty. As a principal software engineer at Amazon with 12 years of experience, Brad would likely find this task challenging but manageable.

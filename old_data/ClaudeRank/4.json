@@ -1,0 +1,6 @@
+
+{
+  "task": "Write code to generate accounting reports",
+  "difficulty": "Medium",
+  "rationale": "Requires knowledge of data aggregation, financial calculations, and report formatting. Involves moderate complexity in data manipulation and business logic, but doesn't demand advanced algorithms or system design. Complexity varies based on report types and data sources."
+}

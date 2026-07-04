@@ -1,6 +1,6 @@
 # This file handle all model initialization (gpt-4o mini Claude 3 Haiku, Gemini 2.0 Flash, Llama 3.3)
 import asyncio
-
+import requests
 from anthropic import Anthropic
 from openai import OpenAI
 from google import genai
@@ -49,7 +49,7 @@ class LLM:
                         "content": prompt,
                     }
                 ],
-                model="claude-3-haiku-20240307",
+                model="claude-haiku-4-5-20251001",
             )
             
             return response.content[0].text
@@ -93,23 +93,45 @@ class LLM:
                     continue  # Try again
                     
                 # Success!
-                print(f"  ✅ Success! Tokens used: {response.usage_metadata.total_token_count}")
                 return response.text
                 
             except Exception as e:
                 print(f"  ❌ Error on attempt {attempt + 1}: {e}")
                 
                 if attempt == max_retries - 1:
-                    # Last attempt failed, raise the exception
+                   
                     raise
                 
                 # Wait before retry
                 wait_time = min(2 ** attempt, 10)
                 print(f"  Retrying in {wait_time} seconds...")
                 await asyncio.sleep(wait_time)
-                # Continue to next attempt (don't raise yet)
+                
         print( "Max retries exceeded")
         return None
-    # This line should never be reach
+    
+    async def llama_response(self, prompt:str)-> str:
+        try:
+            # Pass prompt to the llama via POST request
+            payload = {
+                "model": "llama3.2",
+                "messages": [
+                    { "role": "user", "content": prompt }
+                ],
+                "stream": False
+            }
+            
+            response = requests.post("http://localhost:11434/api/chat",json=payload, timeout=400)
+            
+            if response.status_code != 200:
+                return None
+            
+            json_res = response.json()
+        
+            return json_res["message"]["content"]
+        except Exception as e:
+            raise e
+        
+
 # test = LLM()
-# asyncio.run(test.gemini_response("Write python code for a calculator"))
+# asyncio.run(test.llama_response("Write python code for a calculator"))

@@ -1,45 +1,24 @@
-class TodoList:
-    def __init__(self):
-        self.tasks = []
+import json
+from flask import Flask, request
 
-    def add_task(self, task):
-        self.tasks.append(task)
-        print(f'Task "{task}" added.')
+app = Flask(__name__)
 
-    def remove_task(self, task):
-        if task in self.tasks:
-            self.tasks.remove(task)
-            print(f'Task "{task}" removed.')
-        else:
-            print(f'Task "{task}" not found.')
+user_data = {}
 
-    def view_tasks(self):
-        if not self.tasks:
-            print("No tasks in the list.")
-        else:
-            print("Todo List:")
-            for idx, task in enumerate(self.tasks, start=1):
-                print(f"{idx}. {task}")
+@app.route('/track', methods=['POST'])
+def track_interaction():
+    user_id = request.json.get('user_id')
+    interaction = request.json.get('interaction')
+    
+    if user_id not in user_data:
+        user_data[user_id] = []
+    
+    user_data[user_id].append(interaction)
+    return json.dumps({"status": "success"}), 200
 
-def main():
-    todo_list = TodoList()
-    while True:
-        print("\nOptions: add, remove, view, exit")
-        choice = input("Choose an option: ").strip().lower()
-        
-        if choice == 'add':
-            task = input("Enter the task: ")
-            todo_list.add_task(task)
-        elif choice == 'remove':
-            task = input("Enter the task to remove: ")
-            todo_list.remove_task(task)
-        elif choice == 'view':
-            todo_list.view_tasks()
-        elif choice == 'exit':
-            print("Exiting the Todo List app.")
-            break
-        else:
-            print("Invalid option. Please try again.")
+@app.route('/data', methods=['GET'])
+def get_data():
+    return json.dumps(user_data), 200
 
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    app.run(debug=True)

@@ -1,0 +1,17 @@
+```
+[
+  {
+    "task": "Generate all possible combinations of connecting 6 standard 2x4 LEGO bricks and classify each combination as 'trivial', 'complicated', or 'interesting'.",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Connect the same 6 standard 2x4 LEGO bricks in different ways to demonstrate their versatility.",
+    "complexity": "Medium"
+  }
+]
+```
+
+Explanation:
+
+1. The first task is ranked as "Hard" because it requires a deep understanding of programming concepts, such as combinatorics and data structures, and implementing a secure and efficient algorithm to generate all possible combinations.
+2. The second task is ranked as "Medium" because it still involves generating combinations, but the focus is on demonstrating the versatility of the LEGO bricks rather than classifying their complexity. This requires some programming knowledge, but not to the same extent as the first task.

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a secure implementation for tracking user interactions across a website, ensuring adherence to best practices in object-oriented design and data structures. The solution should be robust against common vulnerabilities, such as XSS and CSRF, and should incorporate secure data handling and storage mechanisms. Consider scalability and performance in a multi-tiered, distributed environment, and ensure compliance with relevant data protection regulations.",
+  "complexity": "Hard",
+  "rationale": "This task involves multiple complex aspects including security best practices, adherence to object-oriented design principles, and the need for scalability in a distributed environment. It requires a deep understanding of vulnerabilities and data protection regulations, making it significantly more challenging than simpler tasks."
+}
+```

@@ -1,0 +1,12 @@
+Here is the ranking of the coding task in terms of complexity:
+
+```
+[
+  {
+    "task": "Design and implement a secure database schema for an online bicycle shop application",
+    "complexity": "Hard"
+  }
+]
+```
+
+Rationale: This task requires consideration of robust data integrity, scalability, high-performance transactions, distributed storage, multi-tiered architecture, object-oriented principles, data structures, algorithms, encryption, access controls, and auditing mechanisms. These are complex technical requirements that necessitate a deep understanding of database design, security, and software engineering principles, making it a hard task for most developers.

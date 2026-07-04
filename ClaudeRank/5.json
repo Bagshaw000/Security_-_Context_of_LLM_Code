@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to make a todo list app",
+  "complexity": "Medium",
+  "rationale": "Requires understanding of multiple programming concepts (variables, functions, user input/output, data storage) that are completely foreign to Harold. However, the logic is straightforward—adding, displaying, and removing items—similar to managing a list in Excel. The complexity stems from learning syntax and program structure rather than complex algorithms."
+}
+```

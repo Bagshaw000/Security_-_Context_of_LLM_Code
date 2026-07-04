@@ -1,0 +1,13 @@
+```
+[
+    {"task": "Coin Selection Task", "complexity": "Hard"},
+    {"task": "Coin Selection Task", "complexity": "Medium"},
+    {"task": "Coin Selection Task", "complexity": "Easy"}
+]
+```
+
+Ranking:
+
+- Hard: The task requires understanding probability and optimization concepts to select coins that maximize the number of heads.
+- Medium: Although it's a coding task, the approach involves logical reasoning and combinatorics rather than complex programming concepts.
+- Easy: This ranking is incorrect as this task cannot be ranked as easy due to its complexity.

@@ -1,0 +1,16 @@
+```
+[
+    {
+        "task": "Evaluating chess positions using a simple program",
+        "complexity": "Hard"
+    },
+    {
+        "task": "Validating user input and preventing potential vulnerabilities in a new chess position evaluation program",
+        "complexity": "Medium-Hard"
+    },
+    {
+        "task": "Ensuring the security and stability of a new chess position evaluation program with no prior knowledge of programming languages or computer science concepts",
+        "complexity": "Hard"
+    }
+]
+```

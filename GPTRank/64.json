@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write a sorting function that sorts strings according to underlying ordering.",
+  "complexity": "Medium",
+  "rationale": "While sorting algorithms are a fundamental concept in programming, implementing a sorting function that respects specific underlying ordering can introduce complexity. It requires understanding of custom comparison logic and may involve handling edge cases, making it more than just a straightforward sorting task."
+}
+```

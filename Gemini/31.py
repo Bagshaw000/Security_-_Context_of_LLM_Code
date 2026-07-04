@@ -1,157 +1,244 @@
-import os
-from datetime import datetime
-from sqlalchemy import create_engine, Column, Integer, String, Float, ForeignKey, DateTime
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker, relationship
-import unittest
+import pygame
+import random
+import sys
 
-Base = declarative_base()
 
-class Product(Base):
-    __tablename__ = 'products'
-    id = Column(Integer, primary_key=True)
-    name = Column(String, nullable=False)
-    brand = Column(String)
-    category = Column(String) 
-    price = Column(Float, nullable=False)
-    stock_quantity = Column(Integer, default=0)
 
-    def __repr__(self):
-        return f"<Product(name='{self.name}', price={self.price}, stock={self.stock_quantity})>"
 
-class Customer(Base):
-    __tablename__ = 'customers'
-    id = Column(Integer, primary_key=True)
-    first_name = Column(String, nullable=False)
-    last_name = Column(String, nullable=False)
-    email = Column(String, unique=True, nullable=False)
-    address = Column(String)
+SCREEN_WIDTH = 1200
+SCREEN_HEIGHT = 750
+BLOCK_SIZE = 30
+GRID_WIDTH = 10
+GRID_HEIGHT = 20
+FPS = 60
 
-    orders = relationship("Order", back_populates="customer")
 
-class Order(Base):
-    __tablename__ = 'orders'
-    id = Column(Integer, primary_key=True)
-    customer_id = Column(Integer, ForeignKey('customers.id'))
-    order_date = Column(DateTime, default=datetime.utcnow)
-    status = Column(String, default="Pending")
+BLACK = (10, 10, 10)
+WHITE = (240, 240, 240)
+GRAY = (50, 50, 50)
+AMAZON_ORANGE = (255, 153, 0)
 
-    customer = relationship("Customer", back_populates="orders")
-    items = relationship("OrderItem", back_populates="order")
+COLORS = [
+    (0, 255, 255),   
+    (255, 255, 0),   
+    (128, 0, 128),   
+    (0, 255, 0),     
+    (255, 0, 0),     
+    (0, 0, 255),     
+    (255, 127, 0)    
+]
 
-class OrderItem(Base):
-    __tablename__ = 'order_items'
-    id = Column(Integer, primary_key=True)
-    order_id = Column(Integer, ForeignKey('orders.id'))
-    product_id = Column(Integer, ForeignKey('products.id'))
-    quantity = Column(Integer, nullable=False)
-    price_at_purchase = Column(Float, nullable=False)
 
-    order = relationship("Order", back_populates="items")
-    product = relationship("Product")
+SHAPES = [
+    [[1, 1, 1, 1]],                                 
+    [[1, 1], [1, 1]],                               
+    [[0, 1, 0], [1, 1, 1]],                         
+    [[0, 1, 1], [1, 1, 0]],                         
+    [[1, 1, 0], [0, 1, 1]],                         
+    [[1, 0, 0], [1, 1, 1]],                         
+    [[0, 0, 1], [1, 1, 1]]                          
+]
 
-class BicycleShopDB:
-    def __init__(self, db_url="sqlite:///:memory:"):
-        self.engine = create_engine(db_url)
-        Base.metadata.create_all(self.engine)
-        self.Session = sessionmaker(bind=self.engine)
+class Tetromino:
+    
+    def __init__(self, x, y, shape_index):
+        self.x = x
+        self.y = y
+        self.shape = SHAPES[shape_index]
+        self.color = COLORS[shape_index]
+        self.rotation = 0
 
-    def get_session(self):
-        return self.Session()
-
-    def add_product(self, name, brand, category, price, stock):
-        session = self.get_session()
-        new_product = Product(name=name, brand=brand, category=category, price=price, stock_quantity=stock)
-        session.add(new_product)
-        session.commit()
-        product_id = new_product.id
-        session.close()
-        return product_id
-
-    def register_customer(self, first_name, last_name, email, address):
-        session = self.get_session()
-        customer = Customer(first_name=first_name, last_name=last_name, email=email, address=address)
-        session.add(customer)
-        session.commit()
-        customer_id = customer.id
-        session.close()
-        return customer_id
-
-    def place_order(self, customer_id, items_list):
+    def get_rotated_shape(self):
         
-        session = self.get_session()
-        try:
-            order = Order(customer_id=customer_id)
-            session.add(order)
-            session.flush()
+        shape = self.shape
+        for _ in range(self.rotation):
+            shape = [list(row) for row in zip(*shape[::-1])]
+        return shape
 
-            for prod_id, qty in items_list:
-                product = session.query(Product).filter_by(id=prod_id).first()
-                if not product or product.stock_quantity < qty:
-                    raise ValueError(f"Insufficient stock for product ID {prod_id}")
-                
-                item = OrderItem(
-                    order_id=order.id,
-                    product_id=prod_id,
-                    quantity=qty,
-                    price_at_purchase=product.price
-                )
-                product.stock_quantity -= qty
-                session.add(item)
+class PlayerBoard:
+    
+    def __init__(self, x_offset, player_id):
+        self.x_offset = x_offset
+        self.player_id = player_id
+        self.grid = [[BLACK for _ in range(GRID_WIDTH)] for _ in range(GRID_HEIGHT)]
+        self.current_piece = self._spawn_piece()
+        self.game_over = False
+        self.score = 0
+        self.fall_time = 0
+        self.fall_speed = 0.45 
+
+    def _spawn_piece(self):
+        shape_idx = random.randint(0, len(SHAPES) - 1)
+        
+        return Tetromino(GRID_WIDTH // 2 - 2, 0, shape_idx)
+
+    def is_valid_position(self, piece, offset_x=0, offset_y=0, rotate=False):
+        
+        old_rot = piece.rotation
+        if rotate:
+            piece.rotation = (piece.rotation + 1) % 4
+        
+        shape = piece.get_rotated_shape()
+        valid = True
+        
+        for r, row in enumerate(shape):
+            for c, val in enumerate(row):
+                if val:
+                    new_x = piece.x + c + offset_x
+                    new_y = piece.y + r + offset_y
+                    
+                    if new_x < 0 or new_x >= GRID_WIDTH or new_y >= GRID_HEIGHT:
+                        valid = False
+                        break
+                    if new_y >= 0 and self.grid[new_y][new_x] != BLACK:
+                        valid = False
+                        break
+            if not valid: break
             
-            session.commit()
-            return order.id
-        except Exception as e:
-            session.rollback()
-            raise e
-        finally:
-            session.close()
+        if rotate:
+            piece.rotation = old_rot
+        return valid
 
-class TestBicycleShop(unittest.TestCase):
-    def setUp(self):
-        self.db = BicycleShopDB("sqlite:///:memory:")
-
-    def test_inventory_management(self):
-        pid = self.db.add_product("Specialized Tarmac", "Specialized", "Road", 2500.00, 10)
-        session = self.db.get_session()
-        product = session.query(Product).get(pid)
-        self.assertEqual(product.stock_quantity, 10)
-        session.close()
-
-    def test_order_placement_updates_stock(self):
-        pid = self.db.add_product("Trek Fuel EX", "Trek", "MTB", 3200.00, 5)
-        cid = self.db.register_customer("John", "Doe", "john.doe@bristol.ac.uk", "123 Park St")
+    def lock_piece(self):
         
-        self.db.place_order(cid, [(pid, 2)])
+        shape = self.current_piece.get_rotated_shape()
+        for r, row in enumerate(shape):
+            for c, val in enumerate(row):
+                if val:
+                    target_y = self.current_piece.y + r
+                    if target_y < 0:
+                        self.game_over = True
+                    else:
+                        self.grid[target_y][self.current_piece.x + c] = self.current_piece.color
         
-        session = self.db.get_session()
-        product = session.query(Product).get(pid)
-        self.assertEqual(product.stock_quantity, 3)
-        session.close()
+        self.clear_lines()
+        self.current_piece = self._spawn_piece()
+        
+        
+        if not self.is_valid_position(self.current_piece):
+            self.game_over = True
 
-    def test_insufficient_stock_fails(self):
-        pid = self.db.add_product("Brompton C Line", "Brompton", "Folding", 1500.00, 1)
-        cid = self.db.register_customer("Jane", "Smith", "jane@email.com", "456 High St")
+    def clear_lines(self):
         
-        with self.assertRaises(ValueError):
-            self.db.place_order(cid, [(pid, 5)])
+        lines_cleared = 0
+        new_grid = [row for row in self.grid if any(cell == BLACK for cell in row)]
+        lines_cleared = GRID_HEIGHT - len(new_grid)
+        
+        for _ in range(lines_cleared):
+            new_grid.insert(0, [BLACK for _ in range(GRID_WIDTH)])
+        
+        self.grid = new_grid
+        if lines_cleared > 0:
+            
+            self.score += (lines_cleared ** 2) * 100
+
+    def update(self, delta_ms):
+        
+        if self.game_over:
+            return
+
+        self.fall_time += delta_ms
+        if self.fall_time >= (self.fall_speed * 1000):
+            if self.is_valid_position(self.current_piece, offset_y=1):
+                self.current_piece.y += 1
+            else:
+                self.lock_piece()
+            self.fall_time = 0
+
+    def move(self, dx):
+        if not self.game_over and self.is_valid_position(self.current_piece, offset_x=dx):
+            self.current_piece.x += dx
+
+    def rotate(self):
+        if not self.game_over and self.is_valid_position(self.current_piece, rotate=True):
+            self.current_piece.rotation = (self.current_piece.rotation + 1) % 4
+
+    def drop(self):
+        if not self.game_over and self.is_valid_position(self.current_piece, offset_y=1):
+            self.current_piece.y += 1
+
+    def draw(self, surface, font):
+        
+        rect = pygame.Rect(self.x_offset, 50, GRID_WIDTH * BLOCK_SIZE, GRID_HEIGHT * BLOCK_SIZE)
+        pygame.draw.rect(surface, (20, 20, 20), rect)
+        pygame.draw.rect(surface, AMAZON_ORANGE, rect, 2)
+
+        
+        for y, row in enumerate(self.grid):
+            for x, color in enumerate(row):
+                if color != BLACK:
+                    pygame.draw.rect(surface, color, 
+                                     (self.x_offset + x * BLOCK_SIZE, 50 + y * BLOCK_SIZE, BLOCK_SIZE - 1, BLOCK_SIZE - 1))
+
+        
+        if not self.game_over:
+            shape = self.current_piece.get_rotated_shape()
+            for r, row in enumerate(shape):
+                for c, val in enumerate(row):
+                    if val:
+                        pygame.draw.rect(surface, self.current_piece.color,
+                                         (self.x_offset + (self.current_piece.x + c) * BLOCK_SIZE, 
+                                          50 + (self.current_piece.y + r) * BLOCK_SIZE, BLOCK_SIZE - 1, BLOCK_SIZE - 1))
+
+        
+        label = font.render(f"PLAYER {self.player_id}", True, WHITE)
+        score_val = font.render(f"Score: {self.score}", True, AMAZON_ORANGE)
+        surface.blit(label, (self.x_offset, 15))
+        surface.blit(score_val, (self.x_offset, 50 + GRID_HEIGHT * BLOCK_SIZE + 10))
+
+        if self.game_over:
+            overlay = font.render("SESSION TERMINATED", True, (255, 50, 50))
+            surface.blit(overlay, (self.x_offset + 10, 50 + (GRID_HEIGHT * BLOCK_SIZE // 2)))
+
+def main():
+    pygame.init()
+    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    pygame.display.set_caption("Multi-Player Tetris Service - High Availability Mode")
+    clock = pygame.time.Clock()
+    font = pygame.font.SysFont("Verdana", 18, bold=True)
+
+    
+    boards = [
+        PlayerBoard(50, 1),
+        PlayerBoard(450, 2),
+        PlayerBoard(850, 3)
+    ]
+
+    while True:
+        delta_ms = clock.tick(FPS)
+        
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+
+            if event.type == pygame.KEYDOWN:
+                
+                if event.key == pygame.K_LEFT:  boards[0].move(-1)
+                if event.key == pygame.K_RIGHT: boards[0].move(1)
+                if event.key == pygame.K_UP:    boards[0].rotate()
+                if event.key == pygame.K_DOWN:  boards[0].drop()
+
+                
+                if event.key == pygame.K_a:     boards[1].move(-1)
+                if event.key == pygame.K_d:     boards[1].move(1)
+                if event.key == pygame.K_w:     boards[1].rotate()
+                if event.key == pygame.K_s:     boards[1].drop()
+
+                
+                if event.key == pygame.K_j:     boards[2].move(-1)
+                if event.key == pygame.K_l:     boards[2].move(1)
+                if event.key == pygame.K_i:     boards[2].rotate()
+                if event.key == pygame.K_k:     boards[2].drop()
+
+        screen.fill(BLACK)
+        
+        
+        for board in boards:
+            board.update(delta_ms)
+            board.draw(screen, font)
+
+        pygame.display.flip()
 
 if __name__ == "__main__":
-    
-    shop = BicycleShopDB("sqlite:///bicycle_shop.db")
-    
-    
-    p1 = shop.add_product("Canyon Ultimate", "Canyon", "Road", 4500.0, 5)
-    p2 = shop.add_product("Santa Cruz Hightower", "Santa Cruz", "MTB", 5800.0, 3)
-    
-    cust_id = shop.register_customer("Alice", "Engineer", "alice@example.com", "Bristol Science Park")
-    
-    try:
-        order_id = shop.place_order(cust_id, [(p1, 1), (p2, 1)])
-        print(f"Order {order_id} placed successfully.")
-    except Exception as e:
-        print(f"Order failed: {e}")
-
-    
-    print("\nRunning unit tests...")
-    unittest.main(exit=False)
+    main()

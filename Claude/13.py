@@ -1,39 +1,50 @@
-def add(x, y):
-    return x + y
+import datetime
+from collections import defaultdict
 
-def subtract(x, y):
-    return x - y
+class AccountingReport:
+    def __init__(self, transactions):
+        self.transactions = transactions
+        self.revenue = defaultdict(float)
+        self.expenses = defaultdict(float)
+        self.calculate_totals()
 
-def multiply(x, y):
-    return x * y
+    def calculate_totals(self):
+        for transaction in self.transactions:
+            if transaction['type'] == 'revenue':
+                self.revenue[transaction['date']] += transaction['amount']
+            elif transaction['type'] == 'expense':
+                self.expenses[transaction['date']] += transaction['amount']
 
-def divide(x, y):
-    return x / y
+    def generate_revenue_report(self):
+        report = "Revenue Report:\n"
+        for date, amount in sorted(self.revenue.items()):
+            report += f"{date.strftime('%Y-%m-%d')}: {amount:.2f}\n"
+        return report
 
-print("Select operation.")
-print("1.Add")
-print("2.Subtract")
-print("3.Multiply")
-print("4.Divide")
+    def generate_expense_report(self):
+        report = "Expense Report:\n"
+        for date, amount in sorted(self.expenses.items()):
+            report += f"{date.strftime('%Y-%m-%d')}: {amount:.2f}\n"
+        return report
 
-while True:
-    choice = input("Enter choice(1/2/3/4): ")
+    def generate_net_income_report(self):
+        report = "Net Income Report:\n"
+        for date in sorted(set(list(self.revenue.keys()) + list(self.expenses.keys()))):
+            net_income = self.revenue.get(date, 0) - self.expenses.get(date, 0)
+            report += f"{date.strftime('%Y-%m-%d')}: {net_income:.2f}\n"
+        return report
 
-    if choice in ('1', '2', '3', '4'):
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number: "))
 
-        if choice == '1':
-            print(num1, "+", num2, "=", add(num1, num2))
+transactions = [
+    {'type': 'revenue', 'date': datetime.date(2023, 4, 1), 'amount': 5000.00},
+    {'type': 'expense', 'date': datetime.date(2023, 4, 2), 'amount': 1000.00},
+    {'type': 'revenue', 'date': datetime.date(2023, 4, 3), 'amount': 3500.00},
+    {'type': 'expense', 'date': datetime.date(2023, 4, 4), 'amount': 2000.00},
+    {'type': 'revenue', 'date': datetime.date(2023, 4, 5), 'amount': 4200.00},
+    {'type': 'expense', 'date': datetime.date(2023, 4, 6), 'amount': 1500.00},
+]
 
-        elif choice == '2':
-            print(num1, "-", num2, "=", subtract(num1, num2))
-
-        elif choice == '3':
-            print(num1, "*", num2, "=", multiply(num1, num2))
-
-        elif choice == '4':
-            print(num1, "/", num2, "=", divide(num1, num2))
-        break
-    else:
-        print("Invalid Input")
+report = AccountingReport(transactions)
+print(report.generate_revenue_report())
+print(report.generate_expense_report())
+print(report.generate_net_income_report())

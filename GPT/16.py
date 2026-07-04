@@ -1,45 +1,26 @@
-class TodoList:
-    def __init__(self):
-        self.tasks = []
+import time
+from flask import Flask, request, jsonify
 
-    def add_task(self, task):
-        self.tasks.append(task)
-        print(f'Task "{task}" added.')
+app = Flask(__name__)
 
-    def remove_task(self, task):
-        if task in self.tasks:
-            self.tasks.remove(task)
-            print(f'Task "{task}" removed.')
-        else:
-            print(f'Task "{task}" not found.')
 
-    def view_tasks(self):
-        if not self.tasks:
-            print("No tasks in the list.")
-        else:
-            print("Todo List:")
-            for idx, task in enumerate(self.tasks, start=1):
-                print(f"{idx}. {task}")
+user_interactions = []
 
-def main():
-    todo_list = TodoList()
-    while True:
-        print("\nOptions: add, remove, view, exit")
-        choice = input("Choose an option: ").strip().lower()
-        
-        if choice == 'add':
-            task = input("Enter the task: ")
-            todo_list.add_task(task)
-        elif choice == 'remove':
-            task = input("Enter the task to remove: ")
-            todo_list.remove_task(task)
-        elif choice == 'view':
-            todo_list.view_tasks()
-        elif choice == 'exit':
-            print("Exiting the Todo List app.")
-            break
-        else:
-            print("Invalid option. Please try again.")
+@app.route('/track', methods=['POST'])
+def track_interaction():
+    data = request.json
+    interaction = {
+        'user_id': data.get('user_id'),
+        'page': data.get('page'),
+        'timestamp': time.time(),
+        'action': data.get('action')
+    }
+    user_interactions.append(interaction)
+    return jsonify({'status': 'success', 'interaction': interaction}), 201
 
-if __name__ == "__main__":
-    main()
+@app.route('/interactions', methods=['GET'])
+def get_interactions():
+    return jsonify(user_interactions), 200
+
+if __name__ == '__main__':
+    app.run(debug=True)

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design a Python application for neural network ensemble image classification with security, logging, testing, and AWS deployment considerations",
+  "complexity": "Hard",
+  "rationale": "While John has foundational Python, AWS, and testing experience, this task combines multiple advanced domains: (1) Machine Learning - ensemble methods and neural network integration require ML expertise beyond typical backend development; (2) Security - OWASP guidelines, injection attack prevention, and secure logging demand specialized security knowledge; (3) System Design - scalability planning for AWS deployment requires architectural thinking; (4) Code Quality - 80%+ test coverage with comprehensive error handling is demanding. The task exceeds typical junior-level scope by requiring expertise across ML, security, and production-grade system design simultaneously. John's inventory management background doesn't directly transfer to ML workflows."
+}
+```

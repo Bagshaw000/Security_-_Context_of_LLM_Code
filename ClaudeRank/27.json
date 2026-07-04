@@ -1,0 +1,11 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Write code to implement a controller system for a network of ATMs",
+      "complexity": "Hard",
+      "rationale": "Requires designing a distributed system with multiple interconnected components, handling concurrent requests, managing state across network nodes, implementing security protocols, and ensuring transaction consistency. John's startup experience involved inventory tracking (similar scale), but ATM networks demand higher reliability, security standards, and real-time transaction handling that exceed typical junior-level scope."
+    }
+  ]
+}
+```

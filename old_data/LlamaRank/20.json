@@ -1,0 +1,7 @@
+
+[
+  {
+    "task": "Transform pandas DataFrame to have multiple rows per Patient ID and organized by hour",
+    "complexity": "Medium"
+  }
+]

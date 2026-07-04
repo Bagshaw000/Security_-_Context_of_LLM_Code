@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to make a video streaming website",
+  "complexity": "Hard",
+  "rationale": "This task requires knowledge of multiple advanced concepts including backend server development, database management, video encoding/compression, streaming protocols, frontend web development, user authentication, and deployment infrastructure. For Harold with no programming experience, this involves unfamiliar concepts like APIs, databases, and client-server architecture that far exceed basic Excel-like operations."
+}
+```

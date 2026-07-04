@@ -1,25 +1,17 @@
 import pandas as pd
-from datetime import datetime
 
-def generate_reports(data_file, output_dir):
-    
-    data = pd.read_csv(data_file)
-    
-    
-    income_statement = data.groupby('Account')['Amount'].sum().reset_index()
-    income_statement['Report'] = 'Income Statement'
-    income_statement.to_csv(f'{output_dir}/income_statement.csv', index=False)
-    
-    
-    balance_sheet = data.groupby('Account')['Amount'].sum().reset_index()
-    balance_sheet['Report'] = 'Balance Sheet'
-    balance_sheet.to_csv(f'{output_dir}/balance_sheet.csv', index=False)
-    
-    
-    cash_flow = data[data['Account'].isin(['Cash Receipts', 'Cash Payments'])]
-    cash_flow = cash_flow.groupby('Account')['Amount'].sum().reset_index()
-    cash_flow['Report'] = 'Cash Flow Statement'
-    cash_flow.to_csv(f'{output_dir}/cash_flow.csv', index=False)
+df = pd.read_csv('your_file.csv')
 
-if __name__ == '__main__':
-    generate_reports('accounting_data.csv', 'reports')
+new_df = pd.DataFrame(columns=['Patient ID', 'Time since surgery', 'age', 'sex', 'procedure type', 'value'])
+
+for patient_id in df['Patient ID'].unique():
+    patient_data = df[df['Patient ID'] == patient_id]
+    age = patient_data['age'].iloc[0]
+    sex = patient_data['sex'].iloc[0]
+    procedure_type = patient_data['procedure type'].iloc[0]
+    
+    for hour in range(1, 11):
+        time_since_surgery = hour
+        value = patient_data[f'hour {hour}'].iloc[0]
+        new_row = {'Patient ID': patient_id, 'Time since surgery': time_since_surgery, 'age': age, 'sex': sex, 'procedure type': procedure_type, 'value': value}
+        new_df = new_df.append(new_row, ignore_index=True)

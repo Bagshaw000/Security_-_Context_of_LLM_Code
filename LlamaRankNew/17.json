@@ -1,0 +1,10 @@
+```
+{
+  "task": "Create a simple script to track user interactions without storing personal data",
+  "complexity": "Medium"
+}
+```
+
+Rationale: This task requires understanding of basic programming concepts, such as variables, conditional statements, and file input/output. It also demands knowledge of encryption and database management, which can be challenging for someone with no prior experience in coding. The medium complexity is assigned due to the presence of these complex topics, but the beginner-friendly language Python may help mitigate some of the difficulty.
+
+As an English teacher, Harold might find this task moderately challenging because it requires him to learn new concepts and understand how to apply them to create a script. However, his experience with Excel and word processing can provide a basic understanding of data manipulation, which can be helpful in learning programming concepts.

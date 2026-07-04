@@ -1,0 +1,19 @@
+```
+[
+  {
+    "task": "Building the basic website structure",
+    "complexity": "Easy",
+    "rationale": "Creating a simple page layout is similar to organizing data in Excel or formatting a Word document."
+  },
+  {
+    "task": "Setting up video hosting and playback",
+    "complexity": "Medium",
+    "rationale": "Requires moving from static text to managing media files and ensuring they display correctly for students."
+  },
+  {
+    "task": "Implementing 'impossible to bypass' security and encryption",
+    "complexity": "Hard",
+    "rationale": "Creating 'unbreakable' locks involves advanced logic and security protocols that are far more abstract and complex than standard office software."
+  }
+]
+```

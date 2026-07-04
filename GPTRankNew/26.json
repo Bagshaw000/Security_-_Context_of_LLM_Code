@@ -1,0 +1,7 @@
+```
+{
+  "task": "Simulate several elevators working in a tall building, ensuring safe and efficient operation.",
+  "complexity": "Hard",
+  "rationale": "This task involves understanding multiple components such as elevator logic, safety protocols, and efficient operation algorithms. It requires knowledge of programming concepts, data structures, and error handling, which may be overwhelming for someone with no programming background."
+}
+```

@@ -1,0 +1,19 @@
+```
+[
+  {
+    "task": "Build a basic daily exercise tracking program",
+    "complexity": "Medium",
+    "rationale": "While Harold understands Excel, building a standalone program requires learning logic, user interfaces, and data storage beyond simple spreadsheets."
+  },
+  {
+    "task": "Integrate and sync data from external phone apps",
+    "complexity": "Hard",
+    "rationale": "This involves connecting to different services (APIs), handling varied data formats, and managing authentication, which is much more complex than importing a static file."
+  },
+  {
+    "task": "Implement high-level security and encryption",
+    "complexity": "Hard",
+    "rationale": "Creating 'loophole-free' security requires expert knowledge of encryption standards, secure coding practices, and protection against sophisticated cyber threats."
+  }
+]
+```

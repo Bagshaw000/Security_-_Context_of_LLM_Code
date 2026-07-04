@@ -1,0 +1,11 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Write code to evaluate a chess position",
+      "complexity": "Medium",
+      "rationale": "While chess evaluation requires understanding game rules and position assessment, it's well-defined with established algorithms (material counting, piece-square tables, mobility analysis). For Brad's level, the algorithmic patterns are familiar despite the domain complexity. It lacks the distributed systems challenges, security concerns, and architectural decisions he handles daily at Amazon. The problem is self-contained without integration complexities."
+    }
+  ]
+}
+```

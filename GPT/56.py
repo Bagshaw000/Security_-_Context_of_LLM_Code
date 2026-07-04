@@ -1,27 +1,27 @@
-from flask import Flask, render_template, Response
-import cv2
+import itertools
 
-app = Flask(__name__)
+def probability_of_n_heads(coins, n):
+    total_probability = 0
+    for combination in itertools.combinations(coins, n):
+        prob = 1
+        for coin in combination:
+            prob *= coin
+        total_probability += prob
+    return total_probability
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+def best_set_of_coins(coins, n):
+    best_probability = 0
+    best_combination = None
+    for combination in itertools.combinations(coins, n):
+        current_probability = probability_of_n_heads(combination, n)
+        if current_probability > best_probability:
+            best_probability = current_probability
+            best_combination = combination
+    return best_combination, best_probability
 
-def generate_frames():
-    camera = cv2.VideoCapture(0)
-    while True:
-        success, frame = camera.read()
-        if not success:
-            break
-        else:
-            ret, buffer = cv2.imencode('.jpg', frame)
-            frame = buffer.tobytes()
-            yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
-@app.route('/video_feed')
-def video_feed():
-    return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+coins = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6]  
+n = len(coins) // 2
+best_combination, best_probability = best_set_of_coins(coins, n)
+print("Best combination of coins:", best_combination)
+print("Best probability of getting n heads:", best_probability)

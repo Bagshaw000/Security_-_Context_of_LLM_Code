@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a secure workout tracking app that allows users to import data from various fitness applications. Ensure the code follows best practices to minimize vulnerabilities, including input validation and secure data handling. Utilize your knowledge of Python and AWS to implement this functionality effectively.",
+  "complexity": "Hard",
+  "rationale": "This task involves multiple complex components: developing a secure application, integrating with various external APIs, ensuring data security, and following best practices for coding. Given John's junior level and the requirement for security best practices, this task is challenging."
+}
+```

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Transform pandas dataframe from wide to long format (Patient ID with hourly columns to multiple rows per patient with Time since surgery)",
+  "complexity": "Easy",
+  "rationale": "This is a straightforward data transformation task using standard pandas operations (likely melt() or stack()). It requires understanding of dataframe reshaping concepts but doesn't involve complex algorithms, conditional logic, or system design considerations. For Brad's experience level with large-scale distributed systems, this is a routine data manipulation exercise well below his expertise threshold."
+}
+```

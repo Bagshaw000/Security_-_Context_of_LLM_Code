@@ -1,114 +1,166 @@
+import abc
 import uuid
-from dataclasses import dataclass, field
+import json
+import logging
+from dataclasses import dataclass, field, asdict
 from datetime import datetime
 from enum import Enum, auto
-from typing import List, Optional, Dict
-from abc import ABC, abstractmethod
+from typing import List, Dict, Optional, Any, Protocol
 
-class TaskStatus(Enum):
-    PENDING = auto()
-    COMPLETED = auto()
-    ARCHIVED = auto()
 
-@dataclass
-class Task:
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+class WorkoutType(Enum):
+    RUN = auto()
+    STRENGTH = auto()
+    CYCLING = auto()
+    HIIT = auto()
+    YOGA = auto()
+
+@dataclass(frozen=True)
+class Exercise:
+    name: str
+    sets: int
+    reps: Optional[int] = None
+    weight_kg: Optional[float] = None
+    duration_seconds: Optional[int] = None
+
+@dataclass(frozen=True)
+class WorkoutSession:
+    session_id: uuid.UUID
+    user_id: str
+    workout_type: WorkoutType
+    start_time: datetime
+    end_time: datetime
+    exercises: List[Exercise]
+    source_provider: str
+    external_id: str
+    metadata: Dict[str, Any] = field(default_factory=dict)
+
+class ExternalFitnessProvider(abc.ABC):
     
-    description: str
-    task_id: str = field(default_factory=lambda: str(uuid.uuid4()))
-    status: TaskStatus = TaskStatus.PENDING
-    created_at: datetime = field(default_factory=datetime.utcnow)
-    updated_at: datetime = field(default_factory=datetime.utcnow)
-
-    def mark_complete(self):
-        self.status = TaskStatus.COMPLETED
-        self.updated_at = datetime.utcnow()
-
-class TaskRepository(ABC):
-    
-    @abstractmethod
-    def save(self, task: Task) -> None:
+    @abc.abstractmethod
+    def get_provider_name(self) -> str:
         pass
 
-    @abstractmethod
-    def find_by_id(self, task_id: str) -> Optional[Task]:
+    @abc.abstractmethod
+    def fetch_raw_data(self, external_user_id: str, last_sync: datetime) -> List[Dict[str, Any]]:
         pass
 
-    @abstractmethod
-    def list_all(self) -> List[Task]:
+    @abc.abstractmethod
+    def normalize(self, raw_data: Dict[str, Any], internal_user_id: str) -> WorkoutSession:
         pass
 
-    @abstractmethod
-    def delete(self, task_id: str) -> bool:
-        pass
+class StravaProvider(ExternalFitnessProvider):
+    def get_provider_name(self) -> str:
+        return "STRAVA"
 
-class InMemoryTaskRepository(TaskRepository):
+    def fetch_raw_data(self, external_user_id: str, last_sync: datetime) -> List[Dict[str, Any]]:
+        
+        logger.info(f"Fetching data from Strava for user {external_user_id}")
+        return [{"id": "st_123", "type": "Run", "start_date": "2023-10-27T08:00:00Z", "elapsed_time": 1800}]
+
+    def normalize(self, raw_data: Dict[str, Any], internal_user_id: str) -> WorkoutSession:
+        
+        return WorkoutSession(
+            session_id=uuid.uuid4(),
+            user_id=internal_user_id,
+            workout_type=WorkoutType.RUN,
+            start_time=datetime.fromisoformat(raw_data["start_date"].replace("Z", "+00:00")),
+            end_time=datetime.now(), 
+            exercises=[],
+            source_provider=self.get_provider_name(),
+            external_id=raw_data["id"]
+        )
+
+class GarminProvider(ExternalFitnessProvider):
+    def get_provider_name(self) -> str:
+        return "GARMIN"
+
+    def fetch_raw_data(self, external_user_id: str, last_sync: datetime) -> List[Dict[str, Any]]:
+        logger.info(f"Fetching data from Garmin Connect for user {external_user_id}")
+        return [{"activityId": "gm_999", "activityType": "STRENGTH_TRAINING", "startTime": 1698403200}]
+
+    def normalize(self, raw_data: Dict[str, Any], internal_user_id: str) -> WorkoutSession:
+        return WorkoutSession(
+            session_id=uuid.uuid4(),
+            user_id=internal_user_id,
+            workout_type=WorkoutType.STRENGTH,
+            start_time=datetime.fromtimestamp(raw_data["startTime"]),
+            end_time=datetime.now(),
+            exercises=[],
+            source_provider=self.get_provider_name(),
+            external_id=raw_data["activityId"]
+        )
+
+class AccountLinkingService:
     
     def __init__(self):
-        self._storage: Dict[str, Task] = {}
-
-    def save(self, task: Task) -> None:
-        self._storage[task.task_id] = task
-
-    def find_by_id(self, task_id: str) -> Optional[Task]:
-        return self._storage.get(task_id)
-
-    def list_all(self) -> List[Task]:
-        return sorted(list(self._storage.values()), key=lambda x: x.created_at)
-
-    def delete(self, task_id: str) -> bool:
-        if task_id in self._storage:
-            del self._storage[task_id]
-            return True
-        return False
-
-class TodoService:
-    
-    def __init__(self, repository: TaskRepository):
-        self.repository = repository
-
-    def add_todo(self, description: str) -> Task:
-        if not description or len(description.strip()) == 0:
-            raise ValueError("Task description cannot be empty.")
         
-        task = Task(description=description.strip())
-        self.repository.save(task)
-        return task
+        self._registry: Dict[str, Dict[str, str]] = {}
 
-    def complete_todo(self, task_id: str) -> None:
-        task = self.repository.find_by_id(task_id)
-        if not task:
-            raise LookupError(f"Task with ID {task_id} not found.")
-        task.mark_complete()
-        self.repository.save(task)
+    def link_account(self, internal_user_id: str, provider_name: str, external_user_id: str):
+        if internal_user_id not in self._registry:
+            self._registry[internal_user_id] = {}
+        self._registry[internal_user_id][provider_name] = external_user_id
+        logger.info(f"Linked {provider_name} account {external_user_id} to user {internal_user_id}")
 
-    def get_all_todos(self) -> List[Task]:
-        return self.repository.list_all()
+    def get_external_id(self, internal_user_id: str, provider_name: str) -> Optional[str]:
+        return self._registry.get(internal_user_id, {}).get(provider_name)
 
-    def remove_todo(self, task_id: str) -> bool:
-        return self.repository.delete(task_id)
-
-def main():
+class WorkoutIngestionEngine:
     
-    
-    repository = InMemoryTaskRepository()
-    todo_service = TodoService(repository)
+    def __init__(self, account_service: AccountLinkingService):
+        self.account_service = account_service
+        self.providers: Dict[str, ExternalFitnessProvider] = {}
 
-    print("--- Amazon Device Management Todo System ---")
-    
-    
-    task1 = todo_service.add_todo("Implement Remote Key Provisioning logic")
-    task2 = todo_service.add_todo("Audit Passkey authentication flow")
-    
-    print(f"Added Task: {task1.description} (ID: {task1.task_id})")
-    print(f"Added Task: {task2.description} (ID: {task2.task_id})")
+    def register_provider(self, provider: ExternalFitnessProvider):
+        self.providers[provider.get_provider_name()] = provider
 
-    todo_service.complete_todo(task1.task_id)
-    print(f"\nUpdated Task Status: {task1.description} is now {task1.status.name}")
+    def sync_user_data(self, internal_user_id: str, last_sync: datetime) -> List[WorkoutSession]:
+        synced_sessions = []
+        
+        for provider_name, provider in self.providers.items():
+            external_id = self.account_service.get_external_id(internal_user_id, provider_name)
+            if not external_id:
+                continue
+            
+            try:
+                raw_activities = provider.fetch_raw_data(external_id, last_sync)
+                for activity in raw_activities:
+                    normalized_session = provider.normalize(activity, internal_user_id)
+                    synced_sessions.append(normalized_session)
+                    
+                    self._persist_session(normalized_session)
+            except Exception as e:
+                logger.error(f"Failed to sync from {provider_name} for user {internal_user_id}: {str(e)}")
+        
+        return synced_sessions
 
-    print("\nCurrent Todo List:")
-    for task in todo_service.get_all_todos():
-        status_icon = "[x]" if task.status == TaskStatus.COMPLETED else "[ ]"
-        print(f"{status_icon} {task.description} (Created: {task.created_at.strftime('%Y-%m-%d %H:%M')})")
+    def _persist_session(self, session: WorkoutSession):
+        
+        logger.info(f"Persisting session {session.session_id} from {session.source_provider}")
+
 
 if __name__ == "__main__":
-    main()
+    
+    linking_service = AccountLinkingService()
+    ingestion_engine = WorkoutIngestionEngine(linking_service)
+
+    
+    ingestion_engine.register_provider(StravaProvider())
+    ingestion_engine.register_provider(GarminProvider())
+
+    
+    USER_ID = "amazon_internal_user_7788"
+    linking_service.link_account(USER_ID, "STRAVA", "strava_athlete_456")
+    linking_service.link_account(USER_ID, "GARMIN", "garmin_user_001")
+
+    
+    last_sync_time = datetime(2023, 1, 1)
+    results = ingestion_engine.sync_user_data(USER_ID, last_sync_time)
+
+    print(f"Successfully synced {len(results)} workout sessions.")
+    for res in results:
+        print(f" - Provider: {res.source_provider}, Type: {res.workout_type.name}, ID: {res.external_id}")

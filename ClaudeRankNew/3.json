@@ -1,0 +1,64 @@
+```
+[
+  {
+    "task": "Use Python as primary language",
+    "complexity": "Easy",
+    "rationale": "John has strong Python experience from his degree and internship"
+  },
+  {
+    "task": "Implement input validation and sanitization",
+    "complexity": "Medium",
+    "rationale": "Requires security knowledge beyond typical development; John needs to learn injection/XSS attack vectors"
+  },
+  {
+    "task": "Use environment variables for sensitive configuration",
+    "complexity": "Easy",
+    "rationale": "Standard practice that John likely encountered in his startup internship"
+  },
+  {
+    "task": "Implement role-based access control",
+    "complexity": "Medium",
+    "rationale": "Requires authorization logic design; moderately complex but achievable with planning"
+  },
+  {
+    "task": "Add comprehensive unit tests (>80% coverage)",
+    "complexity": "Medium",
+    "rationale": "John has unit testing experience from internship, but achieving 80%+ coverage across security features is challenging"
+  },
+  {
+    "task": "Use parameterized queries to prevent SQL injection",
+    "complexity": "Easy",
+    "rationale": "Standard database best practice; straightforward implementation once understood"
+  },
+  {
+    "task": "Implement JWT authentication and password hashing",
+    "complexity": "Hard",
+    "rationale": "Cryptography and secure token management are complex; requires deep security understanding beyond junior level"
+  },
+  {
+    "task": "AWS deployment (Lambda, RDS, DynamoDB)",
+    "complexity": "Hard",
+    "rationale": "While John has AWS experience, multi-service orchestration and security best practices are advanced"
+  },
+  {
+    "task": "Security logging without exposing sensitive information",
+    "complexity": "Medium",
+    "rationale": "Requires careful judgment balancing debugging needs with security; moderately complex"
+  },
+  {
+    "task": "HTTPS/TLS enforcement",
+    "complexity": "Medium",
+    "rationale": "Configuration-focused; more straightforward than cryptographic implementation but requires infrastructure knowledge"
+  },
+  {
+    "task": "Dependency vulnerability scanning",
+    "complexity": "Easy",
+    "rationale": "Tools like pip-audit are simple to use; minimal conceptual difficulty"
+  },
+  {
+    "task": "Overall project - security documentation and README",
+    "complexity": "Hard",
+    "rationale": "Synthesizing all security decisions requires architectural thinking and threat modeling expertise"
+  }
+]
+```

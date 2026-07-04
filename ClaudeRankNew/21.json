@@ -1,0 +1,44 @@
+```
+[
+  {
+    "task": "OAuth 2.0 implementation for third-party authentication",
+    "complexity": "Hard",
+    "rationale": "Requires deep understanding of authentication protocols and security best practices. OAuth 2.0 is complex with multiple flows; John has no demonstrated experience with this. High risk of implementation flaws."
+  },
+  {
+    "task": "Data encryption (AES-256 at rest and in transit) with AWS Secrets Manager",
+    "complexity": "Hard",
+    "rationale": "Requires cryptography expertise and AWS services knowledge beyond his startup internship. Managing encryption keys and integrating with Secrets Manager is non-trivial and security-critical."
+  },
+  {
+    "task": "GDPR compliance and audit logging implementation",
+    "complexity": "Hard",
+    "rationale": "Requires understanding of legal/regulatory requirements and logging architecture. John's inventory tool experience unlikely covered compliance at this level. Mistakes have serious consequences."
+  },
+  {
+    "task": "Third-party API integration (Strava, MyFitnessPal, Garmin) with rate limiting and validation",
+    "complexity": "Medium",
+    "rationale": "Aligns with his inventory management tool experience (API integration, data handling). Rate limiting and validation are moderate-complexity patterns he likely encountered."
+  },
+  {
+    "task": "Input validation and sanitization to prevent injection attacks",
+    "complexity": "Medium",
+    "rationale": "Standard security practice John should understand from CS degree. Applicable across Web frameworks; familiar patterns but requires careful implementation."
+  },
+  {
+    "task": "Comprehensive unit testing with security scenarios (SQL injection, malformed responses)",
+    "complexity": "Medium",
+    "rationale": "John has unit testing experience. Security-focused tests are more complex than basic tests but conceptually aligned with his existing skills."
+  },
+  {
+    "task": "AWS deployment architecture (EC2, RDS, Lambda)",
+    "complexity": "Medium",
+    "rationale": "John has AWS experience from internship. Selecting and configuring appropriate services is moderate—more challenging than basic deployment but within reach."
+  },
+  {
+    "task": "Django/FastAPI framework setup with OWASP best practices",
+    "complexity": "Easy",
+    "rationale": "Python is his strong suit. Framework setup is straightforward; OWASP principles are learnable. Foundational web development skill for a CS graduate."
+  }
+]
+```

@@ -1,0 +1,13 @@
+```
+[
+  {"task": "Design an algorithm to select a subset of coins from 2n biased coins such that the probability of getting exactly n heads is maximized", "complexity": "Hard"},
+  {"task": "Write a function to check if a string is a valid IP address", "complexity": "Medium"},
+  {"task": "Create a data structure to store and manage user profiles", "complexity": "Easy"}
+]
+```
+
+Rationale:
+
+1. Designing an algorithm for selecting coins with maximized probability of getting exactly n heads requires complex mathematical calculations, including combinatorics and probability theory, making it a challenging task (Hard).
+2. Writing a function to check if a string is a valid IP address involves validating the format of the IP address, which can be done using regular expressions or string manipulation, but still requires some programming expertise (Medium).
+3. Creating a data structure to store user profiles primarily involves data modeling and designing a suitable data structure, which can be achieved with basic programming knowledge (Easy).

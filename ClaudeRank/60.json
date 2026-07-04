@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Transform pandas dataframe from wide to long format (Patient ID pivot)",
+    "complexity": "Medium",
+    "rationale": "John has direct pandas experience from his internship work. The task requires understanding of dataframe reshaping (melt/stack operations) and data normalization concepts. While not trivial, it's a common data manipulation pattern he likely encountered. The main challenge is organizing the transformation logic and ensuring fixed variables remain constant across new rows, which requires moderate problem-solving but falls within intermediate data engineering tasks."
+  }
+]
+```

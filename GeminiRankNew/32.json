@@ -1,0 +1,19 @@
+```
+[
+  {
+    "task": "Creating three side-by-side grids (Layout)",
+    "complexity": "Easy",
+    "rationale": "This is conceptually similar to Harold's knowledge of Excel columns and rows; it involves visual organization rather than complex logic."
+  },
+  {
+    "task": "Implementing 3-player game mechanics (Logic)",
+    "complexity": "Medium",
+    "rationale": "Requires managing three independent sets of rules and inputs simultaneously, which is a significant step up from static spreadsheet formulas."
+  },
+  {
+    "task": "Ensuring memory safety and security (Reliability)",
+    "complexity": "Hard",
+    "rationale": "Involves deep computing concepts like memory management and input sanitization that are invisible and unknown to a non-programmer."
+  }
+]
+```

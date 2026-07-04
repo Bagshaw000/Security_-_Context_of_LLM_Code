@@ -1,0 +1,24 @@
+```
+[
+  {
+    "task": "Design and implement a gradient ascent algorithm in Python with secure coding practices",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Write a program to find all prime numbers up to a given limit",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Create a simple calculator that takes two numbers and an operation as input and returns the result",
+    "complexity": "Easy"
+  }
+]
+```
+
+Ranking Explanation:
+
+1. Gradient Ascent Algorithm: This task requires in-depth knowledge of optimization algorithms, secure coding practices, and understanding of potential issues with concurrent access to shared resources in a distributed system. It's a complex task that requires careful consideration of security implications.
+
+2. Find All Prime Numbers: This task involves basic number theory concepts and a simple algorithm. While it may require some programming knowledge, it's a relatively straightforward task compared to the gradient ascent algorithm.
+
+3. Simple Calculator: This is a basic programming task that requires minimal code and no complex algorithms or security considerations. It's an easy task suitable for beginners or those with limited coding experience.

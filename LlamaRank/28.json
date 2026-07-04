@@ -1,0 +1,20 @@
+Here's the ranking in JSON format:
+
+```
+[
+    {"task": "Implement a system that handles user authentication for multiple devices", "complexity": "Medium"},
+    {"task": "Develop a controller system for managing a network of ATMs", "complexity": "Hard"},
+    {"task": "Create a program to calculate the maximum sum of a subarray within an array", "complexity": "Easy"}
+]
+```
+
+Ranking Reason:
+
+1. Implement a system that handles user authentication for multiple devices - Medium
+   This task involves handling user credentials, storing them securely, and ensuring their integrity in a distributed environment. It requires knowledge of authentication protocols and secure data storage but is not extremely complex.
+
+2. Develop a controller system for managing a network of ATMs - Hard
+   Implementing a controller system for managing a network of ATMs involves designing and building a distributed system that integrates with various devices, handles real-time transactions, and ensures security and reliability. It requires advanced knowledge of software engineering, system design, and networking.
+
+3. Create a program to calculate the maximum sum of a subarray within an array - Easy
+   This task involves using algorithms and data structures to solve a well-known problem in computer science. The solution is straightforward and does not require deep understanding of any complex concepts or technologies.

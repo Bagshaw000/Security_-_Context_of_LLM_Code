@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code for a workout tracking app that can import data from other fitness apps",
+  "complexity": "Hard",
+  "rationale": "For Harold (English teacher, no programming experience): This task requires understanding multiple advanced concepts including: (1) API integration to connect with external fitness apps, (2) data parsing and transformation from different formats, (3) database design to store workout data, (4) file handling for imports, and (5) user interface development. Even though Harold understands Excel (basic data organization), the programming logic, authentication protocols, and system architecture needed here far exceed fundamental concepts. The task demands knowledge of frameworks, libraries, and development practices completely foreign to someone with no coding background."
+}
+```

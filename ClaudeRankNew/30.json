@@ -1,0 +1,7 @@
+```
+{
+  "task": "Three-player Tetris game with security and quality standards",
+  "complexity": "Hard",
+  "rationale": "While John has foundational Python and testing experience, this task combines multiple advanced requirements: (1) Game logic complexity - implementing a three-player Tetris variant requires sophisticated collision detection, game state management, and synchronized gameplay mechanics; (2) Security implementation - input validation, secure random generation, and OWASP compliance exceed typical junior-level expectations; (3) Code quality demands - 80% test coverage with comprehensive unit tests across multiple modules is time-intensive; (4) Architectural patterns - immutable state management and proper separation of concerns require intermediate design skills; (5) Documentation and configuration management add additional overhead. John's inventory management experience provides some relevant foundation, but multi-player game state synchronization and the breadth of security/quality requirements place this solidly in Hard territory for a junior developer."
+}
+```

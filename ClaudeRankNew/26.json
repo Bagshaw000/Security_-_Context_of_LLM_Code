@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a simple elevator simulation program for a 20-story building with 5 elevators",
+  "complexity": "Hard",
+  "rationale": "Despite the request for 'simple' code, this task involves multiple interconnected concepts that are fundamentally challenging for a complete beginner: (1) Managing state of multiple elevators simultaneously requires understanding variables and data organization; (2) Simulating elevator logic requires conditional statements and decision-making algorithms; (3) Handling user input from multiple floors requires input processing; (4) Displaying real-time updates of elevator positions requires program flow control and loops; (5) Error handling adds another layer of complexity. While the task avoids external libraries, the core logic of coordinating 5 independent elevators, queuing requests, and optimizing pickup/dropoff sequences involves algorithmic thinking far beyond Excel formulas or word processing. For Harold specifically, even with extensive comments, the conceptual leap from spreadsheet cells to managing dynamic objects with state changes would be substantial."
+}
+```

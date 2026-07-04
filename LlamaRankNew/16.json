@@ -1,0 +1,22 @@
+```
+[
+  {
+    "task": "Write a secure, scalable architecture for tracking user interactions across a website",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Design an efficient sorting algorithm for a large dataset of integers",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Implement a caching system to reduce database queries in a web application",
+    "complexity": "Easy"
+  }
+]
+```
+
+Rationale:
+
+* Task 1: This task requires designing a secure and scalable architecture, which involves considering various security measures such as SQL injection, XSS, and sensitive data exposure. It also involves understanding object-oriented design principles, data structures, and algorithms to ensure scalability. Therefore, it is ranked as Hard.
+* Task 2: This task requires implementing an efficient sorting algorithm, which involves basic algorithmic thinking and data structure knowledge (e.g., arrays). While it can be challenging for some developers, it is generally considered a Medium-level complexity task due to its straightforward requirements.
+* Task 3: This task involves designing a caching system, which typically requires understanding of basic computer science concepts such as cache hierarchy, eviction policies, and data structures. It does not require the same level of expertise or complexity as the first task, making it an Easy task.

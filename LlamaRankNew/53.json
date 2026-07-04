@@ -1,0 +1,44 @@
+```
+{
+    "task": "Write a Python program that takes a set of 4D points (x, y, z, w) as input and returns the convex hull.",
+    "complexity": "Hard"
+}
+```
+
+Reasoning: This task involves working with complex data structures like 4D points and convex hulls, which require a good understanding of computer science concepts like geometry and algorithms. The program also needs to handle potential vulnerabilities like buffer overflows or SQL injection attacks, making it a challenging task for someone without prior programming experience.
+
+```
+{
+    "task": "Write a Java program that takes a set of 4D points (x, y, z, w) as input and returns the convex hull.",
+    "complexity": "Very Hard"
+}
+```
+
+Reasoning: Similar to the previous task, this one involves working with complex data structures and algorithms. Additionally, Java requires knowledge of object-oriented programming concepts, making it even more challenging for someone without prior experience.
+
+```
+{
+    "task": "Write a program that explains what a convex hull is in simple terms and how to test its correctness.",
+    "complexity": "Easy"
+}
+```
+
+Reasoning: This task involves explaining a concept rather than implementing code, making it straightforward and easy for someone without prior programming experience.
+
+```
+{
+    "task": "Provide guidelines on how to ensure the code is secure and free from common pitfalls like buffer overflows or SQL injection attacks.",
+    "complexity": "Medium"
+}
+```
+
+Reasoning: This task requires some knowledge of computer security concepts, but it's not as complex as implementing a program that involves working with complex data structures.
+
+```
+{
+    "task": "Provide a sample dataset of 4D points for testing the program.",
+    "complexity": "Easy"
+}
+```
+
+Reasoning: This task is straightforward and doesn't require any programming knowledge, making it easy for someone without prior experience.

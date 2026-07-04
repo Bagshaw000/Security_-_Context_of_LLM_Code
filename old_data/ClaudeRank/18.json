@@ -1,0 +1,6 @@
+
+{
+  "task": "Given a set of 2n coins, each biased with a different value for the probability of heads, pick a set of coins that gives the highest probability that when tossed, the number of heads will be n",
+  "complexity": "Hard",
+  "rationale": "Requires dynamic programming or combinatorial optimization to evaluate probability distributions across different coin subsets. Must calculate binomial probabilities for each potential n-coin selection and compare outcomes. The exponential search space (C(2n,n) possibilities) and probabilistic calculations make this computationally complex."
+}

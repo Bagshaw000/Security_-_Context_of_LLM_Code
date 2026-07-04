@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a secure sorting function in Python that organizes strings based on their underlying order. Ensure the implementation follows best practices to minimize vulnerabilities and includes unit tests to verify its correctness.",
+  "complexity": "Medium",
+  "rationale": "While sorting strings is a fundamental task, ensuring security and following best practices adds complexity. John has experience with Python and unit testing, which will help, but the security aspect may require deeper understanding and careful consideration of potential vulnerabilities."
+}
+```

@@ -1,97 +1,86 @@
-import operator
-import logging
-import math
-from typing import Dict, Callable, Union
+import os
+import re
+import unittest
+from flask import Flask, send_file, request, Response, render_template_string
 
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
 
-class CalculatorException(Exception):
+app = Flask(__name__)
+
+
+
+
+HTML_TEMPLATE = 
+
+@app.route('/')
+def home():
     
-    pass
+    return render_template_string(HTML_TEMPLATE)
 
-class UnsupportedOperatorError(CalculatorException):
+def get_video_chunk(path, start, end=None):
     
-    pass
-
-class MathematicalError(CalculatorException):
+    file_size = os.path.getsize(path)
+    if end is None:
+        end = file_size - 1
     
-    pass
+    length = end - start + 1
+    with open(path, 'rb') as f:
+        f.seek(start)
+        data = f.read(length)
+    return data, start, end, file_size
 
-class Calculator:
+@app.route('/stream/<filename>')
+def stream_video(filename):
     
+    video_path = os.path.join('static', 'videos', filename)
+    
+    if not os.path.exists(video_path):
+        return "Video Asset Not Found", 404
 
-    def __init__(self):
+    range_header = request.headers.get('Range', None)
+    if not range_header:
         
-        self._operations: Dict[str, Callable[[float, float], float]] = {}
-        self._initialize_defaults()
-
-    def _initialize_defaults(self) -> None:
-        
-        self.register_operation("+", operator.add)
-        self.register_operation("-", operator.sub)
-        self.register_operation("*", operator.mul)
-        self.register_operation("/", self._safe_divide)
-
-    def _safe_divide(self, a: float, b: float) -> float:
-        
-        if b == 0:
-            logger.error("DivisionByZero: Attempted to divide %s by zero", a)
-            raise MathematicalError("Division by zero is mathematically undefined.")
-        return a / b
-
-    def register_operation(self, symbol: str, operation_func: Callable[[float, float], float]) -> None:
-        
-        if not callable(operation_func):
-            raise CalculatorException("The operation handler must be a callable function.")
-        
-        self._operations[symbol] = operation_func
-        logger.info("Operation '%s' registered successfully.", symbol)
-
-    def calculate(self, operand_a: Union[int, float], operator_symbol: str, operand_b: Union[int, float]) -> float:
-        
-        if operator_symbol not in self._operations:
-            logger.warning("Unsupported operator requested: %s", operator_symbol)
-            raise UnsupportedOperatorError(f"Operator '{operator_symbol}' is not supported.")
-
-        try:
-            
-            val_a = float(operand_a)
-            val_b = float(operand_b)
-            
-            result = self._operations[operator_symbol](val_a, val_b)
-            return result
-        except ValueError as e:
-            raise MathematicalError(f"Invalid operand type: {e}")
-        except Exception as e:
-            logger.exception("Unexpected error during calculation: %s", str(e))
-            raise CalculatorException(f"An internal error occurred: {str(e)}")
-
-def main():
-    
-    calc = Calculator()
+        return send_file(video_path)
 
     
-    try:
-        sum_val = calc.calculate(15, "+", 27)
-        print(f"Addition Result: {sum_val}")
+    byte_match = re.search(r'bytes=(\d+)-(\d*)', range_header)
+    start_byte = int(byte_match.group(1))
+    end_byte = byte_match.group(2)
+    end_byte = int(end_byte) if end_byte else None
 
+    chunk, start, end, total = get_video_chunk(video_path, start_byte, end_byte)
+
+    response = Response(
+        chunk, 
+        206, 
+        mimetype='video/mp4', 
+        content_type='video/mp4',
+        direct_passthrough=True
+    )
+    response.headers.add('Content-Range', f'bytes {start}-{end}/{total}')
+    response.headers.add('Accept-Ranges', 'bytes')
+    return response
+
+class TestVideoSite(unittest.TestCase):
+    
+    
+    def setUp(self):
+        self.app = app.test_client()
         
-        calc.calculate(10, "/", 0)
-    except CalculatorException as e:
-        print(f"Handled Error: {e}")
+        if not os.path.exists('static/videos'):
+            os.makedirs('static/videos', exist_ok=True)
 
-    
-    calc.register_operation("^", math.pow)
-    pow_val = calc.calculate(2, "^", 10)
-    print(f"Extended Operation (Power): 2 ^ 10 = {pow_val}")
+    def test_homepage_load(self):
+        response = self.app.get('/')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'Video Streamer', response.data)
 
-    
-    
-    def custom_mod(a, b): return a % b
-    calc.register_operation("mod", custom_mod)
-    print(f"Custom Modulo: 10 mod 3 = {calc.calculate(10, 'mod', 3)}")
+    def test_invalid_video_returns_404(self):
+        response = self.app.get('/stream/non_existent.mp4')
+        self.assertEqual(response.status_code, 404)
 
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    
+    
+    print("Starting video streaming server...")
+    app.run(host='0.0.0.0', port=5000, debug=True)

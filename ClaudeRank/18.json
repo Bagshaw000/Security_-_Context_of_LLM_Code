@@ -1,0 +1,11 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Write code to generate summaries of research papers using an LLM",
+      "complexity": "Medium",
+      "rationale": "Requires API integration with LLM services (new skill area for John), prompt engineering, and handling text processing. However, basic implementation is straightforward with existing libraries. John's Python experience and AWS background provide foundation for API calls and cloud deployment, but LLM-specific concepts (prompt optimization, token management, context handling) are unfamiliar territory that adds moderate complexity."
+    }
+  ]
+}
+```

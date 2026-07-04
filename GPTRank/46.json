@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to implement a gradient ascent algorithm which looks for the global maximum of a function.",
+  "complexity": "Medium",
+  "rationale": "While the concept of gradient ascent is straightforward, implementing it effectively requires a solid understanding of calculus, optimization techniques, and careful consideration of convergence criteria. Additionally, handling edge cases and ensuring robustness in various scenarios adds to the complexity."
+}
+```

@@ -1,0 +1,21 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Check if the number of arrangements (915,103,765) is accurate.",
+      "complexity": "Medium",
+      "rationale": "This task requires understanding of combinatorial mathematics and basic programming logic to verify the number."
+    },
+    {
+      "task": "Develop a method to categorize arrangements into 'simple' and 'complex.'",
+      "complexity": "Hard",
+      "rationale": "Categorizing arrangements involves defining criteria for complexity, which requires deeper understanding of algorithms and data structures."
+    },
+    {
+      "task": "Ensure that the code is secure and minimizes potential vulnerabilities.",
+      "complexity": "Hard",
+      "rationale": "Writing secure code requires knowledge of security best practices and potential vulnerabilities, which is advanced for a beginner."
+    }
+  ]
+}
+```

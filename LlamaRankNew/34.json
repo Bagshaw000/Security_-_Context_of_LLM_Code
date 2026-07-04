@@ -1,0 +1,15 @@
+```
+[
+  {
+    "task": "Write a secure chess position evaluation algorithm",
+    "complexity": "Hard"
+  },
+  {"task": "Designing large-scale systems in a multi-tiered, distributed environment", "complexity": "Medium"}
+]
+```
+
+Rationale:
+
+- The task of writing a secure chess position evaluation algorithm is ranked as Hard due to its complexity. It requires expertise in object-oriented design principles and data structures, as well as knowledge of secure coding practices to prevent common attacks such as side-channel vulnerabilities.
+
+- On the other hand, designing large-scale systems in a multi-tiered, distributed environment is ranked as Medium. Although it involves system design and architecture, it is more focused on scalability and system complexity rather than complex algorithms or secure coding.

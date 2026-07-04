@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write a sorting function that sorts strings according to underlying ordering",
+  "complexity": "Easy",
+  "rationale": "For Brad's level of expertise, this is a straightforward task. String sorting leverages built-in language libraries and basic comparison logic. It requires no knowledge of distributed systems, authentication protocols, or complex data structures—areas where Brad excels. The task lacks the architectural complexity, scalability concerns, or security considerations he typically handles in device management systems. A principal engineer with 12 years of experience would solve this in minutes using standard library functions."
+}
+```

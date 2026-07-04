@@ -1,0 +1,7 @@
+```
+{
+  "task": "Robust and secure 4D Convex Hull algorithm implementation",
+  "complexity": "Hard",
+  "rationale": "While John has Python and unit testing experience, 4D computational geometry is mathematically complex, requiring advanced knowledge of hyperplanes and simplices. Implementing this securely with edge-case handling for higher dimensions exceeds the typical scope of a junior developer's undergraduate and internship experience."
+}
+```

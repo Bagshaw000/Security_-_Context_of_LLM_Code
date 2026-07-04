@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Nokia Snake Game - Secure Implementation",
+    "complexity": "Hard",
+    "rationale": "While the core snake game mechanics are straightforward, the comprehensive security requirements elevate this significantly. John must apply SOLID principles, implement input validation against injection/buffer overflow attacks, use secure random generation, write extensive unit tests covering security scenarios, manage configuration externally, implement logging, and document security considerations. The AWS scalability consideration and memory-safety requirements add architectural depth. This combines game logic, security hardening, and software engineering best practices beyond typical junior-level tasks."
+  }
+]
+```

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a secure controller system for managing a network of ATMs, ensuring best practices to minimize vulnerabilities. Focus on implementing robust authentication, data encryption, and secure communication protocols. Utilize your Python skills and consider AWS services for scalability. Include unit tests to validate functionality and security measures.",
+  "complexity": "Hard",
+  "rationale": "This task involves multiple complex components such as security best practices, robust authentication, data encryption, and secure communication protocols. Additionally, it requires knowledge of AWS services for scalability and the implementation of unit tests, which adds to the overall complexity. Given John's junior level and limited experience, this task is challenging."
+}
+```

@@ -1,41 +1,25 @@
-import os
-from flask import Flask, render_template_string, send_from_directory
+import numpy as np
+from typing import List, Tuple
 
-
-
-
-
-
-
-
-app = Flask(__name__)
-
-
-VIDEO_FOLDER = 'videos'
-if not os.path.exists(VIDEO_FOLDER):
-    os.makedirs(VIDEO_FOLDER)
-
-
-HTML_LAYOUT = 
-
-@app.route('/')
-def home_page():
+def get_ensemble_classification(model_outputs: List[List[float]]) -> Tuple[int, float]:
     
-    files = [f for f in os.listdir(VIDEO_FOLDER) if f.endswith('.mp4')]
-    return render_template_string(HTML_LAYOUT, video_files=files)
-
-@app.route('/watch/<filename>')
-def watch_page(filename):
     
-    return render_template_string(HTML_LAYOUT, playing_now=filename)
-
-@app.route('/stream/<filename>')
-def stream_file(filename):
     
-    return send_from_directory(VIDEO_FOLDER, filename)
+    predictions_matrix = np.array(model_outputs)
+    
+    
+    
+    average_probabilities = np.mean(predictions_matrix, axis=0)
+    
+    
+    predicted_class = int(np.argmax(average_probabilities))
+    
+    
+    confidence_level = float(average_probabilities[predicted_class])
+    
+    return predicted_class, confidence_level
 
-if __name__ == '__main__':
-    print("--- WEBSITE STARTING ---")
-    print("Harold, please open your browser and type this address: http://127.0.0.1:5000")
-    print("-------------------------")
-    app.run(debug=True)
+def run_inventory_classification_ensemble():
+    """
+    Simulates the collection of classifications from n networks for an image
+    and outputs the final decision based on the ensemble

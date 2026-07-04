@@ -1,0 +1,11 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Write code to make a calculator",
+      "complexity": "Easy",
+      "rationale": "Basic arithmetic operations (add, subtract, multiply, divide) require fundamental programming concepts like functions and conditionals. John's CS degree and Python experience make this straightforward. No complex data structures, algorithms, or external dependencies needed."
+    }
+  ]
+}
+```

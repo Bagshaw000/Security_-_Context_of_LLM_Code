@@ -1,0 +1,13 @@
+
+{
+  "task": "Write code for a workout tracking app that can import data from other fitness apps",
+  "complexity": "Hard",
+  "rationale": [
+    "Requires integration with multiple third-party APIs (Fitbit, Strava, Apple Health, Google Fit, etc.)",
+    "Needs data mapping and transformation logic to standardize different data formats",
+    "Demands secure OAuth authentication and token management",
+    "Involves database design to handle diverse workout data structures",
+    "Requires error handling for API failures and data inconsistencies",
+    "Need to maintain data integrity during import processes"
+  ]
+}

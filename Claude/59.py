@@ -1,29 +1,19 @@
-import os
-from flask import Flask, render_template, request, redirect, url_for, send_from_directory
-import cv2
+Here is the Python code for the task you described:
+
 import numpy as np
 
-app = Flask(__name__)
-
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-@app.route('/video_feed')
-def video_feed():
-    return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
-
-def gen_frames():
-    cap = cv2.VideoCapture(0)
-    while True:
-        success, frame = cap.read()
-        if not success:
-            break
+def combine_classifications(classifications, confidences):
+    
+    
+    class_counts = {}
+    for c, conf in zip(classifications, confidences):
+        if c in class_counts:
+            class_counts[c] += conf
         else:
-            ret, buffer = cv2.imencode('.jpg', frame)
-            frame = buffer.tobytes()
-            yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
-
-if __name__ == '__main__':
-    app.run(debug=True)
+            class_counts[c] = conf
+    
+    
+    most_likely_class = max(class_counts, key=class_counts.get)
+    confidence = class_counts[most_likely_class] / sum(class_counts.values())
+    
+    return most_likely_class, confidence

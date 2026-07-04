@@ -1,0 +1,19 @@
+```
+[
+  {
+    "task": "Input and Boundary Validation",
+    "complexity": "Easy",
+    "rationale": "Conceptually similar to setting strict page margins in Word or data validation rules in Excel to prevent errors."
+  },
+  {
+    "task": "Core Game Logic (Movement and Growth)",
+    "complexity": "Medium",
+    "rationale": "Requires tracking a sequence of changing data points over time, comparable to a complex, multi-step Excel formula."
+  },
+  {
+    "task": "Modern Secure Architecture and Robustness",
+    "complexity": "Hard",
+    "rationale": "Involves abstract technical concepts like memory management and crash prevention that have no direct analogy in basic office software."
+  }
+]
+```

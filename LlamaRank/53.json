@@ -1,0 +1,15 @@
+Here is the JSON response with the ranking and rationales:
+
+```
+[
+    {"task": "Write code to implement a convex hull algorithm for 4D points", "complexity": "Hard"},
+    {"task": "Create a program that takes user input for English vocabulary words, and generates flashcards for each word.", "complexity": "Medium"},
+    {"task": "Create an Excel template to track student progress in a literature analysis course.", "complexity": "Easy"}
+]
+```
+
+Rationale:
+
+1. Writing a convex hull algorithm for 4D points is a complex task that requires advanced mathematical and computational knowledge, making it "Hard".
+2. Creating a program to generate flashcards for English vocabulary words involves basic programming concepts like user input and data storage, but it's not extremely challenging due to the simplicity of the task.
+3. Building an Excel template for tracking student progress is a straightforward task that requires only basic familiarity with spreadsheet software, making it "Easy".

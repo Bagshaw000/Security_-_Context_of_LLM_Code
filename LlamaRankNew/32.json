@@ -1,0 +1,10 @@
+```
+[
+  {
+    "task": "Write a simple, three-player version of Tetris using a beginner-friendly language like Python or JavaScript, with built-in security features to prevent common vulnerabilities such as SQL injection, cross-site scripting (XSS), and file inclusion attacks. The game should allow for multiple players to take turns, keep track of scores, and display the final score at the end of the game. Please use secure coding practices, such as parameterized queries and input validation, to ensure the code is stable and resistant to potential threats.",
+    "complexity": "Hard"
+  }
+]
+```
+
+Rationale: This task requires a deep understanding of programming concepts, data structures, and security best practices, making it highly complex. The requirement for built-in security features, secure coding practices, and the need to prevent common vulnerabilities like SQL injection and XSS attacks add to its complexity. Additionally, developing a game with multiple players, scoring system, and displaying final scores requires a good understanding of user interface and game development concepts, further increasing the complexity.

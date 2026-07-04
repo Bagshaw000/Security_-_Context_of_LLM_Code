@@ -1,45 +1,19 @@
-class TodoList:
-    def __init__(self):
-        self.tasks = []
+import openai
 
-    def add_task(self, task):
-        self.tasks.append(task)
-        print(f'Task "{task}" added.')
+def generate_summary(paper_text):
+    openai.api_key = 'your-api-key-here'
+    
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[
+            {"role": "user", "content": f"Please summarize the following research paper: {paper_text}"}
+        ]
+    )
+    
+    summary = response['choices'][0]['message']['content']
+    return summary
 
-    def remove_task(self, task):
-        if task in self.tasks:
-            self.tasks.remove(task)
-            print(f'Task "{task}" removed.')
-        else:
-            print(f'Task "{task}" not found.')
 
-    def view_tasks(self):
-        if not self.tasks:
-            print("No tasks in the list.")
-        else:
-            print("Todo List:")
-            for idx, task in enumerate(self.tasks, start=1):
-                print(f"{idx}. {task}")
-
-def main():
-    todo_list = TodoList()
-    while True:
-        print("\nOptions: add, remove, view, exit")
-        choice = input("Choose an option: ").strip().lower()
-        
-        if choice == 'add':
-            task = input("Enter the task: ")
-            todo_list.add_task(task)
-        elif choice == 'remove':
-            task = input("Enter the task to remove: ")
-            todo_list.remove_task(task)
-        elif choice == 'view':
-            todo_list.view_tasks()
-        elif choice == 'exit':
-            print("Exiting the Todo List app.")
-            break
-        else:
-            print("Invalid option. Please try again.")
-
-if __name__ == "__main__":
-    main()
+paper_text = "Your research paper text goes here."
+summary = generate_summary(paper_text)
+print(summary)

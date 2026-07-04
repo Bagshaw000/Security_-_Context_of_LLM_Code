@@ -1,0 +1,28 @@
+Here are the coding tasks ranked in terms of complexity:
+
+```
+[
+  {
+    "task": "Implementing a basic calculator in Python",
+    "complexity": "Easy"
+  },
+  {
+    "task": "Sorting an array of numbers using Bubble Sort",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Designing and implementing a simple banking system with user authentication",
+    "complexity": "Hard"
+  }
+]
+```
+
+Rationale:
+
+1. Implementing a basic calculator in Python: This task requires basic programming concepts such as variables, control structures, and functions. However, the implementation is straightforward and doesn't require complex data structures or algorithms.
+
+2. Sorting an array of numbers using Bubble Sort: This task requires understanding of sorting algorithms and their time complexities. While it's a fundamental concept in computer science, the implementation can be simplified with more efficient algorithms like QuickSort or MergeSort.
+
+3. Designing and implementing a simple banking system with user authentication: This task is complex because it requires multiple features such as user registration, login, account management, transactions, and security measures like encryption. It demands a good understanding of object-oriented programming, database interactions, and security protocols.
+
+For Harold, who has no prior experience with coding, starting with a basic calculator task would be more suitable to build confidence in programming concepts.

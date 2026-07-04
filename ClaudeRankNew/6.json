@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a secure database system for an online bicycle shop",
+  "complexity": "Hard",
+  "rationale": "While John has foundational experience with Python, databases, and unit testing from his internship, this task requires advanced expertise beyond his current level. Key factors: (1) Security depth - implementing OWASP top 10, SQL injection prevention, and GDPR compliance requires specialized security knowledge; (2) Breadth of scope - combines database design, ORM implementation, authentication, encryption, and AWS deployment across multiple domains; (3) Experience gap - his startup role was assistant-level on inventory tools, not security architecture; (4) New technical areas - AWS RDS encryption, password hashing best practices, and audit logging are not mentioned in his background; (5) High-stakes domain - security vulnerabilities in e-commerce systems have serious consequences. A Medium task would involve building core CRUD operations with basic security, while this Hard task demands comprehensive security architecture, compliance knowledge, and production-ready practices."
+}
+```

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a secure, thread-safe Python simulation for multiple lifts in a skyscraper with concurrency management, defensive programming, and unit testing.",
+  "complexity": "Hard",
+  "rationale": "While John has Python and testing experience, managing multi-threaded concurrency, preventing race conditions, and designing a complex dispatching algorithm requires advanced synchronization knowledge beyond the typical scope of a junior-level inventory tool internship."
+}
+```

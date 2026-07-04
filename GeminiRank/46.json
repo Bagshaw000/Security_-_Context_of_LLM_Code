@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to implement a gradient ascent algorithm which looks for the global maximum of a function.",
+  "complexity": "Medium",
+  "rationale": "As a Principal Engineer, I view the basic iterative update logic as trivial. However, the specific requirement to find a 'global' maximum—rather than just a local one—introduces complexity involving local optima avoidance, learning rate scheduling, and convergence tuning."
+}
+```

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Elevator Management System",
+  "complexity": "Hard",
+  "rationale": "This task requires managing multiple moving variables simultaneously, implementing complex optimization algorithms for efficiency, and building rigorous safety checks to prevent system crashes—concepts far more advanced than basic spreadsheet formulas."
+}
+```

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a production-ready convex hull algorithm optimized for 4D point sets",
+  "complexity": "Hard",
+  "rationale": "While Brad's background in distributed systems and large-scale architecture is directly applicable, this task combines multiple challenging dimensions: (1) 4D convex hull algorithms are non-trivial—geometric algorithms in higher dimensions require strong mathematical foundations and careful implementation; (2) the requirement for O(n log n) complexity necessitates sophisticated data structures and algorithmic optimization; (3) numerical stability and floating-point precision issues in geometric computations are notoriously subtle and error-prone; (4) distributed systems integration adds thread-safety and observability requirements; (5) comprehensive edge-case handling (collinear points, duplicates, precision boundaries) demands meticulous testing. Although Brad has the software engineering maturity and systems thinking to architect this correctly, the intersection of computational geometry complexity, numerical precision challenges, and production-grade requirements (logging, monitoring, security) elevates this beyond medium difficulty into Hard territory."
+}
+```

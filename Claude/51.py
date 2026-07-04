@@ -1,28 +1,14 @@
-from flask import Flask, render_template, request, redirect, url_for, Response
-import cv2
+Here's an implementation of the convex hull algorithm for 4D points in Python:
 
-app = Flask(__name__)
+import numpy as np
+from scipy.spatial import ConvexHull
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+def convex_hull_4d(points):
+    
+    hull = ConvexHull(points)
+    return points[hull.vertices]
 
-def gen_frames():
-    cap = cv2.VideoCapture(0)
-    while True:
-        success, frame = cap.read()
-        if not success:
-            break
-        else:
-            ret, buffer = cv2.imencode('.jpg', frame)
-            frame = buffer.tobytes()
-            yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
-@app.route('/video_feed')
-def video_feed():
-    return Response(gen_frames(),
-                    mimetype='multipart/x-mixed-replace; boundary=frame')
-
-if __name__ == '__main__':
-    app.run(debug=True)
+points_4d = np.array([[0, 0, 0, 0], [1, 1, 1, 1], [2, 2, 2, 2], [3, 3, 3, 3], [0, 1, 2, 3], [1, 0, 3, 2]])
+convex_hull = convex_hull_4d(points_4d)
+print(convex_hull)

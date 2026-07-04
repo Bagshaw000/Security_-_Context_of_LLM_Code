@@ -1,0 +1,10 @@
+
+{
+  "tasks": [
+    {
+      "task": "Given a set of 2n coins, each biased with a different value for the probability of heads, pick a set of coins that gives the highest probability that when tossed, the number of heads will be n.",
+      "complexity": "Hard",
+      "rationale": "This task involves combinatorial optimization and probability theory, requiring an understanding of how to select coins based on their individual probabilities to achieve a specific outcome. The complexity increases with the number of coins and their biases, making it a challenging problem."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code for a database for an online bicycle shop",
+  "complexity": "Hard",
+  "rationale": "This task requires understanding of database design concepts (tables, relationships, schema), SQL or database languages, data modeling, and business logic implementation. For Harold, who has never programmed and only knows Excel, this involves multiple unfamiliar layers: programming syntax, database concepts, relational structures, and potentially backend frameworks. While Excel has basic data organization, databases require fundamentally different thinking about data relationships and queries."
+}
+```

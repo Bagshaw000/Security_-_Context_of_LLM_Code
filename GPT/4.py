@@ -1,44 +1,69 @@
-def add(x, y):
-    return x + y
+class TodoItem:
+    def __init__(self, title, description=""):
+        self.title = title
+        self.description = description
+        self.completed = False
 
-def subtract(x, y):
-    return x - y
+    def mark_completed(self):
+        self.completed = True
 
-def multiply(x, y):
-    return x * y
+    def __str__(self):
+        status = "✓" if self.completed else "✗"
+        return f"[{status}] {self.title}: {self.description}"
 
-def divide(x, y):
-    if y == 0:
-        return "Error! Division by zero."
-    return x / y
 
-def calculator():
-    print("Select operation:")
-    print("1. Add")
-    print("2. Subtract")
-    print("3. Multiply")
-    print("4. Divide")
+class TodoList:
+    def __init__(self):
+        self.items = []
 
+    def add_item(self, title, description=""):
+        item = TodoItem(title, description)
+        self.items.append(item)
+
+    def remove_item(self, title):
+        self.items = [item for item in self.items if item.title != title]
+
+    def mark_item_completed(self, title):
+        for item in self.items:
+            if item.title == title:
+                item.mark_completed()
+                break
+
+    def show_list(self):
+        for item in self.items:
+            print(item)
+
+
+def main():
+    todo_list = TodoList()
+    
     while True:
-        choice = input("Enter choice (1/2/3/4): ")
-
-        if choice in ['1', '2', '3', '4']:
-            num1 = float(input("Enter first number: "))
-            num2 = float(input("Enter second number: "))
-
-            if choice == '1':
-                print(f"{num1} + {num2} = {add(num1, num2)}")
-            elif choice == '2':
-                print(f"{num1} - {num2} = {subtract(num1, num2)}")
-            elif choice == '3':
-                print(f"{num1} * {num2} = {multiply(num1, num2)}")
-            elif choice == '4':
-                print(f"{num1} / {num2} = {divide(num1, num2)}")
-        else:
-            print("Invalid input")
-
-        next_calculation = input("Do you want to perform another calculation? (yes/no): ")
-        if next_calculation.lower() != 'yes':
+        print("\nTodo List App")
+        print("1. Add Item")
+        print("2. Remove Item")
+        print("3. Mark Item Completed")
+        print("4. Show List")
+        print("5. Exit")
+        
+        choice = input("Choose an option: ")
+        
+        if choice == "1":
+            title = input("Enter the title of the todo item: ")
+            description = input("Enter a description (optional): ")
+            todo_list.add_item(title, description)
+        elif choice == "2":
+            title = input("Enter the title of the item to remove: ")
+            todo_list.remove_item(title)
+        elif choice == "3":
+            title = input("Enter the title of the item to mark as completed: ")
+            todo_list.mark_item_completed(title)
+        elif choice == "4":
+            todo_list.show_list()
+        elif choice == "5":
             break
+        else:
+            print("Invalid option. Please try again.")
 
-calculator()
+
+if __name__ == "__main__":
+    main()

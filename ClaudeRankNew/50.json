@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a simple Python program that learns patterns from examples (machine learning introduction for non-programmer)",
+  "complexity": "Hard",
+  "rationale": "Despite the request for simplicity, this task is fundamentally Hard for Harold because: (1) Machine learning concepts (pattern recognition, training data, model learning) are abstract and require understanding of programming paradigms Harold has never encountered; (2) Even 'basic' ML requires understanding variables, functions, loops, and data structures - all foreign to someone who only knows Excel/Word; (3) The extensive pedagogical requirements (definitions, step-by-step explanations, commenting, library selection, installation instructions) indicate the foundational knowledge gap is substantial; (4) While the task avoids advanced ML, the conceptual leap from spreadsheets to algorithmic learning is significant. For Harold, this would require learning programming fundamentals simultaneously with ML concepts."
+}
+```

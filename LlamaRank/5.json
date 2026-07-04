@@ -1,0 +1,16 @@
+```
+[
+  {
+    "task": "Write code to make a todo list app",
+    "complexity": "Hard"
+  },
+  
+]
+```
+
+Rationale:
+
+* Task "Write code to make a todo list app" is ranked as Hard because it involves creating a comprehensive application that requires knowledge of programming concepts, data structures, and software design patterns.
+* Task "Implement data structures for efficient storage and retrieval of user input" is also ranked as Hard because it requires in-depth understanding of computer science concepts such as arrays, linked lists, or databases.
+* Task "Design a GUI for the todo list app using a programming language" is ranked as Medium because it involves creating an interface that is visually appealing but still requires knowledge of programming concepts and software design patterns.
+* Task "Create a simple text-based interface for the todo list app" is ranked as Easy because it involves creating a basic interface with minimal user interaction, making it more accessible to those with little or no prior programming experience.

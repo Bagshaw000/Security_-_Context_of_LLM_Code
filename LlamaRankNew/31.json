@@ -1,0 +1,24 @@
+```
+[
+  {
+    "task": "Design a Trie Data Structure",
+    "complexity": "Easy"
+  },
+  {
+    "task": "Implement a Sorting Algorithm (e.g., Quicksort)",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Develop an Authentication System using OAuth",
+    "complexity": "Hard"
+  }
+]
+```
+
+Rationale:
+
+1. Designing a Trie Data Structure: This task involves creating a data structure to store and retrieve strings efficiently. It requires basic understanding of data structures and algorithms but is relatively simple.
+
+2. Implementing a Sorting Algorithm (e.g., Quicksort): This task involves writing an algorithm to sort a list of elements. It requires a good grasp of algorithms, data structures, and programming concepts but is not overly complex.
+
+3. Developing an Authentication System using OAuth: This task involves designing and implementing an authentication system that utilizes industry-standard protocols for secure authentication and authorization. It requires expertise in object-oriented design, security considerations, and industry-standard protocols, making it a more challenging task.

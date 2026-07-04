@@ -1,86 +1,84 @@
-import os
-import boto3
-import unittest
-from flask import Flask, render_template_string, request, redirect, url_for
-from botocore.exceptions import NoCredentialsError
+import numpy as np
 
-
-app = Flask(__name__)
-
-
-
-S3_BUCKET = os.environ.get('S3_BUCKET_NAME', 'bristol-video-storage')
-S3_REGION = os.environ.get('AWS_REGION', 'eu-west-2')
-s3_client = boto3.client('s3', region_name=S3_REGION)
-
-
-INDEX_HTML = 
-
-WATCH_HTML = 
-
-@app.route('/')
-def index():
+class GlobalGradientAscentOptimizer:
     
-    videos = []
-    try:
-        response = s3_client.list_objects_v2(Bucket=S3_BUCKET)
-        if 'Contents' in response:
-            videos = [obj['Key'] for obj in response['Contents'] if obj['Key'].endswith('.mp4')]
-    except Exception as e:
-        print(f"Error fetching from S3: {e}")
-    
-    return render_template_string(INDEX_HTML, videos=videos)
 
-@app.route('/upload', methods=['POST'])
-def upload():
-    
-    file = request.files.get('video_file')
-    if file and file.filename != '':
-        try:
-            s3_client.upload_fileobj(
-                file, 
-                S3_BUCKET, 
-                file.filename,
-                ExtraArgs={'ContentType': 'video/mp4'}
-            )
-        except NoCredentialsError:
-            return "AWS Credentials not found", 403
-    return redirect(url_for('index'))
+    def __init__(self, learning_rate=0.01, max_iterations=1000, tolerance=1e-7, n_restarts=25):
+        self.learning_rate = learning_rate
+        self.max_iterations = max_iterations
+        self.tolerance = tolerance
+        self.n_restarts = n_restarts
 
-@app.route('/watch/<filename>')
-def watch(filename):
-    
-    try:
+    def _compute_numerical_gradient(self, func, x, epsilon=1e-8):
         
-        url = s3_client.generate_presigned_url(
-            'get_object',
-            Params={'Bucket': S3_BUCKET, 'Key': filename},
-            ExpiresIn=3600
-        )
-    except Exception as e:
-        return str(e), 500
+        grad = np.zeros_like(x, dtype=float)
+        for i in range(len(x)):
+            x_step_plus = np.copy(x).astype(float)
+            x_step_minus = np.copy(x).astype(float)
+            x_step_plus[i] += epsilon
+            x_step_minus[i] -= epsilon
+            grad[i] = (func(x_step_plus) - func(x_step_minus)) / (2 * epsilon)
+        return grad
+
+    def optimize(self, func, bounds, grad_func=None):
         
-    return render_template_string(WATCH_HTML, filename=filename, video_url=url)
+        bounds = np.array(bounds)
+        dim = len(bounds)
+        global_best_x = None
+        global_best_val = -np.inf
 
+        for restart in range(self.n_restarts):
+            
+            current_x = np.random.uniform(bounds[:, 0], bounds[:, 1])
+            
+            for i in range(self.max_iterations):
+                if grad_func:
+                    gradient = grad_func(current_x)
+                else:
+                    gradient = self._compute_numerical_gradient(func, current_x)
 
+                
+                next_x = current_x + self.learning_rate * gradient
+                
+                
+                next_x = np.clip(next_x, bounds[:, 0], bounds[:, 1])
 
-class TestStreamingApp(unittest.TestCase):
-    def setUp(self):
-        app.config['TESTING'] = True
-        self.client = app.test_client()
+                
+                if np.linalg.norm(next_x - current_x) < self.tolerance:
+                    current_x = next_x
+                    break
+                
+                current_x = next_x
 
-    def test_index_route(self):
-        
-        response = self.client.get('/')
-        self.assertEqual(response.status_code, 200)
-        self.assertIn(b'Video Management System', response.data)
+            current_val = func(current_x)
 
-    def test_upload_redirect(self):
-        
-        response = self.client.post('/upload', data={'video_file': (None, '')})
-        self.assertEqual(response.status_code, 302)
+            
+            if current_val > global_best_val:
+                global_best_val = current_val
+                global_best_x = current_x
 
-if __name__ == '__main__':
+        return global_best_x, global_best_val
+
+def example_objective(x):
     
     
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    
+    main_peak = np.exp(-(x[0]**2 + x[1]**2))
+    
+    local_peak = 0.5 * np.exp(-((x[0]-3)**2 + (x[1]-3)**2))
+    return main_peak + local_peak
+
+if __name__ == "__main__":
+    
+    search_bounds = [(-5, 5), (-5, 5)]
+    
+    optimizer = GlobalGradientAscentOptimizer(
+        learning_rate=0.1, 
+        max_iterations=500, 
+        n_restarts=15
+    )
+    
+    best_coords, max_value = optimizer.optimize(example_objective, search_bounds)
+    
+    print(f"Global Maximum found at: {best_coords}")
+    print(f"Maximum Value: {max_value}")

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write a sorting function that sorts strings according to underlying ordering",
+  "complexity": "Hard",
+  "rationale": "For Harold, this task is Hard because it requires understanding of: (1) functions and how to create them, (2) algorithms and logic flow, (3) string comparison concepts, (4) loops and conditional statements. While Harold understands sequential processes from Excel formulas, he has no foundation in programming syntax, function creation, or algorithmic thinking needed to implement even a basic sorting approach."
+}
+```

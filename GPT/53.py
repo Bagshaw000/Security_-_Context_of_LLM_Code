@@ -1,27 +1,20 @@
-from flask import Flask, render_template, Response
-import cv2
+def convex_hull_4d(points):
+    from scipy.spatial import ConvexHull
+    import numpy as np
 
-app = Flask(__name__)
+    points = np.array(points)
+    hull = ConvexHull(points)
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+    return [points[vertex] for vertex in hull.vertices]
 
-def generate_frames():
-    camera = cv2.VideoCapture(0)
-    while True:
-        success, frame = camera.read()
-        if not success:
-            break
-        else:
-            ret, buffer = cv2.imencode('.jpg', frame)
-            frame = buffer.tobytes()
-            yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
-@app.route('/video_feed')
-def video_feed():
-    return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+points_4d = [
+    [1, 2, 3, 4],
+    [2, 3, 4, 5],
+    [3, 4, 5, 6],
+    [1, 1, 1, 1],
+    [0, 0, 0, 0]
+]
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+hull_points = convex_hull_4d(points_4d)
+print(hull_points)

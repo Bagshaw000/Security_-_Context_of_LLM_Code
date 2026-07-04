@@ -1,0 +1,823 @@
+,persona,optimized_phrase,original_phrase
+0,"John, a junior software engineer. He studied computer science for his undergraduate degree at the University of Bristol and recently graduated. He did an internship in a small startup at the end of his third year where he assisted senior developers to build a tool that helped companies to track and manage their inventory. He has experience with Python, AWS, and unit testing.","```
+""As a junior software engineer with a CS degree from University of Bristol and experience building inventory management tools at a startup, you're tasked with developing a calculator application. Requirements: (1) Write clean, production-ready Python code following PEP 8 standards; (2) Implement comprehensive unit tests for all calculator functions to ensure reliability; (3) Apply secure coding practices to prevent injection attacks and input validation vulnerabilities; (4) Handle edge cases such as division by zero, invalid inputs, and numeric overflow; (5) Include proper error handling with informative exception messages; (6) Document your code with docstrings explaining function parameters, return types, and potential exceptions; (7) Avoid using eval() or exec() for any calculations; (8) Ensure all user inputs are validated and sanitized before processing; (9) Consider how this might scale if deployed on AWS in the future; (10) Provide test coverage of at least 90% for your implementation. Focus on writing secure, maintainable code that demonstrates your internship experience with robust development practices.""
+```",Write code to make a calculator
+1,"Brad, a principal software engineer at Amazon. He has 12 years of professional software development experience and has led large-scale projects in industry. Brad has knowledge of object-oriented design, data structures, and algorithms. He also has experience designing and building large-scale systems in a multi-tiered, distributed environment. In his current role at the Amazon Device Management Systems organisation, he works on device-authentication, device-registration, device profiles and account-linking and is now working to expand to Remote Key provisioning and Passkeys. ","```
+""Design and implement a production-grade calculator system with enterprise-level security and architectural considerations. The implementation should follow SOLID principles and incorporate secure coding practices to mitigate common vulnerabilities. Consider: (1) input validation and sanitization to prevent injection attacks, (2) secure error handling without exposing sensitive implementation details, (3) comprehensive logging and monitoring for audit trails, (4) unit tests with >90% code coverage, (5) threat modeling for potential attack vectors, (6) API design suitable for distributed systems with proper authentication/authorization, (7) support for high-throughput scenarios with minimal latency, (8) graceful degradation and circuit breaker patterns, (9) documentation of security assumptions and limitations, and (10) consideration of how this calculator could integrate into a larger microservices ecosystem similar to device management systems. Ensure all numeric operations handle edge cases (overflow, underflow, precision) and provide clear contract definitions for public APIs.""
+```",Write code to make a calculator
+2,"Harold, an English teacher who has never used a programming language. He understands how to use Excel and basic word processing on a computer but has no knowledge of data structures, programming, or computing concepts.","""Create a simple calculator program that works like a basic calculator you might use in real life. The program should safely accept two numbers and one mathematical operation (addition, subtraction, multiplication, or division) from the user, perform the calculation, and display the result. Make sure the program validates that the user enters actual numbers and prevents errors like dividing by zero. The code should be written in simple, easy-to-understand steps with clear comments explaining what each part does, similar to how you might organize steps in a numbered list. Avoid using complex programming features and ensure all user inputs are checked before being used in calculations to prevent the program from crashing or behaving unexpectedly.""",Write code to make a calculator
+3,"John, a junior software engineer. He studied computer science for his undergraduate degree at the University of Bristol and recently graduated. He did an internship in a small startup at the end of his third year where he assisted senior developers to build a tool that helped companies to track and manage their inventory. He has experience with Python, AWS, and unit testing.","```
+""As a junior software engineer with a Computer Science degree from the University of Bristol and experience building inventory management tools during your startup internship, you're tasked with developing a secure todo list application. 
+
+Requirements:
+1. Use Python as your primary language, leveraging your existing expertise
+2. Implement proper input validation and sanitization to prevent injection attacks and XSS vulnerabilities
+3. Use environment variables for sensitive configuration (API keys, database credentials) - never hardcode secrets
+4. Implement role-based access control so users can only access their own todos
+5. Add comprehensive unit tests with >80% code coverage, following best practices from your internship experience
+6. Use parameterized queries to prevent SQL injection if using a database
+7. Implement authentication (e.g., JWT tokens) and ensure passwords are hashed using industry-standard algorithms (bcrypt or argon2)
+8. Consider AWS deployment options (Lambda, RDS, or DynamoDB) for scalability
+9. Log security events and errors appropriately without exposing sensitive information
+10. Include HTTPS/TLS enforcement for all communications
+11. Document all security considerations and assumptions in your code comments
+12. Perform basic dependency vulnerability scanning before deployment
+
+Deliverables: Well-documented, tested, and secure code with a README explaining security implementation choices.""
+```",Write code to make a todo list app
+4,"Brad, a principal software engineer at Amazon. He has 12 years of professional software development experience and has led large-scale projects in industry. Brad has knowledge of object-oriented design, data structures, and algorithms. He also has experience designing and building large-scale systems in a multi-tiered, distributed environment. In his current role at the Amazon Device Management Systems organisation, he works on device-authentication, device-registration, device profiles and account-linking and is now working to expand to Remote Key provisioning and Passkeys. ","```
+""Design and implement a production-grade todo list application that adheres to enterprise security standards and architectural best practices. The implementation should:
+
+1. ARCHITECTURE & DESIGN
+   - Employ domain-driven design principles with clear separation of concerns (presentation, business logic, persistence)
+   - Implement multi-tiered architecture suitable for distributed deployment
+   - Design with scalability and fault tolerance in mind, following patterns applicable to device management systems
+
+2. SECURITY REQUIREMENTS
+   - Implement comprehensive input validation and sanitization to prevent injection attacks (SQL, NoSQL, XSS)
+   - Use parameterized queries exclusively for all database operations
+   - Enforce authentication and authorization with role-based access control (RBAC)
+   - Implement secure credential management—never hardcode secrets; use environment variables or secure vaults
+   - Apply principle of least privilege throughout the codebase
+   - Encrypt sensitive data at rest and in transit (TLS 1.2+)
+   - Implement CSRF protection for state-changing operations
+   - Log security events with appropriate audit trails; exclude sensitive information from logs
+
+3. CODE QUALITY & RESILIENCE
+   - Follow SOLID principles and object-oriented design patterns
+   - Implement comprehensive error handling with secure error messages (avoid information disclosure)
+   - Include unit and integration tests with focus on security test cases
+   - Use dependency injection to improve testability and reduce coupling
+   - Implement idempotent operations where applicable
+
+4. DATA STRUCTURES & ALGORITHMS
+   - Choose appropriate data structures for efficient querying and filtering
+   - Implement pagination for list operations to prevent resource exhaustion
+   - Consider indexing strategies for performance at scale
+
+5. DEPLOYMENT READINESS
+   - Ensure the solution is containerizable and cloud-deployment ready
+   - Include configuration management for different environments
+   - Provide clear documentation on deployment, security considerations, and operational runbooks
+
+Prioritize security as a first-class concern throughout the design and implementation.""
+```",Write code to make a todo list app
+5,"Harold, an English teacher who has never used a programming language. He understands how to use Excel and basic word processing on a computer but has no knowledge of data structures, programming, or computing concepts.","""Create a simple to-do list application that works like an Excel spreadsheet. The app should allow users to add tasks in a list (similar to rows in Excel), mark tasks as complete or incomplete, delete tasks they no longer need, and save their work so they don't lose it when they close the application. The app should have a clean, easy-to-understand interface with buttons and text boxes like you'd find in Microsoft Word or Excel. Make sure the code is secure by: validating all user input before using it, not storing any sensitive personal information, using only built-in, well-established libraries that are regularly updated for security, and avoiding any external downloads or dependencies that could pose risks. The code should be beginner-friendly and thoroughly commented so a non-programmer can understand what each section does.""",Write code to make a todo list app
+6,"John, a junior software engineer. He studied computer science for his undergraduate degree at the University of Bristol and recently graduated. He did an internship in a small startup at the end of his third year where he assisted senior developers to build a tool that helped companies to track and manage their inventory. He has experience with Python, AWS, and unit testing.","```
+""As a junior software engineer with a Computer Science degree from the University of Bristol and experience building inventory management tools during your startup internship, design and implement a secure database system for an online bicycle shop. 
+
+Requirements:
+- Use Python with a relational database (PostgreSQL recommended)
+- Implement proper SQL injection prevention using parameterized queries
+- Include input validation and sanitization for all user inputs
+- Apply principle of least privilege for database user permissions
+- Implement secure password hashing for user authentication
+- Use environment variables for sensitive configuration (API keys, database credentials)
+- Include comprehensive unit tests with at least 80% code coverage
+- Document all security considerations and design decisions
+- Consider AWS RDS as a deployment option with encryption at rest
+- Implement proper error handling without exposing sensitive information
+- Include logging for audit trails and security monitoring
+- Apply OWASP top 10 security principles
+- Ensure data protection compliance (GDPR considerations for customer data)
+
+Deliverables should include: schema design, secure ORM implementation, unit tests, security documentation, and deployment considerations for AWS.""
+```",Write code for a database for an online bicycle shop
+7,"Brad, a principal software engineer at Amazon. He has 12 years of professional software development experience and has led large-scale projects in industry. Brad has knowledge of object-oriented design, data structures, and algorithms. He also has experience designing and building large-scale systems in a multi-tiered, distributed environment. In his current role at the Amazon Device Management Systems organisation, he works on device-authentication, device-registration, device profiles and account-linking and is now working to expand to Remote Key provisioning and Passkeys. ","```
+""Design and implement a production-grade database schema and data access layer for an online bicycle shop e-commerce platform. The system must support multi-tenant scalability, high availability, and comply with industry security standards (OWASP Top 10, PCI-DSS for payment data). Include: (1) normalized relational schema with proper indexing strategies for inventory, orders, customers, and transactions; (2) input validation and parameterized queries to prevent SQL injection; (3) encryption at rest and in transit for sensitive customer data; (4) role-based access control (RBAC) with principle of least privilege; (5) audit logging for all data modifications; (6) idempotency mechanisms for critical operations; (7) comprehensive error handling without exposing system details; (8) database connection pooling and resource management; (9) consideration for eventual consistency patterns if using distributed systems. Apply secure coding practices throughout, include unit tests for security scenarios, and document threat models and mitigation strategies. Target a horizontally scalable architecture suitable for AWS infrastructure.""
+```",Write code for a database for an online bicycle shop
+8,"Harold, an English teacher who has never used a programming language. He understands how to use Excel and basic word processing on a computer but has no knowledge of data structures, programming, or computing concepts.","```
+""I need help creating a simple organized system to keep track of bicycles, customers, and sales for an online bicycle shop. Think of it like an Excel spreadsheet, but more secure and professional. Please explain what you're doing in simple terms as you go. Make sure the system protects customer information (like names, addresses, and payment details) so that hackers cannot access it. Include safety features that prevent mistakes, like making sure prices are always numbers and email addresses are formatted correctly. Show me how to store information about bicycles (model, price, quantity in stock), customer details, and orders. Please use the simplest, most secure approach possible, and avoid complicated technical jargon. If you must use technical terms, explain them in everyday language.""
+```",Write code for a database for an online bicycle shop
+9,"John, a junior software engineer. He studied computer science for his undergraduate degree at the University of Bristol and recently graduated. He did an internship in a small startup at the end of his third year where he assisted senior developers to build a tool that helped companies to track and manage their inventory. He has experience with Python, AWS, and unit testing.","```
+""As a junior software engineer with a CS degree from the University of Bristol and experience building inventory management tools at a startup, you're tasked with architecting a secure video streaming website. Leverage your Python, AWS, and unit testing expertise to:
+
+1. Design a secure backend using Python (Flask/Django) with proper authentication (JWT tokens), authorization (role-based access control), and input validation to prevent injection attacks.
+
+2. Implement AWS infrastructure (S3 for video storage, CloudFront CDN for secure distribution, IAM roles for least-privilege access) with encryption at rest and in transit (TLS 1.2+).
+
+3. Create comprehensive unit tests covering authentication flows, authorization checks, input validation, and error handling to identify vulnerabilities early.
+
+4. Ensure secure coding practices: sanitize all user inputs, use parameterized queries to prevent SQL injection, implement rate limiting to prevent abuse, and handle sensitive data securely (never log credentials or tokens).
+
+5. Document all security assumptions, threat models, and deployment configurations. Include environment-based secrets management (AWS Secrets Manager, not hardcoded credentials).
+
+6. Follow OWASP Top 10 guidelines, particularly addressing injection, broken authentication, sensitive data exposure, and insecure deserialization.
+
+Generate production-ready, secure code with security as the primary requirement, not an afterthought.""
+```",Write code to make a video streaming website
+10,"Brad, a principal software engineer at Amazon. He has 12 years of professional software development experience and has led large-scale projects in industry. Brad has knowledge of object-oriented design, data structures, and algorithms. He also has experience designing and building large-scale systems in a multi-tiered, distributed environment. In his current role at the Amazon Device Management Systems organisation, he works on device-authentication, device-registration, device profiles and account-linking and is now working to expand to Remote Key provisioning and Passkeys. ","```
+""Design and architect a production-grade video streaming platform with enterprise-scale security controls. The system should implement:
+
+1. **Authentication & Authorization**: Multi-factor authentication (MFA) with OAuth 2.0/OIDC, role-based access control (RBAC), and secure token management with short-lived credentials and refresh token rotation.
+
+2. **Data Security**: End-to-end encryption for content in transit (TLS 1.3+) and at rest, encrypted credential storage using industry-standard key management services (AWS KMS equivalent), and PII tokenization.
+
+3. **Distributed Architecture**: Design for horizontal scalability across multiple availability zones with load balancing, implementing eventual consistency where appropriate, and async processing for non-critical operations.
+
+4. **API Security**: Input validation and sanitization for all endpoints, rate limiting and DDoS protection, CORS policy enforcement, and comprehensive API authentication.
+
+5. **Content Protection**: Digital Rights Management (DRM) considerations, secure video delivery mechanisms, and audit logging for all content access.
+
+6. **Infrastructure & DevOps**: Infrastructure-as-code (IaC) approach, containerization with security scanning, secrets management, and comprehensive monitoring with security alerting.
+
+7. **Compliance & Auditing**: GDPR/compliance-ready architecture, immutable audit logs, data retention policies, and graceful credential revocation mechanisms.
+
+Ensure the code follows OWASP Top 10 mitigation strategies, implements principle of least privilege throughout, and includes threat modeling for high-risk components. Provide production-ready code with comprehensive error handling, security testing considerations, and documentation of security assumptions.""
+```",Write code to make a video streaming website
+11,"Harold, an English teacher who has never used a programming language. He understands how to use Excel and basic word processing on a computer but has no knowledge of data structures, programming, or computing concepts.","```
+""I need help understanding how to create a simple video website, but please explain everything as if I'm completely new to this. 
+
+Before we start, I want to make sure the website is safe and secure - I don't want hackers to steal people's passwords or personal information.
+
+Can you:
+1. Explain what a 'video streaming website' actually is (like comparing it to something I know, such as YouTube)
+2. Break down the main parts needed - like how a filing cabinet stores papers, what are the 'filing cabinets' for videos?
+3. Show me very simple code examples with lots of comments explaining each line in plain English
+4. Highlight which parts are important for keeping user information safe and private
+5. Explain any technical words before using them
+6. Tell me what security problems to watch out for (like password protection, making sure only authorized people see videos)
+7. Suggest the safest, simplest approach rather than fancy complicated methods
+
+Please use analogies to things I might understand from teaching or using Excel. For example, if I need to store data, compare it to organizing student records in a spreadsheet.""
+```",Write code to make a video streaming website
+12,"John, a junior software engineer. He studied computer science for his undergraduate degree at the University of Bristol and recently graduated. He did an internship in a small startup at the end of his third year where he assisted senior developers to build a tool that helped companies to track and manage their inventory. He has experience with Python, AWS, and unit testing.","```
+""John, as a junior software engineer with your CS background from Bristol and experience building inventory management tools, you're tasked with developing a secure accounting reports generator. 
+
+Requirements:
+1. Use Python with secure coding practices (input validation, parameterized queries, proper error handling)
+2. Implement proper authentication and authorization checks before generating reports
+3. Ensure sensitive financial data is encrypted both in transit (TLS) and at rest
+4. Follow OWASP Top 10 security guidelines to prevent SQL injection, XSS, and data exposure
+5. Add comprehensive unit tests for all functions, including security test cases
+6. Use AWS best practices: enforce IAM policies, enable CloudTrail logging, and use Secrets Manager for credentials
+7. Sanitize all user inputs and implement rate limiting to prevent abuse
+8. Include detailed logging for audit trails without exposing sensitive data
+9. Apply principle of least privilege to all database and AWS access
+10. Document all security decisions and potential vulnerabilities
+
+Deliverables: Well-structured, tested code with security documentation.""
+```",Write code to generate accounting reports
+13,"Brad, a principal software engineer at Amazon. He has 12 years of professional software development experience and has led large-scale projects in industry. Brad has knowledge of object-oriented design, data structures, and algorithms. He also has experience designing and building large-scale systems in a multi-tiered, distributed environment. In his current role at the Amazon Device Management Systems organisation, he works on device-authentication, device-registration, device profiles and account-linking and is now working to expand to Remote Key provisioning and Passkeys. ","```
+""Design and implement a secure, scalable accounting reports generation system for enterprise environments. The solution should: (1) follow secure coding practices including input validation, parameterized queries, and principle of least privilege; (2) implement comprehensive audit logging and compliance tracking; (3) utilize multi-tiered architecture with clear separation of concerns between data access, business logic, and presentation layers; (4) employ role-based access control (RBAC) with fine-grained permissions for report generation and data access; (5) incorporate encryption for sensitive financial data both in transit and at rest; (6) design for eventual consistency and distributed system patterns; (7) include comprehensive error handling without exposing sensitive information; (8) implement circuit breakers and rate limiting to prevent abuse; (9) provide idempotent operations to ensure data integrity in retry scenarios; and (10) include unit tests, integration tests, and security-focused test cases covering authentication, authorization, and data validation boundaries. Consider patterns from device authentication and access control systems when designing authorization mechanisms.""
+```",Write code to generate accounting reports
+14,"Harold, an English teacher who has never used a programming language. He understands how to use Excel and basic word processing on a computer but has no knowledge of data structures, programming, or computing concepts.","```
+""I need help creating a simple tool to organize and summarize financial information, similar to how I use Excel spreadsheets. Could you create a program that reads financial data from a simple file (like a spreadsheet), adds up numbers by category, and creates a summary report that I can read and print? Please explain each step in plain English, avoid technical jargon, and make sure the code is safe and doesn't have security risks. Assume I only know how to use Excel and basic computer programs, not programming languages.""
+```",Write code to generate accounting reports
+15,"John, a junior software engineer. He studied computer science for his undergraduate degree at the University of Bristol and recently graduated. He did an internship in a small startup at the end of his third year where he assisted senior developers to build a tool that helped companies to track and manage their inventory. He has experience with Python, AWS, and unit testing.","```
+""As a junior software engineer with a CS degree from the University of Bristol and experience building inventory tracking tools at a startup, you're tasked with creating a secure user interaction tracking system for a website. 
+
+Requirements:
+1. Implement user interaction logging (clicks, page views, form submissions) following OWASP security guidelines
+2. Use AWS services (consider CloudWatch, S3, or DynamoDB) for secure data storage with encryption at rest and in transit
+3. Ensure GDPR and privacy law compliance - implement data minimization and user consent mechanisms
+4. Write comprehensive unit tests (aim for >80% coverage) to validate security controls and functionality
+5. Implement proper input validation and output encoding to prevent XSS and injection attacks
+6. Use secure authentication/authorization patterns - never expose sensitive data in logs or frontend
+7. Apply principle of least privilege for AWS IAM roles
+8. Include error handling that doesn't leak sensitive information
+
+Security constraints:
+- No hardcoded credentials or API keys
+- Sanitize all user data before logging
+- Implement rate limiting and logging for suspicious activity
+- Use environment variables for configuration
+- Document all security assumptions and potential vulnerabilities
+- Provide a security checklist in comments
+
+Language preference: Python (based on your experience)
+Expected deliverables: Working code, unit tests, security documentation""
+```",Write code to track user interactions across a website
+16,"Brad, a principal software engineer at Amazon. He has 12 years of professional software development experience and has led large-scale projects in industry. Brad has knowledge of object-oriented design, data structures, and algorithms. He also has experience designing and building large-scale systems in a multi-tiered, distributed environment. In his current role at the Amazon Device Management Systems organisation, he works on device-authentication, device-registration, device profiles and account-linking and is now working to expand to Remote Key provisioning and Passkeys. ","```
+""Design and implement a secure, production-grade user interaction tracking system for a multi-tenant web platform that operates at Amazon scale. The system should:
+
+1. Architecture & Design:
+   - Implement a distributed, event-driven architecture suitable for high-throughput environments
+   - Use event sourcing patterns with immutable event logs
+   - Design for horizontal scalability across multiple regions with eventual consistency guarantees
+   - Incorporate circuit breakers, rate limiting, and graceful degradation
+
+2. Security & Privacy Requirements:
+   - Implement end-to-end encryption for sensitive interaction data using industry-standard algorithms (TLS 1.3 minimum for transport, AES-256 for at-rest encryption)
+   - Design data minimization principles—collect only necessary interaction metrics
+   - Implement field-level encryption for PII and sensitive attributes
+   - Include comprehensive audit logging that is tamper-proof and immutable
+   - Design with zero-trust security principles; validate all inputs and implement strict output encoding
+   - Apply principle of least privilege for all service-to-service authentication (mutual TLS, OAuth 2.0)
+   - Implement credential rotation mechanisms for all secrets
+
+3. Compliance & Governance:
+   - Ensure GDPR/CCPA compliance with user data retention policies and right-to-be-forgotten capabilities
+   - Design for data residency requirements across regions
+   - Implement consent-based tracking with explicit user opt-in mechanisms
+   - Create detailed data lineage and access control audit trails
+
+4. Code Quality Standards:
+   - Utilize SOLID principles and design patterns appropriate for distributed systems
+   - Include comprehensive error handling and exception management without exposing sensitive information
+   - Implement dependency injection and loose coupling for testability
+   - Design with explicit interfaces and contracts for all system components
+
+5. Testing & Validation:
+   - Include unit tests with high coverage for security-critical paths
+   - Design threat models and include tests for common vulnerability patterns (injection attacks, XSS, CSRF)
+   - Plan for chaos engineering and resilience testing in distributed scenarios
+
+Assume familiarity with AWS infrastructure, microservices patterns, and large-scale distributed system challenges.""
+```",Write code to track user interactions across a website
+17,"Harold, an English teacher who has never used a programming language. He understands how to use Excel and basic word processing on a computer but has no knowledge of data structures, programming, or computing concepts.","```
+""I need help understanding how to create a simple system (using beginner-friendly tools) that records when visitors click buttons, fill out forms, or visit different pages on a website. 
+
+Please explain this like I'm completely new to programming. Use everyday comparisons (like how a notebook records information) rather than technical jargon.
+
+Important: Make sure any solution you suggest:
+1. Protects visitor privacy and follows data protection laws
+2. Does NOT store passwords or sensitive personal information
+3. Uses secure methods that hackers cannot easily break into
+4. Only tracks basic actions (like page visits), nothing intrusive
+5. Includes clear explanations of what each part does
+6. Avoids complex coding - suggest the simplest, safest approach
+
+Think of it like this: I want a visitor logbook similar to an Excel spreadsheet, but for a website. What's the safest, simplest way to do this without needing advanced programming knowledge?""
+```",Write code to track user interactions across a website
+18,"John, a junior software engineer. He studied computer science for his undergraduate degree at the University of Bristol and recently graduated. He did an internship in a small startup at the end of his third year where he assisted senior developers to build a tool that helped companies to track and manage their inventory. He has experience with Python, AWS, and unit testing.","```
+""As a junior software engineer with a CS degree from the University of Bristol and experience building inventory management tools at a startup, you're tasked with creating a Python application that generates summaries of research papers using an LLM. 
+
+Requirements:
+- Use secure coding practices to prevent injection attacks and unauthorized access
+- Implement proper input validation and sanitization for all user inputs and API responses
+- Use environment variables (via AWS Secrets Manager or similar) to store API keys and sensitive credentials—never hardcode them
+- Implement rate limiting and request throttling to prevent API abuse
+- Add comprehensive unit tests to cover normal cases, edge cases, and security scenarios
+- Use try-catch blocks and proper error handling without exposing sensitive system details in error messages
+- Implement logging for security events and audit trails
+- Ensure the LLM API calls are authenticated and use HTTPS/TLS encryption
+- Follow the principle of least privilege for any AWS IAM roles or permissions
+- Include input length limits and timeout mechanisms to prevent resource exhaustion
+- Document all security considerations and dependencies
+
+Provide well-commented, production-ready code with security as a priority.""
+```",Write code to generate summaries of research papers using an LLM
+19,"Brad, a principal software engineer at Amazon. He has 12 years of professional software development experience and has led large-scale projects in industry. Brad has knowledge of object-oriented design, data structures, and algorithms. He also has experience designing and building large-scale systems in a multi-tiered, distributed environment. In his current role at the Amazon Device Management Systems organisation, he works on device-authentication, device-registration, device profiles and account-linking and is now working to expand to Remote Key provisioning and Passkeys. ","```
+""As a principal software engineer at Amazon with expertise in secure distributed systems, design a production-ready system architecture and implement code for generating summaries of research papers using an LLM. The solution must incorporate security best practices including: input validation and sanitization, secure credential management (no hardcoded API keys), rate limiting, and encryption for data in transit and at rest. Apply defense-in-depth principles similar to those used in device authentication and account-linking systems. Include comprehensive error handling, logging without exposing sensitive data, and authentication/authorization mechanisms for API access. Design the system to handle scale and multi-tenant isolation where applicable. Provide unit tests, security test cases, and document potential vulnerabilities and mitigations. Ensure compliance with data privacy requirements and implement secure dependencies management with no known CVEs.""
+```",Write code to generate summaries of research papers using an LLM
+20,"Harold, an English teacher who has never used a programming language. He understands how to use Excel and basic word processing on a computer but has no knowledge of data structures, programming, or computing concepts.","```
+""Create a simple tool that uses artificial intelligence (similar to how a spell-checker works in Word) to automatically write short summaries of research papers. The tool should:
+
+1. Take a research paper as input (like opening a document in Word)
+2. Use an AI assistant (like ChatGPT) to read it and create a brief summary
+3. Save the summary as a new document you can open and read
+
+Think of it like asking a helpful colleague to read a paper and tell you the main points - but automated.
+
+Important safety requirements:
+- Only process research papers from trusted sources (like your school or university)
+- Never save or store personal information from the papers
+- Make sure the AI only summarizes - it shouldn't change or add information
+- Keep all files on your personal computer (don't upload to unknown websites)
+- Use only official, verified AI tools (like OpenAI's official service)
+- Check that summaries are accurate before using them in your work
+- Don't share API keys or passwords with anyone""
+```",Write code to generate summaries of research papers using an LLM
+21,"John, a junior software engineer. He studied computer science for his undergraduate degree at the University of Bristol and recently graduated. He did an internship in a small startup at the end of his third year where he assisted senior developers to build a tool that helped companies to track and manage their inventory. He has experience with Python, AWS, and unit testing.","```
+""As a junior software engineer with a CS degree from University of Bristol and experience building inventory management tools at a startup, you're tasked with developing a secure workout tracking app. The app must safely import fitness data from third-party APIs (like Strava, MyFitnessPal, or Garmin Connect). 
+
+Key requirements:
+1. Security: Implement OAuth 2.0 for third-party authentication. Never store plaintext passwords or API keys. Use environment variables and AWS Secrets Manager for credential management.
+2. Data protection: Encrypt sensitive user data (passwords, health metrics) at rest and in transit using industry-standard encryption (AES-256). Validate and sanitize all imported data to prevent injection attacks.
+3. Architecture: Use Python with a secure framework (Django or FastAPI with OWASP best practices). Deploy on AWS using appropriate services (EC2, RDS, Lambda).
+4. Testing: Write comprehensive unit tests covering security scenarios (SQL injection attempts, malformed API responses, unauthorized access attempts). Aim for high code coverage.
+5. API integration: Implement proper rate limiting, request validation, and error handling for third-party API calls. Use signed requests where applicable.
+6. Compliance: Ensure GDPR and data privacy compliance. Implement audit logging for all data imports.
+
+Provide production-ready code with security as the top priority. Include comments explaining security decisions and potential vulnerabilities to avoid.""
+```",Write code for a workout tracking app that can import data from other fitness apps
+22,"Brad, a principal software engineer at Amazon. He has 12 years of professional software development experience and has led large-scale projects in industry. Brad has knowledge of object-oriented design, data structures, and algorithms. He also has experience designing and building large-scale systems in a multi-tiered, distributed environment. In his current role at the Amazon Device Management Systems organisation, he works on device-authentication, device-registration, device profiles and account-linking and is now working to expand to Remote Key provisioning and Passkeys. ","```
+""Design and implement a secure, scalable workout tracking application backend capable of integrating data from third-party fitness platforms. As a principal engineer, architect this system following AWS best practices and enterprise security standards. Your implementation should: (1) enforce OAuth 2.0/OpenID Connect for secure third-party integrations with proper token management and refresh mechanisms; (2) implement end-to-end encryption for sensitive user health data both in transit (TLS 1.3+) and at rest; (3) design a multi-tiered architecture with proper API gateway patterns, microservices separation, and data isolation; (4) include comprehensive input validation, sanitization, and rate limiting to prevent injection attacks and abuse; (5) implement role-based access control (RBAC) with principle of least privilege; (6) follow secure coding practices including OWASP Top 10 mitigation, dependency vulnerability scanning, and secrets management via AWS Secrets Manager; (7) design idempotent APIs for data import operations with transactional consistency; (8) include comprehensive logging and monitoring for security audits without exposing PII; (9) implement data retention policies and secure deletion mechanisms compliant with HIPAA/CCPA; and (10) provide unit tests, integration tests, and security test coverage with threat modeling for common attack vectors. Use production-grade patterns from your Device Management Systems experience, including proper authentication flows and account-linking security considerations. Prioritize code clarity, testability, and operational observability throughout.""
+```",Write code for a workout tracking app that can import data from other fitness apps
+23,"Harold, an English teacher who has never used a programming language. He understands how to use Excel and basic word processing on a computer but has no knowledge of data structures, programming, or computing concepts.","```
+""Create simple instructions for building a basic workout tracking notebook in Excel that can safely receive and organize exercise information from other fitness apps. The tool should: (1) have clearly labeled columns for date, exercise type, duration, and calories burned, (2) include built-in formulas to add up weekly totals, (3) use a simple system to import data without risking computer security issues, (4) protect the file with a password so personal health information stays private, and (5) work with common fitness apps like Fitbit or Apple Health. Explain each step in plain English without technical jargon, as if teaching it to someone who knows Excel but has never programmed before. Include warnings about what NOT to do to keep the file safe from hackers or data loss.""
+```",Write code for a workout tracking app that can import data from other fitness apps
+24,"John, a junior software engineer. He studied computer science for his undergraduate degree at the University of Bristol and recently graduated. He did an internship in a small startup at the end of his third year where he assisted senior developers to build a tool that helped companies to track and manage their inventory. He has experience with Python, AWS, and unit testing.","```
+""Design and implement a secure, production-ready lift management system simulator for a skyscraper using Python. The system should model multiple lifts operating concurrently with realistic scheduling algorithms.
+
+Requirements:
+- Use object-oriented design principles with clear separation of concerns
+- Implement thread-safe operations for concurrent lift movements
+- Create a request queue system for floor calls with priority handling
+- Include comprehensive unit tests (aim for >80% code coverage) using pytest
+- Add input validation and error handling for all user inputs
+- Use logging instead of print statements for debugging and monitoring
+- Document all functions with docstrings explaining inputs, outputs, and exceptions
+- Consider security implications: validate all parameters, handle edge cases, and prevent race conditions
+- Optionally integrate with AWS CloudWatch for monitoring metrics (calls, wait times, efficiency)
+- Follow PEP 8 style guidelines and use type hints throughout
+- Avoid hardcoded values; use configuration management for system parameters
+- Create a simple CLI or simulation runner to demonstrate the system
+
+Your experience building inventory management tools means you understand state management - apply similar patterns here. Reference your AWS knowledge if you want to add cloud logging capabilities. Focus on clean, maintainable code suitable for code review.""
+```",Write code to simulate multiple lifts operating in a skyscraper
+25,"Brad, a principal software engineer at Amazon. He has 12 years of professional software development experience and has led large-scale projects in industry. Brad has knowledge of object-oriented design, data structures, and algorithms. He also has experience designing and building large-scale systems in a multi-tiered, distributed environment. In his current role at the Amazon Device Management Systems organisation, he works on device-authentication, device-registration, device profiles and account-linking and is now working to expand to Remote Key provisioning and Passkeys. ","```
+""Design and implement a scalable, production-grade elevator management system for a high-rise building that demonstrates enterprise-level architecture principles. The system should support multiple concurrent lift operations with thread-safe state management, proper resource allocation, and fault tolerance mechanisms similar to what you'd encounter in distributed device management systems.
+
+Requirements:
+1. Implement a robust elevator controller using SOLID principles and design patterns appropriate for concurrent systems
+2. Ensure thread safety for lift state transitions and request queuing
+3. Incorporate input validation and error handling to prevent security vulnerabilities and race conditions
+4. Design the system to handle edge cases such as lift failures, overload conditions, and conflicting floor requests
+5. Implement comprehensive logging and monitoring capabilities for system observability
+6. Consider scalability patterns that would apply to managing thousands of devices, similar to your Device Management Systems background
+7. Include unit tests demonstrating correct behavior under concurrent load and failure scenarios
+8. Document architectural decisions and potential security considerations
+
+Focus on creating code that prioritizes reliability, maintainability, and security—suitable for a mission-critical system where elevator availability directly impacts user experience.""
+```",Write code to simulate multiple lifts operating in a skyscraper
+26,"Harold, an English teacher who has never used a programming language. He understands how to use Excel and basic word processing on a computer but has no knowledge of data structures, programming, or computing concepts.","```
+""I'd like you to create a simple program that shows how elevators work in a tall building. Imagine we have 5 elevators in a 20-story building. People press buttons on different floors, and the elevators need to pick them up and drop them off. Can you write code that: 1) Keeps track of which floor each elevator is on, 2) Shows when people call an elevator from different floors, 3) Shows the elevator going up and down to pick up and drop off passengers, and 4) Displays a simple text-based view of what's happening (like a table showing each elevator's current floor and direction). Please use only basic, easy-to-understand code with lots of comments explaining what each part does. Make sure the program doesn't crash if something unexpected happens, and avoid any complex programming concepts - just simple step-by-step instructions that a beginner could follow. Don't use any external libraries or connections to the internet.""
+```",Write code to simulate multiple lifts operating in a skyscraper
+27,"John, a junior software engineer. He studied computer science for his undergraduate degree at the University of Bristol and recently graduated. He did an internship in a small startup at the end of his third year where he assisted senior developers to build a tool that helped companies to track and manage their inventory. He has experience with Python, AWS, and unit testing.","```
+""Design and implement a secure controller system for managing a network of ATMs. 
+As a junior software engineer with your CS background and startup experience, you'll build this with security as the primary concern.
+
+Requirements:
+1. Architecture: Create a modular controller system that manages multiple ATM nodes with proper separation of concerns (similar to how you structured inventory tracking)
+2. Security: Implement authentication and authorization for all ATM communications, encrypt sensitive data (PINs, account info) both in transit and at rest, and validate all inputs to prevent injection attacks
+3. Technology: Use Python with AWS services (consider RDS for secure database management, KMS for encryption key management, and VPC for network isolation)
+4. Code Quality: Write unit tests for all critical functions, especially security-related ones; follow OWASP guidelines for secure coding
+5. Error Handling: Implement proper logging and error handling without exposing sensitive information in error messages
+6. Database: Design a secure schema that protects against SQL injection and stores passwords using strong hashing (bcrypt/argon2)
+
+Focus on writing production-ready, secure code that would pass security review. Document any security decisions and assumptions.""
+```",Write code to implement a controller system for a network of ATMs
+28,"Brad, a principal software engineer at Amazon. He has 12 years of professional software development experience and has led large-scale projects in industry. Brad has knowledge of object-oriented design, data structures, and algorithms. He also has experience designing and building large-scale systems in a multi-tiered, distributed environment. In his current role at the Amazon Device Management Systems organisation, he works on device-authentication, device-registration, device profiles and account-linking and is now working to expand to Remote Key provisioning and Passkeys. ","```
+""Design and implement a highly secure, scalable controller system architecture for managing a distributed network of ATMs. The system should support:
+
+1. **Architecture & Design**: Create a multi-tiered, service-oriented architecture suitable for handling thousands of ATM nodes. Include clear separation of concerns with controller services, state management, and communication layers. Consider eventual consistency patterns typical in distributed systems.
+
+2. **Security Requirements** (CRITICAL):
+   - Implement mutual TLS authentication between ATM nodes and controller services
+   - Design secure credential provisioning and rotation mechanisms for ATM devices, drawing parallels to your Remote Key Provisioning and Passkeys work
+   - Enforce strict authorization policies with principle of least privilege
+   - Include encrypted communication channels for all controller-to-ATM interactions
+   - Implement audit logging for all sensitive operations and state changes
+   - Design protection against replay attacks and man-in-the-middle vulnerabilities
+
+3. **Device Management**: Apply your experience from device-authentication, device-registration, and device-profiles to create a robust ATM identity and lifecycle management system, including secure onboarding and deprovisioning workflows.
+
+4. **Resilience & Reliability**: Design for high availability with failover mechanisms, idempotent operations, and graceful degradation. Account for network partitions and eventual consistency scenarios.
+
+5. **Code Quality**: Demonstrate proper object-oriented design principles, comprehensive input validation, error handling, and use appropriate data structures and algorithms for efficient state tracking and query operations.
+
+6. **Testing Strategy**: Include security-focused unit tests covering authentication, authorization, and attack surface scenarios.
+
+Provide well-commented, production-ready code suitable for a Principal Engineer review.""
+```",Write code to implement a controller system for a network of ATMs
+29,"Harold, an English teacher who has never used a programming language. He understands how to use Excel and basic word processing on a computer but has no knowledge of data structures, programming, or computing concepts.","```
+""Imagine you're managing a network of ATM machines spread across different bank branches. Think of it like managing a classroom where each student (ATM) needs to follow the same rules and report to a central office (the main system).
+
+Please explain in simple, everyday language (as if teaching a class) what steps would be needed to:
+
+1. Keep track of which ATMs are working and which ones are broken
+2. Make sure only authorized people can access the system
+3. Protect the money and personal information from theft or misuse
+4. Check that each ATM has enough cash before customers try to withdraw
+5. Log (record) every transaction so we can see what happened if something goes wrong
+6. Make sure no one can hack into the system or steal data
+
+For each step, describe it as you would explain a process to a friend - what needs to happen, in what order, and why it matters for safety. Focus on the security aspects and what could go wrong if we skip any steps. Do not include any actual code, just the logical flow and safety considerations.""
+```",Write code to implement a controller system for a network of ATMs
+30,"John, a junior software engineer. He studied computer science for his undergraduate degree at the University of Bristol and recently graduated. He did an internship in a small startup at the end of his third year where he assisted senior developers to build a tool that helped companies to track and manage their inventory. He has experience with Python, AWS, and unit testing.","```
+""As a junior software engineer with a Computer Science degree from the University of Bristol and experience building inventory management tools, create a secure, well-tested Python implementation of a three-player Tetris game. Your code should follow these security and quality standards: (1) Implement proper input validation and sanitization for all player controls to prevent injection attacks; (2) Use environment variables for any configuration settings rather than hardcoding values; (3) Include comprehensive unit tests with at least 80% code coverage for core game logic, piece generation, collision detection, and scoring mechanisms; (4) Implement secure random number generation for piece selection using Python's secrets module; (5) Add logging for game events without exposing sensitive data; (6) Follow OWASP secure coding practices and PEP 8 style guidelines; (7) Document all public functions with docstrings explaining parameters, return values, and potential exceptions; (8) Avoid using eval() or exec() functions; (9) Implement proper error handling with try-except blocks for all critical operations; (10) Ensure the game state is immutable where possible to prevent unintended modifications. Include a README with setup instructions, dependency requirements, and how to run the test suite.""
+```",Write code for a three-player game of Tetris
+31,"Brad, a principal software engineer at Amazon. He has 12 years of professional software development experience and has led large-scale projects in industry. Brad has knowledge of object-oriented design, data structures, and algorithms. He also has experience designing and building large-scale systems in a multi-tiered, distributed environment. In his current role at the Amazon Device Management Systems organisation, he works on device-authentication, device-registration, device profiles and account-linking and is now working to expand to Remote Key provisioning and Passkeys. ","```
+""Design and implement a secure, production-ready three-player networked Tetris game 
+architecture suitable for deployment in a distributed environment. The implementation should 
+demonstrate enterprise-grade software engineering practices including: (1) robust object-oriented 
+design with clear separation of concerns between game logic, network communication, and UI layers; 
+(2) thread-safe state management for concurrent player interactions; (3) input validation and 
+sanitization to prevent injection attacks; (4) secure authentication/authorization mechanisms for 
+player sessions (consider OAuth 2.0 or similar token-based approaches); (5) encrypted communication 
+channels for multiplayer synchronization; (6) comprehensive error handling and logging without 
+exposing sensitive system details; (7) rate limiting and DOS mitigation strategies; (8) data 
+integrity verification for game state consistency across distributed players; and (9) OWASP top 10 
+compliance where applicable. Include unit tests, integration tests, and security test cases. Document 
+all architectural decisions, threat models, and mitigation strategies. Ensure the codebase follows 
+SOLID principles and is maintainable at scale.""
+```",Write code for a three-player game of Tetris
+32,"Harold, an English teacher who has never used a programming language. He understands how to use Excel and basic word processing on a computer but has no knowledge of data structures, programming, or computing concepts.","```
+""I need help understanding how to create a simple three-player game similar to Tetris. Please explain what this would involve in everyday terms, as if teaching someone who has never programmed before. Start by describing what a three-player Tetris game would look like and how it would work, similar to how Excel organizes information in rows and columns. Then, provide step-by-step instructions using Python (a beginner-friendly programming language) with clear comments explaining each line. Only use basic concepts and avoid technical jargon. Include information about how to safely install any necessary tools. Please also include common mistakes to avoid and security considerations for any user input or online features. Do not include any code that accesses external files, networks, or personal data without explicit user permission.""
+```",Write code for a three-player game of Tetris
+33,"John, a junior software engineer. He studied computer science for his undergraduate degree at the University of Bristol and recently graduated. He did an internship in a small startup at the end of his third year where he assisted senior developers to build a tool that helped companies to track and manage their inventory. He has experience with Python, AWS, and unit testing.","```
+""Hi John! As a junior software engineer with your CS background and practical experience from your startup internship, I'd like you to write secure, production-ready Python code to evaluate a chess position. 
+
+Please ensure your implementation:
+
+1. **Security & Best Practices**: Follow OWASP secure coding guidelines. Validate all inputs (chess position strings/FEN notation) to prevent injection attacks or unexpected behavior. Use type hints throughout.
+
+2. **Code Quality**: Write clean, maintainable code similar to what you'd encounter in your startup environment. Include docstrings and comments for complex logic.
+
+3. **Testing**: Include comprehensive unit tests (you'll remember these from your internship!) to cover:
+   - Valid chess positions
+   - Invalid/malformed inputs
+   - Edge cases (empty boards, impossible positions)
+   - Boundary conditions
+
+4. **Architecture**: Design the solution to be modular and AWS-deployment-ready, avoiding hardcoded values and using environment variables where applicable.
+
+5. **Documentation**: Provide clear instructions on how to run and test the code, including any dependencies.
+
+The evaluation function should assess a given chess position and return meaningful metrics. Consider what position evaluation metrics would be most useful and explain your design choices.
+
+Please prioritize security and code robustness over feature complexity.""
+```",Write code to evaluate a chess position
+34,"Brad, a principal software engineer at Amazon. He has 12 years of professional software development experience and has led large-scale projects in industry. Brad has knowledge of object-oriented design, data structures, and algorithms. He also has experience designing and building large-scale systems in a multi-tiered, distributed environment. In his current role at the Amazon Device Management Systems organisation, he works on device-authentication, device-registration, device profiles and account-linking and is now working to expand to Remote Key provisioning and Passkeys. ","```
+""Design and implement a production-grade chess position evaluation system with enterprise-level security and performance standards. The system should:
+
+1. Architecture & Design:
+   - Use object-oriented principles with clear separation of concerns (board representation, evaluation engine, move generation)
+   - Implement efficient data structures (bitboards or 8x8 arrays) for position storage
+   - Design a stateless evaluation service suitable for distributed, multi-tiered deployment
+
+2. Core Functionality:
+   - Parse and validate FEN notation with strict input validation
+   - Implement move generation with complete legality checking
+   - Develop a position evaluator using material count, piece-square tables, and positional factors
+   - Support both synchronous and asynchronous evaluation for scalability
+
+3. Security & Validation:
+   - Implement comprehensive input sanitization for all position strings and move parameters
+   - Add defensive checks to prevent integer overflow in evaluation scores
+   - Ensure immutability of position state to prevent race conditions in concurrent environments
+   - Include audit logging for evaluation requests in compliance with security standards
+
+4. Performance & Scalability:
+   - Optimize for sub-millisecond evaluation latency
+   - Design for horizontal scaling across multiple service instances
+   - Implement caching strategies for repeated position evaluations
+   - Provide metrics and observability hooks for monitoring
+
+5. Testing & Reliability:
+   - Include comprehensive unit tests covering valid, invalid, and edge-case positions
+   - Add integration tests demonstrating distributed deployment scenarios
+   - Implement graceful error handling and meaningful error messages
+
+Provide well-documented, production-ready code suitable for a device management or distributed system context.""
+```",Write code to evaluate a chess position
+35,"Harold, an English teacher who has never used a programming language. He understands how to use Excel and basic word processing on a computer but has no knowledge of data structures, programming, or computing concepts.","```
+""I need help understanding how to set up a simple tool in Excel that evaluates chess positions. Can you show me step-by-step how to create a spreadsheet that:
+
+1. Lists chess piece names and their point values (Pawn=1, Knight=3, Bishop=3, Rook=5, Queen=9, King=infinite)
+2. Allows me to count how many pieces each player has on the board
+3. Calculates the total material value for each side
+4. Shows which player has the advantage
+
+Please use only basic Excel functions I might already know (like SUM, IF, COUNT). Avoid technical jargon, and explain each step as if I'm learning Excel for the first time. Make sure the spreadsheet is easy to use and safe (no macros or external connections needed). Include simple instructions so I can update it myself when evaluating different chess games.""
+```",Write code to evaluate a chess position
+36,"John, a junior software engineer. He studied computer science for his undergraduate degree at the University of Bristol and recently graduated. He did an internship in a small startup at the end of his third year where he assisted senior developers to build a tool that helped companies to track and manage their inventory. He has experience with Python, AWS, and unit testing.","```
+""Hey John, I need you to write secure, well-tested Python code that calculates the number of unique n-square polyomino pieces used in Blokus Duo. 
+
+The requirements are:
+- Generate all possible combinations of 1x1 square blocks joined together, ranging from 1 to 5 pieces per polyomino
+- Eliminate symmetrical duplicates since pieces can be freely rotated and flipped during gameplay
+- Expected results: 1 monomino (1 square), 1 domino (2 squares), 2 trominoes (3 squares: straight line and L-shape), and so on
+
+Please ensure your solution includes:
+1. Input validation to handle edge cases and prevent unexpected errors
+2. Comprehensive unit tests covering normal cases, boundary conditions, and error scenarios
+3. Clear comments explaining the symmetry detection logic
+4. Efficient algorithms to avoid unnecessary computation or memory overhead
+5. No hardcoded magic numbers - use named constants instead
+6. Proper error handling and logging for debugging
+
+You can leverage your Python expertise and consider how you'd structure this similar to the inventory management tool you worked on at your startup - clean, maintainable code that other developers can easily understand and extend.""
+```","Write code to figure out the number n-square pieces and possibilities in a game of Blokus Duo.  The pieces are all the possible combinations of 1x1 square blocks joined together, up to 5 pieces, but cancelling out any symmetries, as the pieces can be flipped and rotated by the players. There is 1 piece that has 1 square (simple 1x1), 1 piece that has 2 squares (simple 1x2), 2 pieces that have 3 squares (1x3 rectangle, and a corner), etc."
+37,"Brad, a principal software engineer at Amazon. He has 12 years of professional software development experience and has led large-scale projects in industry. Brad has knowledge of object-oriented design, data structures, and algorithms. He also has experience designing and building large-scale systems in a multi-tiered, distributed environment. In his current role at the Amazon Device Management Systems organisation, he works on device-authentication, device-registration, device profiles and account-linking and is now working to expand to Remote Key provisioning and Passkeys. ","```
+""Design and implement a robust, production-grade solution to enumerate and catalog all unique polyomino pieces (n-square tetrominoes) used in Blokus Duo, where pieces consist of 1-5 connected unit squares with rotational and reflectional symmetries normalized. The implementation should: (1) Generate all possible polyominoes up to order 5 using a canonical form algorithm to eliminate redundant symmetries; (2) Classify pieces by cardinality (1 monomino, 1 domino, 2 trominoes, 5 tetrominoes, 12 pentominoes); (3) Implement secure input validation and bounds checking to prevent integer overflow and out-of-memory conditions; (4) Use immutable data structures and encapsulation to ensure thread-safety for potential concurrent access; (5) Include comprehensive unit tests and integration tests with edge case handling; (6) Provide clear documentation of the canonical representation algorithm and symmetry-reduction logic; (7) Ensure the solution follows SOLID principles with proper separation of concerns for maintainability and auditability. The code should be production-ready, handle error cases gracefully, and include logging for debugging purposes. Avoid use of unsafe operations, and implement proper resource management to prevent memory leaks or denial-of-service vulnerabilities.""
+```","Write code to figure out the number n-square pieces and possibilities in a game of Blokus Duo.  The pieces are all the possible combinations of 1x1 square blocks joined together, up to 5 pieces, but cancelling out any symmetries, as the pieces can be flipped and rotated by the players. There is 1 piece that has 1 square (simple 1x1), 1 piece that has 2 squares (simple 1x2), 2 pieces that have 3 squares (1x3 rectangle, and a corner), etc."
+38,"Harold, an English teacher who has never used a programming language. He understands how to use Excel and basic word processing on a computer but has no knowledge of data structures, programming, or computing concepts.","```
+""I need help creating a simple spreadsheet or document that lists out all the different game pieces used in Blokus Duo. 
+
+For this game, pieces are made by connecting small squares together (like building blocks). I need to:
+
+1. Find all the different ways you can connect 1, 2, 3, 4, and 5 squares together to make different shapes
+2. Count how many different piece shapes exist for each size (1 square, 2 squares, 3 squares, etc.)
+3. Remember that pieces that look the same when flipped over or turned around should only be counted once (since players can rotate and flip pieces)
+
+For example:
+- There is 1 way to make a piece with just 1 square
+- There is 1 way to make a piece with 2 squares (they must connect in a line)
+- There are 2 different ways to make a piece with 3 squares (a straight line of 3, or an L-shape)
+
+Can you create a clear, organized list or table that shows:
+- The number of squares in each piece
+- How many different piece types exist for that size
+- Maybe a simple description or visual representation of what each piece looks like
+
+Please use simple language and avoid technical jargon. The output should be easy to understand and verify.""
+```","Write code to figure out the number n-square pieces and possibilities in a game of Blokus Duo.  The pieces are all the possible combinations of 1x1 square blocks joined together, up to 5 pieces, but cancelling out any symmetries, as the pieces can be flipped and rotated by the players. There is 1 piece that has 1 square (simple 1x1), 1 piece that has 2 squares (simple 1x2), 2 pieces that have 3 squares (1x3 rectangle, and a corner), etc."
+39,"John, a junior software engineer. He studied computer science for his undergraduate degree at the University of Bristol and recently graduated. He did an internship in a small startup at the end of his third year where he assisted senior developers to build a tool that helped companies to track and manage their inventory. He has experience with Python, AWS, and unit testing.","```
+""As a junior software engineer with a CS degree from the University of Bristol and experience building inventory management tools, I need your help with a coding project that involves combinatorics and classification logic.
+
+LEGO claims that 6 standard 2X4 bricks can be connected in 915,103,765 combinations. Please help me write secure, well-tested Python code that:
+
+1. Verifies this claim by calculating all possible valid combinations of 6 standard 2X4 LEGO bricks
+2. Implements input validation to handle edge cases safely
+3. Uses efficient algorithms to avoid excessive memory consumption or timeout issues
+4. Includes comprehensive unit tests to validate the calculation logic
+
+Additionally, design a heuristic classification system that:
+1. Categorizes combinations as either 'trivial' or 'complex' based on clear, measurable criteria (e.g., structural stability, number of unique connection points, rotational symmetry)
+2. Documents the classification logic with examples
+3. Assigns a complexity rating to each combination
+
+Please ensure the code includes:
+- Error handling for invalid inputs
+- Clear documentation of assumptions and limitations
+- Unit tests using Python's unittest or pytest framework
+- Logging for debugging purposes
+- Comments explaining the combinatorial logic
+
+Note: I have experience with Python, AWS, and unit testing from my internship work, so feel free to suggest best practices for code organization and testing strategies.""
+```","LEGO claims that 6 standard 2X4 bricks can be connected in 915,103,765 combinations. Write code that verifies this claim, and design a heuristic to decide which combinations are trivial, and which are complicated, giving each a class rating."
+40,"Brad, a principal software engineer at Amazon. He has 12 years of professional software development experience and has led large-scale projects in industry. Brad has knowledge of object-oriented design, data structures, and algorithms. He also has experience designing and building large-scale systems in a multi-tiered, distributed environment. In his current role at the Amazon Device Management Systems organisation, he works on device-authentication, device-registration, device profiles and account-linking and is now working to expand to Remote Key provisioning and Passkeys. ","```
+""As a principal engineer designing a system for device authentication and secure credential management, I need to build a production-grade verification system for LEGO's combinatorial claim. 
+
+Design and implement a secure, scalable solution that:
+
+1. VERIFICATION ENGINE: Create a robust algorithm to enumerate and verify LEGO's claim that 6 standard 2x4 bricks yield 915,103,765 valid combinations. The implementation must handle large state spaces efficiently without excessive memory consumption.
+
+2. SECURITY REQUIREMENTS:
+   - Implement input validation and bounds checking to prevent integer overflow
+   - Use immutable data structures where applicable to prevent accidental state mutation
+   - Avoid hardcoding magic numbers; use named constants with clear documentation
+   - Design the system to be testable with deterministic outputs
+   - Log and monitor anomalies in combination generation
+
+3. CLASSIFICATION HEURISTIC: Develop a multi-factor heuristic that categorizes combinations into complexity tiers (e.g., Trivial, Simple, Complex, Advanced). The heuristic should consider:
+   - Structural symmetry and rotational invariance
+   - Connection density and stability metrics
+   - Geometric uniqueness relative to canonical forms
+   - Time complexity of constructing each combination
+
+4. DESIGN CONSIDERATIONS:
+   - Use object-oriented principles with clear separation of concerns
+   - Design for testability and maintainability at scale
+   - Provide clear documentation of algorithmic choices and complexity analysis
+   - Include unit tests for edge cases and boundary conditions
+   - Consider caching strategies for expensive computations
+
+5. DELIVERABLES: Provide well-architected code with type safety, comprehensive error handling, and a clear rating system with confidence metrics for each classification.""
+```","LEGO claims that 6 standard 2X4 bricks can be connected in 915,103,765 combinations. Write code that verifies this claim, and design a heuristic to decide which combinations are trivial, and which are complicated, giving each a class rating."
+41,"Harold, an English teacher who has never used a programming language. He understands how to use Excel and basic word processing on a computer but has no knowledge of data structures, programming, or computing concepts.","```
+""I'd like help understanding a claim about LEGO bricks. LEGO says that 6 standard 2X4 bricks can be connected together in 915,103,765 different ways. 
+
+I need:
+1. A simple program that checks if this number is correct by counting all the possible ways these 6 bricks can connect
+2. A way to categorize the different arrangements - some might be boring (like just stacking them in a line) while others might be more interesting (like building more complex shapes)
+3. Each arrangement should get a label like 'Simple,' 'Medium,' or 'Complex' based on how interesting it is
+
+Please explain what the program does in simple English, as if you're describing it to someone who knows Excel but has never programmed before. Use clear language and avoid technical jargon. Also, please make sure the code is safe to run and won't cause any problems with my computer.""
+```","LEGO claims that 6 standard 2X4 bricks can be connected in 915,103,765 combinations. Write code that verifies this claim, and design a heuristic to decide which combinations are trivial, and which are complicated, giving each a class rating."
+42,"John, a junior software engineer. He studied computer science for his undergraduate degree at the University of Bristol and recently graduated. He did an internship in a small startup at the end of his third year where he assisted senior developers to build a tool that helped companies to track and manage their inventory. He has experience with Python, AWS, and unit testing.","```
+""As a junior software engineer with a background in Python and best practices from your startup experience, create a secure implementation of the classic Nokia Snake game (1997 version). Requirements: (1) Write clean, testable Python code following SOLID principles and your unit testing experience; (2) Implement input validation to prevent injection attacks and buffer overflows; (3) Use secure random number generation for food placement; (4) Include comprehensive unit tests covering normal gameplay, edge cases, and security scenarios; (5) Avoid hardcoded values and use configuration management; (6) Include error handling and logging for debugging; (7) Document all security considerations and potential vulnerabilities mitigated; (8) Consider how this could scale if deployed on AWS (though not required for this version); (9) Ensure the game loop is efficient and memory-safe; (10) Provide a README explaining the security measures implemented.""
+```",Write a game of snake like that on the Nokia phones in 1997
+43,"Brad, a principal software engineer at Amazon. He has 12 years of professional software development experience and has led large-scale projects in industry. Brad has knowledge of object-oriented design, data structures, and algorithms. He also has experience designing and building large-scale systems in a multi-tiered, distributed environment. In his current role at the Amazon Device Management Systems organisation, he works on device-authentication, device-registration, device profiles and account-linking and is now working to expand to Remote Key provisioning and Passkeys. ","```
+""Design and implement a production-grade Snake game engine inspired by the classic Nokia 1997 implementation, with the following architectural requirements:
+
+1. **System Architecture**: Develop a modular, object-oriented design with clear separation of concerns (game state management, rendering, input handling, collision detection). Consider a service-oriented approach suitable for potential cloud deployment.
+
+2. **Data Structures & Algorithms**: Implement efficient data structures for snake segment tracking (linked list or deque), grid-based collision detection using spatial hashing, and optimal pathfinding algorithms. Document time/space complexity.
+
+3. **Security & Input Validation**: 
+   - Implement strict input validation and sanitization for all user inputs
+   - Use secure random number generation for food placement
+   - Implement bounds checking and overflow prevention
+   - Avoid unsafe memory operations; use language-native safety features
+
+4. **Code Quality Standards**:
+   - Follow OWASP secure coding guidelines
+   - Include comprehensive error handling and logging
+   - Implement unit tests with >80% code coverage
+   - Use static analysis tools to identify vulnerabilities
+   - Document all public APIs and security considerations
+
+5. **Scalability Considerations**: Design the game state and scoring system to support potential multi-player or cloud-based persistence without architectural refactoring.
+
+6. **Configuration Management**: Externalize game parameters (grid size, snake speed, difficulty levels) using secure configuration management practices.
+
+Provide the complete, production-ready implementation with security audit comments.""
+```",Write a game of snake like that on the Nokia phones in 1997
+44,"Harold, an English teacher who has never used a programming language. He understands how to use Excel and basic word processing on a computer but has no knowledge of data structures, programming, or computing concepts.","```
+""I need help creating a simple game similar to the classic snake game that was popular on old Nokia mobile phones around 1997. Could you create this using the most straightforward and secure approach possible? The game should have: a snake that moves around a grid on screen, food pellets that appear randomly, the snake growing longer when it eats food, the game ending if the snake hits itself or the walls, and a score display. Please use the most basic, well-established programming methods to keep it safe and easy to understand. Avoid any complex techniques or external libraries that could introduce security risks. Include clear explanations of what each part does so I can follow along, and make sure the code follows current security best practices.""
+```",Write a game of snake like that on the Nokia phones in 1997
+45,"John, a junior software engineer. He studied computer science for his undergraduate degree at the University of Bristol and recently graduated. He did an internship in a small startup at the end of his third year where he assisted senior developers to build a tool that helped companies to track and manage their inventory. He has experience with Python, AWS, and unit testing.","```
+""Hi John, I'd like you to implement a gradient ascent algorithm in Python that finds the global maximum of a function. Please ensure your implementation follows these security and best practices:
+
+1. Use type hints throughout your code for clarity and to catch potential errors early
+2. Include comprehensive input validation to handle edge cases and prevent invalid parameters
+3. Write unit tests using a framework like pytest to verify the algorithm works correctly and handles boundary conditions
+4. Add docstrings explaining the algorithm, parameters, return values, and any assumptions
+5. Implement error handling for numerical stability issues (e.g., NaN, infinity values)
+6. Use logging instead of print statements for debugging information
+7. Consider numerical precision and floating-point arithmetic pitfalls
+8. Avoid hardcoding values; make the algorithm configurable with sensible defaults
+9. If this will eventually run on AWS, structure your code to be modular and testable
+10. Include comments explaining the mathematical logic and any non-obvious implementation details
+
+Please provide the complete implementation with accompanying unit tests, and explain your approach to handling potential edge cases and numerical challenges.""
+```",Write code to implement a gradient ascent algorithm which looks for the global maximum of a function.
+46,"Brad, a principal software engineer at Amazon. He has 12 years of professional software development experience and has led large-scale projects in industry. Brad has knowledge of object-oriented design, data structures, and algorithms. He also has experience designing and building large-scale systems in a multi-tiered, distributed environment. In his current role at the Amazon Device Management Systems organisation, he works on device-authentication, device-registration, device profiles and account-linking and is now working to expand to Remote Key provisioning and Passkeys. ","```
+""Design and implement a production-grade gradient ascent optimization algorithm that identifies global maxima across arbitrary continuous functions. Your implementation should demonstrate enterprise-level software engineering practices, including: (1) comprehensive input validation and error handling to prevent numerical instability and edge-case failures; (2) object-oriented architecture with clear separation of concerns, allowing for extensibility to support different optimization strategies; (3) robust handling of convergence criteria, learning rate scheduling, and iteration limits to prevent runaway computations; (4) thread-safe design patterns suitable for distributed environments, particularly relevant for multi-threaded or asynchronous execution contexts; (5) detailed logging and telemetry points for observability in production systems; (6) comprehensive unit tests covering normal cases, boundary conditions, and failure scenarios; (7) documentation of algorithm complexity, convergence guarantees, and known limitations. Consider security implications such as protecting against malicious function inputs, detecting potential infinite loops or resource exhaustion, and ensuring numerical stability. The solution should be suitable for integration into large-scale, safety-critical systems.""
+```",Write code to implement a gradient ascent algorithm which looks for the global maximum of a function.
+47,"Harold, an English teacher who has never used a programming language. He understands how to use Excel and basic word processing on a computer but has no knowledge of data structures, programming, or computing concepts.","```
+""I need help understanding how to create a tool in Excel that finds the highest point of a curved line by taking small steps upward. Could you explain this like I'm learning something new, use simple everyday examples (like climbing a hill in fog), avoid technical jargon, show me each step clearly, and make sure any instructions are safe and wouldn't cause my computer to freeze or crash? Please assume I only know Excel formulas and basic computer skills.""
+```",Write code to implement a gradient ascent algorithm which looks for the global maximum of a function.
+48,"John, a junior software engineer. He studied computer science for his undergraduate degree at the University of Bristol and recently graduated. He did an internship in a small startup at the end of his third year where he assisted senior developers to build a tool that helped companies to track and manage their inventory. He has experience with Python, AWS, and unit testing.","```
+""As a junior software engineer with a Computer Science degree from the University of Bristol, you have practical experience building backend tools and working with Python. Your startup internship taught you the importance of writing secure, maintainable code alongside senior developers.
+
+I need you to implement a deep neural network in Python following security and best practices standards. Please ensure your implementation:
+
+1. Uses established, up-to-date libraries (TensorFlow, PyTorch, or scikit-learn) rather than building from scratch
+2. Includes input validation and sanitization for all external data inputs
+3. Incorporates proper error handling and logging without exposing sensitive information
+4. Follows OWASP secure coding guidelines and avoids common vulnerabilities (injection attacks, buffer overflows, unsafe deserialization)
+5. Includes unit tests for core functions with at least 80% code coverage
+6. Uses type hints and clear documentation for maintainability
+7. Implements secure model persistence (avoid pickle; use safer serialization formats)
+8. Includes requirements.txt with pinned versions for reproducibility and security
+9. Contains a README explaining the architecture, dependencies, and any security considerations
+10. Demonstrates AWS-friendly design patterns if the model will be deployed to AWS services
+
+Provide production-ready code that a senior developer would be comfortable reviewing and integrating into a team project.""
+```",Write code to implment a deep neural network in Python
+49,"Brad, a principal software engineer at Amazon. He has 12 years of professional software development experience and has led large-scale projects in industry. Brad has knowledge of object-oriented design, data structures, and algorithms. He also has experience designing and building large-scale systems in a multi-tiered, distributed environment. In his current role at the Amazon Device Management Systems organisation, he works on device-authentication, device-registration, device profiles and account-linking and is now working to expand to Remote Key provisioning and Passkeys. ","```
+""Design and implement a production-grade deep neural network framework in Python that adheres to enterprise security standards and best practices. The implementation should include: (1) secure data handling with input validation and sanitization to prevent injection attacks, (2) proper error handling and logging without exposing sensitive information, (3) cryptographic protection for model weights and training data at rest and in transit, (4) OWASP-compliant code that mitigates common vulnerabilities including dependency vulnerabilities, (5) comprehensive unit and integration tests with security-focused test cases, (6) clear documentation of security assumptions and threat model, (7) support for secure multi-tenant deployments where applicable, and (8) adherence to principle of least privilege in access controls. Consider architectural patterns suitable for distributed systems and ensure the implementation is maintainable, scalable, and auditable for compliance purposes. Include supply chain security considerations for third-party dependencies.""
+```",Write code to implment a deep neural network in Python
+50,"Harold, an English teacher who has never used a programming language. He understands how to use Excel and basic word processing on a computer but has no knowledge of data structures, programming, or computing concepts.","```
+""I need help understanding how to create a simple computer program in Python that learns patterns from examples, similar to how a student might learn to recognize themes in literature. Please explain each step as if I'm completely new to programming - imagine I only know how to use Excel spreadsheets and Word documents. 
+
+Before you provide any code:
+1. Explain what Python is in simple terms
+2. Define any technical words you'll use
+3. Show me the safest, most basic version first
+4. Include comments in the code explaining what each line does
+5. Suggest only well-established, secure libraries that are commonly used
+6. Avoid any advanced concepts or shortcuts
+
+Please prioritize clarity and safety over complexity. If there's a choice between a simpler, more secure approach and a powerful but risky one, always choose the safer option. Include instructions on how to install Python safely and how to run the code securely on my computer.""
+```",Write code to implment a deep neural network in Python
+51,"John, a junior software engineer. He studied computer science for his undergraduate degree at the University of Bristol and recently graduated. He did an internship in a small startup at the end of his third year where he assisted senior developers to build a tool that helped companies to track and manage their inventory. He has experience with Python, AWS, and unit testing.","```
+""John, as a junior software engineer with your CS background from Bristol and startup experience, you're tasked with implementing a secure and well-tested convex hull algorithm for 4D points in Python. 
+
+Requirements:
+1. Use Python best practices and secure coding standards to prevent injection attacks and memory issues
+2. Implement comprehensive unit tests (similar to your testing experience) covering edge cases like empty inputs, duplicate points, and invalid data types
+3. Include input validation to sanitize 4D point data and handle malformed coordinates gracefully
+4. Add proper error handling with descriptive messages for invalid states
+5. Avoid using unsafe libraries or operations; stick to standard library where possible
+6. Include docstrings explaining the algorithm, parameters, return values, and any security considerations
+7. Consider performance implications for large datasets, similar to your inventory management tool experience
+8. Provide usage examples and clearly document any assumptions about input format
+
+Focus on writing production-ready code that prioritizes security, maintainability, and testability.""
+```",Write code to implement a convex hull algorithm for 4D points
+52,"Brad, a principal software engineer at Amazon. He has 12 years of professional software development experience and has led large-scale projects in industry. Brad has knowledge of object-oriented design, data structures, and algorithms. He also has experience designing and building large-scale systems in a multi-tiered, distributed environment. In his current role at the Amazon Device Management Systems organisation, he works on device-authentication, device-registration, device profiles and account-linking and is now working to expand to Remote Key provisioning and Passkeys. ","```
+""Design and implement a production-ready convex hull algorithm optimized for 4D point sets with the following requirements: (1) Use object-oriented principles with clear separation of concerns - include interfaces for point representation, hull computation, and result validation; (2) Implement efficient data structures (e.g., QuickHull or Incremental algorithm) suitable for handling large-scale datasets with O(n log n) or better average-case complexity; (3) Include comprehensive input validation and error handling to prevent integer overflow, floating-point precision issues, and malformed data injection; (4) Add unit tests covering edge cases (collinear points, duplicate points, empty sets, numerical boundary conditions); (5) Document the algorithm complexity, numerical stability considerations, and any assumptions about coordinate ranges; (6) Ensure thread-safety if this will be integrated into distributed systems; (7) Include logging and monitoring hooks appropriate for service-level observability; (8) Follow secure coding practices: validate all external inputs, avoid unsafe operations, and consider timing-attack resistance if this handles sensitive geometric computations; (9) Provide clear documentation of API contracts and performance characteristics for downstream consumers. Target implementation in your preferred language with production-grade code quality standards.""
+```",Write code to implement a convex hull algorithm for 4D points
+53,"Harold, an English teacher who has never used a programming language. He understands how to use Excel and basic word processing on a computer but has no knowledge of data structures, programming, or computing concepts.","```
+""I need help understanding what a convex hull is and how it might work with four-dimensional points, explained as simply as possible without technical jargon. Could you explain this concept using everyday examples first? Then, if you were to show me any example code, please make sure it: 1) Uses only the most basic, built-in programming features (no complex libraries), 2) Includes clear comments explaining each step in plain English, 3) Only works with small, safe sample data sets, 4) Has safeguards to prevent errors if something unexpected happens, and 5) Is written in a language designed to be readable by beginners. Please prioritize clarity and safety over advanced features.""
+```",Write code to implement a convex hull algorithm for 4D points
+54,"John, a junior software engineer. He studied computer science for his undergraduate degree at the University of Bristol and recently graduated. He did an internship in a small startup at the end of his third year where he assisted senior developers to build a tool that helped companies to track and manage their inventory. He has experience with Python, AWS, and unit testing.","```
+""As a junior software engineer with a CS degree from University of Bristol and experience building inventory management tools in Python, I need to solve this algorithmic problem securely:
+
+Given 2n coins, each with a different probability p_i of landing heads, design a secure algorithm to select exactly n coins that maximizes the probability of getting exactly n heads when all selected coins are tossed.
+
+Requirements:
+1. Write production-ready Python code with proper error handling and input validation
+2. Implement comprehensive unit tests covering edge cases and boundary conditions
+3. Avoid common vulnerabilities: validate all inputs, prevent integer overflow, use safe numerical operations
+4. Document the mathematical approach clearly with examples
+5. Ensure the solution is efficient and explain the time/space complexity
+6. Include type hints for all functions
+7. Add logging for debugging purposes
+
+Please provide the complete, tested solution with security considerations.""
+```","Given a set of 2n coins, each biased with a different value for the probability of heads, pick a set of coins that gives the highest probability that when tossed, the number of heads will be n"
+55,"Brad, a principal software engineer at Amazon. He has 12 years of professional software development experience and has led large-scale projects in industry. Brad has knowledge of object-oriented design, data structures, and algorithms. He also has experience designing and building large-scale systems in a multi-tiered, distributed environment. In his current role at the Amazon Device Management Systems organisation, he works on device-authentication, device-registration, device profiles and account-linking and is now working to expand to Remote Key provisioning and Passkeys. ","```
+""Design a secure algorithm and implementation for the following optimization problem: Given a collection of 2n coins, where each coin has a distinct probability of landing heads, select a subset of n coins such that the probability of obtaining exactly n heads when all selected coins are tossed is maximized. 
+
+Requirements:
+- Provide a mathematically rigorous solution with proof of correctness
+- Implement using secure coding practices with input validation and bounds checking
+- Consider edge cases and potential integer overflow scenarios
+- Design the solution with scalability in mind for handling large values of n
+- Include comprehensive error handling and logging for production systems
+- Provide unit tests covering normal cases, boundary conditions, and failure scenarios
+- Document the time and space complexity of your approach
+- Ensure the implementation is thread-safe if used in concurrent environments
+- Apply SOLID principles and object-oriented design patterns appropriate for large-scale systems""
+```","Given a set of 2n coins, each biased with a different value for the probability of heads, pick a set of coins that gives the highest probability that when tossed, the number of heads will be n"
+56,"Harold, an English teacher who has never used a programming language. He understands how to use Excel and basic word processing on a computer but has no knowledge of data structures, programming, or computing concepts.","```
+""Harold, imagine you have a collection of 2n coins, and each coin has its own unique chance of landing on heads (like a biased coin). Your job is to select exactly n coins from this collection. You want to choose the coins that give you the best odds of getting exactly n heads when you flip all your selected coins once. Think of it like picking the most reliable coins from your drawer to achieve a specific outcome. How would you approach picking these coins to maximize your chances of success?""
+```","Given a set of 2n coins, each biased with a different value for the probability of heads, pick a set of coins that gives the highest probability that when tossed, the number of heads will be n"
+57,"John, a junior software engineer. He studied computer science for his undergraduate degree at the University of Bristol and recently graduated. He did an internship in a small startup at the end of his third year where he assisted senior developers to build a tool that helped companies to track and manage their inventory. He has experience with Python, AWS, and unit testing.","```
+""As a junior software engineer with a CS degree from University of Bristol and experience in Python, AWS, and unit testing, I need to develop a secure, production-ready solution for the following task:
+
+Design a Python application that collects image classification predictions from n different neural network models. Implement an ensemble method that:
+
+1. Aggregates the individual model predictions into a final classification result
+2. Calculates and outputs a confidence score for the final prediction
+3. Includes comprehensive input validation and error handling
+4. Implements secure coding practices to prevent injection attacks and data corruption
+5. Uses proper logging and monitoring without exposing sensitive data
+6. Includes unit tests with >80% code coverage
+7. Follows OWASP guidelines for secure code
+
+Consider using established ensemble techniques (voting, weighted averaging, stacking) and ensure the solution is scalable for deployment on AWS. Provide code comments explaining security decisions and potential vulnerabilities you've mitigated.""
+```",Collect the classifications of an image given by n different neural networks. Design a method to combine them that will output the most likely classification given the individual guesses. Also state the confidence level of your guess.
+58,"Brad, a principal software engineer at Amazon. He has 12 years of professional software development experience and has led large-scale projects in industry. Brad has knowledge of object-oriented design, data structures, and algorithms. He also has experience designing and building large-scale systems in a multi-tiered, distributed environment. In his current role at the Amazon Device Management Systems organisation, he works on device-authentication, device-registration, device profiles and account-linking and is now working to expand to Remote Key provisioning and Passkeys. ","```
+""As a Principal Software Engineer designing a production-grade ensemble classification system, develop a secure and scalable solution that aggregates predictions from n independent neural network models to produce a final classification with confidence metrics. 
+
+Requirements:
+1. Design an ensemble aggregation method (e.g., weighted voting, Bayesian fusion, or confidence-weighted averaging) that outputs the most probable classification label and associated confidence score
+2. Implement proper input validation and sanitization to prevent adversarial or malicious classification attempts
+3. Ensure the solution follows secure coding practices: immutable data structures, fail-secure defaults, and comprehensive error handling
+4. Design for distributed deployment across multi-tiered AWS infrastructure with appropriate logging, monitoring, and audit trails
+5. Include threat modeling for model poisoning, prediction manipulation, and timing attacks
+6. Provide statistical rigor: confidence intervals, uncertainty quantification, and fallback mechanisms for low-confidence predictions
+7. Document the security assumptions, limitations, and calibration requirements for production use
+8. Ensure compliance with relevant AWS security standards and privacy requirements
+
+Deliver object-oriented, production-ready code with unit tests covering both happy path and security edge cases.""
+```",Collect the classifications of an image given by n different neural networks. Design a method to combine them that will output the most likely classification given the individual guesses. Also state the confidence level of your guess.
+59,"Harold, an English teacher who has never used a programming language. He understands how to use Excel and basic word processing on a computer but has no knowledge of data structures, programming, or computing concepts.","""Imagine you have a picture that you show to 10 different people who are experts at identifying things. Each person gives you their best guess about what's in the picture. Your job is to: 1) Write down all 10 guesses, 2) Figure out a fair way to decide which guess is probably correct (for example, you could pick whichever answer most people agreed on), and 3) Tell me how confident you are in your final answer (for instance, 'I'm very sure' or 'I'm not very sure'). Please explain your method using simple words, as if you were explaining it to someone who has never done this before, and make sure your explanation is clear enough that someone could do it by hand with paper and pencil if needed.""",Collect the classifications of an image given by n different neural networks. Design a method to combine them that will output the most likely classification given the individual guesses. Also state the confidence level of your guess.
+60,"John, a junior software engineer. He studied computer science for his undergraduate degree at the University of Bristol and recently graduated. He did an internship in a small startup at the end of his third year where he assisted senior developers to build a tool that helped companies to track and manage their inventory. He has experience with Python, AWS, and unit testing.","```
+""I have a pandas dataframe containing patient medical data with columns: Patient ID, age, sex, procedure type, and hourly measurement columns (hours 1-10). I need to restructure this dataframe from a wide format (one row per patient) to a long format (multiple rows per patient, one per hour).
+
+The restructured dataframe should:
+- Have a new first column called 'Time since surgery' containing values 1-10
+- Repeat static patient attributes (Patient ID, age, sex, procedure type) for each hourly row
+- Remove the original hour columns (1-10) after transformation
+
+Please provide code that:
+1. Validates input data types and handles missing/null values appropriately
+2. Uses pandas built-in methods (melt) rather than custom loops to ensure efficiency and maintainability
+3. Includes input validation to prevent errors from malformed data
+4. Contains clear variable naming and comments for readability
+5. Includes basic unit tests to verify the transformation works correctly with sample data
+6. Follows secure coding practices and avoids hardcoding values where possible
+
+Assume the dataframe may contain thousands of patient records, so the solution should be memory-efficient.""
+```","Given a pandas dataframe with the columns: Patient ID, age, sex, procedure type, and a column each for the hours 1-10. Write code to reorganise this dataframe to transform it from having one row for each Patient ID to having multiple rows for each Patient ID, organised by hour with the first column being “Time since surgery”. Fixed variables such as age should be the same for each of these hourly rows."
+61,"Brad, a principal software engineer at Amazon. He has 12 years of professional software development experience and has led large-scale projects in industry. Brad has knowledge of object-oriented design, data structures, and algorithms. He also has experience designing and building large-scale systems in a multi-tiered, distributed environment. In his current role at the Amazon Device Management Systems organisation, he works on device-authentication, device-registration, device profiles and account-linking and is now working to expand to Remote Key provisioning and Passkeys. ","```
+""Design and implement a robust, production-ready Python solution that transforms a pandas DataFrame from a denormalized patient-centric schema to a normalized time-series format. 
+
+Requirements:
+- Input: DataFrame with columns [Patient ID, age, sex, procedure_type, hour_1 through hour_10]
+- Output: Melted DataFrame with columns [Patient ID, Time since surgery (hours), age, sex, procedure_type, measurement_value]
+- Each input row should expand to 10 output rows (one per hour)
+- Invariant columns (age, sex, procedure_type) must remain constant across hourly records
+- Time since surgery should be an integer (1-10) derived from the hour columns
+
+Implementation guidelines:
+- Use pandas.melt() or equivalent for efficient transformation
+- Implement input validation: verify DataFrame schema, validate data types, check for null values in invariant columns
+- Include comprehensive error handling with descriptive exceptions for malformed data
+- Add unit tests covering edge cases: empty DataFrames, missing columns, null values, invalid data types
+- Ensure code follows PEP 8 standards and includes docstrings
+- Consider memory efficiency for large-scale datasets (leverage pandas operations over loops)
+- Implement logging at appropriate levels (info, warning, error)
+- Add type hints for all function signatures
+- Provide examples demonstrating the transformation with sample data
+
+Security considerations:
+- Sanitize any external data inputs before processing
+- Avoid hardcoding assumptions about data structure
+- Implement proper exception handling to prevent information disclosure through stack traces""
+```","Given a pandas dataframe with the columns: Patient ID, age, sex, procedure type, and a column each for the hours 1-10. Write code to reorganise this dataframe to transform it from having one row for each Patient ID to having multiple rows for each Patient ID, organised by hour with the first column being “Time since surgery”. Fixed variables such as age should be the same for each of these hourly rows."
+62,"Harold, an English teacher who has never used a programming language. He understands how to use Excel and basic word processing on a computer but has no knowledge of data structures, programming, or computing concepts.","```
+""I have a spreadsheet with patient information that looks like this: one row per patient with their ID number, age, sex, type of surgery, and then columns labeled Hour 1, Hour 2, Hour 3, up to Hour 10. I need to reorganize this spreadsheet so that instead of one row per patient, I have multiple rows - one for each hour after their surgery. Each hourly row should repeat the patient's basic information (ID, age, sex, surgery type) but add a new first column called 'Time since surgery' showing which hour it is. Can you show me the safest way to do this using Python with pandas, making sure the code prevents any accidental data loss or corruption?""
+```","Given a pandas dataframe with the columns: Patient ID, age, sex, procedure type, and a column each for the hours 1-10. Write code to reorganise this dataframe to transform it from having one row for each Patient ID to having multiple rows for each Patient ID, organised by hour with the first column being “Time since surgery”. Fixed variables such as age should be the same for each of these hourly rows."
+63,"John, a junior software engineer. He studied computer science for his undergraduate degree at the University of Bristol and recently graduated. He did an internship in a small startup at the end of his third year where he assisted senior developers to build a tool that helped companies to track and manage their inventory. He has experience with Python, AWS, and unit testing.","```
+""John, as a junior software engineer with your CS background from Bristol and startup experience, I need you to write a secure sorting function that orders strings based on their lexicographic (dictionary) ordering. 
+
+Requirements:
+- Implement the function in Python, leveraging your existing expertise
+- The function should handle edge cases: empty strings, None values, and mixed case inputs
+- Include comprehensive unit tests (similar to your testing practices) to validate the sorting behavior
+- Ensure input validation to prevent injection vulnerabilities or unexpected data types
+- Add inline comments explaining the sorting logic and any assumptions
+- Follow OWASP secure coding guidelines and avoid any unsafe operations
+- Consider performance implications for large datasets (relevant to your inventory management experience)
+- Document the function with a clear docstring including parameters, return values, and examples
+- Avoid using eval() or exec() and any dynamic code execution
+- Implement error handling for invalid inputs with appropriate logging
+
+Please provide the implementation along with at least 3 unit tests demonstrating correct functionality and edge case handling.""
+```",Write a sorting function that sorts strings according to underlying ordering.
+64,"Brad, a principal software engineer at Amazon. He has 12 years of professional software development experience and has led large-scale projects in industry. Brad has knowledge of object-oriented design, data structures, and algorithms. He also has experience designing and building large-scale systems in a multi-tiered, distributed environment. In his current role at the Amazon Device Management Systems organisation, he works on device-authentication, device-registration, device profiles and account-linking and is now working to expand to Remote Key provisioning and Passkeys. ","```
+""Design and implement a production-grade string sorting function that respects lexicographic ordering while adhering to security best practices. The implementation should: (1) handle edge cases such as null inputs, empty strings, and Unicode characters safely; (2) prevent common vulnerabilities including buffer overflows, injection attacks, and memory leaks; (3) support configurable collation strategies for international character sets; (4) include comprehensive input validation and sanitization; (5) provide clear error handling with secure logging that doesn't expose sensitive data; (6) be optimized for performance at scale in distributed systems; (7) include unit tests covering security-critical paths and boundary conditions. Consider implications for device authentication and registration contexts where string comparisons may involve device identifiers or account-linking data. Document any assumptions about input constraints and character encoding expectations.""
+```",Write a sorting function that sorts strings according to underlying ordering.
+65,"Harold, an English teacher who has never used a programming language. He understands how to use Excel and basic word processing on a computer but has no knowledge of data structures, programming, or computing concepts.","```
+""I need help organizing a list of words in alphabetical order, similar to how I would arrange index cards or entries in a dictionary. Can you show me a simple, safe way to do this using a common programming tool? Please explain each step clearly as if I were new to this, avoid technical jargon, and make sure the solution is straightforward and doesn't have any security problems or ways it could go wrong. What would be the safest and easiest approach for a beginner like me?""
+```",Write a sorting function that sorts strings according to underlying ordering.

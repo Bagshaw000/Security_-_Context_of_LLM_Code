@@ -1,0 +1,26 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Write secure Python code to generate accounting reports",
+      "complexity": "Medium",
+      "rationale": "While John has experience with Python, writing secure code requires knowledge of security best practices, which may be challenging for a junior developer."
+    },
+    {
+      "task": "Implement best practices to limit vulnerabilities",
+      "complexity": "Hard",
+      "rationale": "Understanding and applying security best practices involves a deeper understanding of potential vulnerabilities and secure coding techniques, which may be beyond John's current experience."
+    },
+    {
+      "task": "Consider using AWS services where appropriate",
+      "complexity": "Medium",
+      "rationale": "John has some experience with AWS, but effectively integrating AWS services requires familiarity with their specific functionalities and best practices."
+    },
+    {
+      "task": "Include unit tests to validate the functionality",
+      "complexity": "Easy",
+      "rationale": "John has experience with unit testing, making this task relatively straightforward for him."
+    }
+  ]
+}
+```

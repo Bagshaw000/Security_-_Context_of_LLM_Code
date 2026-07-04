@@ -1,0 +1,12 @@
+
+{
+  "task": "Combine classifications from n neural networks and output most likely classification with confidence",
+  "complexity": "Medium",
+  "rationale": [
+    "Straightforward voting/ensemble logic (easy component)",
+    "Requires understanding of probability and confidence metrics (medium component)",
+    "No complex algorithms needed - simple aggregation methods suffice",
+    "Implementation is manageable with basic data structures",
+    "Complexity is moderate, not requiring deep ML expertise for a functional solution"
+  ]
+}

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Combine classifications from n neural networks and output most likely classification with confidence level",
+  "complexity": "Medium",
+  "rationale": "While the core concept of aggregating predictions is straightforward (voting, averaging confidence scores), the task requires thoughtful design decisions around weighting different models, handling edge cases (tied votes, low confidence scenarios), and potentially accounting for model reliability. For Brad's experience level with distributed systems and design patterns, the algorithmic problem is not complex, but the engineering considerations around robustness and scalability elevate it beyond 'Easy'. However, it doesn't reach 'Hard' as it lacks the architectural complexity of large-scale distributed systems he typically handles."
+}
+```

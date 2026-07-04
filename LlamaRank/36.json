@@ -1,0 +1,16 @@
+```
+[
+    {
+        "task": "Figure out the number n-square pieces and possibilities in a game of Blokus Duo",
+        "complexity": "Hard"
+    },
+    {
+        "task": "Write code to figure out the number n-square pieces and possibilities in a game of Blokus Duo",
+        "complexity": "Easy"
+    }
+]
+```
+
+Rationale:
+- The first task is a description of the problem, which should be Easy complexity for John, as it requires understanding the problem statement but does not require coding.
+- The second task is to write code, which is more complex and requires technical skills. Since John has experience with Python, AWS, and unit testing, writing code for this specific task would be considered Medium complexity, but as a junior software engineer who just graduated, it could be ranked as Hard due to the complexity of generating all possible combinations of n-square pieces while considering symmetries.

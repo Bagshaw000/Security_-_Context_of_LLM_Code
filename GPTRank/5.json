@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to make a todo list app",
+  "complexity": "Hard",
+  "rationale": "Creating a todo list app involves multiple components such as user interface design, data storage, and event handling. It requires understanding of programming concepts, data structures, and possibly frameworks, which can be overwhelming for someone with no prior coding experience."
+}
+```

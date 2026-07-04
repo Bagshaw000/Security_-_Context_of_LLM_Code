@@ -1,0 +1,26 @@
+Here are the ranked coding tasks with their complexity level:
+
+```
+[
+  {
+    "task": "Write code to evaluate a chess position",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Design an algorithm for recommending books based on user ratings and preferences",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Create a simple web scraper to extract data from a website",
+    "complexity": "Easy"
+  }
+]
+```
+
+Reasoning:
+
+- Writing code to evaluate a chess position is considered "Hard" because it requires understanding of complex game theory, algorithms, and data structures like bitboards. It's not straightforward for someone without prior programming experience.
+
+- Designing an algorithm for recommending books based on user ratings and preferences falls under the category of "Medium". This task involves statistical analysis, machine learning concepts, and algorithm design, which might be challenging but is still within the realm of possibility for a beginner with basic computer skills.
+
+- Creating a simple web scraper to extract data from a website is considered an "Easy" task. It requires understanding of HTTP requests, HTML parsing, and possibly some JavaScript, but these are relatively fundamental concepts compared to more complex topics like chess evaluation or book recommendation algorithms.

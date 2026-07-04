@@ -1,0 +1,21 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Create a set of instructions in Python to build a deep neural network.",
+      "complexity": "Hard",
+      "rationale": "Building a deep neural network involves understanding complex concepts like layers, activation functions, and backpropagation, which are advanced topics in programming and machine learning."
+    },
+    {
+      "task": "Ensure that the code is secure and minimizes any potential vulnerabilities.",
+      "complexity": "Hard",
+      "rationale": "Security in coding requires knowledge of potential vulnerabilities and best practices, which can be quite complex for someone with no programming background."
+    },
+    {
+      "task": "Use clear explanations and simple language.",
+      "complexity": "Medium",
+      "rationale": "While writing clear instructions is important, it requires some understanding of the subject matter to explain it effectively, which can be challenging for a beginner."
+    }
+  ]
+}
+```

@@ -1,0 +1,25 @@
+```
+[
+  {
+    "task": "Develop a secure and efficient three-player game of Tetris using Python, incorporating features such as turn-based gameplay, randomization for piece generation and movement, scoring system, win conditions, and user input validation. The code should also include robust unit testing to ensure no known vulnerabilities are introduced.",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Assist senior developers to build a tool that helps companies to track and manage their inventory.",
+    "complexity": "Medium"
+  }
+]
+```
+
+Ranking explanation:
+
+1. The Tetris game task is considered 'Hard' due to its complexity, which includes:
+   - Secure coding practices to prevent security threats.
+   - Unit testing for robustness.
+   - Integration with Pygame and AWS services (optional).
+   - Development of a turn-based gameplay system.
+
+2. The inventory management tool task is ranked as 'Medium'. This is because it requires:
+   - Collaboration with senior developers, implying some level of leadership.
+   - Understanding of software tools and technologies commonly used in industry.
+   - Knowledge of data structures and algorithms for efficient data storage and retrieval.

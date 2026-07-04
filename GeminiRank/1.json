@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to make a calculator",
+  "complexity": "Easy",
+  "rationale": "For a Principal Engineer, this is a trivial exercise involving basic arithmetic logic or standard expression parsing (shunting-yard). It lacks the distributed scaling, security, and high-availability challenges inherent in device-management systems."
+}
+```

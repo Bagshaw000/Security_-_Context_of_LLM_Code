@@ -1,0 +1,14 @@
+Here are the rankings with rational:
+
+```
+[
+  {"task": "Implementing a basic ATM withdrawal system", "complexity": "Easy"},
+  {"task": "Writing a script to analyze a CSV file and generate a word cloud", "complexity": "Medium"},
+  {"task": "Designing and implementing a full-fledged controller system for a network of ATMs", "complexity": "Hard"}
+]
+```
+
+Rationale:
+1. Implementing a basic ATM withdrawal system involves only logical operations, making it easy to understand.
+2. Writing a script to analyze a CSV file generates text from data, which is still within Harold's familiar domain of word processing, but requires some programming concepts (e.g., loops).
+3. Designing and implementing a full-fledged controller system for a network of ATMs involves complex interactions between multiple systems, advanced data structures, networking, and scalability considerations, making it extremely challenging even for experienced developers.

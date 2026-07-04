@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code for a three-player game of Tetris",
+  "complexity": "Hard",
+  "rationale": "Creating a three-player game of Tetris involves understanding game mechanics, graphics rendering, and real-time input handling. It requires knowledge of programming concepts, data structures for managing game state, and potentially complex algorithms for collision detection and line clearing, which are beyond basic programming skills."
+}
+```

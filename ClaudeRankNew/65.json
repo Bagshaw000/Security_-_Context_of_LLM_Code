@@ -1,0 +1,7 @@
+```
+{
+  "task": "Organize a list of words in alphabetical order",
+  "complexity": "Easy",
+  "rationale": "This task involves sorting data, which is a fundamental operation that Harold likely performs mentally or with physical cards daily. Modern programming languages have built-in sorting functions that require minimal syntax. The task doesn't require understanding complex data structures, algorithms, or advanced concepts—just inputting a list and applying a pre-existing sort function. The explanation can be analogized to his familiar dictionary/index card experience, making it conceptually accessible despite his lack of programming background."
+}
+```

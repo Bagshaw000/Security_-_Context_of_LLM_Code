@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Develop a secure, three-player implementation of Tetris with concurrent input handling and resource management.",
+    "complexity": "Hard",
+    "rationale": "While John has state management and Python experience, this task requires advanced knowledge of real-time concurrency, high-level security hardening (DoS mitigation, secure serialization), and complex multi-user state synchronization, which typically exceeds the scope of a junior-level role."
+  }
+]
+```

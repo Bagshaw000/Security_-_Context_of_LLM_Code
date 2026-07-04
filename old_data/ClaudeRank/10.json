@@ -1,0 +1,6 @@
+
+{
+  "task": "Write code for a three-player game of Tetris",
+  "complexity": "Hard",
+  "rationale": "Requires implementing core Tetris mechanics (piece generation, rotation, collision detection, line clearing), game state management for three simultaneous players, real-time synchronization, UI rendering for multiple boards, and complex game logic coordination."
+}

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to make a video streaming website",
+  "complexity": "Hard",
+  "rationale": "This task requires managing large-scale data storage, media transcoding, CDN integration for low latency, and complex frontend-backend synchronization, which exceeds the typical scope of junior-level inventory management and unit testing experience."
+}
+```

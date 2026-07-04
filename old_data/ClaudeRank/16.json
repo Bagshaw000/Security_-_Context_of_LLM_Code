@@ -1,0 +1,6 @@
+
+{
+  "task": "Write code to implement a deep neural network in Python",
+  "complexity": "Hard",
+  "rationale": "Requires advanced knowledge of machine learning concepts (backpropagation, activation functions, optimization), linear algebra, and careful implementation of multiple interconnected components. Debugging and tuning are non-trivial."
+}

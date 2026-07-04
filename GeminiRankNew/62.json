@@ -1,0 +1,7 @@
+```
+{
+  "task": "Reshaping recovery data from wide to long format (pivoting) using Python/pandas.",
+  "complexity": "Medium",
+  "rationale": "While the code is a standard one-line operation (melting), the task is conceptually difficult for Harold because it requires shifting from a static 'page' view to abstract relational data structures and 'tidy' data principles."
+}
+```

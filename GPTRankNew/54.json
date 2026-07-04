@@ -1,0 +1,7 @@
+```
+{
+  "task": "Select a subset of coins that maximizes the likelihood of obtaining exactly n heads when tossed.",
+  "complexity": "Hard",
+  "rationale": "This task involves combinatorial optimization and probability theory, which can be complex for a junior developer. It requires a deep understanding of algorithms and may involve dynamic programming or advanced statistical methods. Additionally, ensuring secure coding practices adds another layer of complexity."
+}
+```

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Select a group of coins to maximize the likelihood of getting exactly n heads.",
+  "complexity": "Hard",
+  "rationale": "This task involves understanding probability, combinatorial optimization, and potentially complex algorithms to evaluate different combinations of coins. It requires a deep understanding of statistical concepts and programming logic, which may be overwhelming for someone with no programming background."
+}
+```

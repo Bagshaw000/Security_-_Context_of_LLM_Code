@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Design and implement a secure ATM network controller system using Python and AWS, ensuring protection against race conditions and injection attacks while following financial security best practices.",
+    "complexity": "Hard",
+    "rationale": "This task requires advanced knowledge of concurrency, high-stakes financial security protocols, and complex architectural design. While John has Python and AWS basics, the requirement to mitigate race conditions and manage sensitive financial transactions exceeds the typical scope of a junior engineer's experience."
+  }
+]
+```

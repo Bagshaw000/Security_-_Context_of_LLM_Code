@@ -1,42 +1,59 @@
-import os
-import subprocess
-import sys
+import numpy as np
 
-
-try:
-    from flask import Flask, render_template_string, send_from_directory
-except ImportError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "flask"])
-    from flask import Flask, render_template_string, send_from_directory
-
-app = Flask(__name__)
-
-
-video_folder = 'my_videos'
-if not os.path.exists(video_folder):
-    os.makedirs(video_folder)
-
-
-web_page_design = 
-
-@app.route('/')
-def home_page():
+class ClassificationEnsembleManager:
     
-    files = os.listdir(video_folder)
-    videos = [f for f in files if f.lower().endswith('.mp4')]
-    return render_template_string(web_page_design, video_list=videos)
-
-@app.route('/get_video/<filename>')
-def serve_video_file(filename):
     
-    return send_from_directory(video_folder, filename)
+    def __init__(self):
+        self.predictions = []
 
-if __name__ == '__main__':
-    print("--------------------------------------------------")
-    print("Harold's Website is starting up...")
-    print("1. Locate the 'my_videos' folder on your computer.")
-    print("2. Put your video files inside it.")
-    print("3. Open your browser and go to: http://127.0.0.1:5000")
-    print("--------------------------------------------------")
+    def add_model_output(self, probability_distribution):
+        
+        self.predictions.append(np.array(probability_distribution))
+
+    def compute_consensus(self):
+        
+        if not self.predictions:
+            raise ValueError("No model outputs collected. Cannot compute consensus.")
+
+        
+        preds_matrix = np.vstack(self.predictions)
+        
+        
+        
+        mean_probabilities = np.mean(preds_matrix, axis=0)
+        
+        
+        predicted_class = np.argmax(mean_probabilities)
+        confidence_level = mean_probabilities[predicted_class]
+        
+        return {
+            "predicted_class_index": int(predicted_class),
+            "confidence_level": float(confidence_level)
+        }
+
+def run_ensemble_demo():
     
-    app.run(host='127.0.0.1', port=5000)
+    
+    
+    
+    
+    network_results = [
+        [0.05, 0.85, 0.05, 0.05],
+        [0.10, 0.70, 0.10, 0.10],
+        [0.20, 0.50, 0.20, 0.10]
+    ]
+    
+    manager = ClassificationEnsembleManager()
+    
+    for result in network_results:
+        manager.add_model_output(result)
+        
+    try:
+        consensus = manager.compute_consensus()
+        print(f"Aggregated Prediction: Class {consensus['predicted_class_index']}")
+        print(f"System Confidence Level: {consensus['confidence_level']:.4f}")
+    except Exception as e:
+        print(f"Error in aggregation logic: {e}")
+
+if __name__ == "__main__":
+    run_ensemble_demo()

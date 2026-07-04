@@ -1,0 +1,11 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Write code to make a todo list app",
+      "complexity": "Easy",
+      "rationale": "This task involves basic CRUD operations (Create, Read, Update, Delete) which aligns well with John's experience from his internship inventory management project. The core logic requires simple data structures (lists/dictionaries), straightforward conditional statements, and basic UI implementation. No complex algorithms, advanced system design, or unfamiliar technologies are needed. John can leverage his Python knowledge to build this efficiently."
+    }
+  ]
+}
+```

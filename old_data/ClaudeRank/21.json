@@ -1,0 +1,6 @@
+
+{
+  "task": "Write a sorting function that sorts strings according to underlying ordering",
+  "complexity": "Easy",
+  "rationale": "This task involves implementing a basic sorting algorithm using built-in string comparison. Most programming languages have native string comparison operators, making this straightforward. No advanced data structures or algorithms beyond standard sorting are required."
+}

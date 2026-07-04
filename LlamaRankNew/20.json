@@ -1,0 +1,19 @@
+```
+[
+  {
+    "task": "Generate summaries of research papers using a pre-trained language model",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Using Hugging Face Transformers or PyTorch for task",
+    "complexity": "Medium"
+  }
+]
+```
+
+Rationale:
+
+* The first task, generating summaries of research papers using a pre-trained language model, requires knowledge of computing concepts, data structures, and programming. It is considered a hard task due to the complexity of processing large volumes of text data and ensuring accurate summarization.
+* The second task, using Hugging Face Transformers or PyTorch for the task, is a more specialized task that still requires some technical expertise. However, it builds upon existing knowledge of pre-trained language models and deep learning frameworks, making it less complex than generating summaries from scratch.
+
+Note: Considering Harold's background in English teaching and limited experience with programming, both tasks are challenging for him to accomplish without significant guidance or support.

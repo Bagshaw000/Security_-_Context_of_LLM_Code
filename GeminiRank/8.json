@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code for a database for an online bicycle shop",
+  "complexity": "Hard",
+  "rationale": "While Harold understands spreadsheets, building a database requires learning relational logic, data normalization, and SQL syntax, which are significantly more abstract and technical than simple data entry."
+}
+```

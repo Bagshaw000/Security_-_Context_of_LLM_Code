@@ -1,50 +1,72 @@
-import tkinter as tk
+import datetime
+import csv
+import json
+import requests
 
-class TodoList:
-    def __init__(self, master):
-        self.master = master
-        master.title("Todo List")
+class WorkoutTracker:
+    def __init__(self, user_name):
+        self.user_name = user_name
+        self.workouts = []
 
-        self.tasks = []
-        self.task_entries = []
+    def import_data(self, app_name, api_key):
+        if app_name == 'Fitbit':
+            self.import_fitbit_data(api_key)
+        elif app_name == 'Strava':
+            self.import_strava_data(api_key)
+        elif app_name == 'Apple Health':
+            self.import_apple_health_data(api_key)
 
-        self.input_frame = tk.Frame(master)
-        self.input_frame.pack(pady=10)
+    def import_fitbit_data(self, api_key):
+        url = 'https://api.fitbit.com/1/user/-/activities/list.json'
+        headers = {'Authorization': f'Bearer {api_key}'}
+        response = requests.get(url, headers=headers)
+        data = response.json()
+        for activity in data['activities']:
+            workout = {
+                'name': activity['name'],
+                'duration': activity['duration'],
+                'distance': activity['distance'],
+                'date': datetime.datetime.strptime(activity['startTime'], '%Y-%m-%dT%H:%M:%S.%f%z').date()
+            }
+            self.workouts.append(workout)
 
-        self.task_entry = tk.Entry(self.input_frame, width=30)
-        self.task_entry.pack(side=tk.LEFT, padx=5)
+    def import_strava_data(self, api_key):
+        url = 'https://www.strava.com/api/v3/athlete/activities'
+        headers = {'Authorization': f'Bearer {api_key}'}
+        response = requests.get(url, headers=headers)
+        data = response.json()
+        for activity in data:
+            workout = {
+                'name': activity['name'],
+                'duration': activity['moving_time'],
+                'distance': activity['distance'],
+                'date': datetime.datetime.strptime(activity['start_date'], '%Y-%m-%dT%H:%M:%SZ').date()
+            }
+            self.workouts.append(workout)
 
-        self.add_button = tk.Button(self.input_frame, text="Add Task", command=self.add_task)
-        self.add_button.pack(side=tk.LEFT, padx=5)
+    def import_apple_health_data(self, api_key):
+        url = 'https://api.apple-healthkit.com/v1/workouts'
+        headers = {'Authorization': f'Bearer {api_key}'}
+        response = requests.get(url, headers=headers)
+        data = response.json()
+        for workout in data['workouts']:
+            new_workout = {
+                'name': workout['activityType'],
+                'duration': workout['duration'],
+                'distance': workout['distance'],
+                'date': datetime.datetime.fromtimestamp(workout['startDate']).date()
+            }
+            self.workouts.append(new_workout)
 
-        self.list_frame = tk.Frame(master)
-        self.list_frame.pack(pady=10)
+    def export_to_csv(self, file_name):
+        with open(file_name, 'w', newline='') as csvfile:
+            fieldnames = ['name', 'duration', 'distance', 'date']
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-        self.task_listbox = tk.Listbox(self.list_frame, width=40)
-        self.task_listbox.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+            writer.writeheader()
+            for workout in self.workouts:
+                writer.writerow(workout)
 
-        self.scroll_bar = tk.Scrollbar(self.list_frame)
-        self.scroll_bar.pack(side=tk.LEFT, fill=tk.BOTH)
-
-        self.task_listbox.config(yscrollcommand=self.scroll_bar.set)
-        self.scroll_bar.config(command=self.task_listbox.yview)
-
-        self.delete_button = tk.Button(self.list_frame, text="Delete Task", command=self.delete_task)
-        self.delete_button.pack(side=tk.LEFT, padx=5)
-
-    def add_task(self):
-        task = self.task_entry.get().strip()
-        if task:
-            self.tasks.append(task)
-            self.task_listbox.insert(tk.END, task)
-            self.task_entry.delete(0, tk.END)
-
-    def delete_task(self):
-        selected = self.task_listbox.curselection()
-        if selected:
-            self.tasks.pop(selected[0])
-            self.task_listbox.delete(selected)
-
-root = tk.Tk()
-todo_list = TodoList(root)
-root.mainloop()
+    def export_to_json(self, file_name):
+        with open(file_name, 'w') as jsonfile:
+            json.dump({'user_name': self.user_name, 'workouts': self.workouts}, jsonfile, indent=4)

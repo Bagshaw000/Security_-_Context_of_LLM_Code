@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Design and implement a production-grade, high-performance FEN chess evaluator using bitboards with rigorous security, thread-safety, and memory-safety constraints.",
+    "complexity": "Hard",
+    "rationale": "While FEN parsing is standard, achieving 'production-grade' performance using bitboards requires deep algorithmic optimization. Integrating mission-critical security (sanitization, memory safety) and thread-safety into a low-level mathematical module within a distributed systems context demands high-level architectural expertise."
+  }
+]
+```

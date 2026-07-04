@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a production-grade deep neural network framework in Python with enterprise security standards",
+  "complexity": "Hard",
+  "rationale": "While Brad's 12 years of experience and expertise in distributed systems, security, and large-scale architecture provide strong foundational knowledge, this task remains Hard because it requires: (1) Deep expertise in multiple specialized domains (ML/DL frameworks, cryptography, security architecture) that extend beyond typical backend engineering, (2) Balancing competing concerns across 8 distinct requirements (security, performance, scalability, auditability, multi-tenancy), (3) Making critical architectural decisions with significant trade-offs (encryption overhead vs. performance, security vs. usability), (4) Implementing enterprise-grade security across the entire ML pipeline—a domain with evolving threat models and less standardized patterns than traditional application security, (5) Supply chain security for ML dependencies is a relatively nascent practice requiring novel solutions. Brad's distributed systems and security background significantly mitigates complexity, but the breadth and depth of ML-specific security concerns push this into Hard territory."
+}
+```

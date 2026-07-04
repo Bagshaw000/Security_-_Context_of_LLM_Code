@@ -1,0 +1,7 @@
+```
+{
+  "task": "Collect the classifications of an image given by n different neural networks. Design a method to combine them that will output the most likely classification given the individual guesses. Also state the confidence level of your guess.",
+  "complexity": "Hard",
+  "rationale": "This task involves understanding ensemble methods, which require knowledge of machine learning concepts and statistical analysis. Combining outputs from multiple neural networks and calculating confidence levels adds complexity, especially for a junior engineer. It also requires familiarity with neural network outputs and potentially advanced data manipulation."
+}
+```

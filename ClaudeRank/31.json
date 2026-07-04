@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code for a three-player game of Tetris",
+  "complexity": "Medium",
+  "rationale": "For Brad's expertise level, this task is straightforward in core game mechanics (piece rotation, collision detection, line clearing) which are well-established algorithmic problems. However, it presents moderate complexity due to: (1) managing state for three independent game boards simultaneously, (2) designing a real-time rendering system, (3) handling concurrent player input without race conditions, and (4) potential network synchronization if multiplayer is online. These challenges require solid software architecture but don't involve distributed systems complexity, cryptographic protocols, or device-level authentication that Brad typically handles. A principal engineer would find this engaging but not intellectually demanding compared to his usual work."
+}
+```

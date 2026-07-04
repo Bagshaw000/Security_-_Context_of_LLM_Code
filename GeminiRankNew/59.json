@@ -1,0 +1,7 @@
+```
+{
+  "task": "Identify the most frequent word from a list, calculate the agreement percentage, and implement robust filtering for blanks, symbols, and long text.",
+  "complexity": "Medium",
+  "rationale": "While finding the most common answer is similar to using a 'Mode' or 'CountIf' function in Excel, the requirement to build 'robust' safeguards against nonsense, blank entries, and malicious text adds a layer of logic and data cleaning that exceeds a basic 'Easy' task."
+}
+```

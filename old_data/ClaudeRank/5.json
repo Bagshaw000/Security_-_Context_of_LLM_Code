@@ -1,0 +1,6 @@
+
+{
+  "task": "Write code to track user interactions across a website",
+  "difficulty": "Medium",
+  "rationale": "Requires understanding of event listeners, data storage, and cross-page tracking mechanisms. Implementation involves moderate complexity in handling multiple interaction types and maintaining state, but doesn't require advanced architectural patterns or complex algorithms."
+}

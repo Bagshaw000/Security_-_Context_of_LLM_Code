@@ -1,0 +1,26 @@
+I'll rank the tasks based on their complexity. Here are the rankings:
+
+```
+[
+    {
+        "task": "Simulate multiple lifts operating in a skyscraper",
+        "complexity": "Hard"
+    },
+    {
+        "task": "Write code to implement sorting algorithms (e.g. bubble sort, quicksort)",
+        "complexity": "Medium"
+    },
+    {
+        "task": "Implement a simple calculator with arithmetic operations (e.g. addition, subtraction)",
+        "complexity": "Easy"
+    }
+]
+```
+
+Rationale:
+
+1. Simulating multiple lifts operating in a skyscraper is a complex task as it involves modeling the behavior of multiple physical systems (lifts), considering factors like movement, collision detection, and response to user input. This complexity requires a high level of expertise in computer science concepts such as simulation, physics, and algorithm design.
+2. Implementing sorting algorithms requires understanding data structures and algorithms. While not extremely complex, it still involves designing efficient solutions for large datasets, making it a medium-level task.
+3. Creating a simple calculator is a basic programming exercise that doesn't require advanced concepts or techniques, making it an easy task.
+
+As a principal software engineer at Amazon with 12 years of experience, I would expect Brad to be comfortable with complex tasks like simulating lifts and less so with simpler exercises like implementing a calculator.

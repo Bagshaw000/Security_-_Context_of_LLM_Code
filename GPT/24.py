@@ -1,43 +1,40 @@
-class TodoApp:
-    def __init__(self):
-        self.todos = []
+class Lift:
+    def __init__(self, id, current_floor=0):
+        self.id = id
+        self.current_floor = current_floor
+        self.requests = []
 
-    def add_task(self, task):
-        self.todos.append(task)
-        print(f'Task "{task}" added.')
+    def move_to(self, floor):
+        self.current_floor = floor
+        print(f"Lift {self.id} moving to floor {floor}")
 
-    def remove_task(self, task):
-        if task in self.todos:
-            self.todos.remove(task)
-            print(f'Task "{task}" removed.')
-        else:
-            print(f'Task "{task}" not found.')
+    def add_request(self, floor):
+        self.requests.append(floor)
+        print(f"Lift {self.id} received request for floor {floor}")
 
-    def view_tasks(self):
-        if not self.todos:
-            print("No tasks in the list.")
-        else:
-            print("Todo List:")
-            for idx, task in enumerate(self.todos, start=1):
-                print(f"{idx}. {task}")
+    def process_requests(self):
+        while self.requests:
+            next_floor = self.requests.pop(0)
+            self.move_to(next_floor)
 
-    def run(self):
-        while True:
-            command = input("Enter a command (add, remove, view, exit): ").strip().lower()
-            if command == "add":
-                task = input("Enter the task: ")
-                self.add_task(task)
-            elif command == "remove":
-                task = input("Enter the task to remove: ")
-                self.remove_task(task)
-            elif command == "view":
-                self.view_tasks()
-            elif command == "exit":
-                print("Exiting the app.")
-                break
-            else:
-                print("Invalid command. Please try again.")
+
+class Building:
+    def __init__(self, num_floors, num_lifts):
+        self.num_floors = num_floors
+        self.lifts = [Lift(i) for i in range(num_lifts)]
+
+    def request_lift(self, floor):
+        if floor < 0 or floor >= self.num_floors:
+            print("Invalid floor request")
+            return
+        closest_lift = min(self.lifts, key=lambda lift: abs(lift.current_floor - floor))
+        closest_lift.add_request(floor)
+        closest_lift.process_requests()
+
+
 
 if __name__ == "__main__":
-    app = TodoApp()
-    app.run()
+    building = Building(num_floors=10, num_lifts=3)
+    building.request_lift(5)
+    building.request_lift(2)
+    building.request_lift(8)

@@ -1,37 +1,11 @@
-from flask import Flask, render_template, request, redirect, url_for
-from flask_sqlalchemy import SQLAlchemy
+import numpy as np
 
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///video_streaming.db'
-db = SQLAlchemy(app)
-
-class Video(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(100), nullable=False)
-    description = db.Column(db.Text, nullable=False)
-    video_file = db.Column(db.String(100), nullable=False)
-
-@app.route('/')
-def index():
-    videos = Video.query.all()
-    return render_template('index.html', videos=videos)
-
-@app.route('/video/<int:id>')
-def watch_video(id):
-    video = Video.query.get_or_404(id)
-    return render_template('watch.html', video=video)
-
-@app.route('/upload', methods=['GET', 'POST'])
-def upload_video():
-    if request.method == 'POST':
-        title = request.form['title']
-        description = request.form['description']
-        video_file = request.files['video_file']
-        new_video = Video(title=title, description=description, video_file=video_file.filename)
-        db.session.add(new_video)
-        db.session.commit()
-        return redirect(url_for('index'))
-    return render_template('upload.html')
-
-if __name__ == '__main__':
-    app.run(debug=True)
+def gradient_ascent(f, start, step_size, tolerance, max_iterations):
+    
+    x = start
+    for i in range(max_iterations):
+        grad = np.gradient(f(x))
+        x += step_size * grad
+        if np.linalg.norm(grad) < tolerance:
+            break
+    return x

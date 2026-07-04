@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a secure code solution that utilizes a large language model (LLM) to generate concise summaries of research papers, ensuring robust error handling and minimizing potential vulnerabilities throughout the implementation.",
+  "complexity": "Hard",
+  "rationale": "This task involves integrating a large language model, which requires understanding of both natural language processing and secure coding practices. The need for robust error handling and vulnerability minimization adds layers of complexity, particularly in a production environment. Given Brad's experience, he can handle this, but the task's multifaceted nature makes it challenging."
+}
+```

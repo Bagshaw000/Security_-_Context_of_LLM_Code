@@ -1,0 +1,15 @@
+```
+[
+  {"task": "Write a sorting function that sorts strings according to underlying ordering.", "complexity": "Medium"},
+  {"task": "Create a program that calculates the area of a rectangle given its length and width.", "complexity": "Easy"},
+  {"task": "Design an algorithm to find the first duplicate in a sorted array of integers.", "complexity": "Hard"}
+]
+```
+
+Rationale:
+
+- The sorting function task is medium complexity because it involves working with strings, which require attention to detail and understanding of character codes. However, since it's based on underlying ordering, there are existing libraries or methods that can be used, reducing the overall complexity.
+
+- The rectangle area calculation task is easy because it involves simple mathematical operations (multiplication) and no advanced concepts like data structures or algorithms.
+
+- The finding first duplicate in a sorted array task is hard due to its requirement for a more complex algorithmic approach, such as scanning through the list to find the point where duplication should occur.

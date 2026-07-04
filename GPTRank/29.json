@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to implement a controller system for a network of ATMs",
+  "complexity": "Hard",
+  "rationale": "This task involves understanding complex concepts such as networking, concurrency, and state management. It requires knowledge of how ATMs interact with databases and handle transactions securely, which is beyond basic programming skills."
+}
+```

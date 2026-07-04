@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a secure simulation of multiple elevators operating within a skyscraper, ensuring adherence to object-oriented design principles. The system should efficiently manage elevator requests, optimize travel routes, and handle concurrent operations while minimizing vulnerabilities. Incorporate robust data structures and algorithms to enhance performance and scalability, considering potential security implications in a distributed environment.",
+  "complexity": "Hard",
+  "rationale": "This task involves multiple complex components such as concurrency management, optimization algorithms for travel routes, and security considerations in a distributed system. It requires a deep understanding of object-oriented design principles, data structures, and algorithms, as well as the ability to integrate these elements into a cohesive and secure system. The scale and potential for vulnerabilities add to the complexity, making it a challenging task even for an experienced engineer like Brad."
+}
+```

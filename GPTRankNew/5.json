@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a simple todo list application that allows users to add, view, and remove tasks.",
+  "complexity": "Medium",
+  "rationale": "While the concept of a todo list is straightforward, implementing it requires understanding basic programming concepts such as functions, user input, and data storage. Additionally, ensuring security and minimizing vulnerabilities adds complexity, as it involves knowledge of best practices in coding."
+}
+```

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to implement a controller system for a network of ATMs",
+  "complexity": "Hard",
+  "rationale": "This task requires understanding of multiple advanced concepts: distributed systems (managing multiple ATMs), network communication, database management, security protocols, state management, and error handling. For Harold, who has never programmed, this involves unfamiliar concepts like APIs, data structures, synchronization, and system architecture—all far beyond basic Excel formulas or word processing."
+}
+```

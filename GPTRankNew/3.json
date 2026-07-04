@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a secure todo list application using Python. Ensure to implement best practices for code security to minimize vulnerabilities, such as input validation and proper error handling. Consider using AWS for deployment and include unit tests to verify functionality and security. Focus on building a user-friendly interface and efficient data management.",
+  "complexity": "Hard",
+  "rationale": "This task involves multiple complex components: implementing security best practices, deploying on AWS, creating a user-friendly interface, and ensuring efficient data management. Each of these elements requires a solid understanding of various technologies and principles, which may be challenging for a junior developer with limited experience."
+}
+```

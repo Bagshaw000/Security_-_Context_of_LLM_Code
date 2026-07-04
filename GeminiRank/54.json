@@ -1,0 +1,7 @@
+```
+{
+  "task": "Given a set of 2n coins, each biased with a different value for the probability of heads, pick a set of coins that gives the highest probability that when tossed, the number of heads will be n",
+  "complexity": "Hard",
+  "rationale": "This task requires advanced knowledge of the Poisson binomial distribution and dynamic programming. While John has a CS degree, the mathematical optimization and algorithmic complexity involved in selecting the optimal subset exceed typical junior-level tasks like inventory management or unit testing."
+}
+```

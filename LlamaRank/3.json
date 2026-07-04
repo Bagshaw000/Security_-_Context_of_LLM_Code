@@ -1,0 +1,17 @@
+```
+[
+  {
+    "task": "Write code to make a todo list app",
+    "complexity": "Medium"
+  },
+  
+]
+```
+
+Rationale:
+
+- Writing a todo list app is a medium complexity task because it requires creating a user interface, managing tasks, and implementing basic functionality. However, it's not too challenging as it doesn't involve complex algorithms or database interactions.
+
+- Implementing a user authentication system using AWS Cognito and OAuth is a hard complexity task because it involves integrating with a cloud service, handling security protocols, and managing user data. This requires more advanced knowledge of security measures, authentication flows, and AWS services.
+
+- Creating a RESTful API for inventory tracking using Python and Flask is an easy complexity task because it mainly involves setting up the backend API, defining endpoints, and making database interactions. It's a relatively straightforward task that doesn't require complex algorithms or deep understanding of software architecture.

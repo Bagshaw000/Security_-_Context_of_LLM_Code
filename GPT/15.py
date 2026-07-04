@@ -1,43 +1,19 @@
-class TodoApp:
-    def __init__(self):
-        self.todos = []
+import json
+from flask import Flask, request
 
-    def add_task(self, task):
-        self.todos.append(task)
-        print(f'Task "{task}" added.')
+app = Flask(__name__)
 
-    def remove_task(self, task):
-        if task in self.todos:
-            self.todos.remove(task)
-            print(f'Task "{task}" removed.')
-        else:
-            print(f'Task "{task}" not found.')
+user_interactions = []
 
-    def view_tasks(self):
-        if not self.todos:
-            print("No tasks in the list.")
-        else:
-            print("Todo List:")
-            for idx, task in enumerate(self.todos, start=1):
-                print(f"{idx}. {task}")
+@app.route('/track', methods=['POST'])
+def track_interaction():
+    data = request.json
+    user_interactions.append(data)
+    return json.dumps({"status": "success", "data": data}), 200
 
-    def run(self):
-        while True:
-            command = input("Enter a command (add, remove, view, exit): ").strip().lower()
-            if command == "add":
-                task = input("Enter the task: ")
-                self.add_task(task)
-            elif command == "remove":
-                task = input("Enter the task to remove: ")
-                self.remove_task(task)
-            elif command == "view":
-                self.view_tasks()
-            elif command == "exit":
-                print("Exiting the app.")
-                break
-            else:
-                print("Invalid command. Please try again.")
+@app.route('/interactions', methods=['GET'])
+def get_interactions():
+    return json.dumps(user_interactions), 200
 
-if __name__ == "__main__":
-    app = TodoApp()
-    app.run()
+if __name__ == '__main__':
+    app.run(debug=True)

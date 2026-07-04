@@ -2,83 +2,77 @@
 
 
 
-import os
 
 
-DATA_FILE = "my_todo_list.txt"
+accounts_database = {
+    "Harold": 1250.00,
+    "Elizabeth": 3400.50,
+    "William": 50.25,
+    "Victoria": 10000.00
+}
 
-def load_tasks():
+def start_atm_machine():
     
-    tasks = []
-    if os.path.exists(DATA_FILE):
-        with open(DATA_FILE, "r") as file:
-            
-            tasks = [line.strip() for line in file.readlines()]
-    return tasks
+    print("--- Welcome to the English Teachers' Credit Union ATM ---")
 
-def save_tasks(tasks):
     
-    with open(DATA_FILE, "w") as file:
-        for task in tasks:
-            file.write(task + "\n")
+    user_name = input("Please enter your name to access your account: ")
 
-def main():
     
-    tasks = load_tasks()
+    if user_name in accounts_database:
+        print("Login Successful. Hello, " + user_name + "!")
 
-    while True:
         
-        print("\n" + "="*30)
-        print("      HAROLD'S TO-DO LIST")
-        print("="*30)
+        is_finished = False
+        while is_finished == False:
+            print("\n--- TRANSACTION MENU ---")
+            print("1. Check my balance")
+            print("2. Put money in (Deposit)")
+            print("3. Take money out (Withdraw)")
+            print("4. Finish and Exit")
 
-        if not tasks:
-            print("Your list is empty.")
-        else:
             
-            for index, item in enumerate(tasks, start=1):
-                print(f"{index}. {item}")
+            choice = input("What would you like to do? (Type 1, 2, 3, or 4): ")
 
-        print("-" * 30)
-        print("OPTIONS:")
-        print("1. Add a new task")
-        print("2. Remove a finished task (by number)")
-        print("3. Save and Exit")
+            if choice == "1":
+                
+                current_balance = accounts_database[user_name]
+                print("Your current balance is: $" + str(current_balance))
 
-        choice = input("\nWhat would you like to do? (Type 1, 2, or 3): ")
+            elif choice == "2":
+                
+                deposit_input = input("How much would you like to deposit? $")
+                deposit_amount = float(deposit_input)
+                
+                
+                accounts_database[user_name] = accounts_database[user_name] + deposit_amount
+                print("Update complete. Your new balance is: $" + str(accounts_database[user_name]))
 
-        if choice == "1":
-            
-            new_item = input("Type your task here: ")
-            tasks.append(new_item)
-            print("Task added!")
+            elif choice == "3":
+                
+                withdraw_input = input("How much would you like to withdraw? $")
+                withdraw_amount = float(withdraw_input)
 
-        elif choice == "2":
-            
-            if not tasks:
-                print("Nothing to remove.")
-                continue
-            
-            try:
-                task_number = int(input("Type the number of the task to remove: "))
-                if 1 <= task_number <= len(tasks):
+                
+                if withdraw_amount <= accounts_database[user_name]:
                     
-                    removed = tasks.pop(task_number - 1)
-                    print(f"Successfully removed: {removed}")
+                    accounts_database[user_name] = accounts_database[user_name] - withdraw_amount
+                    print("Please take your cash. Your remaining balance is: $" + str(accounts_database[user_name]))
                 else:
-                    print("That number is not on your list.")
-            except ValueError:
-                print("Please type a valid number.")
+                    
+                    print("Declined: You do not have enough funds for that amount.")
 
-        elif choice == "3":
-            
-            save_tasks(tasks)
-            print("List saved to " + DATA_FILE + ". Goodbye!")
-            break
+            elif choice == "4":
+                
+                print("Thank you for using the ATM. Please take your card. Goodbye!")
+                is_finished = True
+
+            else:
+                
+                print("That was not a valid choice. Please try again.")
+    else:
         
-        else:
-            print("Invalid choice. Please type 1, 2, or 3.")
+        print("Error: We could not find an account under that name.")
 
 
-if __name__ == "__main__":
-    main()
+start_atm_machine()

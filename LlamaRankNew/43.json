@@ -1,0 +1,19 @@
+```
+[
+  {
+    "task": "Design a simplified version of the classic Snake game",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Design features to prevent common web application vulnerabilities like SQL injection and cross-site scripting (XSS) in the Snake game",
+    "complexity": "Medium"
+  }
+]
+```
+
+Ranking:
+
+* Hard complexity due to: 
+  - Modularity with secure coding practices 
+  - Integration with limited resources and hardware constraints of Nokia phones from 1997
+  - Protection against SQL injection and cross-site scripting (XSS) vulnerabilities

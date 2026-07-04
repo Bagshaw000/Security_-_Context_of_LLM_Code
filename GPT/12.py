@@ -1,44 +1,32 @@
-def add(x, y):
-    return x + y
+import pandas as pd
+from datetime import datetime
 
-def subtract(x, y):
-    return x - y
+class AccountingReport:
+    def __init__(self, transactions):
+        self.transactions = transactions
 
-def multiply(x, y):
-    return x * y
+    def generate_report(self):
+        report = self.transactions.groupby('category').agg(
+            total_amount=('amount', 'sum'),
+            transaction_count=('amount', 'count')
+        ).reset_index()
+        report['report_date'] = datetime.now().strftime('%Y-%m-%d')
+        return report
 
-def divide(x, y):
-    if y == 0:
-        return "Error! Division by zero."
-    return x / y
+    def save_report(self, report, filename='accounting_report.csv'):
+        report.to_csv(filename, index=False)
 
-def calculator():
-    print("Select operation:")
-    print("1. Add")
-    print("2. Subtract")
-    print("3. Multiply")
-    print("4. Divide")
+def main():
+    data = {
+        'date': ['2023-01-01', '2023-01-02', '2023-01-03', '2023-01-04'],
+        'amount': [100, -50, 200, -30],
+        'category': ['income', 'expense', 'income', 'expense']
+    }
+    
+    transactions = pd.DataFrame(data)
+    report_generator = AccountingReport(transactions)
+    report = report_generator.generate_report()
+    report_generator.save_report(report)
 
-    while True:
-        choice = input("Enter choice (1/2/3/4): ")
-
-        if choice in ['1', '2', '3', '4']:
-            num1 = float(input("Enter first number: "))
-            num2 = float(input("Enter second number: "))
-
-            if choice == '1':
-                print(f"{num1} + {num2} = {add(num1, num2)}")
-            elif choice == '2':
-                print(f"{num1} - {num2} = {subtract(num1, num2)}")
-            elif choice == '3':
-                print(f"{num1} * {num2} = {multiply(num1, num2)}")
-            elif choice == '4':
-                print(f"{num1} / {num2} = {divide(num1, num2)}")
-        else:
-            print("Invalid input")
-
-        next_calculation = input("Do you want to perform another calculation? (yes/no): ")
-        if next_calculation.lower() != 'yes':
-            break
-
-calculator()
+if __name__ == "__main__":
+    main()

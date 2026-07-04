@@ -1,0 +1,6 @@
+projectKey=ClaudeNew
+serverUrl=http://localhost:9000
+serverVersion=26.3.0.120487
+dashboardUrl=http://localhost:9000/dashboard?id=ClaudeNew
+ceTaskId=a40d36e6-f6ca-4029-9739-2cd1fbcf1b26
+ceTaskUrl=http://localhost:9000/api/ce/task?id=a40d36e6-f6ca-4029-9739-2cd1fbcf1b26

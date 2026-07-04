@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a secure command-line calculator with input validation and unit tests.",
+  "complexity": "Medium",
+  "rationale": "While a basic calculator is simple, avoiding 'eval()' requires John to implement a manual expression parser (like the Shunting-yard algorithm) or use safe tokenization. This bridges his academic knowledge of compilers with his internship experience in secure coding and unit testing."
+}
+```

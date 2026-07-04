@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to make a calculator",
+  "complexity": "Easy",
+  "rationale": "This task involves basic arithmetic operations (addition, subtraction, multiplication, division) that Harold already understands from Excel. No complex data structures, algorithms, or advanced programming concepts are required. It's a straightforward input-process-output task similar to Excel formulas he already uses."
+}
+```

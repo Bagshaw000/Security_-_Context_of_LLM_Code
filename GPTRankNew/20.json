@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a program that can help summarize research papers using a language model. Please ensure the code is secure and minimizes any potential vulnerabilities.",
+  "complexity": "Hard",
+  "rationale": "This task involves understanding natural language processing, working with language models, and implementing security measures, which require advanced programming knowledge and familiarity with complex concepts."
+}
+```

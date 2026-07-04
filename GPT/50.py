@@ -1,27 +1,28 @@
-from flask import Flask, render_template, Response
-import cv2
+import numpy as np
+import tensorflow as tf
+from tensorflow import keras
 
-app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+X_train = np.random.rand(1000, 10)
+y_train = np.random.randint(2, size=(1000, 1))
 
-def generate_frames():
-    camera = cv2.VideoCapture(0)
-    while True:
-        success, frame = camera.read()
-        if not success:
-            break
-        else:
-            ret, buffer = cv2.imencode('.jpg', frame)
-            frame = buffer.tobytes()
-            yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
-@app.route('/video_feed')
-def video_feed():
-    return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+model = keras.Sequential([
+    keras.layers.Dense(32, activation='relu', input_shape=(10,)),
+    keras.layers.Dense(16, activation='relu'),
+    keras.layers.Dense(1, activation='sigmoid')
+])
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+
+model.fit(X_train, y_train, epochs=10, batch_size=32)
+
+
+X_test = np.random.rand(100, 10)
+y_test = np.random.randint(2, size=(100, 1))
+
+
+test_loss, test_accuracy = model.evaluate(X_test, y_test)
+print('Test accuracy:', test_accuracy)

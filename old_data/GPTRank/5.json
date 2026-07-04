@@ -1,0 +1,6 @@
+
+{
+  "task": "Write code to track user interactions across a website",
+  "complexity": "Medium",
+  "rationale": "This task involves understanding user events, implementing event listeners, and possibly integrating with analytics services. It requires knowledge of JavaScript and web APIs, making it more complex than basic tasks but not as intricate as backend or database management."
+}

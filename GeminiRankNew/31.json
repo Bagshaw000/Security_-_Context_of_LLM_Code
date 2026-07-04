@@ -1,0 +1,9 @@
+```
+[
+  {
+    "task": "Architect and implement a production-grade, three-player authoritative Tetris server with defense-in-depth security and low-latency synchronization.",
+    "complexity": "Hard",
+    "rationale": "While Tetris logic is simple, building a real-time, multi-tenant distributed system requires complex state synchronization, concurrency management, and rigorous security layering to prevent cheating and latency-related state drift."
+  }
+]
+```

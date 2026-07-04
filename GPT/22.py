@@ -1,45 +1,41 @@
-class TodoList:
+class Workout:
+    def __init__(self, date, duration, type, calories_burned):
+        self.date = date
+        self.duration = duration  
+        self.type = type
+        self.calories_burned = calories_burned
+
+    def __str__(self):
+        return f"{self.date}: {self.type} for {self.duration} mins, Calories burned: {self.calories_burned}"
+
+
+class WorkoutTracker:
     def __init__(self):
-        self.tasks = []
+        self.workouts = []
 
-    def add_task(self, task):
-        self.tasks.append(task)
-        print(f'Task "{task}" added.')
+    def add_workout(self, workout):
+        self.workouts.append(workout)
 
-    def remove_task(self, task):
-        if task in self.tasks:
-            self.tasks.remove(task)
-            print(f'Task "{task}" removed.')
-        else:
-            print(f'Task "{task}" not found.')
+    def import_data(self, data):
+        for entry in data:
+            workout = Workout(entry['date'], entry['duration'], entry['type'], entry['calories_burned'])
+            self.add_workout(workout)
 
-    def view_tasks(self):
-        if not self.tasks:
-            print("No tasks in the list.")
-        else:
-            print("Todo List:")
-            for idx, task in enumerate(self.tasks, start=1):
-                print(f"{idx}. {task}")
+    def display_workouts(self):
+        for workout in self.workouts:
+            print(workout)
 
-def main():
-    todo_list = TodoList()
-    while True:
-        print("\nOptions: add, remove, view, exit")
-        choice = input("Choose an option: ").strip().lower()
-        
-        if choice == 'add':
-            task = input("Enter the task: ")
-            todo_list.add_task(task)
-        elif choice == 'remove':
-            task = input("Enter the task to remove: ")
-            todo_list.remove_task(task)
-        elif choice == 'view':
-            todo_list.view_tasks()
-        elif choice == 'exit':
-            print("Exiting the app.")
-            break
-        else:
-            print("Invalid option. Please try again.")
+
 
 if __name__ == "__main__":
-    main()
+    tracker = WorkoutTracker()
+
+    
+    imported_data = [
+        {'date': '2023-10-01', 'duration': 30, 'type': 'Running', 'calories_burned': 300},
+        {'date': '2023-10-02', 'duration': 45, 'type': 'Cycling', 'calories_burned': 400},
+        {'date': '2023-10-03', 'duration': 60, 'type': 'Swimming', 'calories_burned': 500},
+    ]
+
+    tracker.import_data(imported_data)
+    tracker.display_workouts()

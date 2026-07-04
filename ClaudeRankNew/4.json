@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a production-grade todo list application with enterprise security standards and architectural best practices",
+  "complexity": "Hard",
+  "rationale": "While a basic todo app is simple, this specification demands hard complexity due to: (1) Multi-tiered distributed architecture design—requiring deep systems thinking beyond standard layered patterns; (2) Comprehensive security implementation across multiple vectors (authentication, authorization, encryption, injection prevention, audit logging)—matching Brad's current domain management focus; (3) Production-grade code quality requiring SOLID principles, design patterns, DI, and extensive testing; (4) Operational concerns including containerization, environment management, and deployment readiness; (5) Performance considerations (indexing, pagination, idempotency) at scale. For Brad's experience level, while technically achievable, the breadth of enterprise requirements across architecture, security, resilience, and operations elevates this significantly beyond medium complexity."
+}
+```

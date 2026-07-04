@@ -1,0 +1,36 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Generate all possible combinations of 1x1 square blocks joined together, ranging from 1 to 5 pieces per polyomino",
+      "complexity": "Medium",
+      "rationale": "Requires understanding of combinatorial generation and graph traversal to build connected shapes. John's Python experience and startup background make this manageable, though it demands algorithmic thinking beyond basic syntax."
+    },
+    {
+      "task": "Eliminate symmetrical duplicates since pieces can be freely rotated and flipped during gameplay",
+      "complexity": "Hard",
+      "rationale": "Detecting rotational and reflectional symmetry is mathematically complex. Requires implementing canonical form detection or hash-based comparison of transformations. This is the most challenging aspect and goes beyond typical junior-level tasks."
+    },
+    {
+      "task": "Input validation to handle edge cases and prevent unexpected errors",
+      "complexity": "Easy",
+      "rationale": "Straightforward defensive programming. John's unit testing experience makes this routine - basic parameter checking and error handling."
+    },
+    {
+      "task": "Comprehensive unit tests covering normal cases, boundary conditions, and error scenarios",
+      "complexity": "Medium",
+      "rationale": "John has unit testing experience from his internship, but designing comprehensive test coverage for the polyomino logic requires understanding all edge cases and symmetry quirks."
+    },
+    {
+      "task": "Efficient algorithms to avoid unnecessary computation or memory overhead",
+      "complexity": "Hard",
+      "rationale": "Optimizing for performance while generating and deduplicating polyominoes requires algorithmic optimization skills and careful data structure choices - advanced for a junior engineer."
+    },
+    {
+      "task": "Clear comments, named constants, proper error handling, and logging",
+      "complexity": "Easy",
+      "rationale": "Code quality practices John already knows from his startup experience. Standard best practices requiring attention to detail but no complex logic."
+    }
+  ]
+}
+```

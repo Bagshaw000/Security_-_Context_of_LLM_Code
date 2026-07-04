@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code for a three-player game of Tetris",
+  "complexity": "Hard",
+  "rationale": "For someone who uses Excel, this is like building three different spreadsheets that must all update instantly and perfectly at the same time while reacting to three different people typing simultaneously. It requires managing complex gravity, shapes, and scoring rules all at once."
+}
+```

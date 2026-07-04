@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a production-grade, multi-tiered service to generate research paper summaries using an LLM with strict security and OOD principles.",
+  "complexity": "Hard",
+  "rationale": "From my perspective at Amazon, this is 'Hard' because it requires more than just an API call; it necessitates building a scalable distributed architecture, a secure ingestion pipeline for complex documents, and advanced defense-in-depth strategies against prompt injection and data leakage, all while maintaining high-availability and strict operational excellence."
+}
+```

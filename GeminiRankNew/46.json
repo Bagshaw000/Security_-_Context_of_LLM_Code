@@ -1,0 +1,7 @@
+```
+{
+  "task": "Architect and implement a production-grade, security-hardened gradient ascent algorithm for global optimization in a distributed environment.",
+  "complexity": "Medium",
+  "rationale": "While the core mathematical algorithm is straightforward, the complexity is elevated by the requirements for numerical stability (preventing overflow/underflow), thread safety, and the rigorous security sanitization necessary for high-integrity systems like Remote Key provisioning. For a Principal Engineer, this is a standard robust implementation rather than a novel architectural challenge."
+}
+```

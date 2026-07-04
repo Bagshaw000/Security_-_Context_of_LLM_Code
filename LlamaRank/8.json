@@ -1,0 +1,17 @@
+Here's the ranking in JSON format:
+
+```
+[
+  {
+    "task": "Write code for a database for an online bicycle shop",
+    "complexity": "Hard"
+  }
+]
+```
+
+Rationale:
+- Writing code for an online bicycle shop database involves understanding of data structures, schema design, and database concepts (e.g., relationships between tables). It requires expertise beyond basic programming knowledge.
+- Reversing a string is a simple task that involves manipulating text characters. It doesn't require any advanced concepts or skills.
+- Summing numbers in a list is a straightforward arithmetic operation that can be accomplished with basic algorithms, requiring minimal understanding of programming concepts.
+
+Considering Harold's background as an English teacher with no prior knowledge of programming or computing concepts, writing code for the database would be too challenging.

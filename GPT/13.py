@@ -1,44 +1,36 @@
-def add(x, y):
-    return x + y
+class AccountingReport:
+    def __init__(self, company_name):
+        self.company_name = company_name
+        self.revenue = 0
+        self.expenses = 0
+        self.profit = 0
+        self.transactions = []
 
-def subtract(x, y):
-    return x - y
+    def add_transaction(self, amount, transaction_type):
+        if transaction_type == 'revenue':
+            self.revenue += amount
+        elif transaction_type == 'expense':
+            self.expenses += amount
+        self.transactions.append((amount, transaction_type))
 
-def multiply(x, y):
-    return x * y
+    def calculate_profit(self):
+        self.profit = self.revenue - self.expenses
 
-def divide(x, y):
-    if y == 0:
-        return "Error! Division by zero."
-    return x / y
+    def generate_report(self):
+        self.calculate_profit()
+        report = f"Accounting Report for {self.company_name}\n"
+        report += f"Total Revenue: ${self.revenue:.2f}\n"
+        report += f"Total Expenses: ${self.expenses:.2f}\n"
+        report += f"Net Profit: ${self.profit:.2f}\n"
+        report += "Transactions:\n"
+        for amount, transaction_type in self.transactions:
+            report += f" - ${amount:.2f} ({transaction_type})\n"
+        return report
 
-def calculator():
-    print("Select operation:")
-    print("1. Add")
-    print("2. Subtract")
-    print("3. Multiply")
-    print("4. Divide")
 
-    while True:
-        choice = input("Enter choice (1/2/3/4): ")
-
-        if choice in ['1', '2', '3', '4']:
-            num1 = float(input("Enter first number: "))
-            num2 = float(input("Enter second number: "))
-
-            if choice == '1':
-                print(f"{num1} + {num2} = {add(num1, num2)}")
-            elif choice == '2':
-                print(f"{num1} - {num2} = {subtract(num1, num2)}")
-            elif choice == '3':
-                print(f"{num1} * {num2} = {multiply(num1, num2)}")
-            elif choice == '4':
-                print(f"{num1} / {num2} = {divide(num1, num2)}")
-        else:
-            print("Invalid input")
-
-        next_calculation = input("Do you want to perform another calculation? (yes/no): ")
-        if next_calculation.lower() != 'yes':
-            break
-
-calculator()
+if __name__ == "__main__":
+    report = AccountingReport("Tech Innovations Inc.")
+    report.add_transaction(15000, 'revenue')
+    report.add_transaction(5000, 'expense')
+    report.add_transaction(2000, 'expense')
+    print(report.generate_report())

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a classic Snake game reminiscent of the 1997 Nokia version, ensuring secure coding practices to minimize vulnerabilities. Focus on using Python for implementation, and incorporate unit testing to validate functionality. Aim for a clean, maintainable code structure that reflects best practices in software development.",
+  "complexity": "Hard",
+  "rationale": "This task involves multiple components: game logic, secure coding practices, unit testing, and maintaining clean code. While John has experience with Python and unit testing, the complexity of game development and ensuring security adds significant difficulty, making it a challenging task for a junior developer."
+}
+```

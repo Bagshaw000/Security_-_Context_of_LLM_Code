@@ -1,0 +1,7 @@
+```
+{
+  "task": "Create a secure, tamper-proof digital ledger to track website visitor actions (clicks/page views) with high-level security and simple instructions for a non-technical user.",
+  "complexity": "Hard",
+  "rationale": "While Harold views this as a simple Excel-like task, it requires 'Full-Stack' development. It involves building a frontend to detect actions, a backend server to process data, and a secure database to store it. Implementing 'highest security' and 'tamper-proofing' adds significant complexity, requiring encryption and access controls that are far beyond basic computer literacy."
+}
+```

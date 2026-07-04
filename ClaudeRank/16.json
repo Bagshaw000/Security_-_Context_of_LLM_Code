@@ -1,0 +1,7 @@
+```
+{
+  "task": "Write code to track user interactions across a website",
+  "complexity": "Medium",
+  "rationale": "For Brad's expertise level, this task is Medium complexity. While the core concept of event tracking is straightforward, the challenge lies in designing a scalable, distributed system that can handle high-volume interactions across multiple services—a familiar domain given his experience with device management systems. He would need to consider data collection strategies, privacy compliance (GDPR/CCPA), event schema design, real-time processing, and integration with analytics platforms. However, it doesn't involve cryptographic challenges or novel protocol design like his current passkeys work, nor does it require building entirely novel authentication mechanisms. The distributed systems aspect aligns with his expertise but the problem scope is more contained than his typical large-scale projects."
+}
+```

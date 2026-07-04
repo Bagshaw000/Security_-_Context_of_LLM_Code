@@ -1,0 +1,19 @@
+```
+{
+  "tasks": [
+    {
+      "task": "Design and implement a secure video streaming website with secure coding practices",
+      "complexity": "Hard"
+    },
+    {
+      "task": "Implementing Remote Key provisioning and Passkeys features while maintaining security and performance in an existing project",
+      "complexity": "Medium"
+    }
+  ]
+}
+```
+
+Rationale:
+
+1. The first task is ranked as Hard due to the complexity of designing a secure video streaming website that requires scalability, reliability, and performance in a multi-tiered, distributed environment, while incorporating multiple security features such as input validation, secure data storage, encryption, and secure communication protocols.
+2. The second task is ranked as Medium because it involves expanding an existing project with new features (Remote Key provisioning and Passkeys), which requires additional complexity compared to the base functionality of a video streaming website, but is still within the realm of knowledge and expertise gained from working on device-authentication, device-registration, device profiles, and account-linking projects at Amazon Device Management Systems organization.

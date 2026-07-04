@@ -1,0 +1,7 @@
+```
+{
+  "task": "Design and implement a secure, scalable workout tracking application backend with third-party fitness integrations",
+  "complexity": "Hard",
+  "rationale": "This task aligns directly with Brad's expertise but demands mastery across multiple domains simultaneously. While Brad has hands-on experience with OAuth 2.0, device authentication, account-linking, and distributed systems from his Device Management role, this task requires orchestrating 10 interconnected security and architectural concerns at production scale. The complexity stems from: (1) integrating multiple security frameworks (OAuth 2.0, encryption, RBAC, OWASP mitigation) cohesively; (2) designing idempotent APIs with transactional consistency in a microservices context; (3) managing sensitive health data under HIPAA/CCPA compliance; (4) implementing comprehensive observability without PII exposure; and (5) threat modeling across attack vectors. Although Brad possesses the foundational knowledge, executing this holistically—balancing security, scalability, compliance, and testability—is inherently complex. The task is not about learning new concepts but rather synthesizing enterprise-grade patterns under strict constraints, which is characteristic of Hard-level work."
+}
+```

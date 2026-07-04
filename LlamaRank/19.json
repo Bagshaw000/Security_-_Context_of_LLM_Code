@@ -1,0 +1,22 @@
+```
+[
+  {
+    "task": "Generate summaries of research papers using an LLM",
+    "complexity": "Hard"
+  },
+  {
+    "task": "Design a scalable database system for handling large amounts of user data",
+    "complexity": "Medium"
+  },
+  {
+    "task": "Implement a secure authentication system with multi-factor authentication",
+    "complexity": "Easy"
+  }
+]
+```
+
+Rationale:
+
+1. Generating summaries of research papers using an LLM is a complex task that requires natural language processing and machine learning expertise, as well as the ability to understand the context and content of the paper.
+2. Designing a scalable database system for handling large amounts of user data requires knowledge of data structures, algorithms, and distributed systems, but it's still within the realm of software engineering skills.
+3. Implementing a secure authentication system with multi-factor authentication is a specific task that can be broken down into smaller components, making it more manageable and accessible to developers with experience in security and software engineering.

@@ -1,0 +1,7 @@
+```
+{
+  "task": "Develop a secure implementation of a gradient ascent algorithm to identify the global maximum of a specified function. Ensure that the code adheres to best practices in object-oriented design and incorporates robust error handling to mitigate potential vulnerabilities. Consider scalability and performance, especially in a distributed environment.",
+  "complexity": "Hard",
+  "rationale": "This task involves advanced algorithm design (gradient ascent), requires a deep understanding of security practices, and necessitates adherence to object-oriented design principles. Additionally, considerations for scalability and performance in a distributed system add layers of complexity, making it a challenging task even for an experienced engineer."
+}
+```
