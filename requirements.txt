@@ -1,7 +1,9 @@
 anthropic
-dotenv
+python-dotenv
 pandas
 openai
 pandas
 google-genai
 numpy
+requests
+radon
