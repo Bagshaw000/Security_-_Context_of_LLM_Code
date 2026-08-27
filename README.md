@@ -8,6 +8,11 @@ different developer **personas**, paraphrased task wording, and
 security-hardened instruction reduces the vulnerabilities found in an LLM's
 original output.
 
+The full write-up of this study - motivation, methodology, related work, and
+results/discussion - is in [`Dissertation Final Report (2).pdf`](Dissertation%20Final%20Report%20(2).pdf),
+included in this repository. Read that for the research context and findings;
+this README covers only how to run the code.
+
 This README explains the repository layout and the steps needed to reproduce
 the pipeline end to end, from raw prompts through generated code to the final
 complexity/security metrics.
